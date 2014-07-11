@@ -20,6 +20,10 @@
 	
 </head>
 <body class="home">
+	<!-- Overlay Starts Here -->
+	<div class="overlay"></div>
+	<!-- Overlay Ends Here -->
+
 	<div class="wrapper">
 	
 		<!-- Header Starts Here -->
@@ -34,7 +38,7 @@
 			<!-- Logo Ends Here -->
 			
 			<!-- Navigation Starts Here -->
-			<div class="mainmenu transition">
+			<div class="mainmenu">
 				<ul>
 					<li><a href="javascript:void(0)"><i class="entries"></i> <span>entries</span></a></li>
 					<li class="second"><a href="javascript:void(0)"><i class="how-it-works"></i> <span>how it works</span></a></li>
@@ -49,13 +53,13 @@
 			<!-- Mobile Menu Ends Here -->
 			
 			<!-- Login / Register Starts Here -->
-			<div class="navUser transition">
+			<div class="navUser">
 				<i class="loginUser"></i> <a href="javascript:void(0)">Login</a> / <a href="javascript:void(0)">Register</a>
 			</div>
 			<!-- Login / Register Ends Here -->
 			
 			<!-- SYN AppLink Starts Here -->
-			<div class="synApplink transition">
+			<div class="synApplink">
 				<a href="javascript:void(0)"><img src="images/sync-applink-text.png" alt="SYN AppLink" title="SYN AppLink" /></a>
 			</div>
 			<!-- SYN AppLink Ends Here -->
@@ -66,11 +70,15 @@
 		
 		<!-- Banner Starts Here -->
 		<div class="mainBanner">
-			<div class="bannerLogo transition"></div>
-			<div class="playVideo transition">
-				<span>play <i class="arrow"></i></span>
+			<div class="bannerContainer">
+				<div class="bannerLogo transition"></div>
+				<div class="playVideo transition" data-video-src="ky7oL1tWJ1U">
+					<span>play <i class="arrow"></i></span>
+				</div>
+				<div class="arrowDown transition"></div>
 			</div>
-			<div class="arrowDown transition"></div>
+			
+			<div class="videoContainer"></div>			
 		</div>
 		<!-- Banner Ends Here -->
 		
