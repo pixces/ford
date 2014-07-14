@@ -1,0 +1,309 @@
+/* Small Screen Style Starts Here */
+@media only screen and (min-width: 1024px){
+	.mainmenu,.synApplink,.navUser{display:block!important}
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1000px){
+    
+	.mainmenu,.synApplink{display:none}
+	.navUser{display:block!important}
+	.header .navUser{float:right}
+	.header .mainmenu{position:absolute;left:0;top:75px;background:#22a9a2;z-index:99;margin:0;padding:0 35px 0 10px;width:100%}
+	.header .synApplink{position:absolute;right:0;top:75px;z-index:99;}
+	.hotspots{padding:85px 0}
+	.hotspots .hotspot .body{padding:0 30px}
+	.navigationIcon{display:block!important;}
+	.header .mainmenu ul li{padding:0 28px;vertical-align:sub}
+	.header .mainmenu a{color:#ffffff}
+	.header .mainmenu li i.entries{background-position:0 -64px;width:33px;height:32px;margin-top:14px}
+	.header .mainmenu li i.how-it-works{background-position:-43px -66px;width:33px;height:32px;margin-top:14px}
+	.header .mainmenu li i.our-celebs{background-position:-81px -56px;width:45px;height:47px;}
+	.header .mainmenu li i.our-cars{background-position:-130px -66px;width:33px;height:32px;margin-top:14px}
+	.header .mainmenu li a:hover i.entries{background-position:0 -109px;}
+	.header .mainmenu li a:hover i.how-it-works{background-position:-43px -110px;}
+	.header .mainmenu li a:hover i.our-celebs{background-position:-81px -106px;width:45px;height:47px;}
+	.header .mainmenu li a:hover i.our-cars{background-position:-130px -112px;}
+	.SYNCBanner .SYNCRight{right:93px}
+    .black-transparent-hover {margin: 0 auto;}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 699px){
+    
+	.mainmenu,.synApplink,.navUser{display:none}
+	.header .navUser .loginUser{background-position:-160px 0}
+	.sync-link-logo img{height:30px}
+	.header .navUser{float:right}
+	.header .mainmenu{position:absolute;left:0;top:75px;background:#22a9a2;z-index:99;margin:0;padding:10px;width:100%;height:210px}
+	.header .navUser{top:284px;float:left;position:absolute;z-index:99;width:100%;background:#22a9a2;padding-left:10px}
+	.header .synApplink{position:absolute;right:0;top:284px;z-index:99;}
+	.navigationIcon{display:block!important;}
+	.header .mainmenu ul{display:inline}
+	.header .mainmenu ul li{padding:10px 28px;vertical-align:sub;width:50%;float:left;border-bottom:1px solid #1b8f89;min-height:100px;border-right:1px solid #1b8f89}
+	.header .mainmenu ul li.second,.header .mainmenu ul li.last{border-right:0 none!important}
+	.header .mainmenu a{color:#ffffff}
+	.header .mainmenu li i.entries{background-position:0 -64px;width:33px;height:32px;margin-top:14px}
+	.header .mainmenu li i.how-it-works{background-position:-43px -66px;width:33px;height:32px;margin-top:14px}
+	.header .mainmenu li i.our-celebs{background-position:-81px -56px;width:45px;height:47px;}
+	.header .mainmenu li i.our-cars{background-position:-130px -66px;width:33px;height:32px;margin-top:14px}
+	.header .mainmenu li a:hover i.entries{background-position:0 -109px;}
+	.header .mainmenu li a:hover i.how-it-works{background-position:-43px -110px;}
+	.header .mainmenu li a:hover i.our-celebs{background-position:-81px -106px;width:45px;height:47px;}
+	.header .mainmenu li a:hover i.our-cars{background-position:-130px -112px;}
+	.hotspots{padding:25px 0;display:block;}
+	.hotspots .hotspot{display:block;width:100%;margin-bottom:30px;}
+	.hotspots .hotspot .body{min-height:inherit}
+	.slider,.slider-block{width:300px}
+	.slider-content{width:900px}
+	.slider-block div{display:block;text-align:center}
+	.slider-description{width:100%;margin-bottom:20px;}
+	.slider-splitter{position:relative;left:46%;margin:30px 0}
+	.joinUs{font-size:1.875em;min-height:100px}
+	.participateBlock .description .row-fluid .column_container{font-size:0.8em}
+	.column_container span.chooseCeleb,.column_container span.teachSkill,.column_container span.win{left:29%;}
+	.participateBlock .description .heading{font-size:1.875em;line-height:30px;padding:0 10px;}
+	.participateBlock .description .sub-heading{font-size:0.75em;line-height:18px;padding:10px 40px;}
+	.participateBlock .carImage div.ford-ecosport,.participateBlock .carImage div.ford-fiesta{display:none;}
+	.carImage-mobile{display:block!important;padding-top:10px}
+	.participateBlock .carImage div{float:none;width:100%;text-align:center;margin:0}
+	.participateBlock .carImage{min-height:145px;}
+	.hotspotTabs .tabsHeading div{width:100%}
+	.hotspotTabs .tabsHeading .readmore{display:none}
+	.slider-description .the-content{font-size:0.750em}
+	.hotspotTabs .tabContaier ul li{font-size:0.9em}
+	.hotspotTabs .tabContaier ul li a{padding:5px 10px;}
+	.button-prev{left:10px}
+	.button-next{right:10px}
+	.footer-wrapper .socialMediaIcon ul{top:auto;right:auto}
+	.footer-wrapper .socialIcon div{display:inline-block;}
+	.footer-wrapper .socialIcon .img{border-top:1px solid #2a2a2a;margin:0 10px;border-left:0 none;padding:0 15px}
+	.footer-wrapper .socialIcon .img .doubleArrow{display:none}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 396px){
+    
+	.hotspotLinks{padding:23px;}
+	.hotspotLinks a.blueboxLink{margin:10px 0 0 0;}
+	.hotspotLinks a{display:block}
+}
+
+@media only screen and (min-width: 610px) and (max-width: 699px){
+    
+	.mainBanner .bannerLogo{left:34%;}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 609px){
+    
+	.mainBanner .bannerLogo{left:29%;}
+	.mainBanner .playVideo{left: 41%;}
+	.mainBanner .arrowDown{left:47%}
+}
+@media only screen and (min-width: 435px) and (max-width: 479px){
+    
+	.mainBanner .bannerLogo{left:24%;}
+	.mainBanner .playVideo{left:38%;}
+	.mainBanner .arrowDown{left:46%}
+}
+
+@media only screen and (min-width: 375px) and (max-width: 434px){
+    
+	.mainBanner .bannerLogo{left:20%;}
+	.mainBanner .playVideo{left:37%;}
+}
+
+@media only screen and (min-width: 330px) and (max-width: 374px){
+    
+	.mainBanner .bannerLogo{left:15%;}
+	.mainBanner .playVideo{left:34%;}
+	.mainBanner .arrowDown{left:44%;}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 329px){
+    
+	.mainBanner .bannerLogo{left:11%;}
+	.mainBanner .playVideo{left:33%;}
+	.mainBanner .arrowDown{left:43%;}
+    
+}
+
+@media only screen and (min-width: 480px) and (max-width: 575px){
+    
+	.participateBlock .description .row-fluid .column_container{width:32%;}
+	.column_container span.chooseCeleb, .column_container span.teachSkill, .column_container span.win{left:24%;}
+}
+
+@media only screen and (min-width: 420px) and (max-width: 479px){
+    
+	.participateBlock .description .row-fluid .column_container{width:30%;}
+	.column_container span.chooseCeleb, .column_container span.teachSkill, .column_container span.win{left:18%;}
+    
+}
+@media only screen and (min-width: 355px) and (max-width: 419px){
+	.column_container span.chooseCeleb{background-position:0 -158px}
+	.column_container span.teachSkill{background-position:-101px -158px}
+	.column_container span.win{background-position:-201px -158px}
+	.participateBlock .description .row-fluid .column_container{width:30%;padding:50px 0 30px;font-size:0.6em}
+	.column_container span.chooseCeleb, .column_container span.teachSkill, .column_container span.win{left:13%;}
+}
+@media only screen and (min-width: 300px) and (max-width: 354px){
+    
+	.column_container span.chooseCeleb{background-position:0 -158px}
+	.column_container span.teachSkill{background-position:-101px -158px}
+	.column_container span.win{background-position:-201px -158px}
+	.participateBlock .description .row-fluid .column_container{width:30%;padding:50px 0 30px;font-size:0.6em}
+	.column_container span.chooseCeleb, .column_container span.teachSkill, .column_container span.win{left:6%;}
+    
+}
+@media only screen and (min-width: 530px) and (max-width: 699px){
+    
+	.hotspots .hotspot .icon{left:42%;}
+	.hotspots .hotspot .splitter{left:46%;}
+    
+}
+@media only screen and (min-width: 420px) and (max-width: 529px){
+    
+	.hotspots .hotspot .icon{left:40%;}
+	.hotspots .hotspot .splitter{left:44%;}
+    
+}
+@media only screen and (min-width: 300px) and (max-width: 419px){
+    
+	.hotspots .hotspot .icon{left:35%;}
+	.hotspots .hotspot .splitter{left:42%;}
+    
+}
+@media only screen and (min-width: 525px) and (max-width: 699px){
+    
+	.SYNCBanner .SYNCRight{width:46%;right:20px;}	
+    
+}
+
+@media only screen and (min-width: 321px) and (max-width: 524px){
+    
+	.SYNCBanner{background:#FFB94F}
+	.SYNCBanner .SYNCRight{width:100%;right:20px;position:relative;top:auto;right:0;padding-top:25px;}	
+}
+
+@media only screen and (min-width: 300px) and (max-width: 320px){
+    
+	.SYNCBanner{background:url("../images/footer-banner1-mobile.png") no-repeat scroll center center;min-height:408px}
+	.SYNCBanner .SYNCRight{right:0;top:255px;width:100%;padding:0 10px;}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 450px){
+    
+	.footer-wrapper .ford-go-further{left:37%}
+	.footer-wrapper .footer-links{padding-top:48px;}
+}
+
+@media only screen and (min-width: 760px) and (max-width: 954px){
+    
+	.login-right{width:30%}
+}
+
+@media only screen and (min-width: 200px) and (max-width: 759px){
+    
+	.login-right{width:100%;margin-top:15px}
+	.login-splitter{width:100%;min-height:1px;margin:20px 0}
+	.login-left{width:100%}
+	.field input#submit{margin-right:0}
+	.forgot-link{display:block;text-align:center;margin:15px 0;}
+	.login-splitter .arrow{background:url(../images/down-arrow.png) no-repeat center center;position:absolute;width:100%;height:12px;}
+	.login-description{margin:30px 0}
+	.register .upload-block,.register .upload-block.user-image{position:relative;margin-bottom:40px;left:35%}
+	.register .upload-block{margin-bottom:25px;}
+    
+    .my-profile-body .upload-block, .my-profile-body .upload-block.user-image {left: 0px;
+margin: 0 auto;margin-bottom: 40px;}
+    .my-profile-body .my-profile-fields-container {left:0px;}
+    .entries-container .entries-ul .entries-li .under-moderation i {background-position: 10px -135px;}
+    .entries-container .entries-ul .entries-li .approved i {background-position: 25px 0px;}
+    
+    
+}
+
+@media only screen and (min-width: 435px) and (max-width: 502px){
+    
+	.register .upload-block,.register .upload-block.user-image{left:33%}
+}
+@media only screen and (min-width: 390px) and (max-width: 434px){
+    
+	.register .upload-block,.register .upload-block.user-image{left:29%}
+}
+@media only screen and (min-width: 349px) and (max-width: 389px){
+    
+	.register .upload-block,.register .upload-block.user-image{left:25%}
+    
+    /*.my-profile-body .upload-block, .my-profile-body .upload-block.user-image {left: 0px;}
+    .entries-container .entries-ul .entries-li {padding:20px 0px;}
+    .entries-container .entries-ul .entries-li .column,.entries-container .entries-ul .entries-li .content.column {display: block;width:100%;}
+  .rejected-appeal-text .col-full-8,.rejected-appeal-text .col-full-2,.confirm-appeal-text .col-full-8,.confirm-appeal-text .col-full-2 {width:100%;float: none;}
+    .rejected-appeal-text .rejected {margin-top:20px;}
+    .entries-container .entries-ul .entries-li .content.two-third-ct div.btn-ct {width:100%;}
+    .entries-container .entries-ul .entries-li .content.two-third-ct div.btn-ct button {line-height:20px;height:40px;}
+    .entries-container .entries-ul .entries-li .content.two-third-ct .make-appeal-text-area {width:100%;}
+    .entries-container .entries-ul .entries-li .content.two-third-ct .arrow-right {width: 0; 
+	height: 0; 
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid #fff;left: 0px;top: 0px;right: 0px;margin: 0 auto;}
+    .entries-container .entries-ul .entries-li .content.two-third-ct .confirm-appeal-text div.btn-ct {padding: 0px 0px 0px 0px;}
+    .make-an-appeal {width:100%;float:none;}*/
+    
+}
+@media only screen and (min-width: 320px) and (max-width: 348px){
+    
+	.register .upload-block,.register .upload-block.user-image{left:27%}
+    .my-profile-body .upload-block, .my-profile-body .upload-block.user-image {left: 0px;}
+    
+    
+    
+}
+@media only screen and (min-width: 295px) and (max-width: 319px){
+    
+	.register .upload-block,.register .upload-block.user-image{left:18%}
+}
+@media only screen and (min-width: 200px) and (max-width: 360px){
+    
+	.register .container{padding:60px 25px}
+	.register-socialIcon ul li{margin-right:15px;}
+}
+@media only screen and (max-width: 320px){
+    
+	.rowCaptcha div.termsBlock,.rowCaptcha div.captchaBlock{width:100%;text-align:center}
+	.rowCaptcha div.termsBlock ul{margin:0}
+	.rowCaptcha div.termsBlock ul li{float:left}
+}
+
+
+@media only screen and (max-width: 767px){
+body {border:0px solid red;}
+.my-profile-body .upload-block, .my-profile-body .upload-block.user-image {left: 0px;}
+    .entries-container .entries-ul .entries-li {padding:20px 0px;}
+    .entries-container .entries-ul .entries-li .column,.entries-container .entries-ul .entries-li .content.column {display: block;width:100%;}
+  .rejected-appeal-text .col-full-8,.rejected-appeal-text .col-full-2,.confirm-appeal-text .col-full-8,.confirm-appeal-text .col-full-2 {width:100%;float: none;}
+    .rejected-appeal-text .rejected {margin-top:20px;}
+    .entries-container .entries-ul .entries-li .content.two-third-ct div.btn-ct {width:100%;}
+    .entries-container .entries-ul .entries-li .content.two-third-ct div.btn-ct button {line-height:20px;height:40px;}
+    .entries-container .entries-ul .entries-li .content.two-third-ct .make-appeal-text-area {width:100%;}
+    .entries-container .entries-ul .entries-li .content.two-third-ct .arrow-right {width: 0; 
+	height: 0; 
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid #fff;left: 0px;top: 0px;/* bottom: 0px; */right: 0px;margin: 0 auto;}
+    .entries-container .entries-ul .entries-li .content.two-third-ct .confirm-appeal-text div.btn-ct {padding: 0px 0px 0px 0px;}
+    .make-an-appeal {width:100%;float:none;}
+    
+    .Celebrity-Comments-Container .arrow-right {border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+border-top: 10px solid #fff;top: -4px;
+margin: 0 auto;
+right: 0px;}
+    .black-transparent-hover {left: 0px;
+right: 0px;
+margin: 0 auto;}
+    .col-width-80,.col-width-20 {width:100%;clear: both;}
+    .sayit-voice {margin-top:30px;}
+    .Celebrity-Comments-Container {padding: 15px 20px 85px 20px;}
+    .big-btn-submit {height: 80px;}
+    
+}
