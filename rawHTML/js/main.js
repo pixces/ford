@@ -14,9 +14,8 @@ function onm_window_parameters(){
 
 function CelebSubmit() {
 	
-	$('.hotspot .img').on("click", function(){
+	var selectCelebrity = function(){
 		$("#confirm-appeal-section").slideUp();
-
 		var submitBoxes = $('.hotspot .img');
 		$.each(submitBoxes, function(i,d){
 			var $this = $(this);
@@ -30,11 +29,27 @@ function CelebSubmit() {
 		var currentSubmitBoxId = $(this).attr("data-submit-box");
 		$("#" + currentSubmitBoxId).show();
 		$(this).addClass("selected");
-	});
+	};
 
 
+	var editSubmission = function(){
+		$("#confirm-appeal-section").slideUp();
+		var submitBoxes = $('.hotspot .img');
+		$.each(submitBoxes, function(i,d){
+			var $this = $(this);
+			if(!$this.hasClass('can-edit')){
+				$this.removeClass("selected");	
+			}
+			var submitBoxId = $this.attr("data-submit-box");
+			$("#" + submitBoxId).hide();
+		});
 
-	$(".Celebrity-Comments-Container .big-btn-submit").on("click", function(){
+		var currentSubmitBoxId = $(this).parents('.img').eq(0).attr("data-submit-box");
+		$("#" + currentSubmitBoxId).show();
+	};
+
+
+	var submitAction = function(){
 		var $this = $(this);
 		var submitFor = $this.attr("data-submit-for");
 		var $submitFor = $('#'+submitFor)
@@ -42,11 +57,16 @@ function CelebSubmit() {
 		var $celebIcon = $("#"+celebIcon);
 
 		$submitFor.addClass("can-edit").find(".make-an-appeal-txt").hide();
+		$submitFor.unbind('click',selectCelebrity);
+
 		$celebIcon.addClass('active');
 		$this.parents('.Celebrity-Comments-Container').eq(0).hide();
 		$("#confirm-appeal-section").slideDown();
+	};
 
-	});
+	$('.hotspot .img').on("click", selectCelebrity);
+	$(".Celebrity-Comments-Container .big-btn-submit").on("click", submitAction);
+	$('.hotspot .img .edit-tick a').on("click", editSubmission);
 
 
 	$("#done-btn").on('click', function(){
@@ -56,7 +76,7 @@ function CelebSubmit() {
 	$("#confirm-btn").on('click', function(){
 		$("#confirm-appeal-section").slideUp();
 	});
-	
+
 };
 
 
