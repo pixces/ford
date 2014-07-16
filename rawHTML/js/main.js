@@ -48,6 +48,19 @@ function CelebSubmit() {
 		$("#" + currentSubmitBoxId).show();
 	};
 
+	var isAllAppealMade = function(){
+		var submitBoxes = $('.hotspot .img');
+		var counter = 0;
+		$.each(submitBoxes, function(i,d){
+			var $this = $(this);
+			if($this.hasClass('can-edit')){
+				counter++;
+			}
+		});
+
+		return counter;
+	};
+
 
 	var submitAction = function(){
 		var $this = $(this);
@@ -61,7 +74,19 @@ function CelebSubmit() {
 
 		$celebIcon.addClass('active');
 		$this.parents('.Celebrity-Comments-Container').eq(0).hide();
+		
+		var isAllAppeal = isAllAppealMade(); 
+
+		if(isAllAppeal == 3){
+			$("#makeAnotherAppeal").hide();
+			$("#confirmAppeal").show();
+		} else {
+			$("#makeAnotherAppeal").show();
+			$("#confirmAppeal").hide();
+		}
+
 		$("#confirm-appeal-section").slideDown();
+
 	};
 
 	$('.hotspot .img').on("click", selectCelebrity);
@@ -70,7 +95,8 @@ function CelebSubmit() {
 
 
 	$("#done-btn").on('click', function(){
-		$("#confirm-appeal-section").slideUp();
+		$("#makeAnotherAppeal").hide();
+		$("#confirmAppeal").show();
 	});
 
 	$("#confirm-btn").on('click', function(){
