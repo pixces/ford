@@ -110,6 +110,8 @@ class SocialController extends Controller
             //Proceed knowing you have a logged in user who's authenticated.
             $user_profile = $this->getFacebook()->api('/me');
 
+//                print_r($user_profile); exit;
+
             $media = 'facebook';
             if ($user_profile){
                 $profile_photo = "https://graph.facebook.com/".$user_profile['id']."/picture";
@@ -167,7 +169,7 @@ class SocialController extends Controller
                 $_SESSION[$media]['user_name'] = $user_profile['name'];
                 $_SESSION[$media]['appId'] = Yii::app()->params['FB_APP_ID'];
                 $_SESSION[$media]['image'] = $profile_photo;
-                $_SESSION[$media]['displayName'] = $user_profile['username'];
+                $_SESSION[$media]['displayName'] = $user_profile['name'];
                 $_SESSION[$media]['email'] = $email;
 
                 //close this page now
@@ -428,7 +430,6 @@ class SocialController extends Controller
     			exit;
             } else {
 
-                $client->addScope("https://www.googleapis.com/auth/youtube.readonly");
                 $client->addScope("https://www.googleapis.com/auth/userinfo.email");
                 $client->addScope("https://www.googleapis.com/auth/plus.profile.emails.read");
 
@@ -933,7 +934,7 @@ class SocialController extends Controller
                 $userInfo['email_id'] = isset($profile['email']) ? $profile['email'] : null;
                 $userInfo['dob'] = isset($profile['birthday']) ? $this->__parseDOB($profile['birthday']) : null;
                 $userInfo['city'] = isset($profile['location']['name']) ? $profile['location']['name'] : null;
-                $userInfo['username'] = $profile['username'];
+                $userInfo['username'] = $profile['name'];
                 $userInfo['profile_photo'] = "https://graph.facebook.com/".$userInfo['identifier']."/picture";
                 $userInfo['about_me'] = "";
                 break;

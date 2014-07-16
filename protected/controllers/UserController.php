@@ -96,15 +96,17 @@ class UserController extends Controller
         $modelUserProfile = new UserProfiles;
 
         if($_POST){
+//            print_r($_POST); exit;
             //check if the user already exists in the system
-            $user = User::model()->find('email=:emailId', array(':emailId' => $_POST['user']['email']));
+            $emailId = $this->sanitizeData($_POST['user']['email']);
+            $user = User::model()->find('email=:emailId', array(':emailId' => $emailId));
 
             if (!$user){
                 $username = explode(" ",$this->sanitizeData($_POST['user']['name']));
                 $userObj = array();
                 $userObj['first_name'] = $username[0];
                 $userObj['last_name']  = $username[1];
-                $userObj['email']      = $this->sanitizeData($_POST['user']['email']);
+                $userObj['email']      = $emailId;
                 $userObj['password']   = md5($_POST['user']['password']);
                 $userObj['verification_code'] = md5( $userObj['email']."|".$userObj['first_name']."|".time() );
 
@@ -174,7 +176,7 @@ class UserController extends Controller
                     Yii::log( $error.serialize($_POST));
                 }
             } else {
-                $error = "User ".$_POST['emailid']." already exists. Please login!";
+                $error = "User ".$_POST['user']['email']." already exists. Please login!";
                 Yii::log($error);
                 //throw the error messages and quit
                 $model->addError('email',$error);
@@ -832,5 +834,89 @@ class UserController extends Controller
             $string .= $alphaString[rand(0,strlen($alphaString)-1)];
         }
         return $string;
+    }
+
+
+    public function actionCreatecaptcha(){
+
+        //Let's generate a totally random string using md5
+        $md5_hash = md5(rand(0,999));
+        //We don't need a 32 character long string so we trim it down to 5
+        $security_code = substr($md5_hash, 15, 5);
+
+        //Set the session to store the security code
+        if(isset(Yii::app()->session["security_code"])) {
+            unset(Yii::app()->session["security_code"]);
+        }
+        Yii::app()->session["security_code"] = $security_code;
+
+        //putting it also in the tmp params array
+        Yii::app()->params['security_code'] = $security_code;
+
+        //Set the image width and height
+        $width = 251;
+        $height = 79;
+
+        //Create the image resource
+        $image = ImageCreate($width, $height);
+
+        //We are making three colors, white, black and gray
+        $white = ImageColorAllocate($image, 255, 255, 255);
+        $black = ImageColorAllocate($image, 0, 0, 0);
+        $grey = ImageColorAllocate($image, 204, 204, 204);
+
+        //Make the background black
+        ImageFill($image, 0, 0, $black);
+
+        //Add randomly generated string in white to the image
+        ImageString($image, 30, 40, 25, $security_code, $white);
+
+        //Throw in some lines to make it a little bit harder for any bots to break
+        ImageRectangle($image,0,0,$width-1,$height-1,$grey);
+        imageline($image, 0, $height/rand(2,6), $width, $height/2, $grey);
+        imageline($image, $width/rand(2,6), 0, $width/rand(2,6), $height, $grey);
+
+        //Tell the browser what kind of file is come in
+        header("Content-Type: image/jpeg");
+
+        //Output the newly created image in jpeg format
+        ImageJpeg($image);
+
+        //Free up resources
+        ImageDestroy($image);
+
+        exit;
+    }
+
+    public function actionCheckcaptcha () {
+
+        if(isset($_GET['security_code']) && !empty($_GET['security_code'])) {
+            //check if the session exist and then validate it
+            $cacheCode = '';
+            //if (isset(Yii::app()->params['security_code'])){
+            //    $cacheCode = Yii::app()->params['security_code'];
+            //} else
+            if (isset(Yii::app()->session['security_code'])){
+                $cacheCode = Yii::app()->session['security_code'];
+            }
+
+            Yii::log('cached code for Captcha :'.$cacheCode);
+
+            if (!empty($cacheCode)){
+                if ($_GET['security_code'] == $cacheCode) {
+                    echo "success";
+                } else {
+                    Yii::log('Unable to validate captcha Code:'.$_GET['security_code'].' Cached: '.$cacheCode);
+                    echo "failure";
+                }
+            } else {
+                Yii::log('Captcha is Empty:'.$_GET['security_code'].' Cached: '.$cacheCode);
+                echo "success";
+            }
+            Yii::app()->end();
+        } else {
+            Yii::log('Incomplete params recieved '.json_encode($_GET));
+            echo "failure";
+        }
     }
 }

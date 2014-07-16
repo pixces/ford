@@ -15,6 +15,15 @@
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" type='text/css' />
     <![endif]-->
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/jquery.validate.min.js"></script>
+    <script>
+        var API_HOST = '<?=Yii::app()->params['API_URL']; ?>';
+        var SOCIAL_HOST = '<?=Yii::app()->params['SOCIAL_URL']; ?>';
+        var UGC_GALLERY_ID = '<?=Yii::app()->params['ugcGalleryId']; ?>';
+        var CAPTCHA_URL = '<?=Yii::app()->params['CAPTCHA_URL']; ?>';
+        var SITE_URL = '<?php echo Yii::app()->request->baseUrl; ?>';
+    </script>
 
 </head>
 <body class="<?=$this->page_name; ?>">
@@ -153,7 +162,6 @@
 </div>
 <!-- Footer Block Ends Here -->
 </div>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>
 </body>
 </html>
