@@ -12,6 +12,54 @@ function onm_window_parameters(){
 	
 }; 
 
+function CelebSubmit() {
+	
+	$('.hotspot .img').on("click", function(){
+		$("#confirm-appeal-section").slideUp();
+
+		var submitBoxes = $('.hotspot .img');
+		$.each(submitBoxes, function(i,d){
+			var $this = $(this);
+			if(!$this.hasClass('can-edit')){
+				$this.removeClass("selected");	
+			}
+			var submitBoxId = $this.attr("data-submit-box");
+			$("#" + submitBoxId).hide();
+		});
+
+		var currentSubmitBoxId = $(this).attr("data-submit-box");
+		$("#" + currentSubmitBoxId).show();
+		$(this).addClass("selected");
+	});
+
+
+
+	$(".Celebrity-Comments-Container .big-btn-submit").on("click", function(){
+		var $this = $(this);
+		var submitFor = $this.attr("data-submit-for");
+		var $submitFor = $('#'+submitFor)
+		var celebIcon = $this.attr("data-celeb-icon");
+		var $celebIcon = $("#"+celebIcon);
+
+		$submitFor.addClass("can-edit").find(".make-an-appeal-txt").hide();
+		$celebIcon.addClass('active');
+		$this.parents('.Celebrity-Comments-Container').eq(0).hide();
+		$("#confirm-appeal-section").slideDown();
+
+	});
+
+
+	$("#done-btn").on('click', function(){
+		$("#confirm-appeal-section").slideUp();
+	});
+
+	$("#confirm-btn").on('click', function(){
+		$("#confirm-appeal-section").slideUp();
+	});
+	
+};
+
+
 $(document).ready(function(e){
 	$(".tabContents").hide(); 
 	$(".tabContents:first").show();

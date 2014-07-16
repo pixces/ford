@@ -102,21 +102,33 @@
 		<!-- Hot Spots Starts Here -->
 		<div class="hotspots transition">
 			<div class="hotspot col-first">
-				<div class="img"><div class="edit-tick"><i></i><a href="javascript:void(0);">Edit</a></div><div class="black-transparent-hover"></div><img src="images/rocky-mayur.png" alt="Rocky & Mayur" title="Rocky & Mayur" /><div class="make-an-appeal-txt">&nbsp;</div></div>
+				<div class="img" data-submit-box="first-submit" id="first-celeb">
+				<div class="edit-tick"><i></i><a href="javascript:void(0);">Edit</a></div>
+				<div class="select-celeb"><a href="javascript:void(0);">Click to Select</a></div>
+				<div class="black-transparent-hover"></div><img src="images/rocky-mayur.png" alt="Rocky & Mayur" title="Rocky & Mayur" /><div class="make-an-appeal-txt">Make an Appeal</div></div>
 				<div class="icon"></div>
 				<div class="head">Rocky &amp; Mayur</div>
 				<div class="splitter"></div>
 				<div class="body">Food experts they may be but can they carry a tune?  Give them a couple of lessons in singing. </div>
 			</div>
 			<div class="hotspot col-second">
-				<div class="img"><div class="edit-tick"><i></i><a href="javascript:void(0);">Edit</a></div><div class="black-transparent-hover"></div><img src="images/gaurav-kapoor.png" alt="Rocky & Mayur" title="Rocky & Mayur" /><div class="make-an-appeal-txt">&nbsp;</div></div>
+				<div class="img" data-submit-box="second-submit" id="second-celeb">
+				<div class="edit-tick"><i></i><a href="javascript:void(0);">Edit</a></div>
+				<div class="select-celeb"><a href="javascript:void(0);">Click to Select</a></div>
+				<div class="black-transparent-hover"></div><img src="images/gaurav-kapoor.png" alt="Rocky & Mayur" title="Rocky & Mayur" /><div class="make-an-appeal-txt">Make an Appeal</div>
+				</div>
 				<div class="icon"></div>
 				<div class="head">Gaurav Kapoor</div>
 				<div class="splitter"></div>
 				<div class="body">Food renders this suave commentator speechless.  Can you help him cook up a storm?</div>
 			</div>
 			<div class="hotspot col-three">
-				<div class="img"><div class="edit-tick"><a href="javascript:void(0);">Click to Select</a></div><div class="black-transparent-hover"></div><img src="images/anushka-dandekar.png" alt="Anushka Dandekar" title="Anushka Dandekar" /> <div class="make-an-appeal-txt">Make an Appeal</div></div>
+				<div class="img" data-submit-box="third-submit" id="third-celeb">
+				<div class="edit-tick"><i></i><a href="javascript:void(0);">Edit</a></div>
+				<div class="select-celeb"><a href="javascript:void(0);">Click to Select</a></div>
+				<div class="black-transparent-hover"></div><img src="images/anushka-dandekar.png" alt="Anushka Dandekar" title="Anushka Dandekar" /> 
+					<div class="make-an-appeal-txt">Make an Appeal</div>
+				</div>
 				<div class="icon"></div>
 				<div class="head">Anushka Dandekar</div>
 				<div class="splitter"></div>
@@ -126,35 +138,93 @@
 		<!-- Hot Spots Ends Here -->
        
         <!-- hotspots comments section -->
-        <div class="Celebrity-Comments-Container">
+        <div class="Celebrity-Comments-Container" id="first-submit" style="display:none">
             <div class="col-width-80 yellow-comments-container">
                 <div class="col-width-80 textarea-ct"><textarea class="textarea">Make an appeal to Rocky &amp; Mayur...</textarea></div>
-                <div class="col-width-20 btn-ct"><div class="arrow-right"></div><button class="button big-btn-submit">Submit</button></div>
+                <div class="col-width-20 btn-ct"><div class="arrow-right"></div>
+                	<button class="button big-btn-submit" data-submit-for="first-celeb" data-celeb-icon="first-celeb-icon">Submit</button>
+            	</div>
                 </div>
             <div class="col-width-20">
                 <div class="sayit-voice"><i></i><div class="sayit-voice-text"><span>Don’t feel like writing?</span> Say it with your voice. Call  1800000000</div></div>
                 </div>
         </div>
        
-        <div class="Celebrity-Comments-Container">
+        <div class="Celebrity-Comments-Container" id="second-submit" style="display:none">
             <div class="col-width-80 orange-comments-container">
                 <div class="col-width-80 textarea-ct"><textarea class="textarea">Make an appeal to Gaurav Kapoor...</textarea></div>
-                <div class="col-width-20 btn-ct"><div class="arrow-right"></div><button class="button big-btn-submit">Submit</button></div>
+                <div class="col-width-20 btn-ct"><div class="arrow-right"></div>
+                <button class="button big-btn-submit" data-submit-for="second-celeb" data-celeb-icon="second-celeb-icon">Submit</button></div>
                 </div>
             <div class="col-width-20">
                 <div class="sayit-voice"><i></i><div class="sayit-voice-text"><span>Don’t feel like writing?</span> Say it with your voice. Call  1800000000</div></div>
                 </div>
         </div>
 
-        <div class="Celebrity-Comments-Container">
+        <div class="Celebrity-Comments-Container" id="third-submit" style="display:none">
             <div class="col-width-80 green-comments-container">
                 <div class="col-width-80 textarea-ct"><textarea class="textarea">Make an appeal to Anushka Dandekar...</textarea></div>
-                <div class="col-width-20 btn-ct"><div class="arrow-right"></div><button class="button big-btn-submit">Submit</button></div>
+                <div class="col-width-20 btn-ct"><div class="arrow-right"></div>
+                <button class="button big-btn-submit" data-submit-for="third-celeb" data-celeb-icon="third-celeb-icon">Submit</button></div>
                 </div>
             <div class="col-width-20">
                 <div class="sayit-voice"><i></i><div class="sayit-voice-text"><span>Don’t feel like writing?</span> Say it with your voice. Call  1800000000</div></div>
                 </div>
         </div>
+
+        <div id="confirm-appeal-section" class="confirm-appeal-section" style="display:none">
+        	<div class="arrowDown"></div>
+
+        	<!-- make another apppeal starts -->
+        	<div id="makeAnotherAppeal" class="make-anothter-appeal">
+        			<div class="tick-image"></div>
+        			<div class="text-info">
+        				<div>Thank You for your submission!</div>
+						<div>Remember, you can make upto 3 appeals(one appeal per celeb).</div>
+        			</div>
+
+        			<div class="celeb-select-box">
+        					<div class="celeb-icons">
+        						<a href="javascript:void(0)" id="first-celeb-icon" data-celeb = "first-celeb" class="celeb-icon"></a>
+        						<a href="javascript:void(0)" id="second-celeb-icon" data-celeb = "second-celeb" class="celeb-icon"></a>
+        						<a href="javascript:void(0)" id="third-celeb-icon" data-celeb = "third-celeb" class="celeb-icon"></a>
+        					</div>
+							<div>
+        						<strong>Click on the remaining celebs.</strong>
+        					</div>
+
+        					<div class="or-divider">
+        						<div class="or-line"></div>
+        						<div class="or-text">OR</div>
+        					</div>
+        			</div>
+
+        			<div class="btn-box">
+        				<a href="javascript:void(0)" class="confirm-btn" id="done-btn">No, I'm Done</a>
+        			</div>
+        	</div>
+        	<!-- make another apppeal ends -->
+
+        	<!-- confirm appeal starts  -->
+        	<div id="confirmAppeal" class="confirm-appeal">
+        			<div class="tick-image"></div>
+        			<div class="text-info">
+        				<strong>Thank you.</strong>
+						<div>Confirm your appeal(s) by clicking on the button below.</div>
+        			</div>
+
+        			<div class="btn-box">
+        				<a href="javascript:void(0)" class="confirm-btn" id="confirm-btn">Confirm</a>
+        				<div class="confirm-info">
+        					Once you click confirm you cannot edit your appeals.
+        				</div>
+        			</div>
+        	</div>
+        	<!-- confirm appeal ends -->
+
+        </div>
+
+
             <!-- hotspots comments section -->
 		
 		<!-- SYNC AppLink Starts Here -->
@@ -205,5 +275,11 @@
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>	
    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/css3finalize/4.0.0/jquery.css3finalize.min.js"></script> -->
 <script type="text/javascript" src="js/main.js"></script>
+
+<script>
+	$(function(){
+		CelebSubmit();
+	});
+</script>
 </body>
 </html>

@@ -84,7 +84,7 @@ body{background:#C8C8C8;font-family:'FordAntennaCondWGL-Reg',sans-serif;font-siz
 /* Hot Spots Starts Here */
 .hotspots{background:#ffb94f;min-height:565px;display:table;padding:85px 115px;width:100%;text-align:center;position:relative}
 .hotspots .hotspot{display:table-cell;width:33%;}
-.hotspots .hotspot .img{min-width:177px;min-height:177px;margin-bottom:25px;}
+.hotspots .hotspot .img{min-width:264px;min-height:210px;margin-bottom:25px;}
 .hotspots .hotspot .icon{background:url(../images/hotspots-sprite.png) no-repeat;width:100px;height:55px;left:32%;position:relative;}
 .hotspots .hotspot .head{font-family: 'FordAntennaExtraCondWGL-Bold', serif;font-size:1.250em;margin:5px 0}
 .hotspots .hotspot .splitter{width:43px;height:3px;position:relative;background:#e9a43d;left:42%;}
@@ -322,27 +322,57 @@ button.Col25a6a0 {background:#25a6a0;font-size: 24px;}
 .participateBlock .selection-congrats-message .arrowDown {width: 0; height: 0; border-left: 12px solid transparent;border-right: 12px solid transparent;border-top: 12px solid #36b2ab;bottom: -12px;left: 0px;
 right: 0px;
 margin: 0 auto;}
+
+.black-transparent-hover {
+background: rgba(0, 0, 0, 0.5);
+width: 187px;
+height: 187px;
+position: absolute;
+border-radius: 100%;
+left:0px;
+right: 0px;
+top: 0px;margin: 0 auto;
+display:none;
+}
+
 body.selection .hotspots {background:#bbdad8;}
 body.selection .hotspots div.img {position: relative;}
 body.selection .hotspots div.img img {border-radius:187px;width:187px;}
-body.selection .hotspots .col-first div.img img{border:5px solid #ffb547;}
-body.selection .hotspots .col-second div.img img{border:5px solid #f05a29;}
-body.selection .hotspots .col-three div.img img{border:5px solid #8bc440;}
+body.selection .hotspots .col-first div.img:hover .black-transparent-hover{display:block;border:5px solid #ffb547;}
+body.selection .hotspots .col-second div.img:hover .black-transparent-hover{display:block;border:5px solid #f05a29;}
+body.selection .hotspots .col-three div.img:hover .black-transparent-hover{display:block;border:5px solid #8bc440;}
 body.selection .hotspots .hotspot .icon,body.selection .hotspots .hotspot .edit-tick i,.sayit-voice i{background: url(../images/choose-celebrity-sprite.png) no-repeat;}
-
-body.selection .hotspots .hotspot .edit-tick {position: absolute;margin:0 auto;left:0px;right:0px;top:35%;color:#fff;z-index: 999;width:50%;}
+body.selection .hotspots .hotspot .edit-tick, 
+body.selection .hotspots .hotspot .select-celeb
+{display:none;position: absolute;margin:0 auto;left:0px;right:0px;top:35%;color:#fff;z-index: 999;width:50%;}
 body.selection .hotspots .hotspot .edit-tick i {background-position: -10px -274px;width:42px;height:30px;display: inline-block}
 body.selection .hotspots .hotspot.col-second .edit-tick i {background-position: -10px -320px;}
-body.selection .hotspots .hotspot .edit-tick a {display: block;text-decoration: underline;margin-top:5px;}
+body.selection .hotspots .hotspot .edit-tick a {display: block;text-decoration: underline;margin-top:5px; text-transform:uppercase;}
 .make-an-appeal-txt {color:#73a5a2;font-style: italic;}
-.black-transparent-hover {background: rgba(0, 0, 0, 0.5);
-width: 177px;
-height: 177px;
-position: absolute;
-border-radius: 177px;
-left:0px;
-right: 0px;
-top: 5px;margin: 0 auto;}
+
+
+body.selection .hotspots .col-first div.img:hover .select-celeb,
+body.selection .hotspots .col-second div.img:hover .select-celeb,
+body.selection .hotspots .col-three div.img:hover .select-celeb{
+	display:block;
+}
+
+body.selection .hotspots .col-first div.img.selected:hover .select-celeb,
+body.selection .hotspots .col-second div.img.selected:hover .select-celeb,
+body.selection .hotspots .col-three div.img.selected:hover .select-celeb{
+	display:none;
+}
+
+body.selection .hotspots .col-first div.img.selected.can-edit .edit-tick,
+body.selection .hotspots .col-second div.img.selected.can-edit .edit-tick,
+body.selection .hotspots .col-three div.img.selected.can-edit .edit-tick{
+	display:block;
+}
+
+
+body.selection .hotspots .col-first div.img.selected .black-transparent-hover{display:block;border:5px solid #ffb547;}
+body.selection .hotspots .col-second div.img.selected .black-transparent-hover{display:block;border:5px solid #f05a29;}
+body.selection .hotspots .col-three div.img.selected .black-transparent-hover{display:block;border:5px solid #8bc440;}
 
 body.selection .hotspots .col-second .icon {background-position: 0px -60px;}
 body.selection .hotspots .col-three .icon {background-position: 0px -120px;}
@@ -370,3 +400,114 @@ position: relative;}
 .sayit-voice i {background-position: 0px -185px;width:60px;height:80px;display: inline-block;}
 .sayit-voice div.sayit-voice-text span {font-size:14px;}
 /* selection section ends */
+
+
+
+/* confirm sections */
+.confirm-appeal-section{
+	background:#fff;
+	position:relative;
+}
+
+.confirm-appeal-section .arrowDown {
+width: 0;
+height: 0;
+border-left: 12px solid transparent;
+border-right: 12px solid transparent;
+border-top: 12px solid #bbdad8;
+bottom: -12px;
+left: 0px;
+right: 0px;
+margin: 0 auto;
+}
+
+.confirm-appeal, .make-anothter-appeal{
+	text-align: center;
+	color:#0cb9ab;
+	min-height:350px;
+}
+
+.confirm-appeal-section .text-info{
+	margin-top:15px;
+	line-height:2em;
+}
+
+.confirm-appeal-section .btn-box{
+	color:#000;
+	margin-top:55px;
+}
+
+.confirm-appeal-section .btn-box a.confirm-btn{
+	color:#000;
+	text-transform:uppercase;
+	border:solid 3px #000;
+	width:175px;
+	display:inline-block;
+	font-weight:bold;
+	padding:5px 0px;
+}
+
+.confirm-appeal-section .confirm-info{
+	margin-top:10px;
+	font-size:0.9em;
+}
+
+.confirm-appeal-section .tick-image, 
+.confirm-appeal-section .celeb-icon{
+	background:url(../images/icon-sprite.png) no-repeat 0 0;
+	height:45px;
+	width:44px;
+	margin:auto;
+	margin-top:36px;
+
+}
+
+.confirm-appeal-section .celeb-select-box{
+
+}
+
+.confirm-appeal-section .celeb-icon, 
+.confirm-appeal-section .celeb-icon.active {
+	display:inline-block;
+	background-position: -110px -7px;
+	width:32px;
+	height:32px;
+	cursor:default;
+}
+
+.confirm-appeal-section .celeb-icon.active {
+	background-position: -64px -7px;
+}
+
+.confirm-appeal-section .or-divider{
+	position:relative;
+	margin-top:20px;
+}
+
+.confirm-appeal-section .or-line{
+	position:absolute;
+	width:250px;
+	left:50%;
+	margin-left:-125px;
+	border-top:solid 1px #0cb9ab;
+	top:5px;
+}
+
+.confirm-appeal-section .or-text{
+	color:#000;
+	background:#fff;
+	padding:5px 10px;
+	position:relative;
+	top:-8px;
+	width:40px;
+	margin:0 auto;
+}
+
+.make-anothter-appeal .btn-box{
+	margin-top:0px;
+}
+
+/* end confirm sections */
+
+
+
