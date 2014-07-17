@@ -296,7 +296,7 @@ top: 50px;
 .rejected-appeal-text{background:#dfd7d6;padding:20px 0px 20px 20px;margin-bottom:10px;overflow: hidden;}
 .rejected-appeal-text h6 {font-size: 16px;color:#000;font-family: 'FordAntennaCondWGL-Reg', serif;padding:0px;margin:0px;}
 .rejected-appeal-text p{font-size: 14px;color:#b5b5b5;font-family: 'FordAntennaWGL-RegularItalic', serif;padding:0px;margin:0px;line-height:20px;}
-.confirm-appeal-text .col-full-8 {background:#fff;padding:20px;}
+.confirm-appeal-text .col-full-8 {background:#fff;padding:20px;min-height:140px}
 .entries-container .entries-ul .entries-li .content.two-third-ct .confirm-appeal-text div.btn-ct{width:100%;padding:0px 0px 0px 20px;font-size: 14px;}
 .entries-container .entries-ul .entries-li .content.two-third-ct .confirm-appeal-text div.btn-ct button {padding:5px;width:100%;}
 button {padding:10px 20px;border:0px solid red;font-family: 'FordAntennaExtraCondWGL-Bold', serif;}

@@ -106,6 +106,118 @@ function CelebSubmit() {
 };
 
 
+ var ProfileSubmitAppeal = function() {
+	var submitAppealTemplate = '<div class="content two-third-ct column submit-appeal-box">' + 
+							   '<textarea class="make-appeal-text-area">Make an appeal to {{celebName}}</textarea>' +
+							   '<div class="btn-ct"><div class="arrow-right"></div>' +
+							   '<button class="button orange make-an-appeal-submit">Submit</button></div>' + 
+							   '</div>';
+    
+    var confirmAppealTemplate = '<div class="content two-third-ct column confirm-appeal-box">' + 
+	    							'<div class="confirm-appeal-text">' + 
+	                    				'<div class="col-full-8">{{AppealText}}</div>' + 
+	                    				'<div class="col-full-2">' + 
+	                    					'<div class="btn-ct">' + 
+		                    					'<div class="arrow-right"></div>' + 
+			                    					'<p>ONCE YOU SUBMIT YOUR ENTRY YOU CANNOT CHANGE IT.</p>' + 
+			                    					'<button class="button orange confirm-btn">Confirm</button>' + 
+	                    						'</div>' + 
+	                    					'</div>' +   
+	                    			'</div>' +   	
+	                    		'</div>';
+
+	var moderationTemplate = '<div class="content column">'+
+							 	'<p>{{text}}</p>'+
+							 '</div>' +
+							 '<div class="action-updates under-moderation column">' +
+							 	'<div class="img"><img src="images/under-moderation.png" alt="Under Moderation"></div> ' +
+							 	'Under Moderation' + 
+							 '</div>';
+
+
+    
+     var exports = {
+     	init : function(){
+     		$('.make-an-appeal').on('click', exports.makeAppeal);
+     	},
+
+     	makeAppeal : function(){
+ 			var parentLI = $(this).parents('.entries-li').eq(0);
+ 			var celeb = parentLI.attr('data-celeb');
+ 			parentLI.find('.first-column').remove().end()
+ 			.find('.second-column').remove().end()
+ 			.find('.content').remove();
+ 			var celebName = exports.getCelebName(celeb); 
+ 			var submitAppealHTML = submitAppealTemplate.replace('{{celebName}}',celebName);
+ 			parentLI.append(submitAppealHTML);
+ 			parentLI.find('.make-an-appeal-submit').bind('click', exports.submitAppeal);
+
+		},
+
+     	submitAppeal : function(){
+     		var parentLI = $(this).parents('.entries-li').eq(0);
+     		var celeb = parentLI.attr('data-celeb');
+     		var value = parentLI.find('textarea').val();
+     		parentLI.find('.submit-appeal-box').remove();
+
+     		var appealHTML =  confirmAppealTemplate.replace('{{AppealText}}',value);
+			parentLI.append(appealHTML);     		
+
+			parentLI.find('.confirm-appeal-text .col-full-8').bind('click', exports.editAppeal);
+			parentLI.find('.confirm-btn').bind('click', exports.confirmAppeal);
+
+     	},
+
+     	editAppeal : function(){
+     		var parentLI = $(this).parents('.entries-li').eq(0);
+ 			var celeb = parentLI.attr('data-celeb');
+ 			var value = $(this).html();
+ 			parentLI.find('.confirm-appeal-box').remove();
+ 			var submitAppealHTML = submitAppealTemplate;
+ 			parentLI.append(submitAppealHTML);
+ 			parentLI.find('textarea').val(value);
+			parentLI.find('.make-an-appeal-submit').bind('click', exports.submitAppeal)
+		},
+
+		confirmAppeal : function(){
+			var parentLI = $(this).parents('.entries-li').eq(0);
+			var celeb = parentLI.attr('data-celeb');
+			var value = parentLI.find('.col-full-8').html();
+			parentLI.find('.confirm-appeal-box').remove();
+
+			var confirmationHTML = moderationTemplate.replace('{{text}}',value);
+			parentLI.append(confirmationHTML);
+
+
+
+		},
+
+     	getCelebName : function(celeb){
+     			var celebName = '';
+     			if(celeb == 0){
+     				celebName = "Rocky and Mayur";
+     			}
+
+     			else if(celeb == 1){
+     				celebName = "Gaurav Kapur";
+     			}
+
+     			else if(celeb == 2){
+     				celebName = "Anushka Dandekar";
+     			}
+     			return celebName;
+     	}
+
+
+	};
+
+    return exports;
+
+};
+
+
+
+
 $(document).ready(function(e){
 	$(".tabContents").hide(); 
 	$(".tabContents:first").show();
