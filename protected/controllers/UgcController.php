@@ -63,36 +63,37 @@ class UgcController extends Controller {
             Yii::app()->end();
         }
 
-        $user = Yii::app()->user->getId();
+        $userId = Yii::app()->user->getId();
         $ugcGalleryId = Yii::app()->params['ugcGalleryId'];
+        $content = Yii::app()->params['celebrity'];
         $userSubmissions = 0;
         $submittedForApproval = 0;
         $this->page_name = 'submission';
 
-        $model = new Content;
-        $response = array();
+        //get the contents for the selected user
+        $aParams = array(
+            'user_id' => $userId,
+            'gallery_id' => $ugcGalleryId,
+            'is_ugc' => 1
+        );
 
-        $criteria = new CDbCriteria;
-        $criteria->compare('is_ugc', 1);
-        $criteria->compare('gallery_id', $ugcGalleryId);
-        $criteria->compare('user_id', $user);
-        $content = Content::model()->findAll($criteria);
+        $result = Yii::app()->services->performRequest('/content',$aParams,'GET')->getResponseData(true);
 
-        if ($content) {
-            //check if there is any entry which has already been submitted for approval
-            foreach ($content as $item) {
-                //do this later
-                if ($item->is_submitted == 1) {
-                    $submittedForApproval++;
+        if ($result){
+            foreach($result as $item){
+                $content[$item['channel_name']] = array_merge($content[$item['channel_name']],$item);
+                if ($item['is_submitted'] == 1 ){
+                    $submittedForApproval ++;
                 }
                 $userSubmissions++;
             }
         }
-        $maxUploadAllowed = 0;
+
+        $maxUploadAllowed = 3;
         $pendingUploads = $maxUploadAllowed - $userSubmissions;
 
         if ($submittedForApproval > 0) {
-            //atleast one of the submissions are sent for approval
+            //at-least one of the submissions are sent for approval
             //redirect the user to the profile page
             $this->redirect($this->createAbsoluteUrl('user/profile'));
             Yii::app()->end();
@@ -100,10 +101,11 @@ class UgcController extends Controller {
         //display the current submissionpage
         $this->render($this->page_name, array(
             'content' => $content,
-            'response' => $response,
             'page_name' => $this->page_name,
             'submission' => $userSubmissions,
             'pendingUploads' => $pendingUploads,
+            'userSubmissions' => $userSubmissions,
+            'submittedForApproval' => $submittedForApproval,
             'nav' => $this->getNav(),
             'site' => $this->getSite(),
             'lang' => $this->getLang(),
@@ -115,6 +117,53 @@ class UgcController extends Controller {
             'siteParams' => $this->getSiteParams()
         ));
         Yii::app()->end();
+    }
+
+
+    /**
+     * action Save
+     * saves the content to the database
+     * based on the values passed
+     * $user_id -> loggedIn user
+     * $comment -> content text (title / description)
+     * $channel -> celebrity name
+     * $is_ugc
+     */
+    public function actionSave(){
+        //return error if not a loggedin User
+        if (Yii::app()->user->isGuest) {
+            //throw error
+            $this->_sendResponse(200,json_encode(array('response'=>'false','message'=>'Not Logged In.')));
+            Yii::app()->end();
+        }
+
+        if($_POST){
+            if ($_POST['user_id'] == Yii::app()->user->getId()){
+
+                $params = array();
+                $params['user_id'] = $_POST['user_id'];
+                $params['channel_name'] = $_POST['channel'];
+                $params['title'] = $params['description'] = $this->sanitizeData($_POST['comment']);
+                $params['gallery_id'] = Yii::app()->params['ugcGalleryId'];
+                $params['type'] = 'text';
+                $params['is_ugc'] = isset($_POST['is_ugc']) ? $_POST['is_ugc'] : 1 ;
+
+                $result = $this->postContent($params);
+
+                if ($result['id']){
+                    //data successfully submitted
+                    echo CJavaScript::jsonEncode(array('response'=>'success','message'=>'Content submitted.'));
+                } else {
+                    echo CJavaScript::jsonEncode(array('response'=>'false','message'=>$result));
+                }
+            } else {
+                echo CJavaScript::jsonEncode(array('response'=>'false','message'=>'Loggin session has expired. Please login again'));
+            }
+        } else {
+            echo CJavaScript::jsonEncode(array('response'=>'false','message'=>'Invalid request method found.'));
+        }
+        Yii::app()->end();
+
     }
 
     /**
@@ -220,34 +269,14 @@ class UgcController extends Controller {
         }
     }
 
-    public function getContent(){
-
-    }
-
     /**
      * Must be an ajax call
      * Call to post content to the database
      */
-    public function postContent(){
-        //make sure this is an ajax call
-        //if not user loggedin... return error
-        if (Yii::app()->user->isGuest) {
-            //redirect the user to the
-            echo "Not loggedIn";
-            Yii::app()->end();
-        }
-
-        //prepare content params
-        $content['user_id'] = Yii::app()->user->getId();
-        $content['channel_name'] = $_POST['celeb'];
-        $content['title'] = $content['description'] = $this->sanitizeData($_POST['comment']);
-        $content['gallery_id'] = Yii::app()->params['ugcGalleryId'];
-        $content['type'] = 'text';
-        $content['is_ugc'] = 1;
-
+    public function postContent($data){
         //send data to post the content
-        $result = Yii::app()->services->performRequest('/content',$content,'POST')->getResponseData(true);
-        echo $result;
+        $result = Yii::app()->services->performRequest('/content',$data,'POST')->getResponseData(true);
+        return $result;
         Yii::app()->end();
     }
 

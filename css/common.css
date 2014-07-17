@@ -84,7 +84,7 @@ body{background:#C8C8C8;font-family:'FordAntennaCondWGL-Reg',sans-serif;font-siz
 /* Hot Spots Starts Here */
 .hotspots{background:#ffb94f;min-height:565px;display:table;padding:85px 115px;width:100%;text-align:center;position:relative}
 .hotspots .hotspot{display:table-cell;width:33%;}
-.hotspots .hotspot .img{min-width:177px;min-height:177px;margin-bottom:25px;}
+.hotspots .hotspot .img{min-width:264px;min-height:210px;margin-bottom:25px;}
 .hotspots .hotspot .icon{background:url(../images/hotspots-sprite.png) no-repeat;width:100px;height:55px;left:32%;position:relative;}
 .hotspots .hotspot .head{font-family: 'FordAntennaExtraCondWGL-Bold', serif;font-size:1.250em;margin:5px 0}
 .hotspots .hotspot .splitter{width:43px;height:3px;position:relative;background:#e9a43d;left:42%;}
@@ -93,10 +93,10 @@ body{background:#C8C8C8;font-family:'FordAntennaCondWGL-Reg',sans-serif;font-siz
 .hotspots .hotspot .foot a{border:2px solid #042a28;padding:5px 10px 5px 50px;display:inline-block;color:#000000;cursor:text;width:210px;}
 
 .hotspots .col-second .icon{background:url(../images/hotspots-sprite.png) no-repeat 0 -56px;}
-.hotspots .col-three .icon{background:url(../images/hotspots-sprite.png) no-repeat 0 -114px;}
+.hotspots .col-third .icon{background:url(../images/hotspots-sprite.png) no-repeat 0 -114px;}
 .hotspots .col-first .foot a{background:url(../images/hotspot-icon1.png) no-repeat}
 .hotspots .col-second .foot a{background:url(../images/hotspot-icon2.png) no-repeat}
-.hotspots .col-three .foot a{background:url(../images/hotspot-icon3.png) no-repeat}
+.hotspots .col-third .foot a{background:url(../images/hotspot-icon3.png) no-repeat}
 .hotspots .arrowDown{background:url(../images/hotspots-sprite.png) no-repeat -120px -42px;width:39px;height:23px;display:inline-block;position:absolute;bottom:-20px;left:48%;z-index:98}
 /* Hot Spots Ends Here */
 
@@ -190,7 +190,7 @@ height: 48px;}
 .login-splitter{width:1px;background:#ffffff;min-height:335px;float:left;margin:0 50px;position:relative}
 .login-splitter .arrow{background:url(../images/right-arrow.png) no-repeat;width:12px;height:30px;position:absolute;display:inline-block;top:43%}
 .login-right{float:left;width:35%;vertical-align:middle;text-align:center;margin-top:140px}
-.login-right span{display:block;color:#2a2a2a;font-family: 'FordAntennaCondWGL-Reg', sans-serif;margin-top:5px; margin-bottom: 15px;}
+.login-right span{display:block;color:#2a2a2a;font-family: 'FordAntennaCondWGL-Reg', sans-serif;margin-top:5px;}
 #create-account{font-family: 'FordAntennaExtraCondWGL-Bold', serif;font-size:1.250em;width:auto;padding:10px 25px;border:0 none;background:#f2b04b;margin-right:10px;color:#131313;text-transform:uppercase;margin:0}
 /* Login Page Css Ends Here */
 
@@ -329,29 +329,67 @@ button.Col25a6a0 {background:#25a6a0;font-size: 24px;}
 right: 0px;
 margin: 0 auto;}
 body.submission .hotspots {background:#bbdad8;}
-body.submission .hotspots div.img {position: relative;}
-body.submission .hotspots div.img img {border-radius:187px;width:187px;}
-body.submission .hotspots .col-first div.img img{border:5px solid #ffb547;}
+/*body.submission .hotspots .col-first div.img img{border:5px solid #ffb547;}
 body.submission .hotspots .col-second div.img img{border:5px solid #f05a29;}
-body.submission .hotspots .col-three div.img img{border:5px solid #8bc440;}
+body.submission .hotspots .col-third div.img img{border:5px solid #8bc440;} */
 body.submission .hotspots .hotspot .icon,body.submission .hotspots .hotspot .edit-tick i,.sayit-voice i{background: url(../images/choose-celebrity-sprite.png) no-repeat;}
 
-body.submission .hotspots .hotspot .edit-tick {position: absolute;margin:0 auto;left:0px;right:0px;top:35%;color:#fff;z-index: 999;width:50%;}
-body.submission .hotspots .hotspot .edit-tick i {background-position: -10px -274px;width:42px;height:30px;display: inline-block}
-body.submission .hotspots .hotspot.col-second .edit-tick i {background-position: -10px -320px;}
-body.submission .hotspots .hotspot .edit-tick a {display: block;text-decoration: underline;margin-top:5px;}
-.make-an-appeal-txt {color:#73a5a2;font-style: italic;}
-.black-transparent-hover {background: rgba(0, 0, 0, 0.5);
-width: 177px;
-height: 177px;
+.black-transparent-hover {
+background: rgba(0, 0, 0, 0.5);
+width: 187px;
+height: 187px;
 position: absolute;
-border-radius: 177px;
+border-radius: 100%;
 left:0px;
 right: 0px;
-top: 5px;margin: 0 auto;}
+top: 0px;margin: 0 auto;
+display:none;
+}
 
 body.submission .hotspots .col-second .icon {background-position: 0px -60px;}
-body.submission .hotspots .col-three .icon {background-position: 0px -120px;}
+body.submission .hotspots .col-third .icon {background-position: 0px -120px;}
+body.submission .hotspots .hotspot .splitter {background: #000;}
+body.submission .hotspots {background:#bbdad8;}
+body.submission .hotspots div.img {position: relative;}
+body.submission .hotspots div.img img {border-radius:187px;width:187px;}
+body.submission .hotspots .col-first div.img:hover .black-transparent-hover{display:block;border:5px solid #ffb547;}
+body.submission .hotspots .col-second div.img:hover .black-transparent-hover{display:block;border:5px solid #f05a29;}
+body.submission .hotspots .col-third div.img:hover .black-transparent-hover{display:block;border:5px solid #8bc440;}
+body.submission .hotspots .hotspot .icon,body.submission .hotspots .hotspot .edit-tick i,.sayit-voice i{background: url(../images/choose-celebrity-sprite.png) no-repeat;}
+body.submission .hotspots .hotspot .edit-tick,
+body.submission .hotspots .hotspot .select-celeb
+{display:none;position: absolute;margin:0 auto;left:0px;right:0px;top:35%;color:#fff;z-index: 999;width:50%;}
+body.submission .hotspots .hotspot .edit-tick i {background-position: -10px -274px;width:42px;height:30px;display: inline-block}
+body.submission .hotspots .hotspot.col-second .edit-tick i {background-position: -10px -320px;}
+body.submission .hotspots .hotspot .edit-tick a {display: block;text-decoration: underline;margin-top:5px; text-transform:uppercase;}
+.make-an-appeal-txt {color:#73a5a2;font-style: italic;}
+
+
+body.submission .hotspots .col-first div.img:hover .select-celeb,
+body.submission .hotspots .col-second div.img:hover .select-celeb,
+body.submission .hotspots .col-third div.img:hover .select-celeb{
+	display:block;
+}
+
+body.submission .hotspots .col-first div.img.selected:hover .select-celeb,
+body.submission .hotspots .col-second div.img.selected:hover .select-celeb,
+body.submission .hotspots .col-third div.img.selected:hover .select-celeb{
+	display:none;
+}
+
+body.submission .hotspots .col-first div.img.selected.can-edit .edit-tick,
+body.submission .hotspots .col-second div.img.selected.can-edit .edit-tick,
+body.submission .hotspots .col-third div.img.selected.can-edit .edit-tick{
+	display:block;
+}
+
+
+body.submission .hotspots .col-first div.img.selected .black-transparent-hover{display:block;border:5px solid #ffb547;}
+body.submission .hotspots .col-second div.img.selected .black-transparent-hover{display:block;border:5px solid #f05a29;}
+body.submission .hotspots .col-third div.img.selected .black-transparent-hover{display:block;border:5px solid #8bc440;}
+
+body.submission .hotspots .col-second .icon {background-position: 0px -60px;}
+body.submission .hotspots .col-third .icon {background-position: 0px -120px;}
 body.submission .hotspots .hotspot .splitter {background: #000;}
 .col-width-80,.col-width-20{float:left;}
 .col-width-80 {width:80%;}
@@ -376,3 +414,114 @@ position: relative;}
 .sayit-voice i {background-position: 0px -185px;width:60px;height:80px;display: inline-block;}
 .sayit-voice div.sayit-voice-text span {font-size:14px;}
 /* selection section ends */
+
+
+
+/* confirm sections */
+.confirm-appeal-section{
+	background:#fff;
+	position:relative;
+}
+
+.confirm-appeal-section .arrowDown {
+width: 0;
+height: 0;
+border-left: 12px solid transparent;
+border-right: 12px solid transparent;
+border-top: 12px solid #bbdad8;
+bottom: -12px;
+left: 0px;
+right: 0px;
+margin: 0 auto;
+}
+
+.confirm-appeal, .make-another-appeal{
+	text-align: center;
+	color:#0cb9ab;
+	min-height:350px;
+}
+
+.confirm-appeal-section .text-info{
+	margin-top:15px;
+	line-height:2em;
+}
+
+.confirm-appeal-section .btn-box{
+	color:#000;
+	margin-top:55px;
+}
+
+.confirm-appeal-section .btn-box a.confirm-btn{
+	color:#000;
+	text-transform:uppercase;
+	border:solid 3px #000;
+	width:175px;
+	display:inline-block;
+	font-weight:bold;
+	padding:5px 0px;
+}
+
+.confirm-appeal-section .confirm-info{
+	margin-top:10px;
+	font-size:0.9em;
+}
+
+.confirm-appeal-section .tick-image, 
+.confirm-appeal-section .celeb-icon{
+	background:url(../images/icon-sprite.png) no-repeat 0 0;
+	height:45px;
+	width:44px;
+	margin:auto;
+	margin-top:36px;
+
+}
+
+.confirm-appeal-section .celeb-select-box{
+
+}
+
+.confirm-appeal-section .celeb-icon, 
+.confirm-appeal-section .celeb-icon.active {
+	display:inline-block;
+	background-position: -110px -7px;
+	width:32px;
+	height:32px;
+	cursor:default;
+}
+
+.confirm-appeal-section .celeb-icon.active {
+	background-position: -64px -7px;
+}
+
+.confirm-appeal-section .or-divider{
+	position:relative;
+	margin-top:20px;
+}
+
+.confirm-appeal-section .or-line{
+	position:absolute;
+	width:250px;
+	left:50%;
+	margin-left:-125px;
+	border-top:solid 1px #0cb9ab;
+	top:5px;
+}
+
+.confirm-appeal-section .or-text{
+	color:#000;
+	background:#fff;
+	padding:5px 10px;
+	position:relative;
+	top:-8px;
+	width:40px;
+	margin:0 auto;
+}
+
+.make-another-appeal .btn-box{
+	margin-top:0px;
+}
+
+/* end confirm sections */
+
+
+

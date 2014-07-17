@@ -7,6 +7,7 @@ var pollInterval = 1500;
 var maxTries = 50;
 var tryCount = 1;
 var SOCIALURL = SOCIAL_HOST;
+var SITEURL = SITE_URL;
 
 function onm_window_parameters(){ 
 
@@ -16,6 +17,133 @@ function onm_window_parameters(){
 	documentHeight = $(document).height(); 
 	
 };
+
+function CelebSubmit() {
+	
+	var selectCelebrity = function(){
+		$("#confirm-appeal-section").slideUp();
+		var submitBoxes = $('.hotspot .img');
+        $.each(submitBoxes, function(i,d){
+			var $this = $(this);
+			if(!$this.hasClass('can-edit')){
+				$this.removeClass("selected");	
+			}
+			var submitBoxId = $this.attr("data-submit-box");
+            $("#" + submitBoxId).hide();
+		});
+		var currentSubmitBoxId = $(this).attr("data-submit-box");
+		$("#" + currentSubmitBoxId).show();
+		$(this).addClass("selected");
+	};
+
+
+	var editSubmission = function(){
+		$("#confirm-appeal-section").slideUp();
+		var submitBoxes = $('.hotspot .img');
+		$.each(submitBoxes, function(i,d){
+			var $this = $(this);
+			if(!$this.hasClass('can-edit')){
+				$this.removeClass("selected");	
+			}
+			var submitBoxId = $this.attr("data-submit-box");
+			$("#" + submitBoxId).hide();
+		});
+
+		var currentSubmitBoxId = $(this).parents('.img').eq(0).attr("data-submit-box");
+		$("#" + currentSubmitBoxId).show();
+	};
+
+	var isAllAppealMade = function(){
+		var submitBoxes = $('.hotspot .img');
+		var counter = 0;
+		$.each(submitBoxes, function(i,d){
+			var $this = $(this);
+			if($this.hasClass('can-edit')){
+				counter++;
+			}
+		});
+		return counter;
+	};
+
+
+	var submitAction = function(){
+		var $this = $(this);
+		var submitFor = $this.attr("data-submit-for");
+        var $submitFor = $('#'+submitFor)
+        var celebIcon = $this.attr("data-celeb-icon");
+        var $celebIcon = $("#"+celebIcon);
+
+        //make a call to post the data
+        var channel = $this.attr("data-celeb");
+        var comment = $("#"+channel+"-comment").val();
+        var user_id = $this.attr("data-user");
+        var is_ugc = 1;
+
+        //make the call to save this data
+        $.ajax({
+            type: "POST",
+            cache: false,
+            url: SITEURL + "/ugc/" + "save",
+            data: {user_id: user_id, channel: channel, comment: comment, is_ugc: is_ugc},
+            dataType: "json",
+            success: function(data) {
+                if (data.response === 'false') {
+                    //$(".subscribe-message").text(data.message);
+                    // do something with error;
+                    console.log(data.message);
+                } else {
+                    console.log(data.message);
+
+                    //do all the success actions here
+                    $submitFor.addClass("can-edit").find(".make-an-appeal-txt").hide();
+                    $submitFor.unbind('click',selectCelebrity);
+
+                    $celebIcon.addClass('active');
+                    $this.parents('.Celebrity-Comments-Container').eq(0).hide();
+
+                    var isAllAppeal = isAllAppealMade();
+
+                    if(isAllAppeal == 3){
+                        $("#makeAnotherAppeal").hide();
+                        $("#confirmAppeal").show();
+                    } else {
+                        $("#makeAnotherAppeal").show();
+                        $("#confirmAppeal").hide();
+                    }
+
+                    $("#confirm-appeal-section").slideDown();
+
+                    $(".subscribe-message").text('for subscribing to our newsletter');
+                }
+            },
+            error: function() {
+                console.info("request error please debug");
+                console.info(SITEURL + "/ugc/" + "save");
+                console.info({user_id: user_id, channel: channel, comment: comment, is_ugc: is_ugc});
+            }
+        });
+	};
+
+	$('.hotspot .img').on("click", selectCelebrity);
+	$(".Celebrity-Comments-Container .big-btn-submit").on("click", submitAction);
+	$('.hotspot .img .edit-tick a').on("click", editSubmission);
+
+
+	$("#done-btn").on('click', function(){
+		$("#makeAnotherAppeal").hide();
+		$("#confirmAppeal").show();
+	});
+
+	$("#confirm-btn").on('click', function(){
+
+        //make a call to update the is_submitted = true
+        //for all the posted comments
+
+		$("#confirm-appeal-section").slideUp();
+	});
+
+};
+
 
 $(document).ready(function(e){
 	$(".tabContents").hide(); 

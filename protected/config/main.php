@@ -118,9 +118,9 @@ return array(
         'EMAIL_DEV_TESTING' => false,
         'thumb'             => 'thumb',
         'celebrity'         => array(
-                                    'rocky' => array('name'=>'Rocky & Mayur', 'img' => 'rocky-mayur.png','color'=>'yellow'),
-                                    'gaurav' => array('name' => 'Gaurav Kapoor', 'img' => 'gaurav-kapoor.png','color'=>'orange'),
-                                    'anushka' => array('name' => 'Anushka Dandekar', 'img' => 'anushka-dandekar.png','color'=>'green' )
+                                    'rocky' => array('name'=>'Rocky & Mayur', 'img' => 'rocky-mayur.png','color'=>'yellow','signupText'=>'Food experts they may be but can they carry a tune? Give them a couple of lessons in singing.'),
+                                    'gaurav' => array('name' => 'Gaurav Kapoor', 'img' => 'gaurav-kapoor.png','color'=>'orange','signupText'=>'Food renders this suave commentator speechless. Can you help him cook up a storm?'),
+                                    'anushka' => array('name' => 'Anushka Dandekar', 'img' => 'anushka-dandekar.png','color'=>'green','signupText'=>'Can this beautiful diva take a wicket? Show her how to spin a ball.')
                                 ),
     ),
 );

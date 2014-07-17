@@ -1,4 +1,5 @@
-		<!-- Banner Starts Here -->
+
+        <!-- Banner Starts Here -->
 		<div class="mainBanner">
 			<div class="bannerContainer">
 				<div class="bannerLogo transition"></div>
@@ -11,7 +12,9 @@
 			<div class="videoContainer"></div>			
 		</div>
 		<!-- Banner Ends Here -->
-
+		
+		
+		
 		<!-- Participate Block Starts Here -->
 		<div class="participateBlock">
 			<div class="selection-congrats-message">
@@ -30,62 +33,113 @@
 		
 		<!-- Hot Spots Starts Here -->
 		<div class="hotspots transition">
-			<div class="hotspot col-first">
-				<div class="img"><div class="edit-tick"><a href="javascript:void(0);">Click to Select</a></div><div class="black-transparent-hover"></div><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/rocky-mayur.png" alt="Rocky & Mayur" title="Rocky & Mayur" /><div class="make-an-appeal-txt">Make an Appeal</div></div>
+            <?php
+                $placement = array('first','second','third');
+                $t=0;
+                foreach($content as $celeb => $data ) {
+                ?>
+			<div id="celeb-<?=$celeb; ?>" class="hotspot col-<?=$placement[$t]; ?>">
+				<div class="img <?=isset($data['title']) ? 'selected can-edit' : ''; ?>" data-submit-box="<?=$celeb; ?>-submit" id="<?=$celeb; ?>-celeb">
+				<div class="edit-tick"><i></i><a href="javascript:void(0);">Edit</a></div>
+				<div class="select-celeb"><a href="javascript:void(0);">Click to Select</a></div>
+				<div class="black-transparent-hover"></div><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/<?=$data['img']; ?>" alt="<?=$data['name']; ?>" title="<?=$data['name']; ?>" /><div class="make-an-appeal-txt">Make an Appeal</div></div>
 				<div class="icon"></div>
-				<div class="head">Rocky &amp; Mayur</div>
+				<div class="head"><?=$data['name']; ?></div>
 				<div class="splitter"></div>
-				<div class="body">Food experts they may be but can they carry a tune?  Give them a couple of lessons in singing. </div>
+				<div class="body"><?=$data['signupText']; ?></div>
 			</div>
-			<div class="hotspot col-second">
-				<div class="img"><div class="edit-tick"><a href="javascript:void(0);">Click to Select</a></div><div class="black-transparent-hover"></div><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gaurav-kapoor.png" alt="Rocky & Mayur" title="Rocky & Mayur" /><div class="make-an-appeal-txt">Make an Appeal</div></div>
-				<div class="icon"></div>
-				<div class="head">Gaurav Kapoor</div>
-				<div class="splitter"></div>
-				<div class="body">Food renders this suave commentator speechless.  Can you help him cook up a storm?</div>
-			</div>
-			<div class="hotspot col-three">
-				<div class="img"><div class="edit-tick"><a href="javascript:void(0);">Click to Select</a></div><div class="black-transparent-hover"></div><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/anushka-dandekar.png" alt="Anushka Dandekar" title="Anushka Dandekar" /> <div class="make-an-appeal-txt">Make an Appeal</div></div>
-				<div class="icon"></div>
-				<div class="head">Anushka Dandekar</div>
-				<div class="splitter"></div>
-				<div class="body">Can this beautiful diva take a wicket? Show her how to spin a ball.</div>
-			</div>
+            <?php $t++; } ?>
 		</div>
 		<!-- Hot Spots Ends Here -->
        
         <!-- hotspots comments section -->
-        <div class="Celebrity-Comments-Container">
-            <div class="col-width-80 yellow-comments-container">
-                <div class="col-width-80 textarea-ct"><textarea class="textarea">Make an appeal to Rocky &amp; Mayur...</textarea></div>
-                <div class="col-width-20 btn-ct"><div class="arrow-right"></div><button class="button big-btn-submit">Submit</button></div>
+        <?php
+            $placement = array('first','second','third');
+            $t=0;
+            foreach($content as $celeb => $data ) { ?>
+        <div class="Celebrity-Comments-Container" id="<?=$celeb; ?>-submit" style="display:none">
+            <div class="col-width-80 <?=$data['color']; ?>-comments-container">
+                <div class="col-width-80 textarea-ct">
+                    <textarea id="<?=$celeb; ?>-comment" class="textarea"><?=(isset($data['title']) && !empty($data['title']) ) ? $data['title'] : 'Make an appeal to '.$data['name'].'...'; ?></textarea>
+                </div>
+                <div class="col-width-20 btn-ct"><div class="arrow-right"></div>
+                	<button class="button big-btn-submit" data-submit-for="<?=$celeb; ?>-celeb" data-celeb-icon="<?=$placement[$t]; ?>-celeb-icon" data-celeb="<?=$celeb; ?>" data-user="<?=Yii::app()->user->getId(); ?>">Submit</button>
+            	</div>
                 </div>
             <div class="col-width-20">
                 <div class="sayit-voice"><i></i><div class="sayit-voice-text"><span>Don’t feel like writing?</span> Say it with your voice. Call  1800000000</div></div>
                 </div>
         </div>
-       
-        <div class="Celebrity-Comments-Container">
-            <div class="col-width-80 orange-comments-container">
-                <div class="col-width-80 textarea-ct"><textarea class="textarea">Make an appeal to Gaurav Kapoor...</textarea></div>
-                <div class="col-width-20 btn-ct"><div class="arrow-right"></div><button class="button big-btn-submit">Submit</button></div>
-                </div>
-            <div class="col-width-20">
-                <div class="sayit-voice"><i></i><div class="sayit-voice-text"><span>Don’t feel like writing?</span> Say it with your voice. Call  1800000000</div></div>
-                </div>
-        </div>
+        <?php $t++; } ?>
 
-        <div class="Celebrity-Comments-Container">
-            <div class="col-width-80 green-comments-container">
-                <div class="col-width-80 textarea-ct"><textarea class="textarea">Make an appeal to Anushka Dandekar...</textarea></div>
-                <div class="col-width-20 btn-ct"><div class="arrow-right"></div><button class="button big-btn-submit">Submit</button></div>
-                </div>
-            <div class="col-width-20">
-                <div class="sayit-voice"><i></i><div class="sayit-voice-text"><span>Don’t feel like writing?</span> Say it with your voice. Call  1800000000</div></div>
-                </div>
+        <?php $display = (count($content) == 3 ) ? 'block' : 'none'; ?>
+
+        <div id="confirm-appeal-section" class="confirm-appeal-section" style="display:<?=$display; ?>">
+        	<div class="arrowDown"></div>
+
+            <?php if ($display != 'block') { ?>
+        	<!-- make another apppeal starts -->
+        	<div id="makeAnotherAppeal" class="make-another-appeal">
+        			<div class="tick-image"></div>
+        			<div class="text-info">
+        				<div>Thank You for your submission!</div>
+						<div>Remember, you can make upto 3 appeals(one appeal per celeb).</div>
+        			</div>
+
+        			<div class="celeb-select-box">
+        					<div class="celeb-icons">
+        						<a href="javascript:void(0)" id="first-celeb-icon" data-celeb = "first-celeb" class="celeb-icon"></a>
+        						<a href="javascript:void(0)" id="second-celeb-icon" data-celeb = "second-celeb" class="celeb-icon"></a>
+        						<a href="javascript:void(0)" id="third-celeb-icon" data-celeb = "third-celeb" class="celeb-icon"></a>
+        					</div>
+							<div>
+        						<strong>Click on the remaining celebs.</strong>
+        					</div>
+
+        					<div class="or-divider">
+        						<div class="or-line"></div>
+        						<div class="or-text">OR</div>
+        					</div>
+        			</div>
+
+        			<div class="btn-box">
+        				<a href="javascript:void(0)" class="confirm-btn" id="done-btn">No, I'm Done</a>
+        			</div>
+        	</div>
+        	<!-- make another apppeal ends -->
+            <?php } ?>
+
+        	<!-- confirm appeal starts  -->
+        	<div id="confirmAppeal" class="confirm-appeal">
+        			<div class="tick-image"></div>
+        			<div class="text-info">
+        				<strong>Thank you.</strong>
+						<div>Confirm your appeal(s) by clicking on the button below.</div>
+        			</div>
+
+        			<div class="btn-box">
+        				<a href="javascript:void(0)" class="confirm-btn" id="confirm-btn">Confirm</a>
+        				<div class="confirm-info">
+        					Once you click confirm you cannot edit your appeals.
+        				</div>
+        			</div>
+        	</div>
+        	<!-- confirm appeal ends -->
         </div>
         <!-- hotspots comments section -->
-		
+
 		<!-- SYNC AppLink Starts Here -->
-		<?php $this->widget('SyncBanner'); ?>
+		<div class="SYNCBanner">
+			<div class="SYNCRight transition">
+				<div class="img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/footer-sync-applink-text.png" alt="SYNC AppLink" title="SYNC AppLink" /></div>
+				<div class="content">See all the great things you can do when SYNC™ and your phone get together.</div>
+				<div class="boxLink"><a href="javascript:void(0)">Know More</a></div>
+			</div>
+		</div>
 		<!-- SYNC AppLink Ends Here -->
+
+<script>
+	$(function(){
+		CelebSubmit();
+	});
+</script>
