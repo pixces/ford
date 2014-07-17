@@ -237,7 +237,4 @@ function getUserInfo(social) {
 var SUBMISSION = (function() {
 
 
-
-
-
 })();
