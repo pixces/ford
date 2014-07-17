@@ -117,7 +117,10 @@ return array(
         'EMAIL_TO'          => '',
         'EMAIL_DEV_TESTING' => false,
         'thumb'             => 'thumb',
-                
-        
+        'celebrity'         => array(
+                                    'rocky' => array('name'=>'Rocky & Mayur', 'img' => 'rocky-mayur.png','color'=>'yellow'),
+                                    'gaurav' => array('name' => 'Gaurav Kapoor', 'img' => 'gaurav-kapoor.png','color'=>'orange'),
+                                    'anushka' => array('name' => 'Anushka Dandekar', 'img' => 'anushka-dandekar.png','color'=>'green' )
+                                ),
     ),
 );

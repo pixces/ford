@@ -34,7 +34,7 @@ return CMap::mergeArray(
             'TW_CONSUMER_SECRET'=> 'Gn6NcmK9u7GfhVYE1har4yfbaLgB5rFMJIuBZ9CWy51Tc',
             'GG_CLIENT_ID'      => '167886537206-lorn40ojlllt9ssiumkqu2dh5k4cebgd.apps.googleusercontent.com',
             'GG_CLIENT_SECRET'  => 'UbOi9nP8yB3dZ_Wrix5Ob2FI',
-            'ugcGalleryId'      => 3,
+            'ugcGalleryId'      => 1,
         ),
         'modules'=>array(
             // uncomment the following to enable the Gii tool

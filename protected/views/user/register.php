@@ -58,13 +58,13 @@
             <div class="row">
                 <div class="field">
                     <i class="city-icon"></i>
-                    <input type="text" name="UserProfiles[city]" id="city" placeholder="City" />
+                    <input type="text" name="UserProfile[city]" id="city" placeholder="City" />
                 </div>
             </div>
             <div class="row">
                 <div class="field">
                     <i class="phone-icon"></i>
-                    <input type="text" name="UserProfiles[phone]" id="phone" placeholder="Phone" />
+                    <input type="text" name="UserProfile[phone]" id="phone" placeholder="Phone" />
                 </div>
             </div>
             <div class="note">Minimum 8-16 characters</div>

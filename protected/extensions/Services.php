@@ -301,8 +301,6 @@ class Services extends CApplicationComponent
         //prepare the api url
         $this->createApiUrl($path);
 
-//        echo $this->url;
-
         //log the call url
         Yii::log("Call url: ".$this->url, 'info');
 

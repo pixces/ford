@@ -295,9 +295,19 @@ top: 50px;
 .confirm-appeal-text .col-full-8 {background:#fff;padding:20px;}
 .entries-container .entries-ul .entries-li .content.two-third-ct .confirm-appeal-text div.btn-ct{width:100%;padding:0px 0px 0px 20px;font-size: 14px;}
 .entries-container .entries-ul .entries-li .content.two-third-ct .confirm-appeal-text div.btn-ct button {padding:5px;width:100%;}
-button {padding:10px 20px;border:0px solid red;font-family: 'FordAntennaExtraCondWGL-Bold', serif;}
-button.orange,button.Col25a6a0 {color: #fff;text-transform: uppercase;font-size:18px;}
-button.orange {background:#f2b04b;}
+input[type='submit'],button {padding:10px 20px;border:0px solid red;font-family: 'FordAntennaExtraCondWGL-Bold', serif;}
+button.orange,
+button.Col25a6a0,
+button.yellow,
+button.green,
+input[type='submit'].green,
+input[type='submit'].orange,
+input[type='submit'].yellow{
+    color: #fff;text-transform: uppercase;font-size:18px;
+}
+input[type='submit'].yellow,button.yellow {background:#f2b04b;}
+input[type='submit'].orange,button.orange {background:#f05a29;}
+input[type='submit'].green,button.green {background:#8bc440;}
 button.Col25a6a0 {background:#25a6a0;font-size: 24px;}
 .view-other-entries-container{text-align: center;padding:30px 0px;}
 .view-other-entries {padding:10px 20px;}

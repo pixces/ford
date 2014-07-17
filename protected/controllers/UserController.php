@@ -141,13 +141,13 @@ class UserController extends Controller
                     }
 
                     //prepare additional data to be saved ti db
-
                     $userProfile = array();
                     $userProfile['user_id']             = $model->id;
                     $userProfile['full_name']           = $model->first_name." ".$model->last_name;
                     $userProfile['displayname']         = $model->first_name;
-                    $userProfile['city']                = $this->sanitizeData($_POST['UserProfiles']['city']);
+                    $userProfile['city']                = $this->sanitizeData($_POST['UserProfile']['city']);
                     $userProfile['profile_image']       = $profilePic;
+                    $userProfile['phone']               = $_POST['UserProfile']['phone'];
 
                     $modelUserProfile->attributes = $userProfile;
 
@@ -327,75 +327,33 @@ class UserController extends Controller
             Yii::app()->end();
         }
 
-        $is_public = false;
-        $pendingUpload = $maxUploadAllowed = Yii::app()->params['MAX_USER_UPLOAD'];
+        //basic content array
+        $content = Yii::app()->params['celebrity'];
         $ugcGalleryId = Yii::app()->params['ugcGalleryId'];
         $userSubmissions = 0;
+        $userId = Yii::app()->user->getId();
 
-
-        if (isset($id)){
-            //request for public profile
-            $is_public = true;
-
-        } else {
-            //get the id from the logged-in user
-            $id = Yii::app()->user->getId();
-        }
-
-        if (!$id){
-            //redirect the user to the login action
-
-        }
-
-        $user = $this->loadModel($id);//$user->id=$id=19;
+        //get user details
+        $user = $this->loadModel($userId);
         $profile = UserProfiles::model()->find('user_id=:userId',array(":userId"=>$user->id));
-        //find all content for this user
-        //which is under ugc gallery
-        if($is_public){
-            $content = Content::model()->findAll(
-                'user_id = :user_id AND gallery_id = :galleryId AND status = :status AND is_ugc =:is_ugc',
-                array(':user_id'=>$id,':galleryId'=>$ugcGalleryId,':status'=>'approved',':is_ugc'=>1)
-            );
-        }else{
-            $content = Content::model()->findAll(
-                'user_id = :user_id AND gallery_id = :galleryId AND is_ugc =:is_ugc',
-                array(':user_id'=>$id,':galleryId'=>$ugcGalleryId,':is_ugc'=>1)
-            );
-        }
-        //echo '<pre>';print_r($content);exit;
-        if($content){
-            $cont = $content;
-            foreach($content as &$item){
 
-                $contentVote = ContentVote::model()->count(
-                    'content_id = :content_id',
-                    array(':content_id'=>$item->id,)
-                );
-                $item->vote = $contentVote;
-                $userSubmissions++;
-            }
-        }
+        //get the content submitted by this user
+        $params = array(
+            'user_id' => $userId,
+            'gallery_id' => $ugcGalleryId,
+            'is_ugc' => 1,
+        );
+        //$contentList = Yii::app()->services->performRequest('/content',$params,'GET')->getResponseData(true);
+        //print_r($contentList);
 
-        $pendingUpload = $maxUploadAllowed - $userSubmissions;
 
-        if($is_public){
-            $pendingUpload = 0;
-        }
 
-        //display the profile page now
-        //if ($is_public){
-        //$this->page_name = 'profile';
-        //} else {
-        //$this->page_name = 'myProfile';
-        //}
         $profile_page_name = 'profile';
         $this->page_name = $profile_page_name;
         $this->render($this->page_name, array(
             'model'     => $user,
             'profile'   => $profile,
-            'submission'=> $content,
-            'is_public' => $is_public,
-            'pendingUpload' => $pendingUpload,
+            'content'   => $content,
             'page_name' => $this->page_name,
             'nav'       => $this->getNav(),
             'siteParams'=> $this->getSiteParams(),

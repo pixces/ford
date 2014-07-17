@@ -104,6 +104,23 @@ $(document).ready(function(e){
 		$('#select_file').html($(this).val());
 		//alert($(this).val());
     });
+
+    //on select of the make-appeal button on the profile page
+    $(".action-updates .make-an-appeal").on('click', function(){
+        var celebName = $(this).attr('data-name');
+        var color = $(this).attr('data-color');
+        var form = $("#appeal-form").clone().attr("id", celebName+'appeal-form');
+        //find and replace text values and data_name
+        form.find('.make-appeal-text-area').attr('placeholder','Make an appeal to '+celebName);
+        form.find('.make-appeal-text-area').attr('data-name',celebName);
+        form.find('.make-an-appeal-submit').attr('data-name',celebName);
+        form.find('.make-an-appeal-submit').addClass(color);
+        form.find('.make-an-appeal-submit').addClass('submit-appeal');
+        form.find('.appeal-form').attr("id",'AppealFrm');
+
+        //append this to the container
+        $('.'+celebName+'-appeal-content-area').html(form);
+    });
 });
 
 
@@ -216,3 +233,11 @@ function getUserInfo(social) {
             }
         });
 }
+
+var SUBMISSION = (function() {
+
+
+
+
+
+})();
