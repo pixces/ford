@@ -511,3 +511,50 @@ margin: 0 auto;
 
 
 
+
+/* terms & conditoins, privacy policy  */
+.terms-condtions .mainBanner,.sync-applink .mainBanner {min-height:120px;}
+.terms-condtions .participateBlock .page-title-section,.sync-applink .participateBlock .page-title-section {background:#2bc2ba;overflow:hidden;padding:5% 0em;color:#fff;}
+.terms-condtions .participateBlock .page-title-section h2 {font-size:48px;}
+.page-main-body {padding:6% 10%;background: #eaeaea;}
+.page-main-body p {margin-bottom: 2em;font-size:18px;color:#2a2a2a;line-height: 24px;}
+/* terms & conditoins ends */
+
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+/* sync app link  */
+.mobile-view {display: none;}
+.sync-applink .page-main-body {padding:5%;}
+.sync-applink .participateBlock .page-title-section {min-height: 806px;padding:0% 0em;}
+.sync-applink .participateBlock .sync-applink-bg {background: transparent url(../images/sync-apppage-bg.png) no-repeat 0px bottom;height: 816px;background-size: 100%;}
+.sync-applink .participateBlock .sync-applink-bg h2 {text-align: center;padding:2em;}
+.sync-applink .participateBlock .sync-applink-bg h4 {font-size:30px;color:#fff;text-transform: uppercase;letter-spacing: 1px;font-weight: normal;}
+.sync-applink .participateBlock .sync-applink-bg p {text-align: center;font-size: 18px;padding:0.5em 10em;letter-spacing: 1px;}
+.feature-section {padding:3em 0em;border-bottom: 1px solid #ddd;}
+.feature-section h4 {font-family:  "fordantennacondwgl-reg", sans-serif;font-size:30px;margin-bottom:1em;}
+.feature-section p {font-size: 18px;}
+.feature-section .div60,.feature-section .div40 {float:left;}
+.feature-section .div60 {width:60%;padding:0px 2em;box-sizing: border-box;}
+.feature-section .div40 {width:40%;padding:0px 2em;box-sizing: border-box;}
+.feature-section img {width:auto;}
+.hands-free img {position: relative;margin-top:-3em;}
+.sayyoursong .div60 img {margin:-4em 0px 0px 5em;}
+.sayyoursong .div40 {text-align: right;}
+button .orange {color:#ffb94f;font-family:'FordAntennaWGL-Medium';}
+/* sync app link ends */
+
+
