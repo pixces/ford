@@ -305,4 +305,31 @@ $(document).ready(function(e){
 		$('#select_file').html($(this).val());
 		alert($(this).val());
     });
+    
+    var cities = [
+		"Kolkata",
+		"Chandigarh",
+		"Delhi and NCR",
+		"Ludhiana",
+		"Jaipur",
+		"Hyderabad",
+		"Bangalore",
+		"Cochin",
+		"Chennai",
+		"Ahmedabad",
+		"Pune",
+		"Mumbai",
+		"Kathmandu ( New)"
+	];
+    // setup autocomplete function pulling from cities[] array
+	$('#autocomplete').autocomplete({
+		lookup: cities
+	});
+	
+	$('.sort-view-entries > ul > li').find(".subMenu").hide();
+	$('.sort-view-entries > ul > li').click(function(){
+		$('.sort-view-entries > ul > li .subMenu').hide();
+		$(this).find(".subMenu").toggle();
+	});
+    
 });
