@@ -306,30 +306,50 @@ $(document).ready(function(e){
 		alert($(this).val());
     });
     
-    var cities = [
-		"Kolkata",
-		"Chandigarh",
-		"Delhi and NCR",
-		"Ludhiana",
-		"Jaipur",
-		"Hyderabad",
-		"Bangalore",
-		"Cochin",
-		"Chennai",
-		"Ahmedabad",
-		"Pune",
-		"Mumbai",
-		"Kathmandu ( New)"
-	];
-    // setup autocomplete function pulling from cities[] array
-	$('#autocomplete').autocomplete({
-		lookup: cities
+    $('.sort-view-entries > ul > li').find(".subMenu").hide();
+	$('.sort-view-entries > ul > li').on("click",function(){
+		//$('.sort-view-entries > ul > li .subMenu').hide();
+		var $divsubMenu = $(this).find(".subMenu");
+		if ($divsubMenu.is(':visible')){
+			$divsubMenu.hide();
+		}else{
+			$('.sort-view-entries > ul > li .subMenu').hide();
+			$divsubMenu.toggle();
+		}
 	});
 	
-	$('.sort-view-entries > ul > li').find(".subMenu").hide();
-	$('.sort-view-entries > ul > li').click(function(){
-		$('.sort-view-entries > ul > li .subMenu').hide();
-		$(this).find(".subMenu").toggle();
+	$('.sort-view-entries > ul > li .subMenu').on("click",function(event){
+		event.stopPropagation();
+	});
+	
+	$(".view-entries-blk .shareWith").hide();
+	$(".view-entries-blk .share .shareIcon").on("click",function(){
+		$(".view-entries-blk .actionLogin").hide();
+		var $divshareWith = $(this).parent().next();
+		if ($divshareWith.is(':visible')){
+			$divshareWith.hide();		
+		}else{
+			$(".view-entries-blk .shareWith").hide();
+			$divshareWith.toggle();
+		}
+	});
+	
+	$(".view-entries-blk .actionLogin").hide();
+	$(".view-entries-blk .like a").on("click",function(){
+		$(".view-entries-blk .shareWith").hide();
+		var $divactionLogin = $(this).next();
+		if ($divactionLogin.is(':visible')){
+			$divactionLogin.hide();		
+		}else{
+			$(".view-entries-blk .actionLogin").hide();
+			$divactionLogin.toggle();
+		}
+	});
+	
+	$(".view-entries-blk .playAudio").hide();
+	$(".view-entries-blk .audio-bg .play").on("click",function(){
+		$(this).hide().next().show();
+		//var audioElement = $(this).next().find('player');
 	});
     
 });

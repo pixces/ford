@@ -117,9 +117,14 @@
                     </div>
                     <div class="row">
                         <div class="field">
-                            <i class="city-icon"></i>
+                            <!--i class="city-icon"></i -->
                             <select id="city" name="city">
-                                <option selected>City</option>
+                                <option value="">Select City</option>
+                                <option value="Bangalore">Bangalore</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Kolkota">Kolkota</option>
+                                <option value="Mumbai">Mumbai</option>
                             </select>
                         </div>
                     </div>
@@ -179,7 +184,75 @@
 
     </div>
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery-validation.js"></script>   
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+     $("#register-form").validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                email : {
+                    required: true,
+                    email: true
+                },
+                city : {
+                  required: true    
+                },
+                phone : {
+                  required: true      
+                },
+                password : {
+                  required: true
+                },
+                cpassword : {
+                  required: true,
+                  equalTo : "#password"      
+                },
+                captcha : {
+                  required: true      
+                },
+                termsAndCondition : {
+                  required: true      
+                }
+
+            },
+            messages: {
+                name: {
+                    required: "Enter your name"
+                },
+                email : {
+                    required: "Enter your email",
+                    email : "Enter a valied email address"
+                },
+                city : {
+                  required: "Select a city"    
+                },
+                phone : {
+                  required: "Enter your phone number"      
+                },
+                password : {
+                  required: "Enter a password"       
+                },
+                cpassword : {
+                  required: "Confirm your password"       
+                },
+                captcha : {
+                  required: "Enter the verification code"       
+                },
+                termsAndCondition : {
+                  required: "Please check the terms and conditions"      
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.after( error );
+            },
+            submitHandler: function (form) {
+                return false;
+            }
+        });
+</script>
+
 </body>
 
 </html>
