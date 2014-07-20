@@ -35,9 +35,9 @@
 <div class="header">
     <!-- Logo Starts Here -->
     <div class="logo">
-        <div class="ford-logo"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/ford-logo.png" alt="Ford Logo" title="Ford Logo" /></div>
+        <div class="ford-logo"><a href="<?=$this->nav['home']['url']; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/ford-logo.png" alt="Ford Logo" title="Ford Logo" /></div>
         <div class="logo-splitter"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo-splitter.png" alt="Logo Splitter" title="Logo Splitter" /></div>
-        <div class="sync-link-logo"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sync-link-logo.png" alt="Sync Link Logo" title="Sync Link Logo" /></div>
+        <div class="sync-link-logo"><a href="<?=$this->nav['sync-app']['url']; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sync-link-logo.png" alt="Sync Link Logo" title="Sync Link Logo" /></a></div>
     </div>
     <!-- Logo Ends Here -->
     <!-- Navigation Starts Here -->
@@ -53,26 +53,29 @@
             </li>
             <li class="second">
                 <?php echo CHtml::link('<i class="how-it-works"></i> <span>how it works</span>',
-                    array('gallery/index',
+                    array('pages/display',
                         'lang'=>$this->siteParams['lang'],
                         'env'=>$this->siteParams['env'],
-                        'phase'=>$this->siteParams['phase'])
+                        'phase'=>$this->siteParams['phase'],
+                        'view'=>$this->nav['how-it-works']['page_name'])
                 ); ?>
             </li>
             <li class="">
                 <?php echo CHtml::link('<i class="our-celebs"></i> <span>our celebs</span>',
-                    array('gallery/index',
+                    array('pages/display',
                         'lang'=>$this->siteParams['lang'],
                         'env'=>$this->siteParams['env'],
-                        'phase'=>$this->siteParams['phase'])
+                        'phase'=>$this->siteParams['phase'],
+                        'view'=>$this->nav['our-celebs']['page_name'])
                 ); ?>
             </li>
             <li class="last">
                 <?php echo CHtml::link('<i class="our-cars"></i> <span>our cars</span>',
-                    array('gallery/index',
+                    array('pages/display',
                         'lang'=>$this->siteParams['lang'],
                         'env'=>$this->siteParams['env'],
-                        'phase'=>$this->siteParams['phase'])
+                        'phase'=>$this->siteParams['phase'],
+                        'view'=>$this->nav['our-cars']['page_name'])
                 ); ?>
             </li>
         </ul>
@@ -151,9 +154,33 @@
     <div class="footer-links">
         <div class="ford-go-further"></div>
         <ul>
-            <li class="first"><a href="#">About</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li class="first">
+                <?php echo CHtml::link('About',
+                    array('pages/display',
+                        'lang'=>$this->siteParams['lang'],
+                        'env'=>$this->siteParams['env'],
+                        'phase'=>$this->siteParams['phase'],
+                        'view'=>$this->nav['about']['page_name'])
+                ); ?>
+            </li>
+            <li>
+                <?php echo CHtml::link('Privacy',
+                    array('pages/display',
+                        'lang'=>$this->siteParams['lang'],
+                        'env'=>$this->siteParams['env'],
+                        'phase'=>$this->siteParams['phase'],
+                        'view'=>$this->nav['privacy']['page_name'])
+                ); ?>
+            </li>
+            <li>
+                <?php echo CHtml::link('Terms',
+                    array('pages/display',
+                        'lang'=>$this->siteParams['lang'],
+                        'env'=>$this->siteParams['env'],
+                        'phase'=>$this->siteParams['phase'],
+                        'view'=>$this->nav['terms-conditions']['page_name'])
+                ); ?>
+            </li>
         </ul>
         <p class="copyright">2014 Ford India Private Limited.All rights reserved</p>
     </div>
@@ -163,5 +190,6 @@
 <!-- Footer Block Ends Here -->
 </div>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/jquery.autocomplete.min.js"></script>
 </body>
 </html>

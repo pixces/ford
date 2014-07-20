@@ -75,7 +75,7 @@ class PagesController extends Controller {
                 }
             }
 
-            //echo $this->page_name;
+            //echo $this->page_name
 
             $this->render($this->page_name, array(
                 'page_name' => $this->page_name,

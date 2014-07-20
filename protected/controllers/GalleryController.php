@@ -44,8 +44,7 @@ class GalleryController extends Controller
                 break;
         }
 
-
-        $this->page_name = 'index';
+        $this->page_name = 'gallery';
 
         $this->render($this->page_name, array(
             'page_name'=>$this->page_name,
