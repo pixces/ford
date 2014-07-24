@@ -103,7 +103,7 @@
         			</div>
 
         			<div class="btn-box">
-        				<a href="javascript:void(0)" class="confirm-btn" id="done-btn">No, I'm Done</a>
+        				<a href="javascript:void(0)" class="confirm-btn" id="done-btn" data-user="<?=Yii::app()->user->getId(); ?>">No, I'm Done</a>
         			</div>
         	</div>
         	<!-- make another apppeal ends -->
@@ -118,7 +118,15 @@
         			</div>
 
         			<div class="btn-box">
-        				<a href="javascript:void(0)" class="confirm-btn" id="confirm-btn">Confirm</a>
+                        <?php echo CHtml::link('Confirm',
+                            array(
+                                'ugc/confirm',
+                                'lang'=>$siteParams['lang'],
+                                'env'=>$siteParams['env'],
+                                'phase'=>$siteParams['phase'],
+                            ),
+                            array('id'=>'confirm-btn','class'=>'confirm-btn','data-user'=>Yii::app()->user->getId())
+                        ); ?>
         				<div class="confirm-info">
         					Once you click confirm you cannot edit your appeals.
         				</div>

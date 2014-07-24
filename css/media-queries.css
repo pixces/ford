@@ -885,7 +885,7 @@
     }
     .howitworks-main-body .step-cycle-container .ace-audition {
         top: 360px;
-        ;
+        
         right: -50px;
     }
     .howitworks-main-body .step-cycle-container .wow-celeb {
@@ -925,3 +925,134 @@
     }
 }
 /* how it works ends here */
+
+/* Cars Page Css Starts Here */
+@media only screen and (min-width: 768px) and (max-width: 929px) {
+    .aboutCars .divCenter {
+        max-width: 738px;
+        margin: 0 auto;
+    }
+
+    .aboutCarsDescription .divCenter {
+        max-width: 738px;
+        margin: 0 auto;
+    }
+
+    .aboutCars .left-container .carImage img {
+        width: 340px;
+    }
+
+    .aboutCars .right-container .carImage img {
+        width: 395px;
+    }
+
+    .aboutCarsDescription .responsive-image {
+        width: 355px;
+    }
+
+    .aboutCarsDescription .know-more a {
+        font-size: 1.188em
+    }
+
+    .aboutCarsDescription .know-more a i {
+        position: relative;
+        top: 3px;
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+    .cars-banner {
+        background: url("../images/cars/car-banner-mobile.png") repeat scroll center center #dddddd;
+        min-height: 352px;
+    }
+
+    .aboutCars .left-container, .aboutCars .right-container {
+        width: 100%;
+    }
+
+    .aboutCars .left-container {
+        margin-top: 20px
+    }
+
+    .aboutCars .right-container {
+        margin-bottom: 20px;
+    }
+
+    .aboutCars .splitter {
+        display: none
+    }
+
+    .aboutCars .left-container .carImage, .aboutCars .left-container .carDescription, .aboutCars .right-container .carImage, .aboutCars .right-container .carDescription {
+        position: static;
+        top: 0;
+        text-align: center
+    }
+
+    .aboutCars .left-container .carImage img, .aboutCars .right-container .carImage img {
+        max-width: 300px
+    }
+
+    .aboutCars .left-container {
+        min-height: 200px;
+        max-height: initial
+    }
+
+    .car-or {
+        display: block !important;
+        text-align: center;
+        margin: 25px 0
+    }
+
+    .aboutCarsDescription .car-head {
+        text-transform: uppercase;
+        color: #25a6a0;
+        font-size: 3.125em;
+        font-family: 'FordAntennaExtraCondWGL-BoldIt', sans-serif;
+        display: block !important;
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .aboutCarsDescription .splitter, .aboutCarsDescription .blocks i.bullet {
+        display: none
+    }
+
+    .aboutCarsDescription .left-container, .aboutCarsDescription .right-container {
+        float: none;
+        width: 100%
+    }
+
+    .aboutCarsDescription .left-container .blocks div, .aboutCarsDescription .right-container .blocks div {
+        text-align: center
+    }
+
+    .aboutCarsDescription .left-container .blocks, .aboutCarsDescription .right-container .blocks {
+        margin: 20px 25px
+    }
+
+    .aboutCarsDescription img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .aboutCarsDescription .know-more a {
+        font-size: 1.188em
+    }
+
+    .aboutCarsDescription .know-more a i {
+        position: relative;
+        top: 3px;
+    }
+
+    .aboutCarsDescription {
+        padding-bottom: 70px
+    }
+
+    .aboutCarsDescription .right-container .car-head {
+        border-top: 2px solid #606060;
+        padding-top: 25px;
+        margin: 25px 25px 0 25px;
+    }
+}
+
+/* Cars Page Css Ends Here */

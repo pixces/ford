@@ -9,7 +9,7 @@ var tryCount = 1;
 var SOCIALURL = SOCIAL_HOST;
 var SITEURL = SITE_URL;
 
-function onm_window_parameters() {
+function onm_window_parameters(){ 
 
     windowWidth = $(window).width();
     windowHeight = $(window).height();
@@ -20,12 +20,12 @@ function onm_window_parameters() {
 
 function CelebSubmit() {
 
-    var selectCelebrity = function () {
+    var selectCelebrity = function(){
         $("#confirm-appeal-section").slideUp();
         var submitBoxes = $('.hotspot .img');
-        $.each(submitBoxes, function (i, d) {
+        $.each(submitBoxes, function(i, d){
             var $this = $(this);
-            if (!$this.hasClass('can-edit')) {
+            if (!$this.hasClass('can-edit')){
                 $this.removeClass("selected");
             }
             var submitBoxId = $this.attr("data-submit-box");
@@ -37,12 +37,12 @@ function CelebSubmit() {
         $(this).addClass("selected");
     };
 
-    var editSubmission = function () {
+    var editSubmission = function(){
         $("#confirm-appeal-section").slideUp();
         var submitBoxes = $('.hotspot .img');
-        $.each(submitBoxes, function (i, d) {
+        $.each(submitBoxes, function(i,d){
             var $this = $(this);
-            if (!$this.hasClass('can-edit')) {
+            if(!$this.hasClass('can-edit')){
                 $this.removeClass("selected");
             }
             var submitBoxId = $this.attr("data-submit-box");
@@ -53,12 +53,12 @@ function CelebSubmit() {
         $("#" + currentSubmitBoxId).show();
     };
 
-    var isAllAppealMade = function () {
+    var isAllAppealMade = function(){
         var submitBoxes = $('.hotspot .img');
         var counter = 0;
-        $.each(submitBoxes, function (i, d) {
+        $.each(submitBoxes, function(i,d){
             var $this = $(this);
-            if ($this.hasClass('can-edit')) {
+            if($this.hasClass('can-edit')){
                 counter++;
             }
         });
@@ -125,23 +125,62 @@ function CelebSubmit() {
         });
     };
 
+    /*
+    var submitConfirm = function () {
+        var $this = $(this);
+        var btnId = $this.attr("id");
+        var user_id = $this.attr("data-user");
+        var is_ugc = 1;
+
+        //make the call to save this data
+        $.ajax({
+            type: "POST",
+            cache: false,
+            url: SITEURL + "/ugc/" + "confirm",
+            data: {user_id: user_id, is_ugc: is_ugc},
+            dataType: "json",
+            success: function (data) {
+                console.info(data);
+
+                if(data.response === 'success'){
+                    //redirect to the profile page now
+                    window.location.href = SITEURL+"/user/profile/";
+                } else {
+                    //console.info(data.message);
+                }
+            },
+            error: function () {
+                console.info("request error please debug");
+                //console.info(SITEURL + "/ugc/" + "confirm");
+                //console.info({user_id: user_id, is_ugc: is_ugc});
+            }
+        });
+    };*/
+
     $('.hotspot .img').on("click", selectCelebrity);
     $(".Celebrity-Comments-Container .big-btn-submit").on("click", submitAction);
     $('.hotspot .img .edit-tick a').on("click", editSubmission);
 
+    //confirm submission on click of either of these buttons
+    //$("#done-btn").on('click', submitConfirm);
+    //$("#confirm-btn").on('click', submitConfirm);
 
-    $("#done-btn").on('click', function () {
+    /*$("#done-btn").on('click', function(){
+
         $("#makeAnotherAppeal").hide();
         $("#confirmAppeal").show();
+
+        submitConfirm;
+
     });
 
-    $("#confirm-btn").on('click', function () {
+    $("#confirm-btn").on('click', function(){
 
         //make a call to update the is_submitted = true
         //for all the posted comments
-
+        submitConfirm
         $("#confirm-appeal-section").slideUp();
-    });
+    });*/
 
 };
 
@@ -176,11 +215,11 @@ var ProfileSubmitAppeal = function () {
 
 
     var exports = {
-        init: function () {
+        init: function(){
             $('.make-an-appeal').on('click', exports.makeAppeal);
         },
 
-        makeAppeal: function () {
+        makeAppeal: function(){
             var parentLI = $(this).parents('.entries-li').eq(0);
             var celeb = parentLI.attr('data-celeb');
             parentLI.find('.first-column').remove().end()
@@ -193,7 +232,7 @@ var ProfileSubmitAppeal = function () {
 
         },
 
-        submitAppeal: function () {
+        submitAppeal: function(){
             var parentLI = $(this).parents('.entries-li').eq(0);
             var celeb = parentLI.attr('data-celeb');
             var value = parentLI.find('textarea').val();
@@ -207,7 +246,7 @@ var ProfileSubmitAppeal = function () {
 
         },
 
-        editAppeal: function () {
+        editAppeal: function(){
             var parentLI = $(this).parents('.entries-li').eq(0);
             var celeb = parentLI.attr('data-celeb');
             var value = $(this).html();
@@ -218,7 +257,7 @@ var ProfileSubmitAppeal = function () {
             parentLI.find('.make-an-appeal-submit').bind('click', exports.submitAppeal)
         },
 
-        confirmAppeal: function () {
+        confirmAppeal: function(){
             var parentLI = $(this).parents('.entries-li').eq(0);
             var celeb = parentLI.attr('data-celeb');
             var value = parentLI.find('.col-full-8').html();
@@ -230,17 +269,17 @@ var ProfileSubmitAppeal = function () {
 
         },
 
-        getCelebName: function (celeb) {
+        getCelebName: function(celeb){
             var celebName = '';
-            if (celeb == 0) {
+            if(celeb == 0){
                 celebName = "Rocky and Mayur";
             }
 
-            else if (celeb == 1) {
+            else if(celeb == 1){
                 celebName = "Gaurav Kapur";
             }
 
-            else if (celeb == 2) {
+            else if(celeb == 2){
                 celebName = "Anushka Dandekar";
             }
             return celebName;
@@ -254,15 +293,15 @@ var ProfileSubmitAppeal = function () {
 };
 
 
-$(document).ready(function (e) {
+$(document).ready(function(e){
     $(".tabContents").hide();
     $(".tabContents:first").show();
 
-    $(".tabContaier ul li a").click(function () {
+    $(".tabContaier ul li a").click(function(){
         var activeTab = $(this).attr("href");
         var activeTabbg = $(this).parent().css("background-color");
         $(".tabContaier ul li a").removeClass("active");
-        $(".hotspotTabs").css("background-color", activeTabbg);
+        $(".hotspotTabs").css("background-color",activeTabbg);
         $(this).addClass("active");
         $(".tabContents").hide();
         $(activeTab).fadeIn();
@@ -298,24 +337,24 @@ $(document).ready(function (e) {
         currentImage = nextImage;
         e.preventDefault();
     });
-    $('.button-prev').click(function (e) {
+    $('.button-prev').click(function(e) {
         prevImage = currentImage == firstImage ? lastImage : currentImage - 1;
         sliderContent.animate({ "left": -prevImage * sliderImageWidth });
         currentImage = prevImage;
         e.preventDefault();
     });
 
-    $(".navigationIcon").click(function () {
-        if (windowWidth < 700) {
+    $(".navigationIcon").click(function(){
+        if(windowWidth < 700){
             $(".mainmenu,.synApplink,.navUser").slideToggle('4000');
             $(".overlay").toggle().css({"width": documentWidth, "height": documentHeight});
-        } else {
+        }else{
             $(".mainmenu,.synApplink").slideToggle('4000');
             $(".overlay").toggle().css({"width": documentWidth, "height": documentHeight});
         }
     });
 
-    $(".playVideo").click(function () {
+    $(".playVideo").click(function(){
         videoUrl = $(this).attr("data-video-src");
         videoHeight = $(".mainBanner").height();
 
@@ -323,21 +362,21 @@ $(document).ready(function (e) {
         $(".videoContainer").html('<div class="closeVideo"><i>X</i></div><div><iframe width="100%" height="' + videoHeight + '" frameborder="0" allowfullscreen src="http://www.youtube.com/embed/' + videoUrl + '?autoplay=1"></iframe></div>').slideDown();
     });
 
-    $(document).on("click", ".closeVideo i",function () {
+    $(document).on("click", ".closeVideo i",function(){
         $(".videoContainer").slideUp().empty();
         $(".bannerContainer").fadeIn();
     }).on("change", "#my-file", IMAGE.init);
 
-    $(window).resize(function () {
+    $(window).resize(function() {
         onm_window_parameters();
         $(".mainmenu,.synApplink,.navUser,.overlay").hide();
     });
 
-    $(".upload-block upload-img, .upload-block label").on("click", function () {
+    $(".upload-block upload-img, .upload-block label").on("click",function(){
         $('#my-file').trigger("click");
     });
 
-    $('#my-file').change(function () {
+    $('#my-file').change(function() {
         $('#select_file').html($(this).val());
         //alert($(this).val());
     });
@@ -380,11 +419,50 @@ $(document).ready(function (e) {
     });
 
     $('.sort-view-entries > ul > li').find(".subMenu").hide();
-    $('.sort-view-entries > ul > li').click(function () {
-        $('.sort-view-entries > ul > li .subMenu').hide();
-        $(this).find(".subMenu").toggle();
-    });
+    $('.sort-view-entries > ul > li').on("click",function(){
+		//$('.sort-view-entries > ul > li .subMenu').hide();
+		var $divsubMenu = $(this).find(".subMenu");
+		if ($divsubMenu.is(':visible')){
+			$divsubMenu.hide();
+		}else{
+			$('.sort-view-entries > ul > li .subMenu').hide();
+			$divsubMenu.toggle();
+		}
+	});
+	
+	$('.sort-view-entries > ul > li .subMenu').on("click",function(event){
+		event.stopPropagation();
+	});
+	
+	$(".view-entries-blk .shareWith").hide();
+	$(".view-entries-blk .share .shareIcon").on("click",function(){
+		$(".view-entries-blk .actionLogin").hide();
+		var $divshareWith = $(this).parent().next();
+		if ($divshareWith.is(':visible')){
+			$divshareWith.hide();
+		}else{
+			$(".view-entries-blk .shareWith").hide();
+			$divshareWith.toggle();
+		}
+	});
 
+	$(".view-entries-blk .actionLogin").hide();
+	$(".view-entries-blk .like a").on("click",function(){
+		$(".view-entries-blk .shareWith").hide();
+		var $divactionLogin = $(this).next();
+		if ($divactionLogin.is(':visible')){
+			$divactionLogin.hide();	
+		}else{
+			$(".view-entries-blk .actionLogin").hide();
+			$divactionLogin.toggle();
+		}
+	});
+	
+	$(".view-entries-blk .playAudio").hide();
+	$(".view-entries-blk .audio-bg .play").on("click",function(){
+		$(this).hide().next().show();
+		//var audioElement = $(this).next().find('player');
+	});
 });
 
 

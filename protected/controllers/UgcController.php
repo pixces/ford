@@ -119,7 +119,6 @@ class UgcController extends Controller {
         Yii::app()->end();
     }
 
-
     /**
      * action Save
      * saves the content to the database
@@ -167,6 +166,49 @@ class UgcController extends Controller {
     }
 
     /**
+     * Action Confirm and submit
+     * UGC content for moderation
+     * calls the $this->updateContent
+     *
+     * This method is invoked via AJAX Call
+     *
+     * On confirm action -
+     * 1. All the UGC Content for the logged in user will become eligible for moderation
+     * 2. The UGC flow will complete and now onwards the profile page will become active
+     */
+    public function actionConfirm(){
+
+        if (Yii::app()->user->isGuest) {
+            //redirect the user to the
+            $redirectUrl = Yii::app()->createAbsoluteUrl("user/login", $this->getSiteParams());
+            $this->redirect($redirectUrl);
+            Yii::app()->end();
+        }
+
+        //get the id of the user
+        $user_id = Yii::app()->user->getId();
+
+        //update all user content for is_submitted = 1;
+        if (Content::model()->updateAll(
+            array('is_submitted'=>1, 'status'=>'under_review'),
+            'gallery_id = :gallery_id AND user_id = :user_id AND is_ugc = :is_ugc',
+            array(
+                ':gallery_id'=>Yii::app()->params['ugcGalleryId'],
+                ':user_id' => $user_id,
+                ':is_ugc' => 1
+            )
+        )){
+            //update successful
+            //redirect to profile page
+            $this->redirect(Yii::app()->createAbsoluteUrl("user/profile", $this->getSiteParams()));
+            Yii::app()->end();
+        } else {
+            echo "Cannot update the contents";
+        }
+
+    }
+
+    /**
      * Displays a particular model.
      * @param integer $id the ID of the model to be displayed
      */
@@ -191,9 +233,6 @@ class UgcController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
-
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
 
         if (isset($_POST['Content'])) {
             $model->attributes = $_POST['Content'];
@@ -273,10 +312,23 @@ class UgcController extends Controller {
      * Must be an ajax call
      * Call to post content to the database
      */
-    public function postContent($data){
+    public function postContent($params){
         //send data to post the content
-        $result = Yii::app()->services->performRequest('/content',$data,'POST')->getResponseData(true);
+        $result = Yii::app()->services->performRequest('/content',$params,'POST')->getResponseData(true);
         return $result;
+        Yii::app()->end();
+    }
+
+    /**
+     * This method will be used to pass
+     * data to update the ugc content
+     * in the content table
+     * @param array $params (field => value)
+     */
+    public function updateContent($params){
+        $result = Yii::app()->services->performRequest('/update/content',$params,'POST')->getResponseData(true);
+        return $result;
+        exit;
         Yii::app()->end();
     }
 

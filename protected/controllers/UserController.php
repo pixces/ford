@@ -73,9 +73,8 @@ class UserController extends Controller
      * Default/Index landing page
      */
     public function actionIndex(){
-        //create absolute url for redirection
-        $this->redirect($this->createAbsoluteUrl('user/login'));
-        Yii::app()->end();
+        //call the participate action
+        $this->__participate();
     }
 
     /**
@@ -214,7 +213,6 @@ class UserController extends Controller
         }
     }
 
-
     /**
      * Login Action
      * Check if the user is already logged in
@@ -223,11 +221,12 @@ class UserController extends Controller
      */
     public function actionLogin(){
 
+        //redirect user if already loggedin
         if(!Yii::app()->user->isGuest){
-            $this->isContentSubmitted(Yii::app()->user->getId());
-            Yii::app()->end();
+            $this->__participate();
         }
 
+        //do login action
         $model = new LoginForm;
         $this->page_name = 'login';
 
@@ -237,8 +236,7 @@ class UserController extends Controller
             $data = $this->sanitizeData($_POST);
             $model->attributes= $data;
 
-            if($model->validate() && $model->login())
-            {
+            if($model->validate() && $model->login()){
                 //now create a new cookie to enable voting
                 $user = User::model()->findByPk(Yii::app()->user->getId());
                 $name = $user->first_name." ".$user->last_name;
@@ -250,8 +248,10 @@ class UserController extends Controller
                 $cookie->path = "/";
                 Yii::app()->request->cookies['userVote'] = $cookie;
 
-                $this->isContentSubmitted(Yii::app()->user->getId());
+                $this->__participate();
                 Yii::app()->end();
+            } else {
+                Yii::app()->user->setFlash('error', 'Invalid Username or Password.');
             }
         }
 
@@ -275,63 +275,25 @@ class UserController extends Controller
     }
 
     /**
-     * Method to redirect users based on their submissions
-     * @param $userId
-     */
-
-    public function isContentSubmitted($userId)
-    {
-        $criteria = new CDbCriteria;
-        $criteria->compare('user_id',$userId);
-        $criteria->compare('is_submitted', 1);
-        $contentCount = Content::model()->count($criteria);
-
-        if($contentCount > 0)
-        {
-            // redirect to profile page
-            $redirectUrl = Yii::app()->createAbsoluteUrl("user/profile",$this->getSiteParams());
-
-        } else {
-            // redirect to Submission page
-            $redirectUrl = Yii::app()->createAbsoluteUrl("ugc/submission",$this->getSiteParams());
-        }
-        $this->redirect($redirectUrl);
-    }
-
-
-    /**
-     * Check if the user is already loggedin
-     * redirect the user to the sbumission page
-     * else redirect the use to the participate page
-     */
-    public function actionParticipate(){
-
-        if(!Yii::app()->user->isGuest){
-            $this->isContentSubmitted(Yii::app()->user->getId());
-            Yii::app()->end();
-        } else {
-            $this->redirect(Yii::app()->createAbsoluteUrl("user/login",$this->getSiteParams()));
-        }
-        Yii::app()->end();
-    }
-
-    /**
      * Display user profile after login
      * @param null $id
      */
     public function actionProfile($id=null){
 
-        //check for user login
-        if(Yii::app()->user->isGuest){
-            $this->redirect(Yii::app()->createAbsoluteUrl("user/login",$this->getSiteParams()));
-            Yii::app()->end();
+        //check if user is logged in
+        $this->__verifyLogin();
+
+        $userId = Yii::app()->user->getId();
+        //get the value of isContentSubmitted;
+        if (!$this->__isContentSubmitted($userId)){
+            $this->redirect( Yii::app()->createAbsoluteUrl("ugc/submission",$this->getSiteParams()) );
         }
 
         //basic content array
         $content = Yii::app()->params['celebrity'];
         $ugcGalleryId = Yii::app()->params['ugcGalleryId'];
         $userSubmissions = 0;
-        $userId = Yii::app()->user->getId();
+
 
         //get user details
         $user = $this->loadModel($userId);
@@ -345,8 +307,6 @@ class UserController extends Controller
         );
         //$contentList = Yii::app()->services->performRequest('/content',$params,'GET')->getResponseData(true);
         //print_r($contentList);
-
-
 
         $profile_page_name = 'profile';
         $this->page_name = $profile_page_name;
@@ -363,9 +323,6 @@ class UserController extends Controller
             ),
         ));
     }
-
-
-
 
     /**
      * Profile Edit Action
@@ -794,7 +751,6 @@ class UserController extends Controller
         return $string;
     }
 
-
     public function actionCreatecaptcha(){
 
         //Let's generate a totally random string using md5
@@ -877,4 +833,64 @@ class UserController extends Controller
             echo "failure";
         }
     }
+
+
+    /**
+     * Private Helper methods
+     */
+
+    /**
+     * Method to Verify is the user is loggedin
+     * redirect appropriately
+     *
+     * @return bool
+     */
+    private function __verifyLogin(){
+        if(Yii::app()->user->isGuest){
+            $redirectUrl = Yii::app()->createAbsoluteUrl("user/login",$this->getSiteParams());
+            $this->redirect($redirectUrl);
+        }
+        return true;
+    }
+
+    /**
+     * Check if atleast one User content
+     * is submited for moderation
+     * @param  int $userId
+     * @return int $count
+     */
+    private function __isContentSubmitted($userId)
+    {
+        $criteria = new CDbCriteria;
+        $criteria->compare('user_id',$userId);
+        $criteria->compare('is_submitted', 1);
+        $count = Content::model()->count($criteria);
+        return $count;
+    }
+
+    /**
+     * Check if the user is already loggedin
+     * redirect the user to the sbumission page
+     * else redirect the use to the participate page
+     */
+    public function __participate(){
+
+        //check if user is logged in
+        $this->__verifyLogin();
+
+        //get the value of isContentSubmitted;
+        if ($this->__isContentSubmitted(Yii::app()->user->getId())){
+            // redirect to profile page
+            $redirectUrl = Yii::app()->createAbsoluteUrl("user/profile",$this->getSiteParams());
+        } else {
+            // redirect to Submission page
+            $redirectUrl = Yii::app()->createAbsoluteUrl("ugc/submission",$this->getSiteParams());
+        }
+
+        //redirect accordingly
+        $this->redirect($redirectUrl);
+        Yii::app()->end();
+
+    }
+
 }

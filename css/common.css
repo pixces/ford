@@ -2298,11 +2298,14 @@ button .orange {
     margin-top: -5px;
     font-size: 1.306em;
     font-family: 'FordAntennaCondWGL-Bold', serif;
+    position: relative
 }
 .view-entries-blk .entries-list .action .share {
-    float: right
+    float: right;
+    position: relative
 }
-.view-entries-blk .entries-list .action .like i {
+
+.view-entries-blk .entries-list .action .like i.likeIcon {
     background-position: -149px -104px;
     display: inline-block;
     height: 25px;
@@ -2318,7 +2321,8 @@ button .orange {
 .view-entries-blk .anushka-dandekar .action .like a {
     color: #8cd850
 }
-.view-entries-blk .entries-list .action .share i {
+
+.view-entries-blk .entries-list .action .share i.shareIcon {
     background-position: -190px -104px;
     display: inline-block;
     height: 27px;
@@ -2333,21 +2337,24 @@ button .orange {
     display: inline-block;
     width: 40px;
     height: 40px;
-    margin-top: 15px
+    margin-top: 15px;
+    cursor: pointer
 }
 .view-entries-blk .rocky-mayur .audio-bg i {
     background: url(../images/view-all-entries-sprite.png) no-repeat -2px -96px;
     display: inline-block;
     width: 40px;
     height: 40px;
-    margin-top: 15px
+    margin-top: 15px;
+    cursor: pointer
 }
 .view-entries-blk .anushka-dandekar .audio-bg i {
     background: url(../images/view-all-entries-sprite.png) no-repeat -48px -96px;
     display: inline-block;
     width: 40px;
     height: 40px;
-    margin-top: 15px
+    margin-top: 15px;
+    cursor: pointer
 }
 .load-more {
     width: auto;
@@ -2365,7 +2372,102 @@ button .orange {
     border: 1px solid #f2b04b;
     padding: 5px 20px
 }
-/* View Entries Page Css ends Here */
+
+.view-entries-blk .shareWith {
+    width: 155px;
+    height: auto;
+    background: #ffffff;
+    position: absolute;
+    z-index: 99;
+    padding: 10px 0 10px 11px;
+    border: 1px solid #dedede;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    left: -65px;
+    top: -62px;
+    display: none
+}
+
+.view-entries-blk .shareWith ul {
+    list-style: none;
+}
+
+.view-entries-blk .shareWith ul li {
+    float: left;
+    line-height: 15px;
+    margin-right: 10px;
+}
+
+.view-entries-blk .shareWith ul li a {
+    display: block
+}
+
+.view-entries-blk .shareWith ul li i.facebook {
+    background: url("../images/footer-sprite.png") no-repeat;
+    display: inline-block;
+    height: 37px;
+    width: 37px;
+}
+
+.view-entries-blk .shareWith ul li i.twitter {
+    background: url("../images/footer-sprite.png") no-repeat -46px 0;
+    display: inline-block;
+    height: 37px;
+    width: 37px;
+}
+
+.view-entries-blk .shareWith ul li i.tube {
+    background: url("../images/footer-sprite.png") no-repeat -92px 0;
+    display: inline-block;
+    height: 37px;
+    width: 37px;
+}
+
+.view-entries-blk .actionLogin {
+    width: 155px;
+    height: auto;
+    background: #ffffff;
+    position: absolute;
+    z-index: 99;
+    padding: 10px;
+    border: 1px solid #dedede;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    left: -65px;
+    top: -110px;
+    display: none
+}
+
+.view-entries-blk .actionLogin .field {
+    text-align: left
+}
+
+.view-entries-blk .actionLogin .field input {
+    height: 30px;
+    padding: 2px 5px;
+    font-size: 0.55em;
+    font-family: 'FordAntennaCondWGL-Reg', sans-serif
+}
+
+.view-entries-blk .actionLogin .field input#submit {
+    font-size: 0.55em;
+    font-family: 'FordAntennaCondWGL-Reg', sans-serif;
+    padding: 5px 10px;
+    height: auto
+}
+
+.view-entries-blk .playAudio {
+    margin-top: 23px;
+    display: none
+}
+
+.view-entries-blk .playAudio audio {
+    width: 178px
+}
+
+/* View Entries Page Css Ends Here */
 
 /* how it works */
 
@@ -2629,3 +2731,290 @@ button .orange {
     padding: 0px 0px 0px 20px;
 }
 /* how it works ends */
+
+form .error {
+    background: #fbb099 !important;
+}
+
+form label.error, .errorMessage {
+    color: #ff0000;
+    background: none !important;
+    padding-top: 5px;
+    display: block;
+    text-align: left;
+}
+
+.errorMessage {
+    color: #ff0000;
+    background: none !important;
+    padding-bottom: 15px;
+    display: block;
+    text-align: left;
+}
+
+/* Cars Page Css Ends Here */
+.our-cars .mainBanner {
+    min-height: 126px;
+    background-position: 0 -168px
+}
+
+.cars-banner {
+    background: #dddddd url(../images/cars/cars-banner.png) no-repeat center center;
+    min-height: 284px
+}
+
+.cars-banner div {
+    text-align: center;
+    font-family: 'FordAntennaExtraCondWGL-BoldIt', sans-serif;
+    font-size: 3.125em;
+    color: #ffffff
+}
+
+.cars-banner .cars-icon {
+    min-height: 130px;
+    max-height: 130px;
+    padding: 25px 0
+}
+
+.cars-banner .cars-splitter {
+    background: url(../images/cars/car-banner-arrow.png) no-repeat top center;
+    padding-bottom: 25px;
+}
+
+.aboutCars {
+    background: #dddddd;
+    width: 100%;
+    display: inline-block;
+    position: relative
+}
+
+.aboutCars .divCenter {
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+.aboutCars .left-container {
+    width: 50%;
+    float: left;
+    min-height: 400px;
+    max-height: 400px
+}
+
+.aboutCars .right-container {
+    width: 48%;
+    float: left;
+}
+
+.aboutCars .splitter {
+    background: #9cc0be;
+    float: left;
+    max-width: 2px;
+    min-width: 2px;
+    min-height: 305px;
+    max-height: 305px;
+    margin-top: 100px
+}
+
+.aboutCars .splitter i {
+    position: relative;
+    background: url(../images/cars/cars-sprite.png) no-repeat 0 0px;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    left: -26px;
+    top: -54px
+}
+
+.aboutCars .left-container .carImage {
+    position: relative;
+    top: -65px
+}
+
+.aboutCars .right-container .carImage {
+    position: relative;
+    top: -35px
+}
+
+.aboutCars .left-container .carDescription {
+    position: relative;
+    top: -55px
+}
+
+.aboutCars .right-container .carDescription {
+    position: relative;
+    top: -20px
+}
+
+.aboutCars .left-container .carDescription div, .aboutCars .right-container .carDescription div {
+    text-align: center
+}
+
+.aboutCars .left-container .carDescription .head, .aboutCars .right-container .carDescription .head {
+    font-family: 'FordAntennaCondWGL-Bold', serif;
+    font-size: 1.875em;
+    line-height: 45px
+}
+
+.aboutCars .left-container .carDescription .sub-head, .aboutCars .right-container .carDescription .sub-head {
+    font-family: 'FordAntennaCondWGL-Reg', sans-serif;
+    font-size: 1.125em;
+}
+
+.aboutCars .left-container .carDescription .sub-head span, .aboutCars .right-container .carDescription .sub-head span {
+    border-top: 1px solid #9cc0be;
+    padding: 7px 0;
+    display: inline-block
+}
+
+.aboutCars .left-container .carDescription .know-more a, .aboutCars .right-container .carDescription .know-more a {
+    font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+    font-size: 1.643em;
+    background: #25a6a0;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 25px;
+    margin: 10px 0
+}
+
+.aboutCars .left-container .carDescription .know-more a i, .aboutCars .right-container .carDescription .know-more a i {
+    background: url(../images/cars/cars-sprite.png) no-repeat -69px 0px;
+    width: 13px;
+    height: 20px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.aboutCarsDescription {
+    background: #eaeaea;
+    width: auto;
+    overflow: hidden;
+    margin-top: -4px;
+    padding-bottom: 120px
+}
+
+.aboutCarsDescription .divCenter {
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+.aboutCarsDescription .left-container {
+    width: 50%;
+    float: left;
+}
+
+.aboutCarsDescription .right-container {
+    width: 48%;
+    float: left;
+}
+
+.aboutCarsDescription .left-container .blocks {
+    width: auto;
+    padding: 20px 0;
+    border-bottom: 2px solid #cacaca;
+    margin: 20px 25px 20px 0
+}
+
+.aboutCarsDescription .right-container .blocks {
+    width: auto;
+    padding: 20px 0;
+    border-bottom: 2px solid #cacaca;
+    margin: 20px 0 20px 25px
+}
+
+.aboutCarsDescription .left-container .blocks div {
+    text-align: right
+}
+
+.aboutCarsDescription .right-container .blocks div {
+    text-align: left
+}
+
+.aboutCarsDescription .blocks div.image {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.aboutCarsDescription .blocks div.head {
+    font-family: 'FordAntennaCondWGL-Bold', serif;
+    font-size: 1.250em;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    position: relative
+}
+
+.aboutCarsDescription .blocks div.sub-head {
+    font-size: 1.125em;
+    padding-bottom: 30px;
+}
+
+.no-border {
+    border: 0 none !important
+}
+
+.aboutCarsDescription .splitter {
+    background: #9cc0be;
+    float: left;
+    max-width: 2px;
+    min-width: 2px;
+    min-height: 2050px;
+    max-height: 2050px;
+    position: relative
+}
+
+.aboutCarsDescription .splitter i {
+    position: absolute;
+    background: url(../images/cars/cars-sprite.png) no-repeat 0 0px;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    left: -26px;
+    bottom: -54px
+}
+
+.aboutCarsDescription .know-more {
+    text-align: center
+}
+
+.aboutCarsDescription .know-more a, .aboutCars .aboutCarsDescription .know-more a {
+    font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+    font-size: 1.643em;
+    background: #25a6a0;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 25px;
+    margin: 10px 0
+}
+
+.aboutCarsDescription .know-more a i {
+    background: url(../images/cars/cars-sprite.png) no-repeat -69px 0px;
+    width: 13px;
+    height: 20px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.aboutCarsDescription .right-container .know-more {
+    margin-top: 74px
+}
+
+.aboutCarsDescription .blocks i.bullet {
+    background: url(../images/cars/cars-sprite.png) no-repeat -69px -34px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+}
+
+.aboutCarsDescription .left-container .blocks i.bullet {
+    right: -34px;
+    top: 5px
+}
+
+.aboutCarsDescription .right-container .blocks i.bullet {
+    left: -33px;
+    top: 5px
+}
+
+/* Cars Page Css Ends Here */

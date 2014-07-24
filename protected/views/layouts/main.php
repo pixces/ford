@@ -17,6 +17,7 @@
     <![endif]-->
     <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/jquery.autocomplete.min.js"></script>
     <script>
         var API_HOST = '<?=Yii::app()->params['API_URL']; ?>';
         var SOCIAL_HOST = '<?=Yii::app()->params['SOCIAL_URL']; ?>';
@@ -35,9 +36,9 @@
 <div class="header">
     <!-- Logo Starts Here -->
     <div class="logo">
-        <div class="ford-logo"><a href="<?=$this->nav['home']['url']; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/ford-logo.png" alt="Ford Logo" title="Ford Logo" /></div>
+        <div class="ford-logo"><a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/ford-logo.png" alt="Ford Logo" title="Ford Logo" /></div>
         <div class="logo-splitter"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo-splitter.png" alt="Logo Splitter" title="Logo Splitter" /></div>
-        <div class="sync-link-logo"><a href="<?=$this->nav['sync-app']['url']; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sync-link-logo.png" alt="Sync Link Logo" title="Sync Link Logo" /></a></div>
+        <div class="sync-link-logo"><a href="<?=$this->nav['home']['url']; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sync-link-logo.png" alt="Sync Link Logo" title="Sync Link Logo" /></a></div>
     </div>
     <!-- Logo Ends Here -->
     <!-- Navigation Starts Here -->
@@ -121,7 +122,7 @@
     <!-- Login / Register Ends Here -->
     <!-- SYN AppLink Starts Here -->
     <div class="synApplink">
-        <a href="javascript:void(0)"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sync-applink-text.png" alt="SYN AppLink" title="SYN AppLink" /></a>
+        <a href="<?=$this->nav['sync-app']['url']; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sync-applink-text.png" alt="SYN AppLink" title="SYN AppLink" /></a>
     </div>
     <!-- SYN AppLink Ends Here -->
 </div>
@@ -190,6 +191,5 @@
 <!-- Footer Block Ends Here -->
 </div>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/jquery.autocomplete.min.js"></script>
 </body>
 </html>

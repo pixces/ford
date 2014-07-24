@@ -340,6 +340,7 @@ class Services extends CApplicationComponent
 
         //create calls
         $feed = curl_init();
+
         curl_setopt_array($feed, $options);
 
         // execute

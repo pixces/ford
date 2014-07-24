@@ -37,7 +37,7 @@
 			<div class="divCenter">
 				<div class="entries-list rocky-mayur transition">
 					<div class="user-details">
-						<div class="user-pic"><img src="images/user-small-icon.png" /> <span>Tarun Jaiswal</span></div>
+						<div class="user-pic"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/user-small-icon.png" /> <span>Tarun Jaiswal</span></div>
 						<div class="mid-icon"><i></i></div>
 						<div class="celebrity-type"><i></i> <span>Rocky &amp; Mayur</span></div>
 					</div>
@@ -45,27 +45,76 @@
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.mollit anim id est laborum."
 					</div>
 					<div class="action">
-						<div class="like"><a href="javascript:void(0)"><i></i> 21</a></div>
-						<div class="share"><a href="javascript:void(0)"><i></i></a></div>
+						<div class="like">
+							<a href="javascript:void(0)"><i class="likeIcon"></i> 21</a>
+							<div class="actionLogin">
+								<div class="row no-margin">
+									<div class="field">
+										<input type="text" placeholder="Login" id="login" name="login">
+										<input type="password" placeholder="Password" id="password" name="password">
+										<input type="submit" value="Login" id="submit" name="submit">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="share">
+							<a href="javascript:void(0)"><i class="shareIcon"></i></a>
+							<div class="shareWith">
+								<ul>
+									<li><a href="javascript:void(0)"><i class="facebook"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="twitter"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="tube"></i></a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="entries-list anushka-dandekar transition">
 					<div class="user-details">
-						<div class="user-pic"><img src="images/user-small-icon.png" /> <span>Tarun Jaiswal</span></div>
+						<div class="user-pic"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/user-small-icon.png" /> <span>Tarun Jaiswal</span></div>
 						<div class="mid-icon"><i></i></div>
 						<div class="celebrity-type"><i></i> <span>Anushka Dandekar</span></div>
 					</div>
 					<div class="user-description audio-bg">
 						<i class="play"></i>
+						<div class="playAudio">
+							<audio controls>
+								<source src="images/horse.mp3" type="audio/mpeg">
+								<source src="images/horse.ogg" type="audio/ogg">
+								<embed height="50" width="100" src="horse.mp3">
+								Your browser does not support this audio format.
+							</audio>
+						</div>
+
 					</div>
 					<div class="action">
-						<div class="like"><a href="javascript:void(0)"><i></i> 21</a></div>
-						<div class="share"><a href="javascript:void(0)"><i></i></a></div>
+						<div class="like">
+							<a href="javascript:void(0)"><i class="likeIcon"></i> 21</a>
+							<div class="actionLogin">
+								<div class="row no-margin">
+									<div class="field">
+										<input type="text" placeholder="Login" id="login" name="login">
+										<input type="password" placeholder="Password" id="password" name="password">
+										<input type="submit" value="Login" id="submit" name="submit">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="share">
+							<a href="javascript:void(0)"><i class="shareIcon"></i></a>
+							<div class="shareWith">
+								<ul>
+									<li><a href="javascript:void(0)"><i class="facebook"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="twitter"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="tube"></i></a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="entries-list gaurav-kapur transition">
 					<div class="user-details">
-						<div class="user-pic"><img src="images/user-small-icon.png" /> <span>Tarun Jaiswal</span></div>
+						<div class="user-pic"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/user-small-icon.png" /> <span>Tarun Jaiswal</span></div>
 						<div class="mid-icon"><i></i></div>
 						<div class="celebrity-type"><i></i> <span>Gaurav Kapur</span></div>
 					</div>
@@ -73,13 +122,33 @@
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.mollit anim id est laborum."
 					</div>
 					<div class="action">
-						<div class="like"><a href="javascript:void(0)"><i></i> 21</a></div>
-						<div class="share"><a href="javascript:void(0)"><i></i></a></div>
+						<div class="like">
+							<a href="javascript:void(0)"><i class="likeIcon"></i> 21</a>
+							<div class="actionLogin">
+								<div class="row no-margin">
+									<div class="field">
+										<input type="text" placeholder="Login" id="login" name="login">
+										<input type="password" placeholder="Password" id="password" name="password">
+										<input type="submit" value="Login" id="submit" name="submit">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="share">
+							<a href="javascript:void(0)"><i class="shareIcon"></i></a>
+							<div class="shareWith">
+								<ul>
+									<li><a href="javascript:void(0)"><i class="facebook"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="twitter"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="tube"></i></a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="entries-list rocky-mayur transition">
 					<div class="user-details">
-						<div class="user-pic"><img src="images/user-small-icon.png" /> <span>Tarun Jaiswal</span></div>
+						<div class="user-pic"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/user-small-icon.png" /> <span>Tarun Jaiswal</span></div>
 						<div class="mid-icon"><i></i></div>
 						<div class="celebrity-type"><i></i> <span>Rocky &amp; Mayur</span></div>
 					</div>
@@ -87,13 +156,33 @@
 						<i class="play"></i>
 					</div>
 					<div class="action">
-						<div class="like"><a href="javascript:void(0)"><i></i> 21</a></div>
-						<div class="share"><a href="javascript:void(0)"><i></i></a></div>
+						<div class="like">
+							<a href="javascript:void(0)"><i class="likeIcon"></i> 21</a>
+							<div class="actionLogin">
+								<div class="row no-margin">
+									<div class="field">
+										<input type="text" placeholder="Login" id="login" name="login">
+										<input type="password" placeholder="Password" id="password" name="password">
+										<input type="submit" value="Login" id="submit" name="submit">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="share">
+							<a href="javascript:void(0)"><i class="shareIcon"></i></a>
+							<div class="shareWith">
+								<ul>
+									<li><a href="javascript:void(0)"><i class="facebook"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="twitter"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="tube"></i></a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="entries-list anushka-dandekar transition">
 					<div class="user-details">
-						<div class="user-pic"><img src="images/user-small-icon.png" /> <span>Tarun Jaiswal</span></div>
+						<div class="user-pic"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/user-small-icon.png" /> <span>Tarun Jaiswal</span></div>
 						<div class="mid-icon"><i></i></div>
 						<div class="celebrity-type"><i></i> <span>Anushka Dandekar</span></div>
 					</div>
@@ -101,13 +190,33 @@
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.mollit anim id est laborum."
 					</div>
 					<div class="action">
-						<div class="like"><a href="javascript:void(0)"><i></i> 21</a></div>
-						<div class="share"><a href="javascript:void(0)"><i></i></a></div>
+						<div class="like">
+							<a href="javascript:void(0)"><i class="likeIcon"></i> 21</a>
+							<div class="actionLogin">
+								<div class="row no-margin">
+									<div class="field">
+										<input type="text" placeholder="Login" id="login" name="login">
+										<input type="password" placeholder="Password" id="password" name="password">
+										<input type="submit" value="Login" id="submit" name="submit">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="share">
+							<a href="javascript:void(0)"><i class="shareIcon"></i></a>
+							<div class="shareWith">
+								<ul>
+									<li><a href="javascript:void(0)"><i class="facebook"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="twitter"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="tube"></i></a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="entries-list gaurav-kapur transition">
 					<div class="user-details">
-						<div class="user-pic"><img src="images/user-small-icon.png" /> <span>Tarun Jaiswal</span></div>
+						<div class="user-pic"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/user-small-icon.png" /> <span>Tarun Jaiswal</span></div>
 						<div class="mid-icon"><i></i></div>
 						<div class="celebrity-type"><i></i> <span>Gaurav Kapur</span></div>
 					</div>
@@ -115,8 +224,28 @@
 						<i class="play"></i>
 					</div>
 					<div class="action">
-						<div class="like"><a href="javascript:void(0)"><i></i> 21</a></div>
-						<div class="share"><a href="javascript:void(0)"><i></i></a></div>
+						<div class="like">
+							<a href="javascript:void(0)"><i class="likeIcon"></i> 21</a>
+							<div class="actionLogin">
+								<div class="row no-margin">
+									<div class="field">
+										<input type="text" placeholder="Login" id="login" name="login">
+										<input type="password" placeholder="Password" id="password" name="password">
+										<input type="submit" value="Login" id="submit" name="submit">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="share">
+							<a href="javascript:void(0)"><i class="shareIcon"></i></a>
+							<div class="shareWith">
+								<ul>
+									<li><a href="javascript:void(0)"><i class="facebook"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="twitter"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="tube"></i></a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>	
@@ -130,11 +259,28 @@
 		<!-- Load More Ends Here -->
 		
 		<!-- SYNC AppLink Starts Here -->
-		<div class="SYNCBanner">
-			<div class="SYNCRight transition">
-				<div class="img"><img src="images/footer-sync-applink-text.png" alt="SYNC AppLink" title="SYNC AppLink" /></div>
-				<div class="content">See all the great things you can do when SYNC™ and your phone get together.</div>
-				<div class="boxLink"><a href="javascript:void(0)">Know More</a></div>
-			</div>
-		</div>
+        <?php $this->widget('SyncBanner'); ?>
 		<!-- SYNC AppLink Ends Here -->
+
+        <script type="text/javascript">
+            // setup autocomplete function pulling from cities[] array
+            var cities = [
+                "Kolkata",
+                "Chandigarh",
+                "Delhi and NCR",
+                "Ludhiana",
+                "Jaipur",
+                "Hyderabad",
+                "Bangalore",
+                "Cochin",
+                "Chennai",
+                "Ahmedabad",
+                "Pune",
+                "Mumbai",
+                "Kathmandu ( New)"
+            ];
+
+            $('#autocomplete').autocomplete({
+                lookup: cities
+            });
+        </script>

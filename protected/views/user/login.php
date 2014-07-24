@@ -6,19 +6,21 @@
 
 <!-- Container Starts Here -->
 <div class="container">
-    <?php $form=$this->beginWidget('CActiveForm', array(
-        'id'=>'login-form',
-        'enableClientValidation'=>false,
-        'enableAjaxValidation'=> false,
-        'clientOptions' => array(
-            'validateOnSubmit' => true
-        ),
-        'htmlOptions'=>array('enctype'=>'multipart/form-data'),
-    ));  ?>
         <div class="login-left transition">
+            <?php $form=$this->beginWidget('CActiveForm', array(
+                'id'=>'login-form',
+                'enableClientValidation'=>false,
+                'enableAjaxValidation'=> false,
+                'clientOptions' => array(
+                    'validateOnSubmit' => true
+                ),
+                'htmlOptions'=>array('enctype'=>'multipart/form-data'),
+            ));  ?>
             <div class="login-heading">SIGN IN</div>
             <div class="arrow"></div>
             <div class="login-description">You must log in to participate.</div>
+            <div class="errorMessage"><?php echo Yii::app()->user->getFlash('error'); ?></div>
+
             <div class="row">
                 <div class="field">
                     <i class="login-icon"></i>
@@ -45,6 +47,7 @@
                 </div>
             </div>
         </div>
+        <?php $this->endWidget(); ?>
         <div class="login-splitter">
             <span class="arrow"></span>
         </div>
@@ -62,6 +65,34 @@
                 ); ?>
             </span>
         </div>
-    <?php $this->endWidget(); ?>
 </div>
 <!-- Container Ends Here -->
+<script type="text/javascript">
+	 $("#login-form").validate({
+            rules: {
+                username: {
+                    required: true,
+                    email : true
+                },
+                password : {
+                    required: true
+                }
+
+            },
+            messages: {
+                username: {
+                    required: "Username is required",
+                    email : "Please provide a valid email address"
+                },
+                password : {
+                    required: "Password is required"
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.after( error );
+            },
+            submitHandler: function (form) {
+                form.submit();
+            }
+        });
+</script>

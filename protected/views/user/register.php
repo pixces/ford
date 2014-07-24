@@ -57,8 +57,18 @@
             </div>
             <div class="row">
                 <div class="field">
-                    <i class="city-icon"></i>
-                    <input type="text" name="UserProfile[city]" id="city" placeholder="City" />
+                    <!--i class="city-icon"></i -->
+                    <!-- input type="text" name="UserProfile[city]" id="city" placeholder="City" / -->
+			<!--i class="city-icon"></i -->
+                            <!--input type="text" name="city" id="city" placeholder="City" /-->
+                            <select name="city" id="city" placeholder="City">
+                                <option value="">Select City</option>
+                                <option value="Bangalore">Bangalore</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Kolkota">Kolkota</option>
+                                <option value="Mumbai">Mumbai</option>
+                            </select>
                 </div>
             </div>
             <div class="row">
@@ -84,11 +94,13 @@
                 <div class="field">
                     <input type="text" name="captcha" id="captcha" placeholder="Verification Code" />
                     <div class="row rowCaptcha">
-                        <div class="captchaBlock"><img id="imgCaptcha" src="<?php echo Yii::app()->baseUrl."/user/createcaptcha"; ?>" alt="Captcha" /></div>
+                        <div class="captchaBlock">
+				<img id="imgCaptcha" src="<?php echo Yii::app()->baseUrl."/user/createcaptcha"; ?>" alt="Captcha" />
+			</div>
                         <div class="termsBlock">
                             <ul>
-                                <li><input type="checkbox" id="agreement" class="agreement" checked="checked"/> <span>Terms &amp; Conditions</span></li>
-                                <li><input type="checkbox" id="news_letter" class="news_letter" checked="checked"/> <span>I would like to know more about SYNC and AppLink</span></li>
+                                <li><input type="checkbox" id="agreement" class="agreement" checked="checked" name="termsAndCondition" /> <span>Terms &amp; Conditions</span></li>
+                                <li><input type="checkbox" id="news_letter" class="news_letter" checked="checked" name="moreAboutSync" /> <span>I would like to know more about SYNC and AppLink</span></li>
                             </ul>
                         </div>
                     </div>
@@ -109,6 +121,75 @@
     <?php $this->endWidget(); ?>
 </div>
 <!-- Container Ends Here -->
+<script type="text/javascript" src="js/vendor/jquery-validation.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+     $("#register-form").validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                email : {
+                    required: true,
+                    email: true
+                },
+                city : {
+                  required: true    
+                },
+                phone : {
+                  required: true      
+                },
+                password : {
+                  required: true
+                },
+                cpassword : {
+                  required: true,
+                  equalTo : "#password"      
+                },
+                captcha : {
+                  required: true      
+                },
+                termsAndCondition : {
+                  required: true      
+                }
+
+            },
+            messages: {
+                name: {
+                    required: "Enter your name"
+                },
+                email : {
+                    required: "Enter your email",
+                    email : "Enter a valied email address"
+                },
+                city : {
+                  required: "Select a city"    
+                },
+                phone : {
+                  required: "Enter your phone number"      
+                },
+                password : {
+                  required: "Enter a password"       
+                },
+                cpassword : {
+                  required: "Confirm your password"       
+                },
+                captcha : {
+                  required: "Enter the verification code"       
+                },
+                termsAndCondition : {
+                  required: "Please check the terms and conditions"      
+                }
+            },
+            errorPlacement: function (error, element) {
+                element.after( error );
+            },
+            submitHandler: function (form) {
+                return false;
+            }
+        });
+</script>
+
 <script>
     $(function(){
         $("#refresh_captcha").click(function() {

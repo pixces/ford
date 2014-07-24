@@ -1,9 +1,11 @@
 ::selection {
     background: #F2B04B;
 }
+
 ::-moz-selection {
     background: #F2B04B;
 }
+
 * {
     outline: none;
     -moz-box-sizing: border-box;
@@ -11,9 +13,11 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     word-break: break-word;
 }
+
 img {
     -ms-interpolation-mode: bicubic;
 }
+
 ol,
 ul,
 li,
@@ -24,19 +28,24 @@ h4 {
     margin: 0;
     padding: 0;
 }
+
 a {
     text-decoration: none;
     color: #ffffff;
 }
+
 .no-margin {
-    margin: 0!important;
+    margin: 0 !important;
 }
+
 .clear {
     clear: both;
 }
+
 .hide {
     display: none !important;
 }
+
 .transition {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -45,16 +54,19 @@ a {
     -ms-transition: all 0.3s ease;
     transition: all 0.5s ease;
 }
+
 body {
     background: #C8C8C8;
     font-family: 'FordAntennaCondWGL-Reg', sans-serif;
     font-size: 100%
 }
+
 .wrapper {
     max-width: 1024px;
     margin: 0 auto;
     overflow: hidden
 }
+
 /* Header Css Starts Here */
 
 .header {
@@ -62,6 +74,7 @@ body {
     height: 71px;
     background: #121717
 }
+
 .header .logo {
     width: auto;
     height: 71px;
@@ -69,10 +82,12 @@ body {
     display: table;
     padding-left: 15px
 }
+
 .header .logo div {
     display: table-cell;
     vertical-align: middle
 }
+
 .header .mainmenu {
     width: auto;
     margin: 0 35px 0 45px;
@@ -84,58 +99,72 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px
 }
+
 .header .mainmenu ul {
     list-style: none;
     display: table;
     height: 71px
 }
+
 .header .mainmenu a {
     color: #555555
 }
+
 .header .mainmenu ul li {
     display: table-cell;
     vertical-align: middle;
     padding: 0 10px;
     text-align: center;
 }
+
 .header .mainmenu li span {
     display: block
 }
+
 .header .mainmenu li i {
     background: url(../images/navigation-sprite.png) no-repeat;
     display: inline-block
 }
+
 .header .mainmenu li i.entries {
     width: 26px;
     height: 25px;
 }
+
 .header .mainmenu li i.how-it-works {
     width: 22px;
     height: 25px;
     background-position: -35px 0;
 }
+
 .header .mainmenu li i.our-celebs {
     width: 23px;
     height: 25px;
     background-position: -67px 0;
 }
+
 .header .mainmenu li i.our-cars {
     width: 25px;
     height: 25px;
     background-position: -100px 0;
 }
+
 .header .mainmenu li a:hover i.entries {
     background-position: 0 -32px;
 }
+
 .header .mainmenu li a:hover i.how-it-works {
     background-position: -35px -33px;
 }
+
 .header .mainmenu li a:hover i.our-celebs {
     background-position: -67px -33px;
 }
+
 .header .mainmenu li a:hover i.our-cars {
     background-position: -100px -33px;
 }
+
 .header .navigationIcon {
     width: 44px;
     height: 40px;
@@ -145,6 +174,7 @@ body {
     margin: 15px 20px;
     cursor: pointer
 }
+
 .header .navUser {
     font-size: 0.875em;
     color: #e0e0e0;
@@ -152,6 +182,7 @@ body {
     float: left;
     word-spacing: 2px;
 }
+
 .header .navUser .loginUser {
     width: 12px;
     height: 15px;
@@ -161,6 +192,7 @@ body {
     position: relative;
     top: 3px;
 }
+
 .header .navUser .logoutUser {
     width: 12px;
     height: 15px;
@@ -170,9 +202,11 @@ body {
     position: relative;
     top: 3px;
 }
+
 .header .navUser a {
     color: #e0e0e0
 }
+
 .header .synApplink {
     float: right;
     padding: 25px 10px 19px 0;
@@ -180,6 +214,7 @@ body {
     background: url(../images/sync-applink-bg.png) no-repeat;
     width: 195px
 }
+
 /* Banner Css Starts Here */
 
 .mainBanner {
@@ -189,6 +224,7 @@ body {
     text-align: center;
     position: relative
 }
+
 .mainBanner .bannerLogo {
     background: url(../images/banner-sprite.png) no-repeat;
     width: 250px;
@@ -197,6 +233,7 @@ body {
     position: relative;
     top: 80px;
 }
+
 .mainBanner .playVideo {
     width: 105px;
     height: 105px;
@@ -205,6 +242,7 @@ body {
     left: 44%;
     cursor: pointer;
 }
+
 .mainBanner .playVideo span {
     border: 2px solid #35b1aa;
     -webkit-border-radius: 60px;
@@ -218,6 +256,7 @@ body {
     text-transform: uppercase;
     line-height: 98px;
 }
+
 .mainBanner .playVideo span i.arrow {
     width: 12px;
     height: 17px;
@@ -225,6 +264,7 @@ body {
     display: inline-block;
     margin-left: 6px;
 }
+
 .mainBanner .arrowDown {
     background: url(../images/banner-sprite.png) no-repeat 0 -160px;
     width: 38px;
@@ -235,6 +275,7 @@ body {
     left: 48%;
     z-index: 9999;
 }
+
 .joinUs {
     color: #23b3ab;
     background: #ffffff;
@@ -244,17 +285,20 @@ body {
     font-size: 3.125em;
     padding-top: 20px;
 }
+
 .videoContainer {
     display: none;
     text-align: center;
     background: #000
 }
+
 .closeVideo {
     background: #000;
     color: #fff;
     padding: 10px;
     text-align: right;
 }
+
 .closeVideo i {
     border: 1px solid #fff;
     border-radius: 50px;
@@ -265,6 +309,7 @@ body {
     width: 32px;
     cursor: pointer
 }
+
 /* Participate Block Css Starts Here */
 
 .participateBlock {
@@ -273,13 +318,16 @@ body {
     position: relative;
     text-align: center
 }
+
 .participateBlock .description {
     background: #23b3ab;
     min-height: 355px
 }
+
 .participateBlock .description .row-fluid {
     width: 100%
 }
+
 .participateBlock .description .row-fluid .column_container {
     width: 33%;
     display: inline-block;
@@ -289,6 +337,7 @@ body {
     padding: 65px 0 30px;
     position: relative;
 }
+
 .column_container span.chooseCeleb {
     background: url(../images/middle-sprite.png) no-repeat;
     width: 90px;
@@ -297,6 +346,7 @@ body {
     position: absolute;
     top: -38px;
 }
+
 .column_container span.teachSkill {
     background: url(../images/middle-sprite.png) no-repeat -101px 0;
     width: 90px;
@@ -305,6 +355,7 @@ body {
     position: absolute;
     top: -38px;
 }
+
 .column_container span.win {
     background: url(../images/middle-sprite.png) no-repeat -201px 0;
     width: 90px;
@@ -313,6 +364,7 @@ body {
     position: absolute;
     top: -38px;
 }
+
 .participateBlock .description .heading {
     font-size: 2.500em;
     font-family: 'FordAntennaExtraCondWGL-Bold', serif;
@@ -320,6 +372,7 @@ body {
     color: #ffffff;
     line-height: 55px
 }
+
 .participateBlock .description .sub-heading {
     font-family: 'FordAntennaCondWGL-Reg', sans-serif;
     font-weight: normal;
@@ -328,9 +381,11 @@ body {
     line-height: 22px;
     padding: 10px 85px;
 }
+
 .boxLink {
     margin-top: 20px;
 }
+
 .boxLink a {
     border: 2px solid #042a28;
     padding: 5px 30px;
@@ -339,27 +394,33 @@ body {
     color: #000000;
     display: inline-block
 }
+
 .link a {
     text-decoration: underline;
     display: inline-block;
     margin: 10px 0
 }
+
 .participateBlock .carImage {
     background: #2bc2ba;
     min-height: 255px;
     overflow: hidden;
 }
+
 .participateBlock .carImage div {
     width: 50%;
     float: left;
     margin-top: 15px;
 }
+
 .participateBlock .carImage div span {
     display: block
 }
+
 .participateBlock .carImage div span.icon {
     min-height: 206px;
 }
+
 .participateBlock .carImage div span.icon img {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -368,16 +429,20 @@ body {
     transition: all 1s ease;
     cursor: pointer
 }
+
 .carImage .ford-ecosport {
     text-align: right;
 }
+
 .carImage .ford-fiesta {
     text-align: left;
 }
+
 .carImage .ford-ecosport span.text {
     text-transform: uppercase;
     padding-right: 105px;
 }
+
 .carImage .ford-ecosport span.text i {
     background: url("../images/middle-sprite.png") no-repeat scroll 0 -136px;
     width: 9px;
@@ -387,10 +452,12 @@ body {
     right: 5px;
     top: 1px;
 }
+
 .carImage .ford-fiesta span.text {
     text-transform: uppercase;
     padding-left: 175px;
 }
+
 .carImage .ford-fiesta span.text i {
     background: url("../images/middle-sprite.png") no-repeat scroll -22px -136px;
     width: 9px;
@@ -400,6 +467,7 @@ body {
     left: 8px;
     top: 1px;
 }
+
 .participateBlock .carImage div span.icon img:hover {
     transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -411,6 +479,7 @@ body {
     -o-transform: scale(1.2);
     /* Opera */
 }
+
 .participateBlock .arrowDown {
     background: url(../images/middle-sprite.png) no-repeat -130px -125px;
     width: 39px;
@@ -421,6 +490,7 @@ body {
     left: 48%;
     z-index: 98;
 }
+
 /* Hot Spots Starts Here */
 
 .hotspots {
@@ -432,15 +502,18 @@ body {
     text-align: center;
     position: relative
 }
+
 .hotspots .hotspot {
     display: table-cell;
     width: 33%;
 }
+
 .hotspots .hotspot .img {
     min-width: 264px;
     min-height: 210px;
     margin-bottom: 25px;
 }
+
 .hotspots .hotspot .icon {
     background: url(../images/hotspots-sprite.png) no-repeat;
     width: 100px;
@@ -448,11 +521,13 @@ body {
     left: 32%;
     position: relative;
 }
+
 .hotspots .hotspot .head {
     font-family: 'FordAntennaExtraCondWGL-Bold', serif;
     font-size: 1.250em;
     margin: 5px 0
 }
+
 .hotspots .hotspot .splitter {
     width: 43px;
     height: 3px;
@@ -460,19 +535,21 @@ body {
     background: #e9a43d;
     left: 42%;
 }
+
 .hotspots .hotspot .body {
-    font-family: 'FordAntennaCondWGL-Reg', sans-serif;
-    ;
+    font-family: 'FordAntennaCondWGL-Reg', sans-serif;;
     color: #2d2d2d;
     font-size: 0.813em;
     padding: 0 60px;
     margin: 12px 0;
     min-height: 70px
 }
+
 .hotspots .hotspot .foot {
     font-family: 'FordAntennaCondWGL-Bold', serif;
     text-transform: uppercase;
 }
+
 .hotspots .hotspot .foot a {
     border: 2px solid #042a28;
     padding: 5px 10px 5px 50px;
@@ -481,21 +558,27 @@ body {
     cursor: text;
     width: 210px;
 }
+
 .hotspots .col-second .icon {
     background: url(../images/hotspots-sprite.png) no-repeat 0 -56px;
 }
+
 .hotspots .col-three .icon {
     background: url(../images/hotspots-sprite.png) no-repeat 0 -114px;
 }
+
 .hotspots .col-first .foot a {
     background: url(../images/hotspot-icon1.png) no-repeat
 }
+
 .hotspots .col-second .foot a {
     background: url(../images/hotspot-icon2.png) no-repeat
 }
+
 .hotspots .col-three .foot a {
     background: url(../images/hotspot-icon3.png) no-repeat
 }
+
 .hotspots .arrowDown {
     background: url(../images/hotspots-sprite.png) no-repeat -120px -42px;
     width: 39px;
@@ -506,6 +589,7 @@ body {
     left: 48%;
     z-index: 98
 }
+
 /* Hot Spots Ends Here */
 
 /* Hot Spots Tab Starts Here */
@@ -516,28 +600,33 @@ body {
     background: #50b2ac;
     position: relative
 }
+
 .hotspotTabs .tabsHeading {
     display: table;
     width: 100%;
     border-bottom: 1px solid #ffffff;
     padding: 25px 0 5px;
 }
+
 .hotspotTabs .tabsHeading div {
     display: table-cell;
     text-align: center;
     width: 50%
 }
+
 .hotspotTabs .tabsHeading div.head {
     font-family: 'FordAntennaExtraCondWGL-BoldIt', sans-serif;
     font-size: 1.875em;
     text-transform: uppercase;
     color: #fff
 }
+
 .hotspotTabs .tabsHeading div.readmore a {
     font-family: 'FordAntennaCondWGL-Bold', serif;
     color: #1a7772;
     text-transform: uppercase
 }
+
 .hotspotTabs .tabsHeading div.readmore a i {
     background: url(../images/hotspots-sprite.png) no-repeat -229px -48px;
     width: 9px;
@@ -545,16 +634,20 @@ body {
     display: inline-block;
     margin-left: 5px
 }
+
 .hotspotTabs .tabContaier {
     min-height: 297px;
 }
+
 .hotspotTabs .tabContaier .tabContents {
     min-height: 287px
 }
+
 .hotspotTabs .tabContaier ul {
     display: table;
     width: 100%;
 }
+
 .hotspotTabs .tabContaier ul li {
     display: table-cell;
     width: 33%;
@@ -564,35 +657,44 @@ body {
     text-transform: uppercase;
     color: #ffffff
 }
+
 .hotspotTabs .tabContaier ul li a {
     padding: 5px;
     display: block
 }
+
 .hotspotTabs .tabContaier ul li a.active {
     color: #0f6863
 }
+
 .hotspotTabs .tabContaier ul li.tab1 {
     background: #50b2ac
 }
+
 .hotspotTabs .tabContaier ul li.tab2 {
     background: #2bc2ba
 }
+
 .hotspotTabs .tabContaier ul li.tab3 {
     background: #1ea59e
 }
+
 .slider {
     width: 600px;
     margin: 0 auto;
     position: relative;
 }
+
 .slider-mask {
     overflow: hidden;
     position: relative;
 }
+
 .slider-content {
     width: 1800px;
     position: relative;
 }
+
 .button-prev {
     background: url(../images/hotspots-sprite.png) no-repeat -171px -38px;
     cursor: pointer;
@@ -603,6 +705,7 @@ body {
     top: 50%;
     left: -45px;
 }
+
 .button-next {
     background: url(../images/hotspots-sprite.png) no-repeat -198px -38px;
     cursor: pointer;
@@ -613,22 +716,27 @@ body {
     top: 50%;
     right: -45px;
 }
+
 .slider-block div {
     display: inline-block;
     vertical-align: middle
 }
+
 .slider-block {
     margin: 20px 0 0 0;
     float: left;
     position: relative;
     width: 600px;
 }
+
 .slider-img {
     margin-top: 30px;
 }
+
 .slider-splitter {
     margin: 30px 40px;
 }
+
 .slider-img img {
     width: 155px;
     height: 155px;
@@ -638,36 +746,44 @@ body {
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
 }
+
 .slider-splitter {
     background: url(../images/hotspots-sprite.png) no-repeat -123px -83px;
     width: 27px;
     height: 7px;
     display: inline-block;
 }
+
 .slider-description {
     width: 50%;
     text-align: center;
     color: #ffffff
 }
+
 .slider-description .the-title {
     border-bottom: 1px solid #19716c;
     padding-bottom: 10px;
     margin-bottom: 10px
 }
+
 .slider-description div span {
     display: block
 }
+
 .slider-description div span.name {
     font-family: 'FordAntennaCondWGL-Reg', sans-serif;
     font-size: 1.125em;
 }
+
 .slider-description div span.location {
     font-family: 'FordAntennaWGL-Regular', sans-serif;
     font-size: 0.875em;
 }
+
 .slider-description .the-content {
     font-family: 'FordAntennaWGL-RegularItalic';
 }
+
 /* Hot Spots Tab Starts Here */
 
 /* Participate And How it Works Starts Here */
@@ -679,6 +795,7 @@ body {
     text-align: center;
     padding-top: 50px;
 }
+
 .hotspotLinks a {
     display: inline-block;
     padding: 5px 30px;
@@ -686,15 +803,18 @@ body {
     text-transform: uppercase;
     font-size: 1.250em
 }
+
 .hotspotLinks a.orangeboxLink {
     color: #ffb94f;
     border: 2px solid #ffb94f;
 }
+
 .hotspotLinks a.blueboxLink {
     color: #56c8c2;
     border: 2px solid #56c8c2;
     margin-left: 20px;
 }
+
 /* SYNC AppLink Css Here */
 
 .SYNCBanner {
@@ -703,6 +823,7 @@ body {
     min-height: 175px;
     position: relative
 }
+
 .SYNCBanner .SYNCRight {
     position: absolute;
     right: 125px;
@@ -710,6 +831,7 @@ body {
     width: 27%;
     text-align: center
 }
+
 .SYNCBanner .content {
     font-size: 0.75em;
     text-align: center;
@@ -717,15 +839,18 @@ body {
     color: #010101;
     margin: 5px 0 10px;
 }
+
 .SYNCBanner .boxLink {
     margin: 0
 }
+
 /* Footer Css Here */
 
 .footer-wrapper {
     width: 100%;
     height: auto;
 }
+
 .footer-wrapper .socialIcon {
     width: 100%;
     background: #414141;
@@ -733,10 +858,12 @@ body {
     margin: 0 auto;
     text-align: center;
 }
+
 .footer-wrapper .socialIcon div {
     width: auto;
     display: inline-block;
 }
+
 .footer-wrapper .socialMediaIcon ul {
     list-style: none;
     position: relative;
@@ -744,33 +871,39 @@ body {
     top: -13px;
     overflow: hidden
 }
+
 .footer-wrapper .socialMediaIcon ul li {
     float: left;
     line-height: 45px;
     margin-right: 10px;
 }
+
 .footer-wrapper .socialMediaIcon ul li i.facebook {
     height: 37px;
     width: 37px;
     display: inline-block;
     background: url(../images/footer-sprite.png) no-repeat;
 }
+
 .footer-wrapper .socialMediaIcon ul li i.twitter {
     height: 37px;
     width: 37px;
     display: inline-block;
     background: url(../images/footer-sprite.png) no-repeat -46px 0;
 }
+
 .footer-wrapper .socialMediaIcon ul li i.tube {
     height: 37px;
     width: 37px;
     display: inline-block;
     background: url(../images/footer-sprite.png) no-repeat -92px 0;
 }
+
 .footer-wrapper .socialIcon .img {
     padding-left: 20px;
     border-left: 1px solid #2a2a2a
 }
+
 .footer-wrapper .socialIcon .img .doubleArrow {
     height: 25px;
     width: 23px;
@@ -779,6 +912,7 @@ body {
     position: relative;
     top: -30px;
 }
+
 .footer-wrapper .footer-links {
     min-height: 105px;
     width: 100%;
@@ -787,24 +921,29 @@ body {
     padding-top: 35px;
     position: relative
 }
+
 .footer-wrapper .footer-links li {
     display: inline-block;
 }
+
 .footer-wrapper .footer-links li.first a {
     background: none
 }
+
 .footer-wrapper .footer-links li a {
     background: url("../images/footer-bullets-icon.png") no-repeat scroll 0 5px;
     padding: 0 10px 0 15px;
     font-family: 'FordAntennaWGL-Semibold', sans-serif;
     font-size: 0.625em
 }
+
 .footer-wrapper .copyright {
     color: #424242;
     font-size: 0.625em;
     margin: 5px 0 0 0;
     font-family: 'FordAntennaWGL-Semibold', sans-serif;
 }
+
 .footer-wrapper .ford-go-further {
     background: url(../images/footer-sprite.png) no-repeat -13px -75px;
     width: 103px;
@@ -813,6 +952,7 @@ body {
     right: 30px;
     position: absolute
 }
+
 .overlay {
     background: #000000;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
@@ -826,23 +966,27 @@ body {
     left: 0;
     z-index: 99
 }
+
 /* Login Page Css Starts Here */
 
 .login .mainBanner {
     min-height: 126px;
     background-position: 0 -168px
 }
+
 .login .container {
     max-width: 1024px;
     overflow: hidden;
     background: #56c8c2;
     padding: 60px 55px
 }
+
 .login-left {
     float: left;
     width: 53%;
     position: relative;
 }
+
 .login-heading {
     color: #2a2a2a;
     font-size: 3.750em;
@@ -851,6 +995,7 @@ body {
     border-bottom: 1px solid #ffffff;
     text-transform: uppercase
 }
+
 .login-left .arrow {
     background: url(../images/down-arrow.png) no-repeat center center;
     position: absolute;
@@ -858,21 +1003,25 @@ body {
     height: 12px;
     margin-top: -1px
 }
+
 .login-description {
     color: #2a2a2a;
     font-family: 'FordAntennaCondWGL-Reg', sans-serif;
     text-align: center;
     margin: 20px 0
 }
+
 .row {
     width: auto;
     height: auto;
     margin-bottom: 20px;
 }
+
 .field {
     position: relative;
     text-align: center;
 }
+
 .field input,
 .field select {
     width: 100%;
@@ -885,26 +1034,31 @@ body {
     letter-spacing: 1px;
     height: 48px;
 }
+
 ::-webkit-input-placeholder {
     color: #fff;
 }
+
 /* WebKit browsers */
 
 :-moz-placeholder {
     color: #fff;
     opacity: 1;
 }
+
 /* Mozilla Firefox 4 to 18 */
 
 ::-moz-placeholder {
     color: #fff;
     opacity: 1;
 }
+
 /* Mozilla Firefox 19+ */
 
 :-ms-input-placeholder {
     color: #fff;
 }
+
 /* Internet Explorer 10+ */
 
 .login-icon {
@@ -915,6 +1069,7 @@ body {
     top: 10px;
     left: 10px
 }
+
 .password-icon {
     background: url(../images/login-sprite.png) no-repeat -21px 0;
     width: 20px;
@@ -923,6 +1078,7 @@ body {
     top: 9px;
     left: 10px
 }
+
 .field input#submit {
     font-family: 'FordAntennaExtraCondWGL-Bold', serif;
     font-size: 1.250em;
@@ -933,9 +1089,11 @@ body {
     margin-right: 10px;
     text-transform: uppercase
 }
+
 .forgot-link {
     font-family: 'FordAntennaCondWGL-Reg', sans-serif;
 }
+
 .login-splitter {
     width: 1px;
     background: #ffffff;
@@ -944,6 +1102,7 @@ body {
     margin: 0 50px;
     position: relative
 }
+
 .login-splitter .arrow {
     background: url(../images/right-arrow.png) no-repeat;
     width: 12px;
@@ -952,6 +1111,7 @@ body {
     display: inline-block;
     top: 43%
 }
+
 .login-right {
     float: left;
     width: 35%;
@@ -959,12 +1119,14 @@ body {
     text-align: center;
     margin-top: 140px
 }
+
 .login-right span {
     display: block;
     color: #2a2a2a;
     font-family: 'FordAntennaCondWGL-Reg', sans-serif;
     margin-top: 5px;
 }
+
 #create-account {
     font-family: 'FordAntennaExtraCondWGL-Bold', serif;
     font-size: 1.250em;
@@ -977,6 +1139,7 @@ body {
     text-transform: uppercase;
     margin: 0
 }
+
 /* Login Page Css Ends Here */
 
 /* Register Page Css Starts Here */
@@ -985,17 +1148,20 @@ body {
     min-height: 126px;
     background-position: 0 -168px
 }
+
 .register .container {
     max-width: 1024px;
     overflow: hidden;
     background: #F1B04C;
     padding: 60px 55px
 }
+
 .register-container {
     max-width: 400px;
     margin: 0 auto;
     position: relative
 }
+
 .register-heading {
     color: #2a2a2a;
     font-size: 2.875em;
@@ -1004,6 +1170,7 @@ body {
     border-bottom: 1px solid #ffffff;
     text-transform: uppercase
 }
+
 .register-container .arrow {
     background: url(../images/register-down-arrow.png) no-repeat center center;
     position: absolute;
@@ -1011,12 +1178,14 @@ body {
     height: 12px;
     margin-top: -1px
 }
+
 .register-description {
     color: #2a2a2a;
     font-family: 'FordAntennaCondWGL-Reg', sans-serif;
     text-align: center;
     margin: 20px 0
 }
+
 .register-socialIcon {
     width: 100%;
     display: inline-block;
@@ -1025,61 +1194,74 @@ body {
     border-bottom: 1px solid #ffffff;
     position: relative
 }
+
 .register-socialIcon ul {
     list-style: none;
     margin: 0;
     padding: 0;
     overflow: hidden
 }
+
 .register-socialIcon ul li {
     display: inline-block;
     margin-right: 30px;
     width: 59px;
     height: 59px;
 }
+
 .register-socialIcon ul li a {
     display: block
 }
+
 .register-socialIcon ul li i {
     background: url(../images/social-icon-sprite.png) no-repeat;
     width: 59px;
     height: 59px;
     display: inline-block;
 }
+
 .register-socialIcon ul li i.facebook {
     background-position: 0 0
 }
+
 .register-socialIcon ul li i.twitter {
     background-position: -89px 0
 }
+
 .register-socialIcon ul li i.google {
     background-position: -176px 0;
 }
+
 .register-socialIcon ul li.last {
     margin: 0
 }
+
 .register-or {
     position: absolute;
     width: 100%;
     text-align: center;
     bottom: -10px;
 }
+
 .register-or span {
     color: #2a2a2a;
     font-family: 'FordAntennaCondWGL-Reg', sans-serif;
     padding: 10px 20px;
     background: #F1B04C
 }
+
 .register .field input,
 .register .field select {
     background: #F1B04C;
 }
+
 .register .note {
     font-family: 'FordAntennaWGL-RegularItalic', sans-serif;
     font-size: 0.625em;
     color: #ffffff;
     margin: -5px 0 5px;
 }
+
 .name-icon {
     background: url(../images/register-sprite.png) no-repeat;
     width: 20px;
@@ -1088,6 +1270,7 @@ body {
     top: 10px;
     left: 10px
 }
+
 .email-icon {
     background: url(../images/register-sprite.png) no-repeat -23px 0;
     width: 20px;
@@ -1096,6 +1279,7 @@ body {
     top: 17px;
     left: 10px
 }
+
 .city-icon {
     background: url(../images/register-sprite.png) no-repeat -45px 0;
     width: 20px;
@@ -1104,6 +1288,7 @@ body {
     top: 13px;
     left: 10px
 }
+
 .phone-icon {
     background: url(../images/register-sprite.png) no-repeat -65px 0;
     width: 20px;
@@ -1112,6 +1297,7 @@ body {
     top: 11px;
     left: 10px
 }
+
 .password-icon {
     background: url(../images/register-sprite.png) no-repeat -84px 0;
     width: 20px;
@@ -1120,6 +1306,7 @@ body {
     top: 12px;
     left: 10px
 }
+
 .register .upload-block {
     position: absolute;
     left: -150px;
@@ -1131,6 +1318,7 @@ body {
     border-radius: 100px;
     margin-top: -10px;
 }
+
 .register .upload-block .upload-img {
     text-indent: -9999px;
     background: url(../images/register-sprite.png) no-repeat 0 -28px;
@@ -1143,6 +1331,7 @@ body {
     border: 0 none;
     cursor: pointer
 }
+
 .register .upload-block label {
     display: block;
     text-transform: uppercase;
@@ -1153,40 +1342,49 @@ body {
     text-decoration: underline;
     cursor: pointer
 }
+
 .register .field input#submit {
     margin: 0;
     color: #ffffff
 }
+
 .register .login-link {
     display: block;
     margin: 30px 0 0 0;
     color: #2a2a2a;
 }
+
 .register .login-link a {
     text-decoration: underline
 }
+
 .rowCaptcha {
     overflow: hidden;
     margin-top: 20px;
 }
+
 .rowCaptcha div {
     float: left
 }
+
 .rowCaptcha div.captchaBlock {
     width: 250px;
     height: auto;
     text-align: center
 }
+
 .rowCaptcha div.termsBlock {
     width: 150px;
     height: auto
 }
+
 .rowCaptcha div.termsBlock ul {
     list-style: none;
     margin: 0;
     padding: 0;
     margin: 18px 0 0 10px
 }
+
 .rowCaptcha div.termsBlock ul li {
     color: #ffffff;
     font-size: 0.750em;
@@ -1194,6 +1392,7 @@ body {
     margin-top: 5px;
     overflow: hidden
 }
+
 .rowCaptcha div.termsBlock ul li input {
     width: auto;
     padding: 0;
@@ -1203,10 +1402,12 @@ body {
     background: #ffffff;
     border: 1px solid #ffffff
 }
+
 .rowCaptcha div.termsBlock ul li span {
     float: left;
     width: 115px
 }
+
 .register .user-image .upload-img {
     text-indent: 0;
     background: none;
@@ -1214,6 +1415,7 @@ body {
     top: 0;
     cursor: auto
 }
+
 .register .user-image .upload-img img {
     width: 116px;
     height: 116px;
@@ -1223,15 +1425,19 @@ body {
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
 }
+
 .register .user-image label {
     margin-top: 8px;
 }
+
 .register .field input {
     color: #A46A2A
 }
+
 .profile-splitter {
     margin-top: 40px;
 }
+
 /* Register Page Css Starts Here */
 
 /* Profile page css starts here */
@@ -1240,6 +1446,7 @@ body {
     background: #23b3ab;
     padding: 50px 55px;
 }
+
 .my-profile-body .upload-block {
     border: 10px solid #1d9992;
     width: 180px;
@@ -1247,34 +1454,41 @@ body {
     box-sizing: content-box;
     margin-top: 30px;
 }
+
 .my-profile-body .user-image .upload-img img {
     width: 180px;
     height: 180px;
 }
+
 .my-profile-body .my-profile-fields-container {
     left: 100px;
     position: relative;
 }
+
 .my-profile-body .my-profile-fields-container .row .field input[type="text"],
 .my-profile-body .my-profile-fields-container .row .field select {
     background: url(../images/text-field-bg.jpg) repeat 0px 0px;
     border: 0px solid #ddd;
 }
+
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
     background: #23b3ab;
     border: 1px solid #1d9992;
 }
+
 .my-profile-body .my-profile-fields-container .edit-details {
     text-align: left;
     margin-left: 10px;
 }
+
 .my-profile-body .my-profile-fields-container .edit-details a {
     text-transform: uppercase;
     font-size: 14px;
     text-decoration: underline;
 }
+
 .arrow-down {
     width: 0;
     height: 0;
@@ -1283,6 +1497,7 @@ select:-webkit-autofill {
     border-top: 12px solid #23b3ab;
     margin: 0 auto;
 }
+
 .my-profile-messages {
     width: 100%;
     min-height: 80px;
@@ -1299,6 +1514,7 @@ select:-webkit-autofill {
     letter-spacing: 1px;
     margin-bottom: -12px;
 }
+
 .view-your-entries-container {
     background: #eaeaea;
     padding: 20px 10px 0px 10px;
@@ -1306,6 +1522,7 @@ select:-webkit-autofill {
     box-sizing: border-box;
     overflow: hidden;
 }
+
 .view-your-entries-container .view-your-entry-title {
     font-size: 30px;
     text-transform: uppercase;
@@ -1315,18 +1532,22 @@ select:-webkit-autofill {
     font-family: 'FordAntennaExtraCondWGL-Bold', serif;
     padding-bottom: 10px;
 }
+
 .entries-container .entries-ul {
     border-bottom: 2px solid #000;
     padding-bottom: 10px;
 }
+
 .entries-container .entries-ul .entries-li {
     display: block;
     border-bottom: 1px solid #ddd;
     overflow: hidden;
 }
+
 .entries-container .entries-ul .entries-li:last-child {
     border-bottom: 0px solid red;
 }
+
 .entries-container .entries-ul .entries-li .profile-photo {
     width: 25%;
     text-align: center;
@@ -1336,9 +1557,11 @@ select:-webkit-autofill {
     font-style: italic;
     font-weight: bold;
 }
+
 .entries-container .entries-ul .entries-li .profile-photo img {
     width: 120px;
 }
+
 .entries-container .entries-ul .entries-li .content,
 .entries-container .entries-ul .entries-li .content.two-third-ct {
     width: 55%;
@@ -1348,10 +1571,12 @@ select:-webkit-autofill {
     line-height: 24px;
     min-height: 180px;
 }
+
 .entries-container .entries-ul .entries-li .content.two-third-ct {
     width: 75%;
     position: relative;
 }
+
 .entries-container .entries-ul .entries-li .content.two-third-ct .make-appeal-text-area {
     width: 80%;
     float: left;
@@ -1361,17 +1586,20 @@ select:-webkit-autofill {
     background: #fff;
     border: 0px solid red;
 }
+
 .entries-container .entries-ul .entries-li .content.two-third-ct div.btn-ct {
     width: 20%;
     float: left;
     position: relative;
 }
+
 .entries-container .entries-ul .entries-li .content.two-third-ct .make-an-appeal-submit {
     height: 120px;
     line-height: 60px;
     margin-top: 0px;
     width: 100%;
 }
+
 .entries-container .entries-ul .entries-li .content .make-appeal-text {
     padding-top: 40px;
     text-align: center;
@@ -1380,6 +1608,7 @@ select:-webkit-autofill {
     font-family: 'FordAntennaCondWGL-Reg', serif;
     font-style: italic;
 }
+
 .entries-container .entries-ul .entries-li .action-updates {
     width: 20%;
     float: left;
@@ -1389,13 +1618,16 @@ select:-webkit-autofill {
     color: #23b3ab;
     text-transform: uppercase;
 }
+
 .entries-container .entries-ul .entries-li .action-updates div.img {
     margin-top: 20px;
     margin-bottom: 10px;
 }
+
 .entries-container .entries-ul .entries-li .action-updates button {
     margin-top: 40px;
 }
+
 .entries-container .entries-ul .entries-li .under-moderation i,
 .entries-container .entries-ul .entries-li .approved i {
     background: url(../images/view-entries-sprite.png) no-repeat;
@@ -1403,18 +1635,22 @@ select:-webkit-autofill {
     vertical-align: middle;
     margin-bottom: 10px;
 }
+
 .entries-container .entries-ul .entries-li .under-moderation i {
     background-position: 30px -135px;
     height: 60px;
 }
+
 .entries-container .entries-ul .entries-li .approved i {
     background-position: 48px 0px;
     height: 60px;
 }
+
 .entries-container .entries-ul .entries-li .rejected {
     color: #9d1d18;
     text-align: center;
 }
+
 .entries-container .entries-ul .entries-li .content.two-third-ct .arrow-right,
 .arrow-right {
     width: 0;
@@ -1426,12 +1662,14 @@ select:-webkit-autofill {
     left: 0px;
     top: 50px;
 }
+
 .rejected-appeal-text {
     background: #dfd7d6;
     padding: 20px 0px 20px 20px;
     margin-bottom: 10px;
     overflow: hidden;
 }
+
 .rejected-appeal-text h6 {
     font-size: 16px;
     color: #000;
@@ -1439,6 +1677,7 @@ select:-webkit-autofill {
     padding: 0px;
     margin: 0px;
 }
+
 .rejected-appeal-text p {
     font-size: 14px;
     color: #b5b5b5;
@@ -1447,62 +1686,77 @@ select:-webkit-autofill {
     margin: 0px;
     line-height: 20px;
 }
+
 .confirm-appeal-text .col-full-8 {
     background: #fff;
     padding: 20px;
     min-height: 140px
 }
+
 .entries-container .entries-ul .entries-li .content.two-third-ct .confirm-appeal-text div.btn-ct {
     width: 100%;
     padding: 0px 0px 0px 20px;
     font-size: 14px;
 }
+
 .entries-container .entries-ul .entries-li .content.two-third-ct .confirm-appeal-text div.btn-ct button {
     padding: 5px;
     width: 100%;
 }
+
 button {
     padding: 10px 20px;
     border: 0px solid red;
     font-family: 'FordAntennaExtraCondWGL-Bold', serif;
 }
+
 button.orange,
 button.Col25a6a0 {
     color: #fff;
     text-transform: uppercase;
     font-size: 18px;
 }
+
 button.orange {
     background: #f2b04b;
 }
+
 button.Col25a6a0 {
     background: #25a6a0;
     font-size: 24px;
 }
+
 .view-other-entries-container {
     text-align: center;
     padding: 30px 0px;
 }
+
 .view-other-entries {
     padding: 10px 20px;
 }
+
 .pull-right {
     float: right;
 }
+
 .pull-left {
     float: left;
 }
+
 .col-full-8,
 .col-full-2 {
     float: left;
     box-sizing: border-box;
 }
+
 .col-full-8 {
     width: 80%;
 }
+
 .col-full-2 {
     width: 20%;
 }
+
 /* Profile page css ends here */
 
 /* selection section */
@@ -1511,6 +1765,7 @@ button.Col25a6a0 {
     background: #36b2ab;
     overflow: hidden;
 }
+
 .participateBlock .selection-congrats-message div.congrats-message {
     text-align: center;
     width: 100%;
@@ -1518,12 +1773,14 @@ button.Col25a6a0 {
     box-sizing: border-box;
     color: #fff;
 }
+
 .participateBlock .selection-congrats-message div.choose-your-celebrity {
     margin: 0 auto;
     position: relative;
     width: 100%;
     margin-bottom: 40px;
 }
+
 .participateBlock .selection-congrats-message div.choose-your-celebrity-heading {
     width: 50%;
     color: #2a2a2a;
@@ -1535,6 +1792,7 @@ button.Col25a6a0 {
     float: none;
     margin: 0 auto;
 }
+
 .participateBlock .selection-congrats-message div.choose-your-celebrity .arrow {
     background: url(../images/down-arrow-2.jpg) no-repeat center center;
     position: absolute;
@@ -1543,6 +1801,7 @@ button.Col25a6a0 {
     margin-top: -1px;
     float: none;
 }
+
 .participateBlock .selection-congrats-message div.choose-your-celebrity-description {
     width: 100%;
     color: #2a2a2a;
@@ -1550,6 +1809,7 @@ button.Col25a6a0 {
     text-align: center;
     margin: 20px 0
 }
+
 .participateBlock .selection-congrats-message .arrowDown {
     width: 0;
     height: 0;
@@ -1561,6 +1821,7 @@ button.Col25a6a0 {
     right: 0px;
     margin: 0 auto;
 }
+
 .black-transparent-hover {
     background: rgba(0, 0, 0, 0.5);
     width: 187px;
@@ -1573,33 +1834,41 @@ button.Col25a6a0 {
     margin: 0 auto;
     display: none;
 }
+
 body.selection .hotspots {
     background: #bbdad8;
 }
+
 body.selection .hotspots div.img {
     position: relative;
 }
+
 body.selection .hotspots div.img img {
     border-radius: 187px;
     width: 187px;
 }
+
 body.selection .hotspots .col-first div.img:hover .black-transparent-hover {
     display: block;
     border: 5px solid #ffb547;
 }
+
 body.selection .hotspots .col-second div.img:hover .black-transparent-hover {
     display: block;
     border: 5px solid #f05a29;
 }
+
 body.selection .hotspots .col-three div.img:hover .black-transparent-hover {
     display: block;
     border: 5px solid #8bc440;
 }
+
 body.selection .hotspots .hotspot .icon,
 body.selection .hotspots .hotspot .edit-tick i,
 .sayit-voice i {
     background: url(../images/choose-celebrity-sprite.png) no-repeat;
 }
+
 body.selection .hotspots .hotspot .edit-tick,
 body.selection .hotspots .hotspot .select-celeb {
     display: none;
@@ -1612,74 +1881,92 @@ body.selection .hotspots .hotspot .select-celeb {
     z-index: 999;
     width: 50%;
 }
+
 body.selection .hotspots .hotspot .edit-tick i {
     background-position: -10px -274px;
     width: 42px;
     height: 30px;
     display: inline-block
 }
+
 body.selection .hotspots .hotspot.col-second .edit-tick i {
     background-position: -10px -320px;
 }
+
 body.selection .hotspots .hotspot .edit-tick a {
     display: block;
     text-decoration: underline;
     margin-top: 5px;
     text-transform: uppercase;
 }
+
 .make-an-appeal-txt {
     color: #73a5a2;
     font-style: italic;
 }
+
 body.selection .hotspots .col-first div.img:hover .select-celeb,
 body.selection .hotspots .col-second div.img:hover .select-celeb,
 body.selection .hotspots .col-three div.img:hover .select-celeb {
     display: block;
 }
+
 body.selection .hotspots .col-first div.img.selected:hover .select-celeb,
 body.selection .hotspots .col-second div.img.selected:hover .select-celeb,
 body.selection .hotspots .col-three div.img.selected:hover .select-celeb {
     display: none;
 }
+
 body.selection .hotspots .col-first div.img.selected.can-edit .edit-tick,
 body.selection .hotspots .col-second div.img.selected.can-edit .edit-tick,
 body.selection .hotspots .col-three div.img.selected.can-edit .edit-tick {
     display: block;
 }
+
 body.selection .hotspots .col-first div.img.selected .black-transparent-hover {
     display: block;
     border: 5px solid #ffb547;
 }
+
 body.selection .hotspots .col-second div.img.selected .black-transparent-hover {
     display: block;
     border: 5px solid #f05a29;
 }
+
 body.selection .hotspots .col-three div.img.selected .black-transparent-hover {
     display: block;
     border: 5px solid #8bc440;
 }
+
 body.selection .hotspots .col-second .icon {
     background-position: 0px -60px;
 }
+
 body.selection .hotspots .col-three .icon {
     background-position: 0px -120px;
 }
+
 body.selection .hotspots .hotspot .splitter {
     background: #000;
 }
+
 .col-width-80,
 .col-width-20 {
     float: left;
 }
+
 .col-width-80 {
     width: 80%;
 }
+
 .col-width-20 {
     width: 20%;
 }
+
 .textarea-ct {
     min-height: 120px;
 }
+
 .Celebrity-Comments-Container {
     overflow: hidden;
     background: #bbdad8;
@@ -1688,6 +1975,7 @@ body.selection .hotspots .hotspot .splitter {
     width: 100%;
     position: relative;
 }
+
 .Celebrity-Comments-Container .yellow-comments-container,
 .Celebrity-Comments-Container .orange-comments-container,
 .Celebrity-Comments-Container .green-comments-container {
@@ -1696,15 +1984,19 @@ body.selection .hotspots .hotspot .splitter {
     box-sizing: border-box;
     padding-bottom: 0px;
 }
+
 .Celebrity-Comments-Container .yellow-comments-container {
     background: #ffb547;
 }
+
 .Celebrity-Comments-Container .orange-comments-container {
     background: #f05a29;
 }
+
 .Celebrity-Comments-Container .green-comments-container {
     background: #8bc440;
 }
+
 .Celebrity-Comments-Container .col-width-80 .textarea {
     width: 100%;
     min-height: 116px;
@@ -1712,9 +2004,11 @@ body.selection .hotspots .hotspot .splitter {
     box-sizing: border-box;
     border: 0px solid red;
 }
+
 .Celebrity-Comments-Container .btn-ct {
     position: relative;
 }
+
 .big-btn-submit {
     height: 118px;
     line-height: 59px;
@@ -1722,29 +2016,36 @@ body.selection .hotspots .hotspot .splitter {
     text-transform: uppercase;
     width: 100%;
 }
+
 .Celebrity-Comments-Container .yellow-comments-container .big-btn-submit {
     background: #ffb547;
 }
+
 .Celebrity-Comments-Container .orange-comments-container .big-btn-submit {
     background: #f05a29;
 }
+
 .Celebrity-Comments-Container .green-comments-container .big-btn-submit {
     background: #8bc440;
 }
+
 .sayit-voice {
     padding: 10px;
     text-align: center;
     margin-top: -20px;
 }
+
 .sayit-voice i {
     background-position: 0px -185px;
     width: 60px;
     height: 80px;
     display: inline-block;
 }
+
 .sayit-voice div.sayit-voice-text span {
     font-size: 14px;
 }
+
 /* selection section ends */
 
 /* confirm sections */
@@ -1753,6 +2054,7 @@ body.selection .hotspots .hotspot .splitter {
     background: #fff;
     position: relative;
 }
+
 .confirm-appeal-section .arrowDown {
     width: 0;
     height: 0;
@@ -1764,20 +2066,24 @@ body.selection .hotspots .hotspot .splitter {
     right: 0px;
     margin: 0 auto;
 }
+
 .confirm-appeal,
 .make-another-appeal {
     text-align: center;
     color: #0cb9ab;
     min-height: 350px;
 }
+
 .confirm-appeal-section .text-info {
     margin-top: 15px;
     line-height: 2em;
 }
+
 .confirm-appeal-section .btn-box {
     color: #000;
     margin-top: 55px;
 }
+
 .confirm-appeal-section .btn-box a.confirm-btn {
     color: #000;
     text-transform: uppercase;
@@ -1787,10 +2093,12 @@ body.selection .hotspots .hotspot .splitter {
     font-weight: bold;
     padding: 5px 0px;
 }
+
 .confirm-appeal-section .confirm-info {
     margin-top: 10px;
     font-size: 0.9em;
 }
+
 .confirm-appeal-section .tick-image,
 .confirm-appeal-section .celeb-icon {
     background: url(../images/icon-sprite.png) no-repeat 0 0;
@@ -1799,7 +2107,11 @@ body.selection .hotspots .hotspot .splitter {
     margin: auto;
     margin-top: 36px;
 }
-.confirm-appeal-section .celeb-select-box {} .confirm-appeal-section .celeb-icon,
+
+.confirm-appeal-section .celeb-select-box {
+}
+
+.confirm-appeal-section .celeb-icon,
 .confirm-appeal-section .celeb-icon.active {
     display: inline-block;
     background-position: -110px -7px;
@@ -1807,13 +2119,16 @@ body.selection .hotspots .hotspot .splitter {
     height: 32px;
     cursor: default;
 }
+
 .confirm-appeal-section .celeb-icon.active {
     background-position: -64px -7px;
 }
+
 .confirm-appeal-section .or-divider {
     position: relative;
     margin-top: 20px;
 }
+
 .confirm-appeal-section .or-line {
     position: absolute;
     width: 250px;
@@ -1822,6 +2137,7 @@ body.selection .hotspots .hotspot .splitter {
     border-top: solid 1px #0cb9ab;
     top: 5px;
 }
+
 .confirm-appeal-section .or-text {
     color: #000;
     background: #fff;
@@ -1831,9 +2147,11 @@ body.selection .hotspots .hotspot .splitter {
     width: 40px;
     margin: 0 auto;
 }
+
 .make-another-appeal .btn-box {
     margin-top: 0px;
 }
+
 /* end confirm sections */
 
 /* terms & conditoins, privacy policy  */
@@ -1842,6 +2160,7 @@ body.selection .hotspots .hotspot .splitter {
 .sync-applink .mainBanner {
     min-height: 120px;
 }
+
 .terms-condtions .participateBlock .page-title-section,
 .sync-applink .participateBlock .page-title-section {
     background: #2bc2ba;
@@ -1849,20 +2168,24 @@ body.selection .hotspots .hotspot .splitter {
     padding: 3% 0em;
     color: #fff;
 }
+
 .terms-condtions .participateBlock .page-title-section h2 {
     font-size: 48px;
     text-transform: uppercase;
 }
+
 .page-main-body {
     padding: 6% 10%;
     background: #eaeaea;
 }
+
 .page-main-body p {
     margin-bottom: 2em;
     font-size: 18px;
     color: #2a2a2a;
     line-height: 24px;
 }
+
 /* terms & conditoins ends */
 
 .clearfix:after {
@@ -1873,17 +2196,21 @@ body.selection .hotspots .hotspot .splitter {
     clear: both;
     height: 0;
 }
+
 .clearfix {
     display: inline-block;
 }
+
 /* start commented backslash hack \*/
 
 * html .clearfix {
     height: 1%;
 }
+
 .clearfix {
     display: block;
 }
+
 /* close commented backslash hack */
 
 /* sync app link  */
@@ -1891,22 +2218,27 @@ body.selection .hotspots .hotspot .splitter {
 .mobile-view {
     display: none;
 }
+
 .sync-applink .page-main-body {
     padding: 5%;
 }
+
 .sync-applink .participateBlock .page-title-section {
     min-height: 806px;
     padding: 0% 0em;
 }
+
 .sync-applink .participateBlock .sync-applink-bg {
     background: transparent url(../images/sync-apppage-bg.png) no-repeat 0px bottom;
     height: 816px;
     background-size: 100%;
 }
+
 .sync-applink .participateBlock .sync-applink-bg h2 {
     text-align: center;
     padding: 2em;
 }
+
 .sync-applink .participateBlock .sync-applink-bg h4 {
     font-size: 30px;
     color: #fff;
@@ -1914,132 +2246,567 @@ body.selection .hotspots .hotspot .splitter {
     letter-spacing: 1px;
     font-weight: normal;
 }
+
 .sync-applink .participateBlock .sync-applink-bg p {
     text-align: center;
     font-size: 18px;
     padding: 0.5em 10em;
     letter-spacing: 1px;
 }
+
 .feature-section {
     padding: 3em 0em;
     border-bottom: 1px solid #ddd;
 }
+
 .feature-section h4 {
     font-family: "fordantennacondwgl-reg", sans-serif;
     font-size: 30px;
     margin-bottom: 1em;
 }
+
 .feature-section p {
     font-size: 18px;
 }
+
 .feature-section .div60,
 .feature-section .div40 {
     float: left;
 }
+
 .feature-section .div60 {
     width: 60%;
     padding: 0px 2em;
     box-sizing: border-box;
 }
+
 .feature-section .div40 {
     width: 40%;
     padding: 0px 2em;
     box-sizing: border-box;
 }
+
 .feature-section img {
     width: auto;
 }
+
 .hands-free img {
     position: relative;
     margin-top: -3em;
 }
+
 .sayyoursong .div60 img {
     margin: -4em 0px 0px 5em;
 }
+
 .sayyoursong .div40 {
     text-align: right;
 }
+
 button .orange {
     color: #ffb94f;
     font-family: 'FordAntennaWGL-Medium';
 }
+
 /* sync app link ends */
 
 /* View Entries Page Css Starts Here */
-.view-entries .mainBanner{min-height:126px;background-position:0 -168px}
-.view-entries-heading{font-family: 'FordAntennaExtraCondWGL-Bold', serif;font-size:1.563em;text-transform:uppercase;text-align:center;background:#f2b04b;line-height:70px}
-.sort-view-entries{background:#eaeaea;text-align:center;padding-bottom:35px}
-.sort-view-entries ul{width:528px;position:relative;margin:0 auto;list-style:none;display:table;min-height:68px;background:#35b1aa}
-.sort-view-entries ul li{float:left;padding:10px 33px;text-transform:uppercase;font-family: 'FordAntennaExtraCondWGL-Bold', serif;color:#ffffff;display:table-cell;position:relative}
-.sort-view-entries ul li i{display:block;position:relative;background:url(../images/view-all-entries-sprite.png) no-repeat;width:34px;height:40px;-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;-o-transition: all 0.3s ease;-khtml-transition: all 0.3s ease;-ms-transition: all 0.3s ease;transition:all 0.5s ease;}
-.sort-view-entries ul li i.arrow{display:none}
-.sort-view-entries ul li i.sortByall{background-position:0 5px}
-.sort-view-entries ul li i.sortBycity{background-position:-45px 5px}
-.sort-view-entries ul li i.sortBytext{background-position:-90px 5px;left:2px}
-.sort-view-entries ul li i.sortByvoice{background-position:-137px 5px}
-.sort-view-entries ul li i.sortBycelebrity{background-position:-182px 6px;left:13px}
-.sort-view-entries ul li a:hover i.sortByall,.sort-view-entries ul li a.active i.sortByall{background-position:0 -44px;}
-.sort-view-entries ul li a:hover i.sortBycity,.sort-view-entries ul li a.active i.sortBycity{background-position:-45px -45px}
-.sort-view-entries ul li a:hover i.sortBytext,.sort-view-entries ul li a.active i.sortBytext{background-position:-90px -45px;left:2px}
-.sort-view-entries ul li a:hover i.sortByvoice,.sort-view-entries ul li a.active i.sortByvoice{background-position:-137px -45px}
-.sort-view-entries ul li a:hover i.sortBycelebrity,.sort-view-entries ul li a.active i.sortBycelebrity{background-position:-183px -44px;left:13px}
-.sort-view-entries ul li a.active i.arrow{display:block;background:url(../images/view-all-entries-sprite.png) no-repeat -8px -213px;width:34px;height:25px;position:absolute}
-.sort-view-entries ul li.sortCelebrity a.active i.arrow{margin-left:13px}
-.sort-view-entries ul li ul.subMenu{width:auto;position:absolute;z-index:999;margin-left:5px;}
-.sort-view-entries ul li ul.subMenu  li{padding:10px 15px;text-align:left;}
-.sort-view-entries ul li ul.subMenu .cityinput{display:block;background:transparent;border:1px solid #ffffff;font-size:0.750em;font-family:'FordAntennaCondWGL-Reg',sans-serif;line-height:20px;margin-top:5px;}
-.sort-view-entries ul li ul.subMenu label{font-family:'FordAntennaCondWGL-Reg',sans-serif;font-size:0.8em;color:#000000}
-.autocomplete-suggestions{background:#35b1aa;margin-left:-15px;width:142px!important;padding:0 15px 10px;overflow:auto}
-.autocomplete-suggestion,.sortCelebrity ul.subMenu  li{font-size:0.750em;color:#ffffff;border-bottom:1px solid #2fa69f;padding:7px 0;cursor:pointer;font-family:'FordAntennaCondWGL-Reg',sans-serif}
-.sort-view-entries ul li.sortCelebrity ul.subMenu{left:-36px;right:-2px;padding:10px}
-.sortCelebrity ul.subMenu  li{float:none;display:block;width:139px}
-.view-entries-blk{width:auto;background:#eaeaea;overflow:hidden;padding:20px 0}
-.view-entries-blk .divCenter{max-width:720px;margin:0 auto}
-.view-entries-blk .entries-list{max-width:220px;min-height:175px;background:#ffffff;border:1px solid #dedede;border-bottom:2px solid #707070;float:left;margin:0 0 40px 15px;}
-.view-entries-blk .entries-list .user-details{position:relative;width:218px;min-height:45px;}
-.view-entries-blk .entries-list .user-details div{float:left; font-family: 'FordAntennaExtraCondWGL-BoldIt', sans-serif;color:#35b1aa;font-size:0.750em;text-align:center}
-.view-entries-blk .entries-list .user-details div i{display:block;position:relative;background:url(../images/view-all-entries-sprite.png) no-repeat;}
-.view-entries-blk .entries-list .user-details div.user-pic img{width:46px;height:46px;background-size:cover;display:inline-block;border-radius:100px;-webkit-border-radius:100px;-moz-border-radius:100px;border:1px solid #ffffff;display:block;margin:-20px 0 0 25px;position:absolute}
-.view-entries-blk .entries-list .user-details div.user-pic{max-width:98px;min-width:98px;}
-.view-entries-blk .entries-list .user-details div.user-pic span{margin-top:28px;display:block;overflow:hidden;padding:0 10px;text-overflow:ellipsis;white-space:nowrap;}
-.view-entries-blk .entries-list .user-details div.mid-icon{width:22px;min-height:40px}
-.view-entries-blk .entries-list .user-details div.mid-icon i{width:20px;height:5px;background-position:-233px -10px;margin-top:15px}
-.view-entries-blk .entries-list .user-details div.celebrity-type{max-width:98px;min-width:98px;}
-.view-entries-blk .rocky-mayur .user-details div.celebrity-type i{width:48px;height:48px;background-position:0 -154px;position:absolute;margin:-20px 0 0 25px}
-.view-entries-blk .gaurav-kapur .user-details div.celebrity-type i{width:48px;height:48px;background-position:-61px -154px;position:absolute;margin:-20px 0 0 25px}
-.view-entries-blk .anushka-dandekar .user-details div.celebrity-type i{width:48px;height:48px;background-position:-121px -154px;position:absolute;margin:-20px 0 0 25px}
-.view-entries-blk .entries-list .user-details div.celebrity-type span{margin-top:28px;display:block;overflow:hidden;padding:0 10px;text-overflow:ellipsis;white-space:nowrap;}
-.view-entries-blk .entries-list .user-description{color:#8a8a8a;font-size:0.750em;font-family: 'FordAntennaCondWGL-Reg', sans-serif;padding:10px 20px;line-height:15px;height:95px;}
-.view-entries-blk .entries-list .action{height:32px;width:auto;padding:0 20px;}
-.view-entries-blk .entries-list .action i{display:block;position:relative;background:url(../images/view-all-entries-sprite.png) no-repeat;}
-.view-entries-blk .entries-list .action .like{float:left;margin-top:-5px;font-size:1.306em;font-family: 'FordAntennaCondWGL-Bold', serif;position:relative}
-.view-entries-blk .entries-list .action .share{float:right;position:relative}
-.view-entries-blk .entries-list .action .like i.likeIcon{background-position:-149px -104px;display:inline-block;height:25px;width:25px;top:5px;}
-.view-entries-blk .rocky-mayur .action .like a{color:#f2b04b}
-.view-entries-blk .gaurav-kapur .action .like a{color:#f05a29}
-.view-entries-blk .anushka-dandekar .action .like a{color:#8cd850}
-.view-entries-blk .entries-list .action .share i.shareIcon{background-position:-190px -104px;display:inline-block;height:27px;width:25px;}
-.view-entries-blk .entries-list .audio-bg{background:url(../images/audio-bg.png) no-repeat center center;text-align:center}
-.view-entries-blk .gaurav-kapur .audio-bg i{background:url(../images/view-all-entries-sprite.png) no-repeat -97px -96px;display:inline-block;width:40px;height:40px;margin-top:15px;cursor:pointer}
-.view-entries-blk .rocky-mayur .audio-bg i{background:url(../images/view-all-entries-sprite.png) no-repeat -2px -96px;display:inline-block;width:40px;height:40px;margin-top:15px;cursor:pointer}
-.view-entries-blk .anushka-dandekar .audio-bg i{background:url(../images/view-all-entries-sprite.png) no-repeat -48px -96px;display:inline-block;width:40px;height:40px;margin-top:15px;cursor:pointer}
-.load-more{width:auto;height:auto;padding-bottom:40px;text-align:center;background:#eaeaea}
-.load-more input{font-family: 'FordAntennaExtraCondWGL-Bold', serif;text-transform:uppercase;font-size:1.250em;color:#000;background:#f2b04b;border:1px solid #f2b04b;padding:5px 20px}
+.view-entries .mainBanner {
+    min-height: 126px;
+    background-position: 0 -168px
+}
 
-.view-entries-blk .shareWith{width:155px;height:auto;background:#ffffff;position:absolute;z-index:99;padding:10px 0 10px 11px;border:1px solid #dedede;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;left:-65px;top:-62px;display:none}
-.view-entries-blk .shareWith ul{list-style:none;}
-.view-entries-blk .shareWith ul li {float:left;line-height:15px;margin-right:10px;}
-.view-entries-blk .shareWith ul li a{display:block}
-.view-entries-blk .shareWith ul li i.facebook {background: url("../images/footer-sprite.png") no-repeat;display:inline-block;height:37px;width:37px;}
-.view-entries-blk .shareWith ul li i.twitter {background: url("../images/footer-sprite.png") no-repeat -46px 0;display:inline-block;height:37px;width:37px;}
-.view-entries-blk .shareWith ul li i.tube{background: url("../images/footer-sprite.png") no-repeat -92px 0;display:inline-block;height:37px;width:37px;}
+.view-entries-heading {
+    font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+    font-size: 1.563em;
+    text-transform: uppercase;
+    text-align: center;
+    background: #f2b04b;
+    line-height: 70px
+}
 
-.view-entries-blk .actionLogin{width:155px;height:auto;background:#ffffff;position:absolute;z-index:99;padding:10px;border:1px solid #dedede;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;left:-65px;top:-110px;display:none}
-.view-entries-blk .actionLogin .field{text-align:left}
-.view-entries-blk .actionLogin .field input{height:30px;padding:2px 5px;font-size:0.55em;font-family:'FordAntennaCondWGL-Reg',sans-serif}
-.view-entries-blk .actionLogin .field input#submit{font-size:0.55em;font-family:'FordAntennaCondWGL-Reg',sans-serif;padding:5px 10px;height:auto}
-.view-entries-blk .playAudio{margin-top:23px;display:none}
-.view-entries-blk .playAudio audio{width:178px}
+.sort-view-entries {
+    background: #eaeaea;
+    text-align: center;
+    padding-bottom: 35px
+}
+
+.sort-view-entries ul {
+    width: 528px;
+    position: relative;
+    margin: 0 auto;
+    list-style: none;
+    display: table;
+    min-height: 68px;
+    background: #35b1aa
+}
+
+.sort-view-entries ul li {
+    float: left;
+    padding: 10px 33px;
+    text-transform: uppercase;
+    font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+    color: #ffffff;
+    display: table-cell;
+    position: relative
+}
+
+.sort-view-entries ul li i {
+    display: block;
+    position: relative;
+    background: url(../images/view-all-entries-sprite.png) no-repeat;
+    width: 34px;
+    height: 40px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -khtml-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.5s ease;
+}
+
+.sort-view-entries ul li i.arrow {
+    display: none
+}
+
+.sort-view-entries ul li i.sortByall {
+    background-position: 0 5px
+}
+
+.sort-view-entries ul li i.sortBycity {
+    background-position: -45px 5px
+}
+
+.sort-view-entries ul li i.sortBytext {
+    background-position: -90px 5px;
+    left: 2px
+}
+
+.sort-view-entries ul li i.sortByvoice {
+    background-position: -137px 5px
+}
+
+.sort-view-entries ul li i.sortBycelebrity {
+    background-position: -182px 6px;
+    left: 13px
+}
+
+.sort-view-entries ul li a:hover i.sortByall, .sort-view-entries ul li a.active i.sortByall {
+    background-position: 0 -44px;
+}
+
+.sort-view-entries ul li a:hover i.sortBycity, .sort-view-entries ul li a.active i.sortBycity {
+    background-position: -45px -45px
+}
+
+.sort-view-entries ul li a:hover i.sortBytext, .sort-view-entries ul li a.active i.sortBytext {
+    background-position: -90px -45px;
+    left: 2px
+}
+
+.sort-view-entries ul li a:hover i.sortByvoice, .sort-view-entries ul li a.active i.sortByvoice {
+    background-position: -137px -45px
+}
+
+.sort-view-entries ul li a:hover i.sortBycelebrity, .sort-view-entries ul li a.active i.sortBycelebrity {
+    background-position: -183px -44px;
+    left: 13px
+}
+
+.sort-view-entries ul li a.active i.arrow {
+    display: block;
+    background: url(../images/view-all-entries-sprite.png) no-repeat -8px -213px;
+    width: 34px;
+    height: 25px;
+    position: absolute
+}
+
+.sort-view-entries ul li.sortCelebrity a.active i.arrow {
+    margin-left: 13px
+}
+
+.sort-view-entries ul li ul.subMenu {
+    width: auto;
+    position: absolute;
+    z-index: 999;
+    margin-left: 5px;
+}
+
+.sort-view-entries ul li ul.subMenu li {
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.sort-view-entries ul li ul.subMenu .cityinput {
+    display: block;
+    background: transparent;
+    border: 1px solid #ffffff;
+    font-size: 0.750em;
+    font-family: 'FordAntennaCondWGL-Reg', sans-serif;
+    line-height: 20px;
+    margin-top: 5px;
+}
+
+.sort-view-entries ul li ul.subMenu label {
+    font-family: 'FordAntennaCondWGL-Reg', sans-serif;
+    font-size: 0.8em;
+    color: #000000
+}
+
+.autocomplete-suggestions {
+    background: #35b1aa;
+    margin-left: -15px;
+    width: 142px !important;
+    padding: 0 15px 10px;
+    overflow: auto
+}
+
+.autocomplete-suggestion, .sortCelebrity ul.subMenu li {
+    font-size: 0.750em;
+    color: #ffffff;
+    border-bottom: 1px solid #2fa69f;
+    padding: 7px 0;
+    cursor: pointer;
+    font-family: 'FordAntennaCondWGL-Reg', sans-serif
+}
+
+.sort-view-entries ul li.sortCelebrity ul.subMenu {
+    left: -36px;
+    right: -2px;
+    padding: 10px
+}
+
+.sortCelebrity ul.subMenu li {
+    float: none;
+    display: block;
+    width: 139px
+}
+
+.view-entries-blk {
+    width: auto;
+    background: #eaeaea;
+    overflow: hidden;
+    padding: 20px 0
+}
+
+.view-entries-blk .divCenter {
+    max-width: 720px;
+    margin: 0 auto
+}
+
+.view-entries-blk .entries-list {
+    max-width: 220px;
+    min-height: 175px;
+    background: #ffffff;
+    border: 1px solid #dedede;
+    border-bottom: 2px solid #707070;
+    float: left;
+    margin: 0 0 40px 15px;
+}
+
+.view-entries-blk .entries-list .user-details {
+    position: relative;
+    width: 218px;
+    min-height: 45px;
+}
+
+.view-entries-blk .entries-list .user-details div {
+    float: left;
+    font-family: 'FordAntennaExtraCondWGL-BoldIt', sans-serif;
+    color: #35b1aa;
+    font-size: 0.750em;
+    text-align: center
+}
+
+.view-entries-blk .entries-list .user-details div i {
+    display: block;
+    position: relative;
+    background: url(../images/view-all-entries-sprite.png) no-repeat;
+}
+
+.view-entries-blk .entries-list .user-details div.user-pic img {
+    width: 46px;
+    height: 46px;
+    background-size: cover;
+    display: inline-block;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border: 1px solid #ffffff;
+    display: block;
+    margin: -20px 0 0 25px;
+    position: absolute
+}
+
+.view-entries-blk .entries-list .user-details div.user-pic {
+    max-width: 98px;
+    min-width: 98px;
+}
+
+.view-entries-blk .entries-list .user-details div.user-pic span {
+    margin-top: 28px;
+    display: block;
+    overflow: hidden;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.view-entries-blk .entries-list .user-details div.mid-icon {
+    width: 22px;
+    min-height: 40px
+}
+
+.view-entries-blk .entries-list .user-details div.mid-icon i {
+    width: 20px;
+    height: 5px;
+    background-position: -233px -10px;
+    margin-top: 15px
+}
+
+.view-entries-blk .entries-list .user-details div.celebrity-type {
+    max-width: 98px;
+    min-width: 98px;
+}
+
+.view-entries-blk .rocky-mayur .user-details div.celebrity-type i {
+    width: 48px;
+    height: 48px;
+    background-position: 0 -154px;
+    position: absolute;
+    margin: -20px 0 0 25px
+}
+
+.view-entries-blk .gaurav-kapur .user-details div.celebrity-type i {
+    width: 48px;
+    height: 48px;
+    background-position: -61px -154px;
+    position: absolute;
+    margin: -20px 0 0 25px
+}
+
+.view-entries-blk .anushka-dandekar .user-details div.celebrity-type i {
+    width: 48px;
+    height: 48px;
+    background-position: -121px -154px;
+    position: absolute;
+    margin: -20px 0 0 25px
+}
+
+.view-entries-blk .entries-list .user-details div.celebrity-type span {
+    margin-top: 28px;
+    display: block;
+    overflow: hidden;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.view-entries-blk .entries-list .user-description {
+    color: #8a8a8a;
+    font-size: 0.750em;
+    font-family: 'FordAntennaCondWGL-Reg', sans-serif;
+    padding: 10px 20px;
+    line-height: 15px;
+    height: 95px;
+}
+
+.view-entries-blk .entries-list .action {
+    height: 32px;
+    width: auto;
+    padding: 0 20px;
+}
+
+.view-entries-blk .entries-list .action i {
+    display: block;
+    position: relative;
+    background: url(../images/view-all-entries-sprite.png) no-repeat;
+}
+
+.view-entries-blk .entries-list .action .like {
+    float: left;
+    margin-top: -5px;
+    font-size: 1.306em;
+    font-family: 'FordAntennaCondWGL-Bold', serif;
+    position: relative
+}
+
+.view-entries-blk .entries-list .action .share {
+    float: right;
+    position: relative
+}
+
+.view-entries-blk .entries-list .action .like i.likeIcon {
+    background-position: -149px -104px;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    top: 5px;
+}
+
+.view-entries-blk .rocky-mayur .action .like a {
+    color: #f2b04b
+}
+
+.view-entries-blk .gaurav-kapur .action .like a {
+    color: #f05a29
+}
+
+.view-entries-blk .anushka-dandekar .action .like a {
+    color: #8cd850
+}
+
+.view-entries-blk .entries-list .action .share i.shareIcon {
+    background-position: -190px -104px;
+    display: inline-block;
+    height: 27px;
+    width: 25px;
+}
+
+.view-entries-blk .entries-list .audio-bg {
+    background: url(../images/audio-bg.png) no-repeat center center;
+    text-align: center
+}
+
+.view-entries-blk .gaurav-kapur .audio-bg i {
+    background: url(../images/view-all-entries-sprite.png) no-repeat -97px -96px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    cursor: pointer
+}
+
+.view-entries-blk .rocky-mayur .audio-bg i {
+    background: url(../images/view-all-entries-sprite.png) no-repeat -2px -96px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    cursor: pointer
+}
+
+.view-entries-blk .anushka-dandekar .audio-bg i {
+    background: url(../images/view-all-entries-sprite.png) no-repeat -48px -96px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    cursor: pointer
+}
+
+.load-more {
+    width: auto;
+    height: auto;
+    padding-bottom: 40px;
+    text-align: center;
+    background: #eaeaea
+}
+
+.load-more input {
+    font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+    text-transform: uppercase;
+    font-size: 1.250em;
+    color: #000;
+    background: #f2b04b;
+    border: 1px solid #f2b04b;
+    padding: 5px 20px
+}
+
+.view-entries-blk .shareWith {
+    width: 155px;
+    height: auto;
+    background: #ffffff;
+    position: absolute;
+    z-index: 99;
+    padding: 10px 0 10px 11px;
+    border: 1px solid #dedede;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    left: -65px;
+    top: -62px;
+    display: none
+}
+
+.view-entries-blk .shareWith ul {
+    list-style: none;
+}
+
+.view-entries-blk .shareWith ul li {
+    float: left;
+    line-height: 15px;
+    margin-right: 10px;
+}
+
+.view-entries-blk .shareWith ul li a {
+    display: block
+}
+
+.view-entries-blk .shareWith ul li i.facebook {
+    background: url("../images/footer-sprite.png") no-repeat;
+    display: inline-block;
+    height: 37px;
+    width: 37px;
+}
+
+.view-entries-blk .shareWith ul li i.twitter {
+    background: url("../images/footer-sprite.png") no-repeat -46px 0;
+    display: inline-block;
+    height: 37px;
+    width: 37px;
+}
+
+.view-entries-blk .shareWith ul li i.tube {
+    background: url("../images/footer-sprite.png") no-repeat -92px 0;
+    display: inline-block;
+    height: 37px;
+    width: 37px;
+}
+
+.view-entries-blk .actionLogin {
+    width: 155px;
+    height: auto;
+    background: #ffffff;
+    position: absolute;
+    z-index: 99;
+    padding: 10px;
+    border: 1px solid #dedede;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    left: -65px;
+    top: -110px;
+    display: none
+}
+
+.view-entries-blk .actionLogin .field {
+    text-align: left
+}
+
+.view-entries-blk .actionLogin .field input {
+    height: 30px;
+    padding: 2px 5px;
+    font-size: 0.55em;
+    font-family: 'FordAntennaCondWGL-Reg', sans-serif
+}
+
+.view-entries-blk .actionLogin .field input#submit {
+    font-size: 0.55em;
+    font-family: 'FordAntennaCondWGL-Reg', sans-serif;
+    padding: 5px 10px;
+    height: auto
+}
+
+.view-entries-blk .playAudio {
+    margin-top: 23px;
+    display: none
+}
+
+.view-entries-blk .playAudio audio {
+    width: 178px
+}
+
 /* View Entries Page Css Ends Here */
 
 /* how it works */
@@ -2047,12 +2814,14 @@ button .orange {
 .howitworks-main-body {
     position: relative;
 }
+
 .howitworks-main-body .center-obj {
     margin: 0px auto;
     text-align: center;
     position: relative;
     height: 700px;
 }
+
 .howitworks-main-body .center-obj .circle-obj {
     width: 335px;
     height: 335px;
@@ -2062,6 +2831,7 @@ button .orange {
     margin-top: -80px;
     padding: 90px 20px 0px 20px;
 }
+
 .howitworks-main-body .center-obj .center-main-img,
 .howitworks-main-body .center-obj .center-obj-carimg,
 .howitworks-main-body .step-cycle-container .each-step .bg-image,
@@ -2070,6 +2840,7 @@ button .orange {
     background: url(../images/howitworks.png) no-repeat;
     margin: 0 auto;
 }
+
 .howitworks-main-body .center-obj .center-main-img,
 .howitworks-main-body .center-obj .center-obj-carimg {
     text-align: center;
@@ -2077,11 +2848,13 @@ button .orange {
     z-index: 999;
     position: relative;
 }
+
 .howitworks-main-body .center-obj .center-main-img {
     background-position: -283px -30px;
     width: 244px;
     height: 228px;
 }
+
 .howitworks-main-body .center-obj .play-btn #button {
     width: 50px;
     height: 50px;
@@ -2095,12 +2868,14 @@ button .orange {
     background: #fff;
     padding: 15px 0 0 5px;
 }
+
 .howitworks-main-body .center-obj .play-btn {
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
 }
+
 .howitworks-main-body .center-obj .play-btn #button #triangle {
     width: 0;
     height: 0;
@@ -2111,6 +2886,7 @@ button .orange {
     z-index: 2;
     margin: 0 auto;
 }
+
 .howitworks-main-body .center-obj .center-obj-title {
     font-size: 24px;
     color: #a86f18;
@@ -2118,9 +2894,11 @@ button .orange {
     font-weight: bold;
     font-family: "FordAntennaExtraCondWGL-Reg", sans-serif;
 }
+
 .howitworks-main-body .center-obj .center-obj-appeal {
     margin: 5px 0px;
 }
+
 .howitworks-main-body .center-obj .center-obj-appeal button {
     border: 2px solid #fff;
     color: #fff;
@@ -2128,104 +2906,124 @@ button .orange {
     font-size: 18px;
     background: none;
 }
+
 .howitworks-main-body .center-obj .center-obj-appeal button span.orange {
     color: #fff;
 }
+
 .howitworks-main-body .center-obj .center-obj-carimg {
     background-position: -215px -423px;
     width: 350px;
     height: 108px;
     margin-top: -75px;
 }
+
 .howitworks-main-body .step-cycle-container {
     position: relative;
     margin-top: -520px;
     width: 100%;
 }
+
 .howitworks-main-body .step-cycle-container .each-step .first-arrow {
     margin: 10px auto;
 }
+
 .howitworks-main-body .step-cycle-container .each-step {
     font-size: 14px;
     text-align: center;
     width: 200px;
     height: auto;
 }
+
 .howitworks-main-body .step-cycle-container .drive-tech .step-content {
     padding: 0px 20px 0px 116px;
     width: 250px;
 }
+
 .howitworks-main-body .step-cycle-container .wow-celeb .step-content {
     padding: 0px 20px 0px 150px;
     margin-top: -65px;
 }
+
 .howitworks-main-body .step-cycle-container .choose-celebrity .bg-image {
     background-position: -535px -45px;
     width: 160px;
     height: 64px;
 }
+
 .howitworks-main-body .step-cycle-container .make-an-appeal .bg-image {
     background-position: -630px -190px;
     width: 102px;
     height: 64px;
 }
+
 .howitworks-main-body .step-cycle-container .ace-audition .bg-image {
     background-position: -678px -390px;
     width: 50px;
     height: 80px;
 }
+
 .howitworks-main-body .step-cycle-container .wow-celeb .bg-image {
     background-position: -358px -580px;
     width: 246px;
     height: 128px;
 }
+
 .howitworks-main-body .step-cycle-container .drive-tech .bg-image {
     background-position: -213px -578px;
     width: 86px;
     height: 65px;
 }
+
 .howitworks-main-body .step-cycle-container .get-friends-talking .bg-image {
     background-position: -15px -376px;
     width: 102px;
     height: 83px;
 }
+
 .howitworks-main-body .step-cycle-container .the-final-word .bg-image {
     background-position: -30px -190px;
     width: 55px;
     height: 60px;
 }
+
 .howitworks-main-body .step-cycle-container .choose-ur-win .bg-image {
     background-position: 0px -50px;
     width: 230px;
     height: 70px;
 }
+
 .howitworks-main-body .step-cycle-container .choose-celebrity .mobile-arrow {
     display: none;
 }
+
 .howitworks-main-body .step-cycle-container .choose-celebrity .first-arrow {
     background-position: -535px -140px
-    /*-642px -140px*/
-    ;
+    /*-642px -140px*/;
     width: 200px;
     height: 30px;
 }
+
 .howitworks-main-body .step-cycle-container .make-an-appeal .first-arrow {
     background-position: -698px -310px;
     width: 10px;
     height: 60px;
 }
+
 .howitworks-main-body .step-cycle-container .ace-audition .first-arrow {
     background-position: -638px -545px;
     width: 40px;
     height: 45px;
     margin-left: 20px;
 }
+
 .howitworks-main-body .step-cycle-container .get-friends-talking .first-arrow {
     background-position: 30px -281px;
     /*-27px -294px;*/
     width: 200px;
     height: 53px;
 }
+
 .howitworks-main-body .step-cycle-container .drive-tech .first-arrow {
     background-position: -114px -574px;
     width: 50px;
@@ -2234,14 +3032,17 @@ button .orange {
     left: -90px;
     top: 50px;
 }
+
 .howitworks-main-body .step-cycle-container .the-final-word .first-arrow {
     background-position: -82px -140px;
     width: 18px;
     height: 26px;
 }
+
 .howitworks-main-body .step-cycle-container .each-step .bg-image {
     margin-bottom: 10px;
 }
+
 .howitworks-main-body .step-cycle-container .each-step h4 {
     text-transform: uppercase;
     font-style: italic;
@@ -2249,117 +3050,349 @@ button .orange {
     font-family: "FordAntennaExtraCondWGL-Reg", sans-serif;
     margin-bottom: 5px;
 }
+
 .howitworks-main-body .step-cycle-container .each-step p {
     margin: 0px;
     padding: 0px;
     font-size: 13px;
     line-height: 16px;
 }
+
 .howitworks-main-body .step-cycle-container .each-step {
     position: absolute;
     top: 0px;
     right: 0px;
 }
+
 .howitworks-main-body .step-cycle-container .choose-celebrity {
     top: -10px;
     right: 50px;
 }
+
 .howitworks-main-body .step-cycle-container .make-an-appeal {
     top: 145px;
     right: 0px;
 }
+
 .howitworks-main-body .step-cycle-container .ace-audition {
-    top: 360px;
-    ;
+    top: 360px;;
     right: 00px;
 }
+
 .howitworks-main-body .step-cycle-container .wow-celeb {
     right: 190px;
     top: 530px;
 }
+
 .howitworks-main-body .step-cycle-container .drive-tech {
     top: 475px;
     left: 70px;
     width: 300px;
 }
+
 .howitworks-main-body .step-cycle-container .get-friends-talking {
     top: 270px;
     left: -35px;
     width: 250px;
 }
+
 .howitworks-main-body .step-cycle-container .the-final-word {
     left: -20px;
     top: 102px;
     width: 220px;
 }
+
 .howitworks-main-body .step-cycle-container .choose-ur-win {
     top: -10px;
     left: 40px;
 }
+
 .howitworks-main-body .step-cycle-container .wow-celeb .step-content {
     padding: 0px 0px 0px 100px;
     margin-top: -65px;
 }
+
 .howitworks-main-body .step-cycle-container .drive-tech .step-content {
     padding: 0px 0px 0px 20px;
 }
+
 /* how it works ends */
 
-
 form .error {
-    background:#fbb099 !important;
+    background: #fbb099 !important;
 }
 
 form label.error {
-    color:#ff0000;
-    background:none !important;
-    padding-top:5px;
-    display:block;
-    text-align:left;
+    color: #ff0000;
+    background: none !important;
+    padding-top: 5px;
+    display: block;
+    text-align: left;
 }
 
 /* Cars Page Css Ends Here */
-.cars .mainBanner{min-height:126px;background-position:0 -168px}
-.cars-banner{background:#dddddd url(../images/cars/cars-banner.png) no-repeat center center;min-height:284px}
-.cars-banner div{text-align:center;font-family: 'FordAntennaExtraCondWGL-BoldIt', sans-serif;font-size:3.125em;color:#ffffff}
-.cars-banner .cars-icon{min-height:130px;max-height:130px;padding:25px 0}
-.cars-banner .cars-splitter{background:url(../images/cars/car-banner-arrow.png) no-repeat top center;padding-bottom:25px;}
-.aboutCars{background:#dddddd;width:100%;display:inline-block;position:relative}
-.aboutCars .divCenter{max-width:930px;margin:0 auto;}
-.aboutCars .left-container{width:50%;float:left;min-height:400px;max-height:400px}
-.aboutCars .right-container{width:48%;float:left;}
-.aboutCars .splitter{background:#9cc0be;float:left;max-width:2px;min-width:2px;min-height:305px;max-height:305px;margin-top:100px}
-.aboutCars .splitter i{position:relative;background:url(../images/cars/cars-sprite.png) no-repeat 0 0px;width:54px;height:54px;display:inline-block;left:-26px;top:-54px}
-.aboutCars .left-container .carImage{position:relative;top:-65px}
-.aboutCars .right-container .carImage{position:relative;top:-35px}
-.aboutCars .left-container .carDescription{position:relative;top:-55px}
-.aboutCars .right-container .carDescription{position:relative;top:-20px}
-.aboutCars .left-container .carDescription div,.aboutCars .right-container .carDescription div{text-align:center}
-.aboutCars .left-container .carDescription .head,.aboutCars .right-container .carDescription .head{font-family: 'FordAntennaCondWGL-Bold', serif;font-size:1.875em;line-height:45px}
-.aboutCars .left-container .carDescription .sub-head,.aboutCars .right-container .carDescription .sub-head{font-family: 'FordAntennaCondWGL-Reg', sans-serif;font-size:1.125em;}
-.aboutCars .left-container .carDescription .sub-head span,.aboutCars .right-container .carDescription .sub-head span{border-top:1px solid #9cc0be;padding:7px 0;display:inline-block}
-.aboutCars .left-container .carDescription .know-more a,.aboutCars .right-container .carDescription .know-more a{font-family:'FordAntennaExtraCondWGL-Bold', serif;font-size:1.643em;background:#25a6a0;color:#ffffff;text-transform:uppercase;display:inline-block;padding:10px 25px;margin:10px 0}
-.aboutCars .left-container .carDescription .know-more a i,.aboutCars .right-container .carDescription .know-more a i{background:url(../images/cars/cars-sprite.png) no-repeat -69px 0px;width:13px;height:20px;margin-left:10px;display:inline-block;}
-.aboutCarsDescription{background:#eaeaea;width:auto;overflow:hidden;margin-top:-4px;padding-bottom:120px}
-.aboutCarsDescription .divCenter{max-width:930px;margin:0 auto;}
-.aboutCarsDescription .left-container{width:50%;float:left;}
-.aboutCarsDescription .right-container{width:48%;float:left;}
+.cars .mainBanner {
+    min-height: 126px;
+    background-position: 0 -168px
+}
 
-.aboutCarsDescription .left-container .blocks{width:auto;padding:20px 0;border-bottom:2px solid #cacaca;margin:20px 25px 20px 0}
-.aboutCarsDescription .right-container .blocks{width:auto;padding:20px 0;border-bottom:2px solid #cacaca;margin:20px 0 20px 25px}
-.aboutCarsDescription .left-container .blocks div{text-align:right}
-.aboutCarsDescription .right-container .blocks div{text-align:left}
-.aboutCarsDescription .blocks div.image{text-align:center;padding-bottom:20px;}
-.aboutCarsDescription .blocks div.head{font-family: 'FordAntennaCondWGL-Bold', serif;font-size:1.250em;padding-bottom:20px;text-transform:uppercase;position:relative}
-.aboutCarsDescription .blocks div.sub-head{font-size:1.125em;padding-bottom:30px;}
-.no-border{border:0 none!important}
-.aboutCarsDescription .splitter{background:#9cc0be;float:left;max-width:2px;min-width:2px;min-height:2050px;max-height:2050px;position:relative}
-.aboutCarsDescription .splitter i{position:absolute;background:url(../images/cars/cars-sprite.png) no-repeat 0 0px;width:54px;height:54px;display:inline-block;left:-26px;bottom:-54px}
-.aboutCarsDescription  .know-more{text-align:center}
-.aboutCarsDescription  .know-more a,.aboutCars .aboutCarsDescription .know-more a{font-family:'FordAntennaExtraCondWGL-Bold', serif;font-size:1.643em;background:#25a6a0;color:#ffffff;text-transform:uppercase;display:inline-block;padding:10px 25px;margin:10px 0}
-.aboutCarsDescription .know-more a i{background:url(../images/cars/cars-sprite.png) no-repeat -69px 0px;width:13px;height:20px;margin-left:10px;display:inline-block;}
-.aboutCarsDescription .right-container .know-more{margin-top:74px}
-.aboutCarsDescription .blocks i.bullet{background:url(../images/cars/cars-sprite.png) no-repeat -69px -34px;width:15px;height:15px;display:inline-block;position:absolute;}
-.aboutCarsDescription .left-container .blocks i.bullet{right:-34px;top:5px}
-.aboutCarsDescription .right-container .blocks i.bullet{left:-33px;top:5px}
+.cars-banner {
+    background: #dddddd url(../images/cars/cars-banner.png) no-repeat center center;
+    min-height: 284px
+}
+
+.cars-banner div {
+    text-align: center;
+    font-family: 'FordAntennaExtraCondWGL-BoldIt', sans-serif;
+    font-size: 3.125em;
+    color: #ffffff
+}
+
+.cars-banner .cars-icon {
+    min-height: 130px;
+    max-height: 130px;
+    padding: 25px 0
+}
+
+.cars-banner .cars-splitter {
+    background: url(../images/cars/car-banner-arrow.png) no-repeat top center;
+    padding-bottom: 25px;
+}
+
+.aboutCars {
+    background: #dddddd;
+    width: 100%;
+    display: inline-block;
+    position: relative
+}
+
+.aboutCars .divCenter {
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+.aboutCars .left-container {
+    width: 50%;
+    float: left;
+    min-height: 400px;
+    max-height: 400px
+}
+
+.aboutCars .right-container {
+    width: 48%;
+    float: left;
+}
+
+.aboutCars .splitter {
+    background: #9cc0be;
+    float: left;
+    max-width: 2px;
+    min-width: 2px;
+    min-height: 305px;
+    max-height: 305px;
+    margin-top: 100px
+}
+
+.aboutCars .splitter i {
+    position: relative;
+    background: url(../images/cars/cars-sprite.png) no-repeat 0 0px;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    left: -26px;
+    top: -54px
+}
+
+.aboutCars .left-container .carImage {
+    position: relative;
+    top: -65px
+}
+
+.aboutCars .right-container .carImage {
+    position: relative;
+    top: -35px
+}
+
+.aboutCars .left-container .carDescription {
+    position: relative;
+    top: -55px
+}
+
+.aboutCars .right-container .carDescription {
+    position: relative;
+    top: -20px
+}
+
+.aboutCars .left-container .carDescription div, .aboutCars .right-container .carDescription div {
+    text-align: center
+}
+
+.aboutCars .left-container .carDescription .head, .aboutCars .right-container .carDescription .head {
+    font-family: 'FordAntennaCondWGL-Bold', serif;
+    font-size: 1.875em;
+    line-height: 45px
+}
+
+.aboutCars .left-container .carDescription .sub-head, .aboutCars .right-container .carDescription .sub-head {
+    font-family: 'FordAntennaCondWGL-Reg', sans-serif;
+    font-size: 1.125em;
+}
+
+.aboutCars .left-container .carDescription .sub-head span, .aboutCars .right-container .carDescription .sub-head span {
+    border-top: 1px solid #9cc0be;
+    padding: 7px 0;
+    display: inline-block
+}
+
+.aboutCars .left-container .carDescription .know-more a, .aboutCars .right-container .carDescription .know-more a {
+    font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+    font-size: 1.643em;
+    background: #25a6a0;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 25px;
+    margin: 10px 0
+}
+
+.aboutCars .left-container .carDescription .know-more a i, .aboutCars .right-container .carDescription .know-more a i {
+    background: url(../images/cars/cars-sprite.png) no-repeat -69px 0px;
+    width: 13px;
+    height: 20px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.aboutCarsDescription {
+    background: #eaeaea;
+    width: auto;
+    overflow: hidden;
+    margin-top: -4px;
+    padding-bottom: 120px
+}
+
+.aboutCarsDescription .divCenter {
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+.aboutCarsDescription .left-container {
+    width: 50%;
+    float: left;
+}
+
+.aboutCarsDescription .right-container {
+    width: 48%;
+    float: left;
+}
+
+.aboutCarsDescription .left-container .blocks {
+    width: auto;
+    padding: 20px 0;
+    border-bottom: 2px solid #cacaca;
+    margin: 20px 25px 20px 0
+}
+
+.aboutCarsDescription .right-container .blocks {
+    width: auto;
+    padding: 20px 0;
+    border-bottom: 2px solid #cacaca;
+    margin: 20px 0 20px 25px
+}
+
+.aboutCarsDescription .left-container .blocks div {
+    text-align: right
+}
+
+.aboutCarsDescription .right-container .blocks div {
+    text-align: left
+}
+
+.aboutCarsDescription .blocks div.image {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.aboutCarsDescription .blocks div.head {
+    font-family: 'FordAntennaCondWGL-Bold', serif;
+    font-size: 1.250em;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    position: relative
+}
+
+.aboutCarsDescription .blocks div.sub-head {
+    font-size: 1.125em;
+    padding-bottom: 30px;
+}
+
+.no-border {
+    border: 0 none !important
+}
+
+.aboutCarsDescription .splitter {
+    background: #9cc0be;
+    float: left;
+    max-width: 2px;
+    min-width: 2px;
+    min-height: 2050px;
+    max-height: 2050px;
+    position: relative
+}
+
+.aboutCarsDescription .splitter i {
+    position: absolute;
+    background: url(../images/cars/cars-sprite.png) no-repeat 0 0px;
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    left: -26px;
+    bottom: -54px
+}
+
+.aboutCarsDescription .know-more {
+    text-align: center
+}
+
+.aboutCarsDescription .know-more a, .aboutCars .aboutCarsDescription .know-more a {
+    font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+    font-size: 1.643em;
+    background: #25a6a0;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 25px;
+    margin: 10px 0
+}
+
+.aboutCarsDescription .know-more a i {
+    background: url(../images/cars/cars-sprite.png) no-repeat -69px 0px;
+    width: 13px;
+    height: 20px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.aboutCarsDescription .right-container .know-more {
+    margin-top: 74px
+}
+
+.aboutCarsDescription .blocks i.bullet {
+    background: url(../images/cars/cars-sprite.png) no-repeat -69px -34px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+}
+
+.aboutCarsDescription .left-container .blocks i.bullet {
+    right: -34px;
+    top: 5px
+}
+
+.aboutCarsDescription .right-container .blocks i.bullet {
+    left: -33px;
+    top: 5px
+}
+
 /* Cars Page Css Ends Here */
