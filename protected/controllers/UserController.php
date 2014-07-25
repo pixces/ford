@@ -293,6 +293,7 @@ class UserController extends Controller
         $content = Yii::app()->params['celebrity'];
         $ugcGalleryId = Yii::app()->params['ugcGalleryId'];
         $userSubmissions = 0;
+        $submittedForApproval = 0;
 
 
         //get user details
@@ -300,14 +301,26 @@ class UserController extends Controller
         $profile = UserProfiles::model()->find('user_id=:userId',array(":userId"=>$user->id));
 
         //get the content submitted by this user
-        $params = array(
+        $aParams = array(
             'user_id' => $userId,
             'gallery_id' => $ugcGalleryId,
             'is_ugc' => 1,
         );
-        //$contentList = Yii::app()->services->performRequest('/content',$params,'GET')->getResponseData(true);
-        //print_r($contentList);
 
+        $result = Yii::app()->services->performRequest('/content',$aParams,'GET')->getResponseData(true);
+
+        if ($result){
+            foreach($result as $item){
+                $content[$item['channel_name']] = array_merge($content[$item['channel_name']],$item);
+                if ($item['is_submitted'] == 1 ){
+                    $submittedForApproval ++;
+                }
+                $userSubmissions++;
+            }
+        }
+
+        //print_r($content);
+        //exit;
         $profile_page_name = 'profile';
         $this->page_name = $profile_page_name;
         $this->render($this->page_name, array(

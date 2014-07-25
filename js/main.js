@@ -363,7 +363,7 @@ $(document).ready(function(e){
     });
 
     $(document).on("click", ".closeVideo i",function(){
-        $(".videoContainer").slideUp().empty();
+        $(".videoContainer").hide().empty();
         $(".bannerContainer").fadeIn();
     }).on("change", "#my-file", IMAGE.init);
 
@@ -463,6 +463,47 @@ $(document).ready(function(e){
 		$(this).hide().next().show();
 		//var audioElement = $(this).next().find('player');
 	});
+
+/* Celebs Page JS Starts Here */
+	$(".celebs-our-content,.celebsVideo").hide();
+	$('.celebs-action a i').on("click",function(){
+		$(".celebsVideo").find("iframe").attr("src","");
+		$(".celebsContainer").show();
+		var activeDiv = $(this).attr("class");
+		$(".celebs-our-celebs,.celebs-our-content,.celebsVideo").hide();		
+		$(".celebs-our-content."+activeDiv).show();
+	});
+	
+	$(".celebs-our-content .play-video a").on("click",function(){
+		var videoURL = $(this).attr("rel");
+		if(windowWidth < 767){
+			$(this).parent().parent().next().show();
+			$(this).parent().parent().find(".play-video").hide();
+			$(this).parent().parent().find(".description").hide();
+			$(this).parent().parent().find(".more").hide();
+			$(this).parent().parent().next().find("iframe").attr("src","http://www.youtube.com/embed/"+videoURL+"?autoplay=1");
+	}else{
+			$(this).parent().parent().next().show();
+			$(this).parent().parent().hide().next().show();
+			$(this).parent().parent().next().find("iframe").attr("src","http://www.youtube.com/embed/"+videoURL+"?autoplay=1");
+		}
+	});
+	
+	$(".closeVideo i").on("click",function(){
+		$(this).parent().next().find("iframe").attr("src","");
+		$(this).parent().parent().hide();
+		$(this).parent().parent().prev().show();
+		if(windowWidth < 767){
+			$(this).parent().parent().prev().find(".play-video").show();
+			$(this).parent().parent().prev().find(".description").show();
+			$(this).parent().parent().prev().find(".more").show();	
+	}else{			
+			$(this).parent().parent().prev().show();
+		}
+	});
+	/* Celebs Page JS Ends Here */
+
+
 });
 
 
