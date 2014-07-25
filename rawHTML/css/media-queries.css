@@ -1264,3 +1264,116 @@
 }
 
 /* Cars Page Css Ends Here */
+
+/* Celebs Page Css Ends Here */
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+    .celebs-content {
+        min-height: 2125px;
+        max-height: none;
+        background: url(../images/celebs-background-mobile.png) repeat
+    }
+
+    .celebs-centerImg {
+        background: url(../images/celebs-bg-image-mobile.png) no-repeat top center;
+        min-height: 341px;
+    }
+
+    .celebs-action {
+        display: none;
+    }
+
+    .celebs-our-celebs {
+        display: block !important
+    }
+
+    .celebs-our-content {
+        display: block !important;
+        background: url(../images/celebs-mobile-bg.png) no-repeat center 165px !important;
+        min-height: 351px;
+        max-width: 100%;
+        max-width: 319px !important
+    }
+
+    .celebs-our-content .description {
+        font-size: 0.8em !important;
+        padding: 0 35px !important
+    }
+
+    .celebs-our-content.gaurav-kapur .description {
+        padding: 0 10px !important
+    }
+
+    .celebs-our-celebs {
+        background: url(../images/celebs-our-celebs-mobile.png) no-repeat;
+        max-width: 286px;
+        height: 286px;
+        margin: 0 auto;
+        font-size: 2.5em;
+        line-height: 35px
+    }
+
+    .celebs-our-celebs span {
+        padding-top: 115px;
+    }
+
+    .celebs-our-content .head {
+        font-size: 1.875em;
+    }
+
+    .celebs-our-content .sub-head, .celebs-our-content .title {
+        font-size: 1em
+    }
+
+    .celebs-our-content .play-video .play-video-icon {
+        margin: 35px auto 0 !important;
+    }
+
+    .celebsVideo {
+        top: 8px
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 699px) {
+    .carImage-icon {
+        background: url("../images/home-car-image-mobile.png") no-repeat scroll center center;
+        max-height: 159px;
+        min-height: 159px;
+        margin: 10px 0 !important
+    }
+
+    .participateBlock .carImage div.ford-ecosport, .participateBlock .carImage div.ford-fiesta {
+        display: block
+    }
+
+    .carImage .ford-ecosport span.icon {
+        margin: 0
+    }
+
+    .carImage .ford-ecosport span.text, .carImage .ford-fiesta span.text {
+        text-align: center;
+        padding: 0
+    }
+
+    .participateBlock .carImage div span.icon img {
+        max-width: 100%;
+    }
+
+    .appSync {
+        position: static;
+        margin: 40px 0 !important
+    }
+
+    .carImage-mobile {
+        display: none !important
+    }
+
+    .participateBlock .carImage {
+        background: url("../images/home-car-image-bg.png") no-repeat scroll center 485px #2bc2ba
+    }
+
+    .participateBlock .carImage div span.icon {
+        min-height: 175px
+    }
+}
+
+/* Celebs Page Css Ends Here */
