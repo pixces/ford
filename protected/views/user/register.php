@@ -58,9 +58,6 @@
             <div class="row">
                 <div class="field">
                     <!--i class="city-icon"></i -->
-                    <!-- input type="text" name="UserProfile[city]" id="city" placeholder="City" / -->
-			<!--i class="city-icon"></i -->
-                            <!--input type="text" name="city" id="city" placeholder="City" /-->
                             <select name="city" id="city" placeholder="City">
                                 <option value="">Select City</option>
                                 <option value="Bangalore">Bangalore</option>

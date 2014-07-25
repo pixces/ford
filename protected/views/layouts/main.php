@@ -67,7 +67,7 @@
                         'lang'=>$this->siteParams['lang'],
                         'env'=>$this->siteParams['env'],
                         'phase'=>$this->siteParams['phase'],
-                        'view'=>$this->nav['our-celebs']['page_name'])
+                        'view'=>$this->nav['celebs']['page_name'])
                 ); ?>
             </li>
             <li class="last">
@@ -76,7 +76,7 @@
                         'lang'=>$this->siteParams['lang'],
                         'env'=>$this->siteParams['env'],
                         'phase'=>$this->siteParams['phase'],
-                        'view'=>$this->nav['our-cars']['page_name'])
+                        'view'=>$this->nav['cars']['page_name'])
                 ); ?>
             </li>
         </ul>
