@@ -290,7 +290,8 @@ $(document).ready(function (e) {
 
     $(window).resize(function () {
         onm_window_parameters();
-        $(".mainmenu,.synApplink,.navUser,.overlay").hide();
+        $(".mainmenu,.synApplink,.navUser,.overlay,.videoOverlay").hide();
+		$(".videoOverlay").find("iframe").attr("src", "");
     });
 
     $(".upload-block upload-img, .upload-block label").on("click", function () {
@@ -387,5 +388,17 @@ $(document).ready(function (e) {
         }
     });
     /* Celebs Page JS Ends Here */
+	
+	
+	$(".hotspots .hotspot .img a").click(function(){
+		var videoID = $(this).attr("rel");
+		$(".overlay").toggle().css({"width": documentWidth, "height": documentHeight,"top": 0});
+		$(".videoOverlay").show().find("iframe").attr("src", "http://www.youtube.com/embed/" + videoID + "?autoplay=1");
+	});
+	
+	$(".closevideoOverlay i").on("click", function (){
+		$(".overlay").hide();
+		$(".videoOverlay").hide().find("iframe").attr("src", "");
+	});
 
 });
