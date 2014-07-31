@@ -1413,7 +1413,8 @@ body {
     text-align: left;
     margin-right: 5px;
     background: #ffffff;
-    border: 1px solid #ffffff
+    border: 1px solid #ffffff;
+	height:auto;
 }
 
 .rowCaptcha div.termsBlock ul li span {
