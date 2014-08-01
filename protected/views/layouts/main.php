@@ -31,6 +31,15 @@
 <!-- Overlay Starts Here -->
 <div class="overlay"></div>
 <!-- Overlay Ends Here -->
+
+<!-- Home Video Overlay Starts Here -->
+<div class="centerOverlay">
+	<div class="videoOverlay">
+		<div class="closevideoOverlay"><i>X</i></div>
+		<iframe width="100%" height="300" frameborder="0" ></iframe>
+	</div>
+</div>
+<!-- Home Video Overlay Ends Here -->
 <div class="wrapper">
 <!-- Header Starts Here -->
 <div class="header">

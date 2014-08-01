@@ -359,7 +359,7 @@ $(document).ready(function(e){
         videoHeight = $(".mainBanner").height();
 
         $(".bannerContainer").hide();
-        $(".videoContainer").html('<div class="closeVideo"><i>X</i></div><div><iframe width="100%" height="' + videoHeight + '" frameborder="0" allowfullscreen src="http://www.youtube.com/embed/' + videoUrl + '?autoplay=1"></iframe></div>').slideDown();
+        $(".videoContainer").html('<div class="closeVideo"><i>X</i></div><div><iframe width="100%" height="360" frameborder="0" allowfullscreen src="http://www.youtube.com/embed/' + videoUrl + '?autoplay=1"></iframe></div>').show();
     });
 
     $(document).on("click", ".closeVideo i",function(){
@@ -369,7 +369,8 @@ $(document).ready(function(e){
 
     $(window).resize(function() {
         onm_window_parameters();
-        $(".mainmenu,.synApplink,.navUser,.overlay").hide();
+        $(".mainmenu,.synApplink,.navUser,.overlay,.videoOverlay").hide();
+		$(".videoOverlay").find("iframe").attr("src", "#");
     });
 
     $(".upload-block upload-img, .upload-block label").on("click",function(){
@@ -502,6 +503,34 @@ $(document).ready(function(e){
 		}
 	});
 	/* Celebs Page JS Ends Here */
+	
+	$(".hotspots .hotspot .img a").click(function(){
+		var videoID = $(this).attr("rel");
+		$(".overlay").toggle().css({"width": documentWidth, "height": documentHeight,"top": 0});
+		$(".videoOverlay").show().find("iframe").attr("src", "http://www.youtube.com/embed/" + videoID + "?autoplay=1");
+	});
+	
+	$(".closevideoOverlay i").on("click", function (){
+		$(".overlay").hide();
+		$(".videoOverlay").hide().find("iframe").attr("src", "");
+	});
+	
+	 $("#videoCarousel").owlCarousel({
+		//autoPlay : 3000,
+		stopOnHover : true,
+		items : 5,
+		lazyLoad : true,
+		navigation : true
+		//transitionStyle : "fade"
+	});
+	
+	$("#videoCarousel .item a").click(function () {
+        videoUrl = $(this).attr("rel");
+        videoHeight = $(".mainBanner").height();
+
+        $(".bannerContainer").hide();
+        $(".videoContainer").html('<div class="closeVideo"><i>X</i></div><div><iframe width="100%" height="340" frameborder="0" allowfullscreen src="http://www.youtube.com/embed/' + videoUrl + '?autoplay=1"></iframe></div>').show();
+    });
 
 
 });

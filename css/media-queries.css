@@ -1166,6 +1166,98 @@
     .participateBlock .carImage div span.icon {
         min-height: 175px
     }
+	
+	.centerOverlay{
+		max-width:300px;
+	}
+	
+	.videoOverlay{
+		width:300px;
+	}
 }
 
 /* Celebs Page Css Ends Here */
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+	.whiteBG{
+		width:100%;
+		background:#ffffff;
+	}
+	
+	.how-it-works-flow{
+		height: 300px;
+		margin: 0 auto;
+		max-width: 250px;
+		position:relative;
+		top: -30px;
+	}
+	
+	.how-it-works-flow .image{
+		position:relative;
+		top:0;
+		background:url(../images/home-middle-mobile.png) no-repeat center center;
+		width:250px;
+		height:263px;
+	}
+	
+	.how-it-works-flow ul li{
+		position:absolute;
+		top:0;
+	}
+	
+	.how-it-works-flow ul li.col-one{
+		margin:0;
+		left:-38px;
+		top:90px;
+	}
+
+	.how-it-works-flow ul li.col-two{
+		margin:0;
+		left:95px;
+		top:90px;
+	}
+
+	.how-it-works-flow ul li.col-three{
+		margin:0;
+		left:-55px;
+		top:265px;
+	}
+
+	.how-it-works-flow ul li.col-four{
+		margin:0;
+		left:130px;
+		top:265px;
+	}
+	
+}
+
+@media only screen and (min-width: 595px) and (max-width: 894px) {
+	#videoCarousel{
+		max-width:500px;
+	}
+}
+
+@media only screen and (min-width: 421px) and (max-width: 594px) {
+	#videoCarousel{
+		max-width:350px;
+	}
+}
+
+@media only screen and (min-width: 200px) and (max-width: 420px) {
+	#videoCarousel{
+		max-width:320px;
+	}
+	
+	.home-videoCarousel .owl-prev{
+		left:0;
+	}
+	
+	.home-videoCarousel .owl-next{
+		right:0;
+	}
+	
+	.watch-auditions{
+		font-size: 1.125em;
+		max-width: 270px;
+	}
+}

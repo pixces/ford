@@ -332,12 +332,23 @@ body {
     margin-top: 20px;
 }
 .boxLink a {
-    border: 2px solid #042a28;
+    border: 2px solid #fff;
     padding: 5px 30px;
     font-family: 'FordAntennaExtraCondWGL-Bold', serif;
     font-size: 1.250em;
-    color: #000000;
-    display: inline-block
+    color: #fff;
+    display: inline-block;
+	text-transform:uppercase;
+}
+
+.boxLink a i{
+	background:url("../images/cars/cars-sprite.png") no-repeat scroll -69px 2px;
+	height:24px;
+	width:13px;
+	margin-left:10px;
+	display:inline-block;
+	position:relative;
+	top:4px;
 }
 .link a {
     text-decoration: underline;
@@ -434,6 +445,7 @@ body {
 }
 .hotspots .hotspot {
     display: table-cell;
+	display: inline-block;
     width: 33%;
 }
 .hotspots .hotspot .img {
@@ -461,8 +473,7 @@ body {
     left: 42%;
 }
 .hotspots .hotspot .body {
-    font-family: 'FordAntennaCondWGL-Reg', sans-serif;
-    ;
+    font-family: 'FordAntennaCondWGL-Reg', sans-serif;;
     color: #2d2d2d;
     font-size: 0.813em;
     padding: 0 60px;
@@ -980,7 +991,8 @@ body {
     margin-right: 10px;
     color: #131313;
     text-transform: uppercase;
-    margin: 0
+    margin: 0;
+	display:inline-block;
 }
 /* Login Page Css Ends Here */
 
@@ -1206,7 +1218,8 @@ body {
     text-align: left;
     margin-right: 5px;
     background: #ffffff;
-    border: 1px solid #ffffff
+    border: 1px solid #ffffff;
+	height:auto;
 }
 .rowCaptcha div.termsBlock ul li span {
     float: left;
@@ -1351,7 +1364,7 @@ select:-webkit-autofill {
 }
 .entries-container .entries-ul .entries-li .content,
 .entries-container .entries-ul .entries-li .content.two-third-ct {
-    width: 75%;
+    width: 55%;
     float: left;
     box-sizing: border-box;
     padding: 2%;
@@ -1391,7 +1404,7 @@ select:-webkit-autofill {
     font-style: italic;
 }
 .entries-container .entries-ul .entries-li .action-updates {
-    width: 25%;
+    width: 20%;
     float: left;
     box-sizing: border-box;
     padding: 2%;
@@ -3344,7 +3357,7 @@ form label.error, .errorMessage {
 }
 
 .mainBanner .playVideo span i.arrow {
-    background: url("../images/banner-sprite.png") no-repeat scroll 0 -200px;
+    background: url("../images/banner-sprite.png") no-repeat scroll -60px -156px;
     width: 15px;
     height: 22px
 }
@@ -3357,4 +3370,183 @@ form label.error, .errorMessage {
     margin-top: 15px
 }
 
+.centerOverlay{
+	max-width:500px;
+	margin:0 auto;
+}
+
+.videoOverlay{
+	display:none;
+	background:none repeat scroll 0 0 #fff;
+    border-radius:10px;
+    padding:10px;
+    text-align:center;
+    width:500px;
+	top:150px;
+	position:fixed;
+	z-index:9999;
+}
+
+.videoOverlay .closevideoOverlay {
+    background: #fff;
+    color: #000;
+    padding: 10px;
+    text-align: right;
+}
+
+.videoOverlay .closevideoOverlay i {
+    border: 1px solid #000;
+    border-radius: 50px;
+    display: inline-block;
+    font-style: normal;
+    padding: 5px;
+    text-align: center;
+    width: 32px;
+    cursor: pointer;
+	position: absolute;
+	top: -10px;
+	background: #fff;
+}
+
+.hotspots .hotspot .img a{
+	display:inline-block;
+}
 /* Home Page New Css Ends Here */
+
+/* Home Page Phase 1B Css Starts Here */
+.how-it-works-flow{
+	position:relative;
+	width:100%;
+	max-width:768px;
+	margin:0 auto;
+	height:120px;
+}
+
+.how-it-works-flow .image{
+	position:absolute;
+	top:-45px;
+	background:url(../images/home-middle.png) no-repeat center center;
+	width:768px;
+	height:90px;
+}
+
+.how-it-works-flow ul{
+	list-style:none;
+}
+
+.how-it-works-flow ul li{
+	display:inline-block;
+	float:left;
+	text-align:center;
+	width:190px;
+	margin-top:60px;
+	font-style:italic;
+}
+
+.how-it-works-flow ul li.col-one{
+	width:165px;
+}
+
+.how-it-works-flow ul li.col-two{
+	width:225px;
+}
+
+.how-it-works-flow ul li.col-three{
+	width:195px;
+}
+
+.how-it-works-flow ul li.col-four{
+	margin-left: 18px;
+    width: 147px;
+}
+
+.home-videoCarousel{
+	width:100%;
+	background:#ffffff;
+	height:230px;
+	padding-top:30px
+}
+
+#videoCarousel .item{
+	margin: 3px;
+	margin: 0 auto;
+    max-width: 152px;
+}
+
+#videoCarousel .item img{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+#videoCarousel{
+	max-width:795px;
+	margin:0 auto;
+	padding-left: 5px;
+}
+
+.home-videoCarousel .item-icon{
+	display:block;
+	position:relative;
+	text-align:center;
+	width:150px;
+}
+
+.home-videoCarousel .item-icon i{
+	position:absolute;
+	top:18px;
+	left:53px;
+}
+
+.home-videoCarousel .description{
+	width:150px;
+	display:block;
+	font-family: 'FordAntennaCondWGL-Bold', serif;
+	color:#1c150f;
+	text-align:center;
+	font-size:0.868em;
+	margin-top:5px;
+}
+
+.home-videoCarousel .owl-prev{
+	left:-32px;
+    position:absolute;
+    top:31px;
+	background:url("../images/cars/cars-sprite.png") no-repeat scroll -87px 2px;
+	width:13px;
+	height:24px;
+	text-indent: -9999px;
+}
+
+.home-videoCarousel .owl-next{
+	right:-32px;
+    position:absolute;
+    top:31px;
+	background:url("../images/cars/cars-sprite.png") no-repeat scroll -69px 2px;
+	width:13px;
+	height:24px;
+	text-indent: -9999px;
+}
+
+.home-videoCarousel .item a:hover{
+	transform: scale(1.2);
+    -ms-transform: scale(1.2);/* IE 9 */
+    -moz-transform: scale(1.2);/* Firefox */
+    -webkit-transform: scale(1.2);/* Safari and Chrome */
+    -o-transform: scale(1.2);/* Opera */
+}
+
+.watch-auditions{
+	font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+	font-size:1.625em;
+	text-transform:uppercase;
+	color:#ffffff;
+	padding:5px 0;
+	border-bottom:2px solid #ffffff;
+	border-top:2px solid #ffffff;
+	max-width: 390px;
+	margin:0 auto;
+	position:relative;
+	top:125px;
+}
+/* Home Page Phase 1B Css Ends Here */
