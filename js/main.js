@@ -296,6 +296,16 @@ var ProfileSubmitAppeal = function () {
 
 
 $(document).ready(function(e){
+	$(document).on("focus", "textarea", function() {
+        if (this.value === this.defaultValue) {
+            this.value = '';
+        }
+	}).on("blur", "textarea", function() {
+		if (this.value === '') {
+			this.value = this.defaultValue;
+		}
+	});
+	
     $(".tabContents").hide();
     $(".tabContents:first").show();
 
@@ -517,14 +527,14 @@ $(document).ready(function(e){
 		$(".videoOverlay").hide().find("iframe").attr("src", "");
 	});
 	
-	 $("#videoCarousel").owlCarousel({
+	/*$("#videoCarousel").owlCarousel({
 		//autoPlay : 3000,
 		stopOnHover : true,
 		items : 5,
 		lazyLoad : true,
 		navigation : true
 		//transitionStyle : "fade"
-	});
+	});*/
 	
 	$("#videoCarousel .item a").click(function () {
         videoUrl = $(this).attr("rel");
@@ -533,8 +543,7 @@ $(document).ready(function(e){
         $(".bannerContainer").hide();
         $(".videoContainer").html('<div class="closeVideo"><i>X</i></div><div><iframe width="100%" height="340" frameborder="0" allowfullscreen src="http://www.youtube.com/embed/' + videoUrl + '?autoplay=1"></iframe></div>').show();
     });
-
-
+	
 });
 
 
