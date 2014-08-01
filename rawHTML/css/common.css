@@ -3791,3 +3791,141 @@ form label.error {
 	display:inline-block;
 }
 /* Home Page New Css Ends Here */
+
+/* Home Page Phase 1B Css Starts Here */
+.how-it-works-flow{
+	position:relative;
+	width:100%;
+	max-width:768px;
+	margin:0 auto;
+	height:120px;
+}
+
+.how-it-works-flow .image{
+	position:absolute;
+	top:-45px;
+	background:url(../images/home-middle.png) no-repeat center center;
+	width:768px;
+	height:90px;
+}
+
+.how-it-works-flow ul{
+	list-style:none;
+}
+
+.how-it-works-flow ul li{
+	display:inline-block;
+	float:left;
+	text-align:center;
+	width:190px;
+	margin-top:60px;
+	font-style:italic;
+}
+
+.how-it-works-flow ul li.col-one{
+	width:165px;
+}
+
+.how-it-works-flow ul li.col-two{
+	width:225px;
+}
+
+.how-it-works-flow ul li.col-three{
+	width:195px;
+}
+
+.how-it-works-flow ul li.col-four{
+	margin-left: 18px;
+    width: 147px;
+}
+
+.home-videoCarousel{
+	width:100%;
+	background:#ffffff;
+	height:230px;
+	padding-top:30px
+}
+
+#videoCarousel .item{
+	margin: 3px;
+	margin: 0 auto;
+    max-width: 152px;
+}
+
+#videoCarousel .item img{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+#videoCarousel{
+	max-width:795px;
+	margin:0 auto;
+	padding-left: 5px;
+}
+
+.home-videoCarousel .item-icon{
+	display:block;
+	position:relative;
+	text-align:center;
+	width:150px;
+}
+
+.home-videoCarousel .item-icon i{
+	position:absolute;
+	top:18px;
+	left:53px;
+}
+
+.home-videoCarousel .description{
+	width:150px;
+	display:block;
+	font-family: 'FordAntennaCondWGL-Bold', serif;
+	color:#1c150f;
+	text-align:center;
+	font-size:0.868em;
+	margin-top:5px;
+}
+
+.home-videoCarousel .owl-prev{
+	left:-32px;
+    position:absolute;
+    top:31px;
+	background:url("../images/cars/cars-sprite.png") no-repeat scroll -87px 2px;
+	width:13px;
+	height:24px;
+	text-indent: -9999px;
+}
+
+.home-videoCarousel .owl-next{
+	right:-32px;
+    position:absolute;
+    top:31px;
+	background:url("../images/cars/cars-sprite.png") no-repeat scroll -69px 2px;
+	width:13px;
+	height:24px;
+	text-indent: -9999px;
+}
+
+.home-videoCarousel .item a:hover{
+	transform: scale(1.2);
+    -ms-transform: scale(1.2);/* IE 9 */
+    -moz-transform: scale(1.2);/* Firefox */
+    -webkit-transform: scale(1.2);/* Safari and Chrome */
+    -o-transform: scale(1.2);/* Opera */
+}
+
+.watch-auditions{
+	font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+	font-size:1.625em;
+	text-transform:uppercase;
+	color:#ffffff;
+	padding:5px 0;
+	border-bottom:2px solid #ffffff;
+	border-top:2px solid #ffffff;
+	max-width: 390px;
+	margin:0 auto;
+	position:relative;
+	top:125px;
+}
+/* Home Page Phase 1B Css Ends Here */

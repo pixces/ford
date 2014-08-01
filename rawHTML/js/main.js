@@ -291,7 +291,7 @@ $(document).ready(function (e) {
     $(window).resize(function () {
         onm_window_parameters();
         $(".mainmenu,.synApplink,.navUser,.overlay,.videoOverlay").hide();
-		$(".videoOverlay").find("iframe").attr("src", "");
+		$(".videoOverlay").find("iframe").attr("src", "#");
     });
 
     $(".upload-block upload-img, .upload-block label").on("click", function () {
@@ -400,5 +400,22 @@ $(document).ready(function (e) {
 		$(".overlay").hide();
 		$(".videoOverlay").hide().find("iframe").attr("src", "");
 	});
+	
+	 $("#videoCarousel").owlCarousel({
+		//autoPlay : 3000,
+		stopOnHover : true,
+		items : 5,
+		lazyLoad : true,
+		navigation : true
+		//transitionStyle : "fade"
+	});
+	
+	$("#videoCarousel .item a").click(function () {
+        videoUrl = $(this).attr("rel");
+        videoHeight = $(".mainBanner").height();
+
+        $(".bannerContainer").hide();
+        $(".videoContainer").html('<div class="closeVideo"><i>X</i></div><div><iframe width="100%" height="340" frameborder="0" allowfullscreen src="http://www.youtube.com/embed/' + videoUrl + '?autoplay=1"></iframe></div>').show();
+    });
 
 });
