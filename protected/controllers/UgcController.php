@@ -142,7 +142,8 @@ class UgcController extends Controller {
                 $params = array();
                 $params['user_id'] = $_POST['user_id'];
                 $params['channel_name'] = $_POST['channel'];
-                $params['title'] = $params['description'] = $this->sanitizeData($_POST['comment']);
+                $params['title'] = 'Comment for '.$params['channel_name']." by user #".$params['user_id'];
+                $params['description'] = $this->sanitizeData($_POST['comment']);
                 $params['gallery_id'] = Yii::app()->params['ugcGalleryId'];
                 $params['type'] = 'text';
                 $params['is_ugc'] = isset($_POST['is_ugc']) ? $_POST['is_ugc'] : 1 ;
@@ -167,45 +168,62 @@ class UgcController extends Controller {
 
     /**
      * Action Confirm and submit
-     * UGC content for moderation
-     * calls the $this->updateContent
+     * required to Confirm a UGC Submission and submit it for moderation.
+     * Checks for is_user_logged
      *
-     * This method is invoked via AJAX Call
+     * Invoked through an AJAX Call
+     * -- required --
+     * int $user_id
+     * int $is_ugc
      *
-     * On confirm action -
-     * 1. All the UGC Content for the logged in user will become eligible for moderation
-     * 2. The UGC flow will complete and now onwards the profile page will become active
+     * -- optional --
+     * string $channel
+     * string $comment
+     * string $confirm_type (one/all)
+     *
+     * -- return --
+     * json status (success/error)
+     * json message
      */
     public function actionConfirm(){
-
         if (Yii::app()->user->isGuest) {
-            //redirect the user to the
-            $redirectUrl = Yii::app()->createAbsoluteUrl("user/login", $this->getSiteParams());
-            $this->redirect($redirectUrl);
+            //throw error
+            $this->_sendResponse(200,json_encode(array('response'=>'error','message'=>'User not Logged In.')));
             Yii::app()->end();
         }
 
         //get the id of the user
-        $user_id = Yii::app()->user->getId();
+        if ($_POST['user_id'] == Yii::app()->user->getId()){
 
-        //update all user content for is_submitted = 1;
-        if (Content::model()->updateAll(
-            array('is_submitted'=>1, 'status'=>'under_review'),
-            'gallery_id = :gallery_id AND user_id = :user_id AND is_ugc = :is_ugc',
-            array(
-                ':gallery_id'=>Yii::app()->params['ugcGalleryId'],
-                ':user_id' => $user_id,
-                ':is_ugc' => 1
-            )
-        )){
-            //update successful
-            //redirect to profile page
-            $this->redirect(Yii::app()->createAbsoluteUrl("user/profile", $this->getSiteParams()));
-            Yii::app()->end();
+            $attributes = array('is_submitted'=>1, 'status'=>'under_review');
+            $condition = array(
+                'gallery_id = :gallery_id',
+                'user_id = :user_id',
+                'is_ugc = :is_ugc',
+                'status = :status'
+            );
+            $params = array(
+                ':gallery_id' => Yii::app()->params['ugcGalleryId'],
+                ':user_id' => $_POST['user_id'],
+                ':is_ugc' => $_POST['is_ugc'],
+                ':status' => 'pending'
+            );
+
+            if (isset($_POST['confirm_type']) && $_POST['confirm_type'] == 'one'){
+                $condition[] = 'channel_name = :channel';
+                $params[':channel'] = $_POST['channel'];
+            }
+
+            //make the call
+            if ( Content::model()->updateAll($attributes,implode(' AND ',$condition),$params) ){
+                echo CJavaScript::jsonEncode(array('response'=>'success','message'=>'Content updated.'));
+            } else {
+                echo CJavaScript::jsonEncode(array('response'=>'error','message'=>'Cannot update.'));
+            }
         } else {
-            echo "Cannot update the contents";
+            echo CJavaScript::jsonEncode(array('response'=>'error','message'=>'Invalid user details provided. Please re-login'));
         }
-
+        Yii::app()->end();
     }
 
     /**

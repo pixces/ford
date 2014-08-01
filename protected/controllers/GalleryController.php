@@ -9,7 +9,33 @@
 class GalleryController extends Controller
 {
 
+    /**
+     * Displaying Gallery and its related search
+     * Search Type: Display by
+     *  - All
+     *  - City (Select City Name)
+     *  - Type (All / Text / Voice)
+     *  - By Channel (Rocky / Gaurav / Anushka)
+     */
     public function actionIndex(){
+
+        //basic params
+        $params = array(
+            'is_ugc' => 1,
+            'gallery' => Yii::app()->params['ugcGalleryId'],
+            'limit' => 30,
+        );
+
+        //mode = city -> city = ?
+        //mode = type -> type =
+
+
+
+
+
+
+
+
         $popularEntries = array();
         $latestEntries = array();
         $searchEntries = array();
@@ -63,43 +89,7 @@ class GalleryController extends Controller
         Yii::app()->end();
     }
 
-    /*
-    public function actionSearch(){
 
-        $this->page_name = 'search';
-
-        $this->render($this->page_name, array(
-            'page_name'=>$this->page_name,
-            'nav' => $this->getNav(),
-            'siteParams' => $this->getSiteParams(),
-            'widget' => array(
-                'partners' => $this->getSitePartners(),
-                'footer' => $this->getSiteFooter(),
-            ),
-        ));
-        Yii::app()->end();
-
-    }
-
-    public function actionList(){
-
-        $galleryMode = $_GET['mode'];
-
-        $this->page_name = 'list';
-
-        $this->render($this->page_name, array(
-            'mode'      => $galleryMode,
-            'page_name' =>$this->page_name,
-            'nav'       => $this->getNav(),
-            'siteParams'=> $this->getSiteParams(),
-            'widget'    => array(
-                'partners' => $this->getSitePartners(),
-                'footer' => $this->getSiteFooter(),
-            ),
-        ));
-        Yii::app()->end();
-    }
-    */
 
 
 

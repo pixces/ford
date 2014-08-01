@@ -41,11 +41,18 @@
             </div>
             <div class="row">
                 <div class="field edit-details">
-                    <a href="edit-details.html" class="edit-details">Edit Details</a>
+                    <?php echo CHtml::link('Edit Details',
+                        array(
+                            'user/edit',
+                            'lang'=>$siteParams['lang'],
+                            'env'=>$siteParams['env'],
+                            'phase'=>$siteParams['phase'],
+                        ),
+                        array('id'=>'edit-details','class'=>'edit-details','data-user'=>Yii::app()->user->getId())
+                    ); ?>
                 </div>
             </div>
         </div>
-
     </div>
     <!--/form -->
 </div>
@@ -64,7 +71,7 @@
     <div class="entries-container">
         <ul class="entries-ul">
             <?php foreach ($content as $celeb => $cont) { ?>
-            <li class="entries-li" data-celeb="<?=$celeb; ?>">
+            <li class="entries-li" data-celeb="<?=$celeb; ?>" data-user="<?=$model->id; ?>">
                 <!-- profile image -->
                 <div class="profile-photo column <?=$celeb; ?>">
                     <div class="img">
@@ -74,26 +81,26 @@
                 </div>
                 <!-- profile image ends -->
                 <!-- appeal content are starts -->
-                <div class="content two-third-ct column <?=$celeb; ?>-appeal-content-area">
-                    <?php if (isset($cont['id']) && !empty($cont['id'])){ ?>
-                        <?php if ($cont['status'] != 'pending'){ ?>
-                            <?php if ($cont['status'] == 'rejected') { ?>
-                                <!-- content rejected -->
-                                <div class="rejected-appeal-text">
-                                    <div class="col-full-8">
-                                        <h6>Sorry but your appeal has been rejected. Moderator’s message is as follows:</h6>
-                                        <p><?=$cont['description']; ?></p>
-                                    </div>
-                                    <div class="col-full-4 rejected">
-                                        <div class="img">
-                                            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/rejected-icon.png" alt="Approved" title="Rejected">
-                                        </div>
-                                        Rejected
-                                    </div>
+                <?php if (isset($cont['id']) && !empty($cont['id'])){ ?>
+                    <?php if ($cont['status'] != 'pending'){ ?>
+                        <?php if ($cont['status'] == 'rejected') { ?>
+                            <!-- content rejected -->
+                            <div class="rejected-appeal-text">
+                                <div class="col-full-8">
+                                    <h6>Sorry but your appeal has been rejected. Moderator’s message is as follows:</h6>
+                                    <p><?=$cont['description']; ?></p>
                                 </div>
-                                <button class="button orange make-an-appeal pull-right">Make Another Appeal</button>
-                            <?php } else { ?>
-                                <!-- content either approved / under moderation //-->
+                                <div class="col-full-4 rejected">
+                                    <div class="img">
+                                        <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/rejected-icon.png" alt="Approved" title="Rejected">
+                                    </div>
+                                    Rejected
+                                </div>
+                            </div>
+                            <button class="button orange make-an-appeal pull-right">Make Another Appeal</button>
+                        <?php } else { ?>
+                            <!-- content either approved / under moderation //-->
+                            <div class="content two-third-ct column <?=$celeb; ?>-appeal-content-area">
                                 <div class="content column">
                                     <p><?=$cont['description']; ?></p>
                                 </div>
@@ -106,11 +113,13 @@
                                     </div>
                                     <?=str_replace("-"," ", $status_text); ?>
                                 </div>
-                            <?php } ?>
-                        <?php } else { ?>
-                            <!-- content not submitted for moderation -->
+                            </div>
+                        <?php } ?>
+                    <?php } else { ?>
+                        <!-- content not submitted for moderation -->
+                        <div class="content two-third-ct column confirm-appeal-box">
                             <div class="confirm-appeal-text">
-                                <div class="col-full-8"><p><?=$cont['description']; ?></p></div>
+                                <div class="col-full-8"><?=$cont['description']; ?></div>
                                 <div class="col-full-2">
                                     <div class="btn-ct">
                                         <div class="arrow-right"></div>
@@ -119,18 +128,19 @@
                                     </div>
                                 </div>
                             </div>
-
-                        <?php } ?>
-                    <?php } else { ?>
-                        <!-- still awaiting submission -->
+                        </div>
+                    <?php } ?>
+                <?php } else { ?>
+                    <!-- still awaiting submission -->
+                    <div class="content two-third-ct column submit-appeal-box">
                         <div class="content column first-column">
                             <p class="make-appeal-text">You have not made an appeal yet.</p>
                         </div>
                         <div class="action-updates column second-column">
                             <button class="button orange make-an-appeal">Make An Appeal</button>
                         </div>
-                    <?php } ?>
-                </div>
+                    </div>
+                <?php } ?>
                 <!-- appeal content are ends -->
             </li>
             <?php } ?>

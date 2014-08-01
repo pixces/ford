@@ -95,19 +95,20 @@ class UserController extends Controller
         $modelUserProfile = new UserProfiles;
 
         if($_POST){
-//            print_r($_POST); exit;
-            //check if the user already exists in the system
-            $emailId = $this->sanitizeData($_POST['user']['email']);
+
+            $emailId = $this->sanitizeData($_POST['email']);
             $user = User::model()->find('email=:emailId', array(':emailId' => $emailId));
 
             if (!$user){
-                $username = explode(" ",$this->sanitizeData($_POST['user']['name']));
+                $username = explode(" ",$this->sanitizeData($_POST['name']));
                 $userObj = array();
                 $userObj['first_name'] = $username[0];
-                $userObj['last_name']  = $username[1];
+                $userObj['last_name']  = isset($username[1]) ? $username[1] : '' ;
                 $userObj['email']      = $emailId;
-                $userObj['password']   = md5($_POST['user']['password']);
+                $userObj['password']   = md5($_POST['password']);
                 $userObj['verification_code'] = md5( $userObj['email']."|".$userObj['first_name']."|".time() );
+                $userObj['is_verified'] = 1;
+                $userObj['status'] = 'active';
 
                 $model->attributes = $userObj;
 
@@ -119,7 +120,6 @@ class UserController extends Controller
                     if($_FILES['UserProfiles']['error']['profile_image'] == 0){
                         //photo uploaded into the application
                         if(CUploadedFile::getInstance($modelUserProfile,'profile_image')){
-
                             $uploadPath = "/upload/images/";
                             $basePath = Yii::app()->basePath."/..".$uploadPath;
 
@@ -144,9 +144,9 @@ class UserController extends Controller
                     $userProfile['user_id']             = $model->id;
                     $userProfile['full_name']           = $model->first_name." ".$model->last_name;
                     $userProfile['displayname']         = $model->first_name;
-                    $userProfile['city']                = $this->sanitizeData($_POST['UserProfile']['city']);
+                    $userProfile['city']                = $this->sanitizeData($_POST['city']);
                     $userProfile['profile_image']       = $profilePic;
-                    $userProfile['phone']               = $_POST['UserProfile']['phone'];
+                    $userProfile['phone']               = $_POST['phone'];
 
                     $modelUserProfile->attributes = $userProfile;
 
@@ -158,10 +158,10 @@ class UserController extends Controller
                         Yii::app()->session['user_email'] = $model->email;
 
                         //force login this use
-                        $this->forceLogin($_POST['user']['email'], $_POST['user']['password']);
+                        $this->forceLogin($_POST['email'], $_POST['password']);
 
                         //redirect the user to the profile page
-                        $this->redirect($this->createAbsoluteUrl('user/participate'));
+                        $this->redirect($this->createAbsoluteUrl('ugc/submission'));
 
 
                     } else {
@@ -175,7 +175,7 @@ class UserController extends Controller
                     Yii::log( $error.serialize($_POST));
                 }
             } else {
-                $error = "User ".$_POST['user']['email']." already exists. Please login!";
+                $error = "User ".$_POST['email']." already exists. Please login!";
                 Yii::log($error);
                 //throw the error messages and quit
                 $model->addError('email',$error);
@@ -360,43 +360,8 @@ class UserController extends Controller
         $model = $this->loadModel($userId);
         $modelUserProfile = UserProfiles::model()->find('user_id=:userId',array(":userId"=>$model->id));
 
-        if(isset($_REQUEST['phase'])=="winner")
-		{
-		if($_POST){
-			$userObj['wruskills'] = $this->sanitizeData($_POST['User']['wruskills']);
-            $model->attributes=$userObj;
-            $model->scenario = "update";		
-			
-			if($model->save()){ 
+        /*
 
-
-				$userProfile = array();
-				$userProfile['user_id'] = $model->id;               
-				$userProfile['wruskills'] = $this->sanitizeData($_POST['User']['wruskills']);
-				$userProfile['wmuwatched'] = $this->sanitizeData($_POST['User']['wmuwatched']);	
-				$userProfile['wburead'] = $this->sanitizeData($_POST['User']['wburead']);
-				$userProfile['wrufmusic'] = $this->sanitizeData($_POST['User']['wrufmusic']);
-				$userProfile['wsportslike'] = $this->sanitizeData($_POST['User']['wsportslike']);
-				$userProfile['wruointerests'] = $this->sanitizeData($_POST['User']['wruointerests']);
-				$userProfile['wruhobbies'] = $this->sanitizeData($_POST['User']['wruhobbies']);			
-               
-                $modelUserProfile->attributes=$userProfile;                
-                if($modelUserProfile->save()){
-                    $message =  "updating user profile data update";
-                    Yii::log($message);
-                    Yii::app()->user->setFlash('update_profile','Your profile has been updated.');
-                } else {
-                    $message = "Unable to update user profile info, Error : ".serialize($modelUserProfile->getErrors());
-                    Yii::log($message);
-                }
-            } else {
-                $message = "Unable to update user data, Error : ".serialize($model->getErrors());
-                Yii::log($message);
-            }
-			}
-		}
-		else
-		{
         if($_POST){
             $userObj['first_name'] = $this->sanitizeData($_POST['User']['firstname']);
             $userObj['last_name']  = $this->sanitizeData($_POST['User']['lastname']);
@@ -472,10 +437,9 @@ class UserController extends Controller
                 $message = "Unable to update user data, Error : ".serialize($model->getErrors());
                 Yii::log($message);
             }
-        }
-		}
+        } */
 
-        $this->page_name = 'edit-profile';
+        $this->page_name = 'editprofile';
         $this->render($this->page_name, array(
             'page_name'=>$this->page_name,
             'nav' => $this->nav,

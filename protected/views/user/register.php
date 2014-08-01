@@ -46,39 +46,39 @@
             <div class="row">
                 <div class="field">
                     <i class="name-icon"></i>
-                    <input type="text" name="user[name]" id="name" placeholder="Name" />
+                    <input type="text" name="name" id="name" placeholder="Name" />
                 </div>
             </div>
             <div class="row">
                 <div class="field">
                     <i class="email-icon"></i>
-                    <input type="text" name="user[email]" id="email" placeholder="Email" />
+                    <input type="text" name="email" id="email" placeholder="Email" />
                 </div>
             </div>
             <div class="row">
                 <div class="field">
                     <!--i class="city-icon"></i -->
-                            <select name="city" id="city" placeholder="City">
-                                <option value="">Select City</option>
-                                <option value="Bangalore">Bangalore</option>
-                                <option value="Chennai">Chennai</option>
-                                <option value="Delhi">Delhi</option>
-                                <option value="Kolkota">Kolkota</option>
-                                <option value="Mumbai">Mumbai</option>
-                            </select>
+                        <select name="city" id="city" placeholder="City">
+                            <option value="">Select City</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Kolkota">Kolkota</option>
+                            <option value="Mumbai">Mumbai</option>
+                        </select>
                 </div>
             </div>
             <div class="row">
                 <div class="field">
                     <i class="phone-icon"></i>
-                    <input type="text" name="UserProfile[phone]" id="phone" placeholder="Phone" />
+                    <input type="text" name="phone" id="phone" placeholder="Phone" />
                 </div>
             </div>
             <div class="note">Minimum 8-16 characters</div>
             <div class="row">
                 <div class="field">
                     <i class="password-icon"></i>
-                    <input type="password" name="user[password]" id="password" placeholder="Password" />
+                    <input type="password" name="password" id="password" placeholder="Password" />
                 </div>
             </div>
             <div class="row">
@@ -118,8 +118,6 @@
     <?php $this->endWidget(); ?>
 </div>
 <!-- Container Ends Here -->
-<script type="text/javascript" src="js/vendor/jquery-validation.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript">
      $("#register-form").validate({
             rules: {
@@ -157,7 +155,7 @@
                 },
                 email : {
                     required: "Enter your email",
-                    email : "Enter a valied email address"
+                    email : "Enter a valid email address"
                 },
                 city : {
                   required: "Select a city"    
@@ -182,7 +180,7 @@
                 element.after( error );
             },
             submitHandler: function (form) {
-                return false;
+                $(form).ajaxSubmit();
             }
         });
 </script>
@@ -203,96 +201,7 @@
         }, 1500);
     }
 
-
     jQuery.validator.addMethod("alpha", function(value, element) {
         return this.optional(element) || value == value.match(/^[a-zA-Z]+$/);
     },"Only Characters Allowed.");
-
-//    $("#register-form").validate({
-//        rules: {
-//            name: {
-//                alpha: true,
-//                required: true
-//            },
-//            email: {
-//                required: true
-//            },
-//            city: {
-//                required: true
-//            },
-//            phone: {
-//                required: true,
-//                number: true,
-//                minlength: 10,
-//                maxlength: 10
-//            },
-//            password: {
-//                required: true,
-//                minlength: 8,
-//                maxlength: 16
-//            },
-//            cpassword: {
-//                required: true ,
-//                minlength: 8,
-//                maxlength: 16,
-//                equalTo: "#password"
-//            },
-//            captcha_code: {
-//                required: true
-//            },
-//            agreement: {
-//                required: true
-//            }
-//        },
-//        messages: {
-//            name: {
-//                required: "Missing Name"
-//            },
-//            email: {
-//                required: "Missing Email ID"
-//            },
-//            password: {
-//                required: "Missing Password"
-//            },
-//            confirm_password: {
-//                required: "Re-Enter Password"
-//            },
-//            phone: {
-//                required: "Missing Mobile Number"
-//            },
-//            city: {
-//                required: "Missing City"
-//            },
-//            captcha: {
-//                required: "Required"
-//            },
-//            agreement: {
-//                required: "Please accept terms and conditions "
-//            }
-//        },
-//        errorPlacement: function (error, element) {
-//            element.after( error );
-//        },
-//        submitHandler: function (form) {
-//            console.info(form);
-//            $.ajax({
-//                url: CAPTCHA_URL + "?security_code=" + $.trim($("#captcha").val())
-//            }).done(function(data) {
-//                    if(data=='success'){
-//                        form.submit();
-//                    }else{
-//                        $("#captcha_code").addClass('error');
-//                        $('<label for="captcha_code" class="error" id="captcha-error">Invalid captcha</label>').insertAfter("#captcha_code");
-//                    }
-//                });
-//        }
-        /*
-         submitHandler: function (form) {
-         $.mobile.changePage('#success', {
-         transition: "slide"
-         });
-         return false;
-         } */
-//    });
-
 </script>

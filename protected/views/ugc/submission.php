@@ -60,7 +60,7 @@
         <div class="Celebrity-Comments-Container" id="<?=$celeb; ?>-submit" style="display:none">
             <div class="col-width-80 <?=$data['color']; ?>-comments-container">
                 <div class="col-width-80 textarea-ct">
-                    <textarea id="<?=$celeb; ?>-comment" class="textarea"><?=(isset($data['title']) && !empty($data['title']) ) ? $data['title'] : 'Make an appeal to '.$data['name'].'...'; ?></textarea>
+                    <textarea id="<?=$celeb; ?>-comment" class="textarea"><?=(isset($data['description']) && !empty($data['description']) ) ? $data['description'] : 'Make an appeal to '.$data['name'].'...'; ?></textarea>
                 </div>
                 <div class="col-width-20 btn-ct"><div class="arrow-right"></div>
                 	<button class="button big-btn-submit" data-submit-for="<?=$celeb; ?>-celeb" data-celeb-icon="<?=$placement[$t]; ?>-celeb-icon" data-celeb="<?=$celeb; ?>" data-user="<?=Yii::app()->user->getId(); ?>">Submit</button>
@@ -72,7 +72,7 @@
         </div>
         <?php $t++; } ?>
 
-        <?php $display = (count($content) == 3 ) ? 'block' : 'none'; ?>
+        <?php $display = ($userSubmissions == 3) ? 'block' : 'none'; ?>
 
         <div id="confirm-appeal-section" class="confirm-appeal-section" style="display:<?=$display; ?>">
         	<div class="arrowDown"></div>

@@ -27,7 +27,7 @@
     </script>
 
 </head>
-<body class="<?=$this->page_name; ?>">
+<body class="<?=($this->page_name == 'editprofile' ) ? 'register' : $this->page_name; ?>">
 <!-- Overlay Starts Here -->
 <div class="overlay"></div>
 <!-- Overlay Ends Here -->

@@ -575,7 +575,7 @@ body {
     background: url(../images/hotspots-sprite.png) no-repeat 0 -56px;
 }
 
-.hotspots .col-three .icon {
+.hotspots .col-third .icon {
     background: url(../images/hotspots-sprite.png) no-repeat 0 -114px;
 }
 
@@ -587,7 +587,7 @@ body {
     background: url(../images/hotspot-icon2.png) no-repeat
 }
 
-.hotspots .col-three .foot a {
+.hotspots .col-third .foot a {
     background: url(../images/hotspot-icon3.png) no-repeat
 }
 
@@ -1156,8 +1156,7 @@ body {
 /* Login Page Css Ends Here */
 
 /* Register Page Css Starts Here */
-
-.register .mainBanner {
+.register .mainBanner, .profile .mainBanner {
     min-height: 126px;
     background-position: 0 -168px
 }
@@ -1332,7 +1331,7 @@ body {
     margin-top: -10px;
 }
 
-.register .upload-block .upload-img {
+.register .upload-block .upload-img, .profile .upload-block .upload-img {
     text-indent: -9999px;
     background: url(../images/register-sprite.png) no-repeat 0 -28px;
     width: 55px;
@@ -1422,7 +1421,7 @@ body {
     width: 115px
 }
 
-.register .user-image .upload-img {
+.register .user-image .upload-img, .profile .user-image .upload-img {
     text-indent: 0;
     background: none;
     left: 0;
@@ -1455,13 +1454,12 @@ body {
 /* Register Page Css Starts Here */
 
 /* Profile page css starts here */
-
-.my-profile-body .container {
+.profile .container {
     background: #23b3ab;
     padding: 50px 55px;
 }
 
-.my-profile-body .upload-block {
+.profile .upload-block {
     border: 10px solid #1d9992;
     width: 180px;
     height: 180px;
@@ -1469,18 +1467,17 @@ body {
     margin-top: 30px;
 }
 
-.my-profile-body .user-image .upload-img img {
+.profile .user-image .upload-img img {
     width: 180px;
     height: 180px;
 }
 
-.my-profile-body .my-profile-fields-container {
+.profile .my-profile-fields-container {
     left: 100px;
     position: relative;
 }
-
-.my-profile-body .my-profile-fields-container .row .field input[type="text"],
-.my-profile-body .my-profile-fields-container .row .field select {
+.profile .my-profile-fields-container .row .field input[type="text"],
+.profile .my-profile-fields-container .row .field select {
     background: url(../images/text-field-bg.jpg) repeat 0px 0px;
     border: 0px solid #ddd;
 }
@@ -1492,12 +1489,12 @@ select:-webkit-autofill {
     border: 1px solid #1d9992;
 }
 
-.my-profile-body .my-profile-fields-container .edit-details {
+.profile .my-profile-fields-container .edit-details {
     text-align: left;
     margin-left: 10px;
 }
 
-.my-profile-body .my-profile-fields-container .edit-details a {
+.profile .my-profile-fields-container .edit-details a {
     text-transform: uppercase;
     font-size: 14px;
     text-decoration: underline;
@@ -1578,7 +1575,7 @@ select:-webkit-autofill {
 
 .entries-container .entries-ul .entries-li .content,
 .entries-container .entries-ul .entries-li .content.two-third-ct {
-    width: 55%;
+    width: 75%;
     float: left;
     box-sizing: border-box;
     padding: 2%;
@@ -1624,7 +1621,7 @@ select:-webkit-autofill {
 }
 
 .entries-container .entries-ul .entries-li .action-updates {
-    width: 20%;
+    width: 25%;
     float: left;
     box-sizing: border-box;
     padding: 2%;
@@ -1836,6 +1833,17 @@ button.Col25a6a0 {
     margin: 0 auto;
 }
 
+body.submission .hotspots {
+    background: #bbdad8;
+}
+
+/*body.submission .hotspots .col-first div.img img{border:5px solid #ffb547;}
+body.submission .hotspots .col-second div.img img{border:5px solid #f05a29;}
+body.submission .hotspots .col-third div.img img{border:5px solid #8bc440;} */
+body.submission .hotspots .hotspot .icon, body.submission .hotspots .hotspot .edit-tick i, .sayit-voice i {
+    background: url(../images/choose-celebrity-sprite.png) no-repeat;
+}
+
 .black-transparent-hover {
     background: rgba(0, 0, 0, 0.5);
     width: 187px;
@@ -1849,42 +1857,52 @@ button.Col25a6a0 {
     display: none;
 }
 
-body.selection .hotspots {
+body.submission .hotspots .col-second .icon {
+    background-position: 0px -60px;
+}
+
+body.submission .hotspots .col-third .icon {
+    background-position: 0px -120px;
+}
+
+body.submission .hotspots .hotspot .splitter {
+    background: #000;
+}
+
+body.submission .hotspots {
     background: #bbdad8;
 }
 
-body.selection .hotspots div.img {
+body.submission .hotspots div.img {
     position: relative;
 }
 
-body.selection .hotspots div.img img {
+body.submission .hotspots div.img img {
     border-radius: 187px;
     width: 187px;
 }
 
-body.selection .hotspots .col-first div.img:hover .black-transparent-hover {
+body.submission .hotspots .col-first div.img:hover .black-transparent-hover {
     display: block;
     border: 5px solid #ffb547;
 }
 
-body.selection .hotspots .col-second div.img:hover .black-transparent-hover {
+body.submission .hotspots .col-second div.img:hover .black-transparent-hover {
     display: block;
     border: 5px solid #f05a29;
 }
 
-body.selection .hotspots .col-three div.img:hover .black-transparent-hover {
+body.submission .hotspots .col-third div.img:hover .black-transparent-hover {
     display: block;
     border: 5px solid #8bc440;
 }
-
-body.selection .hotspots .hotspot .icon,
-body.selection .hotspots .hotspot .edit-tick i,
+body.submission .hotspots .hotspot .icon,
+body.submission .hotspots .hotspot .edit-tick i,
 .sayit-voice i {
     background: url(../images/choose-celebrity-sprite.png) no-repeat;
 }
-
-body.selection .hotspots .hotspot .edit-tick,
-body.selection .hotspots .hotspot .select-celeb {
+body.submission .hotspots .hotspot .edit-tick,
+body.submission .hotspots .hotspot .select-celeb {
     display: none;
     position: absolute;
     margin: 0 auto;
@@ -1895,19 +1913,16 @@ body.selection .hotspots .hotspot .select-celeb {
     z-index: 999;
     width: 50%;
 }
-
-body.selection .hotspots .hotspot .edit-tick i {
+body.submission .hotspots .hotspot .edit-tick i {
     background-position: -10px -274px;
     width: 42px;
     height: 30px;
     display: inline-block
 }
-
-body.selection .hotspots .hotspot.col-second .edit-tick i {
+body.submission .hotspots .hotspot.col-second .edit-tick i {
     background-position: -10px -320px;
 }
-
-body.selection .hotspots .hotspot .edit-tick a {
+body.submission .hotspots .hotspot .edit-tick a {
     display: block;
     text-decoration: underline;
     margin-top: 5px;
@@ -1918,49 +1933,48 @@ body.selection .hotspots .hotspot .edit-tick a {
     color: #73a5a2;
     font-style: italic;
 }
-
-body.selection .hotspots .col-first div.img:hover .select-celeb,
-body.selection .hotspots .col-second div.img:hover .select-celeb,
-body.selection .hotspots .col-three div.img:hover .select-celeb {
+body.submission .hotspots .col-first div.img:hover .select-celeb,
+body.submission .hotspots .col-second div.img:hover .select-celeb,
+body.submission .hotspots .col-third div.img:hover .select-celeb {
     display: block;
 }
 
-body.selection .hotspots .col-first div.img.selected:hover .select-celeb,
-body.selection .hotspots .col-second div.img.selected:hover .select-celeb,
-body.selection .hotspots .col-three div.img.selected:hover .select-celeb {
+body.submission .hotspots .col-first div.img.selected:hover .select-celeb,
+body.submission .hotspots .col-second div.img.selected:hover .select-celeb,
+body.submission .hotspots .col-third div.img.selected:hover .select-celeb {
     display: none;
 }
 
-body.selection .hotspots .col-first div.img.selected.can-edit .edit-tick,
-body.selection .hotspots .col-second div.img.selected.can-edit .edit-tick,
-body.selection .hotspots .col-three div.img.selected.can-edit .edit-tick {
+body.submission .hotspots .col-first div.img.selected.can-edit .edit-tick,
+body.submission .hotspots .col-second div.img.selected.can-edit .edit-tick,
+body.submission .hotspots .col-third div.img.selected.can-edit .edit-tick {
     display: block;
 }
 
-body.selection .hotspots .col-first div.img.selected .black-transparent-hover {
+body.submission .hotspots .col-first div.img.selected .black-transparent-hover {
     display: block;
     border: 5px solid #ffb547;
 }
 
-body.selection .hotspots .col-second div.img.selected .black-transparent-hover {
+body.submission .hotspots .col-second div.img.selected .black-transparent-hover {
     display: block;
     border: 5px solid #f05a29;
 }
 
-body.selection .hotspots .col-three div.img.selected .black-transparent-hover {
+body.submission .hotspots .col-third div.img.selected .black-transparent-hover {
     display: block;
     border: 5px solid #8bc440;
 }
 
-body.selection .hotspots .col-second .icon {
+body.submission .hotspots .col-second .icon {
     background-position: 0px -60px;
 }
 
-body.selection .hotspots .col-three .icon {
+body.submission .hotspots .col-third .icon {
     background-position: 0px -120px;
 }
 
-body.selection .hotspots .hotspot .splitter {
+body.submission .hotspots .hotspot .splitter {
     background: #000;
 }
 
@@ -2170,20 +2184,24 @@ body.selection .hotspots .hotspot .splitter {
 
 /* terms & conditoins, privacy policy  */
 
-.terms-condtions .mainBanner,
-.sync-applink .mainBanner {
+.terms-conditions .mainBanner,
+.privacy .mainBanner,
+.how-it-works .mainBanner,
+.sync-app .mainBanner {
     min-height: 120px;
 }
-
-.terms-condtions .participateBlock .page-title-section,
-.sync-applink .participateBlock .page-title-section {
+.terms-conditions .participateBlock .page-title-section,
+.how-it-works .participateBlock .page-title-section,
+.privacy .participateBlock .page-title-section,
+.sync-app .participateBlock .page-title-section {
     background: #2bc2ba;
     overflow: hidden;
     padding: 3% 0em;
     color: #fff;
 }
-
-.terms-condtions .participateBlock .page-title-section h2 {
+.terms-conditions .participateBlock .page-title-section h2,
+.privacy .participateBlock .page-title-section h2,
+.how-it-works .participateBlock .page-title-section h2{
     font-size: 48px;
     text-transform: uppercase;
 }
@@ -2232,36 +2250,30 @@ body.selection .hotspots .hotspot .splitter {
 .mobile-view {
     display: none;
 }
-
-.sync-applink .page-main-body {
+.sync-app .page-main-body {
     padding: 5%;
 }
-
-.sync-applink .participateBlock .page-title-section {
+.sync-app .participateBlock .page-title-section {
     min-height: 806px;
     padding: 0% 0em;
 }
-
-.sync-applink .participateBlock .sync-applink-bg {
+.sync-app .participateBlock .sync-applink-bg {
     background: transparent url(../images/sync-apppage-bg.png) no-repeat 0px bottom;
     height: 816px;
     background-size: 100%;
 }
-
-.sync-applink .participateBlock .sync-applink-bg h2 {
+.sync-app .participateBlock .sync-applink-bg h2 {
     text-align: center;
     padding: 2em;
 }
-
-.sync-applink .participateBlock .sync-applink-bg h4 {
+.sync-app .participateBlock .sync-applink-bg h4 {
     font-size: 30px;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: normal;
 }
-
-.sync-applink .participateBlock .sync-applink-bg p {
+.sync-app .participateBlock .sync-applink-bg p {
     text-align: center;
     font-size: 18px;
     padding: 0.5em 10em;
@@ -2325,7 +2337,8 @@ button .orange {
 /* sync app link ends */
 
 /* View Entries Page Css Starts Here */
-.view-entries .mainBanner {
+
+.gallery .mainBanner {
     min-height: 126px;
     background-position: 0 -168px
 }
@@ -3136,10 +3149,18 @@ form .error {
     background: #fbb099 !important;
 }
 
-form label.error {
+form label.error, .errorMessage {
     color: #ff0000;
     background: none !important;
     padding-top: 5px;
+    display: block;
+    text-align: left;
+}
+
+.errorMessage {
+    color: #ff0000;
+    background: none !important;
+    padding-bottom: 15px;
     display: block;
     text-align: left;
 }
