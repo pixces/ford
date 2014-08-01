@@ -532,21 +532,24 @@
         margin: 30px 0
     }
     .register .upload-block,
-    .register .upload-block.user-image {
+    .register .upload-block.user-image,
+	.profile .upload-block,
+    .profile .upload-block.user-image{
         position: relative;
         margin-bottom: 40px;
         left: 35%
     }
-    .register .upload-block {
+    .register .upload-block,
+	.profile .upload-block{
         margin-bottom: 25px;
     }
-    .my-profile-body .upload-block,
-    .my-profile-body .upload-block.user-image {
+    .profile .upload-block,
+    .profile .upload-block.user-image {
         left: 0px;
         margin: 0 auto;
         margin-bottom: 40px;
     }
-    .my-profile-body .my-profile-fields-container {
+    .profile .my-profile-fields-container {
         left: 0px;
     }
     .entries-container .entries-ul .entries-li .under-moderation i {
@@ -558,19 +561,25 @@
 }
 @media only screen and (min-width: 435px) and (max-width: 502px) {
     .register .upload-block,
-    .register .upload-block.user-image {
+    .register .upload-block.user-image,
+	.profile .upload-block,
+    .profile .upload-block.user-image{
         left: 33%
     }
 }
 @media only screen and (min-width: 390px) and (max-width: 434px) {
     .register .upload-block,
-    .register .upload-block.user-image {
+    .register .upload-block.user-image,
+	.profile .upload-block,
+    .profile .upload-block.user-image{
         left: 29%
     }
 }
 @media only screen and (min-width: 349px) and (max-width: 389px) {
     .register .upload-block,
-    .register .upload-block.user-image {
+    .register .upload-block.user-image,
+	.profile .upload-block,
+    .profile .upload-block.user-image{
         left: 25%
     }
     /*.my-profile-body .upload-block, .my-profile-body .upload-block.user-image {left: 0px;}
@@ -591,17 +600,17 @@
 }
 @media only screen and (min-width: 320px) and (max-width: 348px) {
     .register .upload-block,
-    .register .upload-block.user-image {
+    .register .upload-block.user-image,
+	.profile .upload-block,
+    .profile .upload-block.user-image{
         left: 27%
-    }
-    .my-profile-body .upload-block,
-    .my-profile-body .upload-block.user-image {
-        left: 0px;
     }
 }
 @media only screen and (min-width: 295px) and (max-width: 319px) {
     .register .upload-block,
-    .register .upload-block.user-image {
+    .register .upload-block.user-image,
+	.profile .upload-block,
+    .profile .upload-block.user-image{
         left: 18%
     }
 }
@@ -630,8 +639,8 @@
     body {
         border: 0px solid red;
     }
-    .my-profile-body .upload-block,
-    .my-profile-body .upload-block.user-image {
+    .profile .upload-block,
+    .profile .upload-block.user-image {
         left: 0px;
     }
     .entries-container .entries-ul .entries-li {

@@ -205,13 +205,15 @@ var ProfileSubmitAppeal = function () {
         '</div>' +
         '</div>';
 
-    var moderationTemplate = '<div class="content column">' +
+    var moderationTemplate = '<div class="content two-third-ct column submit-appeal-box">' +
+		'<div class="content column">' +
         '<p>{{text}}</p>' +
         '</div>' +
         '<div class="action-updates under-moderation column">' +
-        '<div class="img"><img src="images/under-moderation.png" alt="Under Moderation"></div> ' +
+        '<div class="img"><img src="/FordHTML/images/under-moderation.png" alt="Under Moderation"></div> ' +
         'Under Moderation' +
-        '</div>';
+        '</div>' +
+		'</div>';
 
 
     var exports = {
