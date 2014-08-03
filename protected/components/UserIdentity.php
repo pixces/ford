@@ -60,14 +60,13 @@ class UserIdentity extends CUserIdentity
                 $user=User::model()->find('LOWER(email)=?',array(strtolower($this->username)));
                 break;
         }//end switch
-        
+
         if($force_login) {
             $pwd = $this->password;
         } else {
             $pwd = User::model()->encrypt($this->password);
         }
-        
-        
+
         if($user===null) 
         {
             $this->errorCode = self::ERROR_USERNAME_INVALID;
@@ -97,6 +96,7 @@ class UserIdentity extends CUserIdentity
             }
             $this->setState('lastLoginTime', $lastLogin);
             $this->setState('role', $user->role);
+            $this->setState('firstName',$user->first_name);
             $this->errorCode = self::ERROR_NONE;
         }
         return !$this->errorCode;

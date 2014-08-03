@@ -2262,21 +2262,21 @@ button .orange {
     max-width: 98px;
     min-width: 98px;
 }
-.view-entries-blk .rocky-mayur .user-details div.celebrity-type i {
+.view-entries-blk .rocky .user-details div.celebrity-type i {
     width: 48px;
     height: 48px;
     background-position: 0 -154px;
     position: absolute;
     margin: -20px 0 0 25px
 }
-.view-entries-blk .gaurav-kapur .user-details div.celebrity-type i {
+.view-entries-blk .gaurav .user-details div.celebrity-type i {
     width: 48px;
     height: 48px;
     background-position: -61px -154px;
     position: absolute;
     margin: -20px 0 0 25px
 }
-.view-entries-blk .anushka-dandekar .user-details div.celebrity-type i {
+.view-entries-blk .anushka .user-details div.celebrity-type i {
     width: 48px;
     height: 48px;
     background-position: -121px -154px;
@@ -2328,13 +2328,13 @@ button .orange {
     width: 25px;
     top: 5px;
 }
-.view-entries-blk .rocky-mayur .action .like a {
+.view-entries-blk .rocky .action .like a {
     color: #f2b04b
 }
-.view-entries-blk .gaurav-kapur .action .like a {
+.view-entries-blk .gaurav .action .like a {
     color: #f05a29
 }
-.view-entries-blk .anushka-dandekar .action .like a {
+.view-entries-blk .anushka .action .like a {
     color: #8cd850
 }
 
@@ -2348,7 +2348,7 @@ button .orange {
     background: url(../images/audio-bg.png) no-repeat center center;
     text-align: center
 }
-.view-entries-blk .gaurav-kapur .audio-bg i {
+.view-entries-blk .gaurav .audio-bg i {
     background: url(../images/view-all-entries-sprite.png) no-repeat -97px -96px;
     display: inline-block;
     width: 40px;
@@ -2356,7 +2356,7 @@ button .orange {
     margin-top: 15px;
     cursor: pointer
 }
-.view-entries-blk .rocky-mayur .audio-bg i {
+.view-entries-blk .rocky .audio-bg i {
     background: url(../images/view-all-entries-sprite.png) no-repeat -2px -96px;
     display: inline-block;
     width: 40px;
@@ -2364,7 +2364,7 @@ button .orange {
     margin-top: 15px;
     cursor: pointer
 }
-.view-entries-blk .anushka-dandekar .audio-bg i {
+.view-entries-blk .anushka .audio-bg i {
     background: url(../images/view-all-entries-sprite.png) no-repeat -48px -96px;
     display: inline-block;
     width: 40px;

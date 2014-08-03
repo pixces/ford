@@ -36,8 +36,26 @@
 			</div>
             <div class="heading transition">Familiar faces.Unfamiliar  territory.</div>
             <div class="sub-heading">3 subject matter experts are out to master a genre completely alien to them. They need help. Yours to be precise. Play the expert and help our celebs master a new game. If you succeed, you get to win the 2014 Ford Fiesta or Ecosport.  Consider it your guru dakshina.</div>
-            <div class="boxLink"><a href="javascript:void(0)">Participate now <i></i></a></div>
-            <div class="link"><a href="javascript:void(0)">How it works?</a></div>
+            <div class="boxLink">
+                <?php echo CHtml::link('Participate now <i></i>',
+                    array(
+                        'user/login',
+                        'lang'=>$siteParams['lang'],
+                        'env'=>$siteParams['env'],
+                        'phase'=>$siteParams['phase'],
+                    )
+                ); ?>
+            </div>
+            <div class="link">
+                <?php echo CHtml::link('How it works?',
+                    array(
+                        'pages/display',
+                        'lang'=>$siteParams['lang'],
+                        'env'=>$siteParams['env'],
+                        'phase'=>$siteParams['phase'],
+                        'view'=>$this->nav['how-it-works']['page_name']
+                    )
+                ); ?>
         </div>
         <div class="carImage">
 			<div class="carImage-heading">Show them the way with MOBILE APPS <br/>ON SYNC<sup>&reg;</sup> APPLINK<sup>&trade;</sup>.</div>
@@ -264,8 +282,25 @@
 
     <!-- Participate And How it Works Starts Here -->
     <div class="hotspotLinks">
-        <a href="javascript:void(0)" class="orangeboxLink">Participate now</a>
-        <a href="javascript:void(0)" class="blueboxLink">How it works?</a>
+        <?php echo CHtml::link('Participate now',
+            array(
+                'user/login',
+                'lang'=>$siteParams['lang'],
+                'env'=>$siteParams['env'],
+                'phase'=>$siteParams['phase'],
+            ),
+            array('class'=>'orangeboxLink')
+        ); ?>
+        <?php echo CHtml::link('How it works?',
+            array(
+                'pages/display',
+                'lang'=>$siteParams['lang'],
+                'env'=>$siteParams['env'],
+                'phase'=>$siteParams['phase'],
+                'view'=>$this->nav['how-it-works']['page_name']
+            ),
+            array('class'=>'blueboxLink')
+        ); ?>
     </div>
     <!-- Participate And How it Works Ends Here -->
 

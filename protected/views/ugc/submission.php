@@ -39,7 +39,7 @@
                 foreach($content as $celeb => $data ) {
                 ?>
 			<div id="celeb-<?=$celeb; ?>" class="hotspot col-<?=$placement[$t]; ?>">
-				<div class="img <?=isset($data['title']) ? 'selected can-edit' : ''; ?>" data-submit-box="<?=$celeb; ?>-submit" id="<?=$celeb; ?>-celeb">
+				<div class="img <?=isset($data['content']['title']) ? 'selected can-edit' : ''; ?>" data-submit-box="<?=$celeb; ?>-submit" id="<?=$celeb; ?>-celeb">
 				<div class="edit-tick"><i></i><a href="javascript:void(0);">Edit</a></div>
 				<div class="select-celeb"><a href="javascript:void(0);">Click to Select</a></div>
 				<div class="black-transparent-hover"></div><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/<?=$data['img']; ?>" alt="<?=$data['name']; ?>" title="<?=$data['name']; ?>" /><div class="make-an-appeal-txt">Make an Appeal</div></div>
@@ -60,7 +60,7 @@
         <div class="Celebrity-Comments-Container" id="<?=$celeb; ?>-submit" style="display:none">
             <div class="col-width-80 <?=$data['color']; ?>-comments-container">
                 <div class="col-width-80 textarea-ct">
-                    <textarea id="<?=$celeb; ?>-comment" class="textarea"><?=(isset($data['description']) && !empty($data['description']) ) ? $data['description'] : 'Make an appeal to '.$data['name'].'...'; ?></textarea>
+                    <textarea id="<?=$celeb; ?>-comment" class="textarea"><?=(isset($data['description']) && !empty($data['content']['description']) ) ? $data['content']['description'] : 'Make an appeal to '.$data['name'].'...'; ?></textarea>
                 </div>
                 <div class="col-width-20 btn-ct"><div class="arrow-right"></div>
                 	<button class="button big-btn-submit" data-submit-for="<?=$celeb; ?>-celeb" data-celeb-icon="<?=$placement[$t]; ?>-celeb-icon" data-celeb="<?=$celeb; ?>" data-user="<?=Yii::app()->user->getId(); ?>">Submit</button>
@@ -118,7 +118,9 @@
         			</div>
 
         			<div class="btn-box">
-                        <?php echo CHtml::link('Confirm',
+                        <a href="javascript:void(0)" class="confirm-btn" id="confirm-btn" data-user="<?=Yii::app()->user->getId(); ?>">Confirm</a>
+                        <?php
+                        /*echo CHtml::link('Confirm',
                             array(
                                 'ugc/confirm',
                                 'lang'=>$siteParams['lang'],
@@ -126,7 +128,8 @@
                                 'phase'=>$siteParams['phase'],
                             ),
                             array('id'=>'confirm-btn','class'=>'confirm-btn','data-user'=>Yii::app()->user->getId())
-                        ); ?>
+                        );*/
+                        ?>
         				<div class="confirm-info">
         					Once you click confirm you cannot edit your appeals.
         				</div>

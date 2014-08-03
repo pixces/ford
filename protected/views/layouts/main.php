@@ -113,7 +113,7 @@
         ); ?>
         <?php } else { ?>
         <i class="loginUser"></i>
-        <?php echo CHtml::link('MyProfile',
+        <?php echo CHtml::link(Yii::app()->user->firstName,
             array('user/profile',
                 'lang'=>$this->siteParams['lang'],
                 'env'=>$this->siteParams['env'],
@@ -155,7 +155,14 @@
             </ul>
         </div>
         <div class="img">
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/footer-car-image.png" alt="Fiesta/EcoSport" title="Fiesta/EcoSport" /> <i class="doubleArrow"></i>
+            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/footer-car-image.png" alt="Fiesta/EcoSport" title="Fiesta/EcoSport" />
+            <?php echo CHtml::link('<i class="doubleArrow">',
+                array('pages/display',
+                    'lang'=>$this->siteParams['lang'],
+                    'env'=>$this->siteParams['env'],
+                    'phase'=>$this->siteParams['phase'],
+                    'view'=>$this->nav['cars']['page_name'])
+            ); ?></a></i>
         </div>
     </div>
     <!-- Footer Social Icon Ends Here -->
@@ -165,15 +172,6 @@
         <div class="ford-go-further"></div>
         <ul>
             <li class="first">
-                <?php echo CHtml::link('About',
-                    array('pages/display',
-                        'lang'=>$this->siteParams['lang'],
-                        'env'=>$this->siteParams['env'],
-                        'phase'=>$this->siteParams['phase'],
-                        'view'=>$this->nav['about']['page_name'])
-                ); ?>
-            </li>
-            <li>
                 <?php echo CHtml::link('Privacy',
                     array('pages/display',
                         'lang'=>$this->siteParams['lang'],

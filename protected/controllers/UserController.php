@@ -157,8 +157,8 @@ class UserController extends Controller
                         Yii::app()->session['user_id'] = $userProfile['user_id'];
                         Yii::app()->session['user_email'] = $model->email;
 
-                        //force login this use
-                        $this->forceLogin($_POST['email'], $_POST['password']);
+                        //force login this user
+                        $this->forceLogin($userObj['email'], $userObj['password']);
 
                         //redirect the user to the profile page
                         $this->redirect($this->createAbsoluteUrl('ugc/submission'));
@@ -284,6 +284,7 @@ class UserController extends Controller
         $this->__verifyLogin();
 
         $userId = Yii::app()->user->getId();
+
         //get the value of isContentSubmitted;
         if (!$this->__isContentSubmitted($userId)){
             $this->redirect( Yii::app()->createAbsoluteUrl("ugc/submission",$this->getSiteParams()) );
@@ -311,16 +312,14 @@ class UserController extends Controller
 
         if ($result){
             foreach($result as $item){
-                $content[$item['channel_name']] = array_merge($content[$item['channel_name']],$item);
-                if ($item['is_submitted'] == 1 ){
+                $content[$item['content']['channel_name']] = array_merge($content[$item['content']['channel_name']],$item);
+                if ($item['content']['is_submitted'] == 1 ){
                     $submittedForApproval ++;
                 }
                 $userSubmissions++;
             }
         }
 
-        //print_r($content);
-        //exit;
         $profile_page_name = 'profile';
         $this->page_name = $profile_page_name;
         $this->render($this->page_name, array(

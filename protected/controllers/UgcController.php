@@ -81,8 +81,8 @@ class UgcController extends Controller {
 
         if ($result){
             foreach($result as $item){
-                $content[$item['channel_name']] = array_merge($content[$item['channel_name']],$item);
-                if ($item['is_submitted'] == 1 ){
+                $content[$item['content']['channel_name']] = array_merge($content[$item['content']['channel_name']],$item);
+                if ($item['content']['is_submitted'] == 1 ){
                     $submittedForApproval ++;
                 }
                 $userSubmissions++;

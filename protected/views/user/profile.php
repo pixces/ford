@@ -81,14 +81,14 @@
                 </div>
                 <!-- profile image ends -->
                 <!-- appeal content are starts -->
-                <?php if (isset($cont['id']) && !empty($cont['id'])){ ?>
-                    <?php if ($cont['status'] != 'pending'){ ?>
-                        <?php if ($cont['status'] == 'rejected') { ?>
+                <?php if (isset($cont['content']['id']) && !empty($cont['content']['id'])){ ?>
+                    <?php if ($cont['content']['status'] != 'pending'){ ?>
+                        <?php if ($cont['content']['status'] == 'rejected') { ?>
                             <!-- content rejected -->
                             <div class="rejected-appeal-text">
                                 <div class="col-full-8">
                                     <h6>Sorry but your appeal has been rejected. Moderator’s message is as follows:</h6>
-                                    <p><?=$cont['description']; ?></p>
+                                    <p><?=$cont['content']['description']; ?></p>
                                 </div>
                                 <div class="col-full-4 rejected">
                                     <div class="img">
@@ -102,10 +102,10 @@
                             <!-- content either approved / under moderation //-->
                             <div class="content two-third-ct column <?=$celeb; ?>-appeal-content-area">
                                 <div class="content column">
-                                    <p><?=$cont['description']; ?></p>
+                                    <p><?=$cont['content']['description']; ?></p>
                                 </div>
                                 <?php
-                                    $status_text = ($cont['status'] == 'under_review') ? 'under-moderation' : 'approved';
+                                    $status_text = ($cont['content']['status'] == 'under_review') ? 'under-moderation' : 'approved';
                                 ?>
                                 <div class="action-updates <?=$status_text; ?> column">
                                     <div class="img">
@@ -119,7 +119,7 @@
                         <!-- content not submitted for moderation -->
                         <div class="content two-third-ct column confirm-appeal-box">
                             <div class="confirm-appeal-text">
-                                <div class="col-full-8"><?=$cont['description']; ?></div>
+                                <div class="col-full-8"><?=$cont['content']['description']; ?></div>
                                 <div class="col-full-2">
                                     <div class="btn-ct">
                                         <div class="arrow-right"></div>
@@ -146,7 +146,15 @@
             <?php } ?>
         </ul>
         <div class="view-other-entries-container">
-            <button class="button Col25a6a0 view-other-entries-btn">View Other Entries</button>
+            <?php echo CHtml::link('<button class="button Col25a6a0 view-other-entries-btn">View Other Entries</button>',
+                array(
+                    'gallery/index',
+                    'lang'=>$siteParams['lang'],
+                    'env'=>$siteParams['env'],
+                    'phase'=>$siteParams['phase'],
+                ),
+                array('id'=>'edit-details','class'=>'edit-details','data-user'=>Yii::app()->user->getId())
+            ); ?>
         </div>
     </div>
 </div>

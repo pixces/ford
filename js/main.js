@@ -8,6 +8,9 @@ var maxTries = 50;
 var tryCount = 1;
 var SOCIALURL = SOCIAL_HOST;
 var SITEURL = SITE_URL;
+var ENV = 'base';
+var LANG = 'en';
+var PHASE = 'recruit';
 
 function onm_window_parameters(){ 
 
@@ -80,6 +83,7 @@ function CelebSubmit() {
         var user_id = $this.attr("data-user");
         var is_ugc = 1;
 
+
         //make the call to save this data
         $.ajax({
             type: "POST",
@@ -114,7 +118,7 @@ function CelebSubmit() {
 
                     $("#confirm-appeal-section").slideDown();
 
-                    $(".subscribe-message").text('for subscribing to our newsletter');
+                    //$(".subscribe-message").text('for subscribing to our newsletter');
                 }
             },
             error: function () {
@@ -125,62 +129,76 @@ function CelebSubmit() {
         });
     };
 
-    /*
-    var submitConfirm = function () {
-        var $this = $(this);
-        var btnId = $this.attr("id");
-        var user_id = $this.attr("data-user");
-        var is_ugc = 1;
 
-        //make the call to save this data
-        $.ajax({
-            type: "POST",
-            cache: false,
-            url: SITEURL + "/ugc/" + "confirm",
-            data: {user_id: user_id, is_ugc: is_ugc},
-            dataType: "json",
-            success: function (data) {
-                console.info(data);
+     var submitConfirm = function (e) {
 
-                if(data.response === 'success'){
-                    //redirect to the profile page now
-                    window.location.href = SITEURL+"/user/profile/";
-                } else {
-                    //console.info(data.message);
-                }
+         e.preventDefault;
+
+         var $this = $(this);
+         var btnId = $this.attr("id");
+         var user_id = $this.attr("data-user");
+         var is_ugc = 1;
+         //var location = $this.attr('href');
+
+         console.log(btnId);
+         console.log(user_id);
+         console.log(is_ugc);
+
+
+         //make the call to save this data
+         $.ajax({
+             type: "POST",
+             cache: false,
+             url: SITEURL + "/ugc/" + "confirm",
+             data: {user_id: user_id, is_ugc: is_ugc},
+             dataType: "json",
+             success: function (data) {
+                 if(data.response === 'success'){
+                     //redirect to the profile page now
+                     console.log(data.message);
+                     var location = SITEURL+"/user/profile/"+"?env="+ENV+"&lang="+LANG+"&phase="+PHASE;
+                     console.log(location);
+                     window.location.href = location;
+                 } else {
+                    console.info("error" + data.message);
+                     return false;
+                 }
             },
             error: function () {
                 console.info("request error please debug");
-                //console.info(SITEURL + "/ugc/" + "confirm");
-                //console.info({user_id: user_id, is_ugc: is_ugc});
+                console.info(SITEURL + "/ugc/" + "confirm");
+                console.info({user_id: user_id, is_ugc: is_ugc});
+                return false;
             }
-        });
-    };*/
+         });
+     };
 
     $('.hotspot .img').on("click", selectCelebrity);
     $(".Celebrity-Comments-Container .big-btn-submit").on("click", submitAction);
     $('.hotspot .img .edit-tick a').on("click", editSubmission);
 
     //confirm submission on click of either of these buttons
-    //$("#done-btn").on('click', submitConfirm);
-    //$("#confirm-btn").on('click', submitConfirm);
+    $("#done-btn").on('click', submitConfirm);
+    $("#confirm-btn").on('click', submitConfirm);
 
     /*$("#done-btn").on('click', function(){
 
-        $("#makeAnotherAppeal").hide();
-        $("#confirmAppeal").show();
+     $("#makeAnotherAppeal").hide();
+     $("#confirmAppeal").show();
 
-        submitConfirm;
+     submitConfirm;
 
-    });
+     });
 
-    $("#confirm-btn").on('click', function(){
+     $("#confirm-btn").on('click', function(){
 
-        //make a call to update the is_submitted = true
-        //for all the posted comments
-        submitConfirm
-        $("#confirm-appeal-section").slideUp();
-    });*/
+     //make a call to update the is_submitted = true
+     //for all the posted comments
+     submitConfirm
+     $("#confirm-appeal-section").slideUp();
+     });*/
+
+
 
 };
 
@@ -205,20 +223,23 @@ var ProfileSubmitAppeal = function () {
         '</div>' +
         '</div>';
 
-    var moderationTemplate = '<div class="content two-third-ct column submit-appeal-box">' +
-		'<div class="content column">' +
+    var moderationTemplate = '<div class="content two-third-ct column {{celebName}}-appeal-content-area">' +
+        '<div class="content column">' +
         '<p>{{text}}</p>' +
         '</div>' +
         '<div class="action-updates under-moderation column">' +
-        '<div class="img"><img src="/FordHTML/images/under-moderation.png" alt="Under Moderation"></div> ' +
+        '<div class="img">' +
+        '<img src="'+SITEURL+'/images/under-moderation.png" alt="Under Moderation">' +
+        '</div>' +
         'Under Moderation' +
         '</div>' +
-		'</div>';
-
+        '</div>';
 
     var exports = {
         init: function(){
             $('.make-an-appeal').on('click', exports.makeAppeal);
+            $('.confirm-appeal-text .col-full-8').on('click', exports.editAppeal);
+            $('.confirm-btn').on('click', exports.confirmAppeal);
         },
 
         makeAppeal: function(){
@@ -228,24 +249,55 @@ var ProfileSubmitAppeal = function () {
                 .find('.second-column').remove().end()
                 .find('.content').remove();
             var celebName = exports.getCelebName(celeb);
-            var submitAppealHTML = submitAppealTemplate.replace('{{celebName}}', celebName);
+            var submitAppealHTML = submitAppealTemplate.replace('{{celebName}}', celeb);
             parentLI.append(submitAppealHTML);
             parentLI.find('.make-an-appeal-submit').bind('click', exports.submitAppeal);
 
         },
 
         submitAppeal: function(){
+
             var parentLI = $(this).parents('.entries-li').eq(0);
             var celeb = parentLI.attr('data-celeb');
+            var user_id = parentLI.attr('data-user');
             var value = parentLI.find('textarea').val();
-            parentLI.find('.submit-appeal-box').remove();
 
-            var appealHTML = confirmAppealTemplate.replace('{{AppealText}}', value);
-            parentLI.append(appealHTML);
+            //make a call to post the data
+            var channel = celeb;
+            var comment = value;
+            var user_id = user_id;
+            var is_ugc = 1;
 
-            parentLI.find('.confirm-appeal-text .col-full-8').bind('click', exports.editAppeal);
-            parentLI.find('.confirm-btn').bind('click', exports.confirmAppeal);
+            //make the call to save this data
+            $.ajax({
+                type: "POST",
+                cache: false,
+                url: SITEURL + "/ugc/" + "save",
+                data: {user_id: user_id, channel: channel, comment: comment, is_ugc: is_ugc },
+                dataType: "json",
+                success: function (data) {
+                    if (data.response === 'false') {
+                        return false;
+                        console.log('unable to save user submission');
+                        console.log(data.message);
+                    } else {
+                        console.log(data.message);
 
+                        //display the submission confirm box
+                        parentLI.find('.submit-appeal-box').remove();
+
+                        var appealHTML = confirmAppealTemplate.replace('{{AppealText}}', value);
+                        parentLI.append(appealHTML);
+                        parentLI.find('.confirm-appeal-text .col-full-8').bind('click', exports.editAppeal);
+                        parentLI.find('.confirm-btn').bind('click', exports.confirmAppeal);
+                    }
+                },
+                error: function () {
+                    console.log("request error please debug");
+                    console.log(SITEURL + "/ugc/" + "save");
+                    console.log({user_id: user_id, channel: channel, comment: comment, is_ugc: is_ugc});
+                }
+            });
         },
 
         editAppeal: function(){
@@ -263,12 +315,33 @@ var ProfileSubmitAppeal = function () {
             var parentLI = $(this).parents('.entries-li').eq(0);
             var celeb = parentLI.attr('data-celeb');
             var value = parentLI.find('.col-full-8').html();
-            parentLI.find('.confirm-appeal-box').remove();
+            var user_id = parentLI.attr('data-user');
+            var is_ugc = 1;
 
-            var confirmationHTML = moderationTemplate.replace('{{text}}', value);
-            parentLI.append(confirmationHTML);
-
-
+            //make the call to save this data
+            $.ajax({
+                type: "POST",
+                cache: false,
+                url: SITEURL + "/ugc/" + "confirm",
+                data: {user_id: user_id, channel: celeb, comment: value, is_ugc: is_ugc, confirm_type:'one' },
+                dataType: "json",
+                success: function (data) {
+                    if (data.response === 'error') {
+                        return false;
+                        console.log('unable to save user submission');
+                        console.log(data.message);
+                    } else {
+                        parentLI.find('.confirm-appeal-box').remove();
+                        var confirmationHTML = moderationTemplate.replace(/{{celebName}}/g, celeb).replace(/{{text}}/g, value);
+                        parentLI.append(confirmationHTML);
+                    }
+                },
+                error: function () {
+                    console.log("request error please debug");
+                    console.log(SITEURL + "/ugc/" + "confirm");
+                    console.log({user_id: user_id, channel: celeb, comment: value, is_ugc: is_ugc, confirm_type:'one' });
+                }
+            });
         },
 
         getCelebName: function(celeb){
@@ -371,7 +444,7 @@ $(document).ready(function(e){
         videoHeight = $(".mainBanner").height();
 
         $(".bannerContainer").hide();
-        $(".videoContainer").html('<div class="closeVideo"><i>X</i></div><div><iframe width="100%" height="360" frameborder="0" allowfullscreen src="http://www.youtube.com/embed/' + videoUrl + '?autoplay=1"></iframe></div>').show();
+        $(".videoContainer").html('<div class="closeVideo"><i>X</i></div><div><iframe width="100%" height="' + videoHeight + '" frameborder="0" allowfullscreen src="http://www.youtube.com/embed/' + videoUrl + '?autoplay=1"></iframe></div>').slideDown();
     });
 
     $(document).on("click", ".closeVideo i",function(){
@@ -654,7 +727,145 @@ function getUserInfo(social) {
                 tryCount = 0;
             }
         });
-}
+};
+
+var GALLERY = (function () {
+
+    var $galleryPlaceHolder = $("#entries");
+
+    var Data = {
+        Gallery: (typeof galleryData !== 'undefined') ? galleryData : "",
+        aCelebrity : (typeof aCelebs !== 'undefined') ? aCelebs : "",
+        offset : 0,
+        limit : 15
+    };
+
+    var galleryTemplate = {
+        text: [
+            '<div class="entries-list {{CELEB}} transition">',
+                '<div class="user-details">',
+                    '<div class="user-pic"><img src="{{USER_IMAGE}}" /> <span>{{USER_NAME}}</span></div>',
+                    '<div class="mid-icon"><i></i></div>',
+                    '<div class="celebrity-type"><i></i> <span>{{CELEB_NAME}}</span></div>',
+                '</div>',
+                '<div class="user-description">{{CONTENT}}</div>',
+                '<div class="action">',
+                    '<div class="like">',
+                        '<a href="javascript:void(0)"><i class="likeIcon"></i> {{VOTE}}</a>',
+                        '<div class="actionLogin">',
+                            '<div class="row no-margin">',
+                                '<div class="field">',
+                                    '<input type="text" placeholder="Login" id="login" name="login">',
+                                    '<input type="password" placeholder="Password" id="password" name="password">',
+                                    '<input type="submit" value="Login" id="submit" name="submit">',
+                                '</div>',
+                            '</div>',
+                        '</div>',
+                    '</div>',
+                    '<div class="share">',
+                        '<a href="javascript:void(0)"><i class="shareIcon"></i></a>',
+                        '<div class="shareWith">',
+                            '<ul>',
+                                '<li><a href="javascript:void(0)"><i class="facebook"></i></a></li>',
+                                '<li><a href="javascript:void(0)"><i class="twitter"></i></a></li>',
+                                '<li><a href="javascript:void(0)"><i class="tube"></i></a></li>',
+                            '</ul>',
+                        '</div>',
+                    '</div>',
+                '</div>',
+            '</div>'
+        ].join(""),
+
+        audio: [
+            '<div class="entries-list anushka-dandekar transition">',
+                '<div class="user-details">',
+                    '<div class="user-pic"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/user-small-icon.png" /> <span>Tarun Jaiswal</span></div>',
+                    '<div class="mid-icon"><i></i></div>',
+                    '<div class="celebrity-type"><i></i> <span>Anushka Dandekar</span></div>',
+                '</div>',
+                '<div class="user-description audio-bg">',
+                    '<i class="play"></i>',
+                    '<div class="playAudio">',
+                        '<audio controls>',
+                            '<source src="images/horse.mp3" type="audio/mpeg">',
+                            '<source src="images/horse.ogg" type="audio/ogg">',
+                            '<embed height="50" width="100" src="horse.mp3">',
+                            'Your browser does not support this audio format.',
+                        '</audio>',
+                    '</div>',
+                '</div>',
+                '<div class="action">',
+                    '<div class="like">',
+                        '<a href="javascript:void(0)"><i class="likeIcon"></i> 21</a>',
+                        '<div class="actionLogin">',
+                            '<div class="row no-margin">',
+                                '<div class="field">',
+                                    '<input type="text" placeholder="Login" id="login" name="login">',
+                                    '<input type="password" placeholder="Password" id="password" name="password">',
+                                    '<input type="submit" value="Login" id="submit" name="submit">',
+                                '</div>',
+                            '</div>',
+                        '</div>',
+                    '</div>',
+                    '<div class="share">',
+                        '<a href="javascript:void(0)"><i class="shareIcon"></i></a>',
+                        '<div class="shareWith">',
+                            '<ul>',
+                                '<li><a href="javascript:void(0)"><i class="facebook"></i></a></li>',
+                                '<li><a href="javascript:void(0)"><i class="twitter"></i></a></li>',
+                                '<li><a href="javascript:void(0)"><i class="tube"></i></a></li>',
+                            '</ul>',
+                        '</div>',
+                    '</div>',
+                '</div>',
+            '</div>'
+        ].join("")
+    };
+
+    var exports = {
+
+        initialize: function(){
+            GALLERY.buildGallery();
+        },
+
+        buildGallery : function( data ){
+
+            if( data !== undefined ) {
+                Gallery = data;
+            } else {
+                Gallery = Data.Gallery;
+            }
+
+            if (Gallery === null || !Gallery) { return; }
+            var Output = [];
+            var dataLength = Gallery.length;
+
+            for(var i = dataLength-1; i >= 0; i--){
+                var content = Gallery[i],
+                    mediaType = content["content"]["type"],
+                    user_image = (content['user']['profile_image'] === null || !content['user']['profile_image']) ? SITEURL+'/images/user-icon.png' : content['user']['profile_image'],
+                    vote = content['content']['vote'],
+                    celeb_name = '';
+
+                var template = galleryTemplate[ mediaType ].replace( /{{CELEB}}/g, content['content']['channel_name'] )
+                    .replace( /{{USER_IMAGE}}/g, user_image )
+                    .replace( /{{USER_NAME}}/g, content['user']['full_name'] )
+                    .replace( /{{CELEB_NAME}}/g, Data.aCelebrity[ content['content']['channel_name'] ]['name'])
+                    .replace( /{{CONTENT}}/g, content['content']['description'] )
+                    .replace( /{{VOTE}}/g, vote);
+
+                Output.unshift( template );
+            }
+
+            $galleryPlaceHolder.append( Output.join("") );
+        }
+
+
+    };
+    return exports;
+
+
+})();
 
 var SUBMISSION = (function () {
 
