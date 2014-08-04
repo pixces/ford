@@ -989,7 +989,7 @@
     }
 
     .sort-view-entries ul li {
-        padding: 10px 9px
+        padding: 10px 12px
     }
 }
 
@@ -1466,5 +1466,28 @@
 	.watch-auditions{
 		font-size: 1.125em;
 		max-width: 270px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 930px) {
+	.shortlistHeading{
+		padding:25px 140px;
+	}
+}
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+	.shortlistHeading{
+		padding:25px;
+	}
+	.shortlistIcon,.viewOther-entries,.sort-view-entries.mobile-sort-view-entries{
+		display:block;
+	}
+	.shortlistSort{
+		display:none;
+	}
+	.sort-view-entries ul.shortlist-blk{
+		width:100%
+	}
+	.view-entries-blk.shortlist-entries-blk .divCenter{
+		width: 235px;
 	}
 }

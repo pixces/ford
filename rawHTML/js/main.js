@@ -302,10 +302,16 @@ $(document).ready(function (e) {
         $('#select_file').html($(this).val());
         alert($(this).val());
     });
-
+	
+	$("body").on("click", function() {
+		$('.sort-view-entries ul li ul.subMenu').hide();
+	});
+	
     $('.sort-view-entries > ul > li').find(".subMenu").hide();
-    $('.sort-view-entries > ul > li').on("click", function () {
+    $('.sort-view-entries > ul > li').on("click", function (event) {
         //$('.sort-view-entries > ul > li .subMenu').hide();
+		$(".sort-view-entries ul li a").removeClass("active");
+		$(this).find("a").addClass("active");
         var $divsubMenu = $(this).find(".subMenu");
         if ($divsubMenu.is(':visible')) {
             $divsubMenu.hide();
@@ -313,11 +319,14 @@ $(document).ready(function (e) {
             $('.sort-view-entries > ul > li .subMenu').hide();
             $divsubMenu.toggle();
         }
+		event.stopPropagation();
     });
 
     $('.sort-view-entries > ul > li .subMenu').on("click", function (event) {
         event.stopPropagation();
     });
+	
+	
 
     $(".view-entries-blk .shareWith").hide();
     $(".view-entries-blk .share .shareIcon").on("click", function () {
@@ -353,7 +362,7 @@ $(document).ready(function (e) {
     /* Celebs Page JS Starts Here */
     $(".celebs-our-content,.celebsVideo").hide();
     $('.celebs-action a i').on("click", function () {
-        $(".celebsVideo").find("iframe").attr("src", "");
+        $(".celebsVideo").find("iframe").attr("src", "#");
         $(".celebsContainer").show();
         var activeDiv = $(this).attr("class");
         $(".celebs-our-celebs,.celebs-our-content,.celebsVideo").hide();
@@ -376,7 +385,7 @@ $(document).ready(function (e) {
     });
 
     $(".closeVideo i").on("click", function () {
-        $(this).parent().next().find("iframe").attr("src", "");
+        $(this).parent().next().attr("src", "#");
         $(this).parent().parent().hide();
         $(this).parent().parent().prev().show();
         if (windowWidth < 767) {

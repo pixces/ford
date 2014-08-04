@@ -518,6 +518,7 @@ body {
     display: table-cell;
 	display: inline-block;
     width: 33%;
+	float:left;
 }
 
 .hotspots .hotspot .img {
@@ -3950,3 +3951,133 @@ form label.error, .errorMessage {
 	top:125px;
 }
 /* Home Page Phase 1B Css Ends Here */
+
+
+/* Short List Entries Css Starts Here */
+.shortlistEntries{
+	float:left;
+	width:auto;
+	height:auto;
+}
+.view-entries-blk.shortlist-entries-blk .divCenter{
+	width:710px;
+}
+.shortlistEntries .entries-list{
+	float:none;
+}
+.shortlistHeading{
+	padding:25px 230px;
+}
+.shortlistHeading span{
+	display:block;
+	line-height:initial;
+}
+.shortlistHeading span.heading{
+	color:#ffffff;
+	font-size:1.600em;
+	font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+}
+.shortlistHeading span.sub-heading{
+	font-size:0.640em;
+	text-transform:none;
+	font-family: 'FordAntennaCondWGL-Reg', sans-serif;
+	line-height:22px;
+}
+.shortlistHotspot{
+	width:auto;
+	height:auto;
+}
+.shortlistHotspot .img{
+	text-align:center;
+}
+.shortlistHotspot .img img{
+	border:2px solid #e9a43d;
+	border-radius:100px;
+	max-width:177px;
+}
+.gaurav-kapoor .img img{
+	border:2px solid #f05a29;
+}
+.anushka-dandekar .img img{
+	border:2px solid #8cd850;
+}
+.shortlistHotspot .icon {
+    background: url("../images/shortlist-sprite.png") no-repeat scroll;
+    height: 55px;
+    left: 32%;
+    position: relative;
+    width: 100px;
+	margin:10px 0;
+}
+.gaurav-kapoor .icon{
+	background-position:0 -56px;
+}
+.anushka-dandekar .icon{
+	background-position:0 -111px;
+}
+.shortlistHotspot .head {
+    font-family: 'FordAntennaExtraCondWGL-Bold',serif;
+    font-size: 1.25em;
+    margin: 5px 0;
+	text-align:center;
+}
+.shortlistHotspot .splitter {
+    background:#e9a43d;
+    height: 3px;
+    left: 42%;
+    position: relative;
+    width: 43px;
+	margin:10px 0 40px;
+}
+.gaurav-kapoor .splitter {
+	background:#f05a29;
+}
+.anushka-dandekar .splitter {
+	background:#8cd850;
+}
+.sort-view-entries ul.shortlist-blk{
+	width:660px;
+}
+.sort-view-entries ul li.shortlistIcon{
+	position:relative;
+	padding-top:37px;
+}
+.sort-view-entries ul li.shortlistIcon i{
+	background:url("../images/shortlist-sprite.png") no-repeat -126px 0;
+	height:97px;
+	width:73px;
+	position:absolute;
+	top:15px;
+	left:29px;
+}
+.shortlistHeading .shortlistIcon{
+	position:relative;
+	max-width:75px;
+	margin:0 auto;
+	padding:23px 0;
+}
+.shortlistHeading .shortlistIcon i{
+	background:url("../images/shortlist-sprite.png") no-repeat -126px 4px;
+	height:102px;
+	width:73px;
+	position:absolute;
+	top:13px;
+	left:3px;
+	color:#ffffff;
+	font-size:0.7em;
+	font-style:normal;
+}
+.viewOther-entries{
+	text-align:center;
+	background:#eaeaea;
+	padding:60px 0 10px;
+}
+.viewOther-entries a{
+	color:#000000;
+	font-family: 'FordAntennaExtraCondWGL-Reg', sans-serif;
+	text-decoration:underline;
+}
+.shortlistIcon,.viewOther-entries,.mobile-sort-view-entries{
+	display:none;
+}
+/* Short List Entries Css Ends Here */
