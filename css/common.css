@@ -2167,9 +2167,12 @@ button .orange {
 .autocomplete-suggestions {
     background: #35b1aa;
     margin-left: -15px;
-    width: 142px!important;
+    width: 146px!important;
     padding: 0 15px 10px;
     overflow: auto
+}
+.autocomplete-suggestions strong{
+	font-weight:normal;
 }
 .autocomplete-suggestion,
 .sortCelebrity ul.subMenu li {

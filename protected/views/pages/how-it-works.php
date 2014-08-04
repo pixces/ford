@@ -23,9 +23,10 @@
                 <div class="center-main-img"></div>
                 <div class="circle-obj">
                     <div class="play-btn">
-                        <div id="button">
+                        <a href="javascript:void(0)" rel="j2pF4Cx2COo" class="howitworksPlay"><div id="button">
                             <div id="triangle"></div>
-                        </div>Play Video</div>
+                        </div>Play Video</a>
+					</div>
                     <div class="center-obj-title">The way to winning a Ford EcoSport. Or a 2014 Ford Fiesta.</div>
                     <div class="center-obj-appeal">
                         <button class="button appeal-btn">MAKE AN APPEAL &nbsp;&nbsp;<span class="chevron-right orange">&rsaquo;</span>

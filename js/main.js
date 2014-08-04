@@ -505,7 +505,7 @@ $(document).ready(function(e){
     });
 
     $('.sort-view-entries > ul > li').find(".subMenu").hide();
-    $('.sort-view-entries > ul > li').on("click",function(){
+    $('.sort-view-entries > ul > li').on("click",function(event){
 		//$('.sort-view-entries > ul > li .subMenu').hide();
 		$(".sort-view-entries ul li a").removeClass("active");
 		$(this).find("a").addClass("active");
@@ -516,10 +516,15 @@ $(document).ready(function(e){
 			$('.sort-view-entries > ul > li .subMenu').hide();
 			$divsubMenu.toggle();
 		}
+		event.stopPropagation();
 	});
 	
 	$('.sort-view-entries > ul > li .subMenu').on("click",function(event){
 		event.stopPropagation();
+	});
+	
+	$("body").on("click", function() {
+		$('.sort-view-entries ul li ul.subMenu').hide();
 	});
 	
 	$(".view-entries-blk .shareWith").hide();
@@ -578,7 +583,7 @@ $(document).ready(function(e){
 	});
 	
 	$(".closeVideo i").on("click",function(){
-		$(this).parent().next().find("iframe").attr("src","");
+		$(this).parent().find("iframe").attr("src","");
 		$(this).parent().parent().hide();
 		$(this).parent().parent().prev().show();
 		if(windowWidth < 767){
@@ -591,7 +596,7 @@ $(document).ready(function(e){
 	});
 	/* Celebs Page JS Ends Here */
 	
-	$(".hotspots .hotspot .img a.playCelebVideo").click(function(){
+	$(".hotspots .hotspot .img a.playCelebVideo , .howitworksPlay").click(function(){
 		var videoID = $(this).attr("rel");
 		$(".overlay").toggle().css({"width": documentWidth, "height": documentHeight,"top": 0});
 		$(".videoOverlay").show().find("iframe").attr("src", "http://www.youtube.com/embed/" + videoID + "?autoplay=1");
