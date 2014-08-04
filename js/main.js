@@ -507,6 +507,8 @@ $(document).ready(function(e){
     $('.sort-view-entries > ul > li').find(".subMenu").hide();
     $('.sort-view-entries > ul > li').on("click",function(){
 		//$('.sort-view-entries > ul > li .subMenu').hide();
+		$(".sort-view-entries ul li a").removeClass("active");
+		$(this).find("a").addClass("active");
 		var $divsubMenu = $(this).find(".subMenu");
 		if ($divsubMenu.is(':visible')){
 			$divsubMenu.hide();

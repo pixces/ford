@@ -129,12 +129,11 @@
                                             <span class="location">Delhi</span>
                                         </div>
                                         <div class="the-content">
-											<audio controls>
-												<source src="images/horse.mp3" type="audio/mpeg">
-												<source src="images/horse.ogg" type="audio/ogg">
-												<embed height="50" width="100" src="horse.mp3">
-												Your browser does not support this audio format.
-											</audio>
+											<audio controls="controls">
+												<source src="../images/horse.mp3" type="audio/mpeg" />
+												<source src="../images/horse.ogg" type="audio/ogg" />
+												Your browser does not support the audio element.
+											</audio> 
                                         </div>
                                     </div>
                                 </div>
