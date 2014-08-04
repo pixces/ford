@@ -32,7 +32,7 @@
 		<!-- Participate Block Starts Here -->
 		
 		<!-- Hot Spots Starts Here -->
-		<div class="hotspots transition">
+		<div class="hotspots transition chooseCelebrity">
             <?php
                 $placement = array('first','second','third');
                 $t=0;

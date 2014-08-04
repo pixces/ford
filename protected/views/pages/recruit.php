@@ -56,7 +56,8 @@
                         'view'=>$this->nav['how-it-works']['page_name']
                     )
                 ); ?>
-        </div>
+			</div>
+		</div>
         <div class="carImage">
 			<div class="carImage-heading">Show them the way with MOBILE APPS <br/>ON SYNC<sup>&reg;</sup> APPLINK<sup>&trade;</sup>.</div>
 			<div class="carImage-icon"></div>
@@ -78,7 +79,7 @@
     <!-- Hot Spots Starts Here -->
     <div class="hotspots transition">
         <div class="hotspot col-first">
-            <div class="img"><a rel="j2pF4Cx2COo" href="javascript:void(0)"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/rocky-mayur_play.png" alt="Rocky &amp; Mayur" title="Rocky &amp; Mayur" /></a></div>
+            <div class="img"><a rel="j2pF4Cx2COo" href="javascript:void(0)" class="playCelebVideo"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/rocky-mayur_play.png" alt="Rocky &amp; Mayur" title="Rocky &amp; Mayur" /></a></div>
             <div class="icon"></div>
             <div class="head">Rocky &amp; Mayur</div>
             <div class="splitter"></div>
@@ -86,7 +87,7 @@
             <div class="foot"><a href="javascript:void(0)">NEED MUSICIANS</a></div>
         </div>
         <div class="hotspot col-second">
-            <div class="img"><a rel="Byqp30gxWjo" href="javascript:void(0)"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gaurav-kapoor_play.png" alt="Gaurav Kapoor" title="Gaurav Kapoor" /></a></div>
+            <div class="img"><a rel="Byqp30gxWjo" href="javascript:void(0)" class="playCelebVideo"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gaurav-kapoor_play.png" alt="Gaurav Kapoor" title="Gaurav Kapoor" /></a></div>
             <div class="icon"></div>
             <div class="head">Gaurav Kapoor</div>
             <div class="splitter"></div>
@@ -94,7 +95,7 @@
             <div class="foot"><a href="javascript:void(0)">NEEDs FOODIES</a></div>
         </div>
         <div class="hotspot col-third">
-            <div class="img"><a rel="BgmxTLwIZwk" href="javascript:void(0)"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/anushka-dandekar_play.png" alt="Anushka Dandekar" title="Anushka Dandekar" /></a></div>
+            <div class="img"><a rel="BgmxTLwIZwk" href="javascript:void(0)" class="playCelebVideo"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/anushka-dandekar_play.png" alt="Anushka Dandekar" title="Anushka Dandekar" /></a></div>
             <div class="icon"></div>
             <div class="head">Anushka Dandekar</div>
             <div class="splitter"></div>

@@ -447,6 +447,7 @@ body {
     display: table-cell;
 	display: inline-block;
     width: 33%;
+	float:left;
 }
 .hotspots .hotspot .img {
     min-width: 264px;
@@ -1799,15 +1800,17 @@ body.submission .hotspots .hotspot .splitter {
     padding: 10px;
     text-align: center;
     margin-top: -20px;
+	font-size:0.84em;
 }
 .sayit-voice i {
     background-position: 0px -185px;
     width: 60px;
-    height: 80px;
+    height: 75px;
     display: inline-block;
 }
 .sayit-voice div.sayit-voice-text span {
-    font-size: 14px;
+    font-size: 1em;
+	display:block;
 }
 /* selection section ends */
 
@@ -3553,3 +3556,7 @@ form label.error, .errorMessage {
 	top:125px;
 }
 /* Home Page Phase 1B Css Ends Here */
+
+.chooseCelebrity{
+	padding-bottom:0 !important;
+}
