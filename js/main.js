@@ -583,7 +583,7 @@ $(document).ready(function(e){
 	});
 	
 	$(".closeVideo i").on("click",function(){
-		$(this).parent().find("iframe").attr("src","");
+		$(this).parent().next().attr("src","");
 		$(this).parent().parent().hide();
 		$(this).parent().parent().prev().show();
 		if(windowWidth < 767){
