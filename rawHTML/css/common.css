@@ -1045,7 +1045,7 @@ body {
     padding: 10px 5px 10px 35px;
     font-size: 18px;
     letter-spacing: 1px;
-    height: 48px;
+   /* height: 48px;*/
 }
 
 ::-webkit-input-placeholder {
@@ -4081,3 +4081,21 @@ form label.error, .errorMessage {
 	display:none;
 }
 /* Short List Entries Css Ends Here */
+
+
+.password-reset .mainBanner {
+    min-height: 126px;
+    background-position: 0 -168px
+}
+
+.password-reset .container {
+    max-width: 1024px;
+    overflow: hidden;
+    background: #56c8c2;
+    padding: 60px 55px
+}
+
+.password-reset .login-left{
+	float:none;
+	margin:0 auto;
+}
