@@ -503,6 +503,11 @@ $(document).ready(function(e){
     $('#autocomplete').autocomplete({
         lookup: cities
     });
+	
+	$(document).on("click",".autocomplete-selected",function () {
+        $('#cityinputValue').html($(this).text()).hide();
+		alert("City ==="+$('#cityinputValue').html());
+    });
 
     $('.sort-view-entries > ul > li').find(".subMenu").hide();
     $('.sort-view-entries > ul > li').on("click",function(event){
@@ -511,7 +516,7 @@ $(document).ready(function(e){
 		$(this).find("a").addClass("active");
 		var $divsubMenu = $(this).find(".subMenu");
 		if ($divsubMenu.is(':visible')){
-			$divsubMenu.hide();
+			$divsubMenu.hide();			
 		}else{
 			$('.sort-view-entries > ul > li .subMenu').hide();
 			$divsubMenu.toggle();
@@ -520,6 +525,12 @@ $(document).ready(function(e){
 	});
 	
 	$('.sort-view-entries > ul > li .subMenu').on("click",function(event){
+		event.stopPropagation();
+	});
+	
+	$('.sort-view-entries > ul > li.sortCelebrity .subMenu li').on("click",function(event){
+		alert("celebrity ==="+$(this).html());
+		$('.sort-view-entries > ul > li .subMenu').hide();
 		event.stopPropagation();
 	});
 	

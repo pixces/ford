@@ -16,7 +16,10 @@
 				<li><a href="javascript:void(0)" class="active"><i class="sortByall"></i> All <i class="arrow"></i></a></li>
 				<li><a href="javascript:void(0)" class=""><i class="sortBycity"></i> city <i class="arrow"></i></a>
 					<ul class="subMenu">
-						<li><label>Enter your city</label><input type="text" name="city" class="cityinput" id="autocomplete"></li>
+						<li>
+							<label>Enter your city</label><input type="text" name="city" class="cityinput" id="autocomplete">
+							<div id="cityinputValue"></div>
+						</li>
 					</ul>
 				</li>
 				<li><a href="javascript:void(0)" class=""><i class="sortBytext"></i> text <i class="arrow"></i></a></li>
