@@ -30,6 +30,7 @@
 						<li>Gaurav Kapoor</li>
 						<li>Anushka Dandekar</li>
 					</ul>
+					<div id="celebrityinputValue"></div>
 				</li>
 			</ul>
 		</div>

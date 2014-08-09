@@ -202,7 +202,6 @@ function CelebSubmit() {
 
 };
 
-
 var ProfileSubmitAppeal = function () {
     var submitAppealTemplate = '<div class="content two-third-ct column submit-appeal-box">' +
         '<textarea class="make-appeal-text-area">Make an appeal to {{celebName}}</textarea>' +
@@ -503,13 +502,35 @@ $(document).ready(function(e){
     $('#autocomplete').autocomplete({
         lookup: cities
     });
+	
+	$(".load-more input").click(function(){
+		var searchtype = $(".sort-view-entries li").find(".active").parent().attr("data-type");
+		var searchvalue;
+		if(searchtype == "all"){
+			searchvalue = "all";
+			galleryContent(searchtype,searchvalue);
+		}else if(searchtype == "text"){
+			searchvalue = "text";
+			galleryContent(searchtype,searchvalue);
+		}else if(searchtype == "audio"){
+			searchvalue = "audio";
+			galleryContent(searchtype,searchvalue);
+		}else if(searchtype == "city"){
+			searchvalue = $('#cityinputValue').html();
+			galleryContent(searchtype,searchvalue);
+		}else if(searchtype == "celebrity"){
+			searchvalue = $('#celebrityinputValue').html();
+			galleryContent(searchtype,searchvalue);
+		}
+	});
 
     //city gallery select
 	$(document).on("click",".autocomplete-selected",function () {
         $('#cityinputValue').html($(this).text()).hide();
-		alert("City ==="+$('#cityinputValue').html());
+		var searchtype = "city";
+		var searchvalue = $('#cityinputValue').html();
+		galleryContent(searchtype,searchvalue);
     });
-
 
     $('.sort-view-entries > ul > li').find(".subMenu").hide();
     $('.sort-view-entries > ul > li').on("click",function(event){
@@ -517,6 +538,7 @@ $(document).ready(function(e){
 		$(".sort-view-entries ul li a").removeClass("active");
 		$(this).find("a").addClass("active");
 		var $divsubMenu = $(this).find(".subMenu");
+		
 		if ($divsubMenu.is(':visible')){
 			$divsubMenu.hide();			
 		}else{
@@ -524,9 +546,17 @@ $(document).ready(function(e){
 			$divsubMenu.toggle();
 		}
 
-        var data_type = $(this).attr('data-type');
-
-
+        var searchtype = $(this).attr('data-type');
+		if(searchtype == "all"){
+			var searchvalue = "all";
+			galleryContent(searchtype,searchvalue);
+		}else if(searchtype == "text"){
+			var searchvalue = "text";
+			galleryContent(searchtype,searchvalue);
+		}else if(searchtype == "audio"){
+			var searchvalue = "audio";
+			galleryContent(searchtype,searchvalue);
+		}
 		event.stopPropagation();
 	});
 	
@@ -536,8 +566,23 @@ $(document).ready(function(e){
 
     //celebrity gallery select
 	$('.sort-view-entries > ul > li.sortCelebrity .subMenu li').on("click",function(event){
-		alert("celebrity ==="+$(this).html());
-		$('.sort-view-entries > ul > li .subMenu').hide();
+		var searchtype = "celebrity";
+		var searchvalue = $(this).html();
+		if(searchvalue == "Rocky &amp; Mayur"){
+			searchvalue = "rocky";
+			$("#celebrityinputValue").html(searchvalue);
+			galleryContent(searchtype,searchvalue);
+		}else if(searchvalue == "Gaurav Kapoor"){
+			searchvalue = "gaurav";
+			$("#celebrityinputValue").html(searchvalue);
+			galleryContent(searchtype,searchvalue);
+		}else if(searchvalue == "Anushka Dandekar"){
+			searchvalue = "anushka";
+			$("#celebrityinputValue").html(searchvalue);
+			galleryContent(searchtype,searchvalue);
+		}
+		//galleryContent(searchtype,searchvalue);
+		$('.sort-view-entries > ul > li .subMenu').hide();		
 		event.stopPropagation();
 	});
 	
@@ -647,7 +692,6 @@ $(document).ready(function(e){
 
 
 });
-
 
 var IMAGE = {
 
@@ -943,3 +987,7 @@ var SUBMISSION = (function () {
 
 
 })();
+
+function galleryContent(searchtype,searchvalue){
+	alert(searchtype+'----'+searchvalue);
+};

@@ -3596,3 +3596,7 @@ form label.error, .errorMessage {
 	float:none;
 	margin:0 auto;
 }
+
+#cityinputValue,#celebrityinputValue{
+	display:none;
+}
