@@ -500,7 +500,14 @@ $(document).ready(function(e){
     ];
     // setup autocomplete function pulling from cities[] array
     $('#autocomplete').autocomplete({
-        lookup: cities
+        lookup: cities,
+		onSelect: function (selectedCity) {
+			$('.sort-view-entries > ul > li .subMenu').hide();
+			var searchtype = $(".sort-view-entries li").find(".active").parent().attr("data-type");
+			var searchvalue = selectedCity.value;
+			$('#cityinputValue').html(searchvalue);
+			galleryContent(searchtype,searchvalue);
+		} 
     });
 	
 	$(".load-more input").click(function(){
