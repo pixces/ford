@@ -658,6 +658,7 @@ class UserController extends Controller
     public function actionPasswordReset(){
 
         if($_POST){
+
             if (isset($_POST['email'])){
                 //check if the user already exists in the system
                 $user = User::model()->find('email = :emailId', array(':emailId' => $_POST['email']));
@@ -669,7 +670,6 @@ class UserController extends Controller
                     if ( $user->is_verified ){
                         //create a new password (6 - 8 digit alphanum random)
                         $randomNumber = $this->randomNumber(8);
-
                         $user->password = md5($randomNumber);
 
                         //update password in the database
@@ -677,20 +677,24 @@ class UserController extends Controller
                             //send email to the user
 
                             $mailData =  array('name' => $user->first_name." ".$user->last_name , 'password'=>$randomNumber);
-                            $subject = '[Grab Your Dream] Password reset mail';
+                            $subject = '[FORD: SyncC&Link] Your password was reset';
 
+
+                            Yii::app()->user->setFlash('error', 'Password reset Successful. An email has been sent with new login information. '.$randomNumber);
+
+                            /*
                             //send the email to the user
                             if ( $this->sendUserMail('password-reset',$user->email,$mailData,$subject) ){
                                 //$redirectUrl = Yii::app()->createAbsoluteUrl("user/confirmation",$this->getSiteParams());
                                 //$this->redirect($redirectUrl);
                                 //$user->addError('email',"Password reset Successful. An email has been sent with new login information.");
-                                Yii::app()->user->setFlash('error', 'Password reset Successful. An email has been sent with new login information.');
+                                Yii::app()->user->setFlash('error', 'Password reset Successful. An email has been sent with new login information.'.$randomNumber);
 
                             } else {
                                 // Failed to save profile info, delete the user info
                                 $error =  "Cannot send reset password email ".$user->email;
                                 Yii::log($error);
-                            }
+                            }*/
                         }
                     } else {
                         //if user not verified throw error -- You are not verified. Please check your email and complete verification.

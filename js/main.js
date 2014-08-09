@@ -503,11 +503,13 @@ $(document).ready(function(e){
     $('#autocomplete').autocomplete({
         lookup: cities
     });
-	
+
+    //city gallery select
 	$(document).on("click",".autocomplete-selected",function () {
         $('#cityinputValue').html($(this).text()).hide();
 		alert("City ==="+$('#cityinputValue').html());
     });
+
 
     $('.sort-view-entries > ul > li').find(".subMenu").hide();
     $('.sort-view-entries > ul > li').on("click",function(event){
@@ -521,13 +523,18 @@ $(document).ready(function(e){
 			$('.sort-view-entries > ul > li .subMenu').hide();
 			$divsubMenu.toggle();
 		}
+
+        var data_type = $(this).attr('data-type');
+
+
 		event.stopPropagation();
 	});
 	
 	$('.sort-view-entries > ul > li .subMenu').on("click",function(event){
 		event.stopPropagation();
 	});
-	
+
+    //celebrity gallery select
 	$('.sort-view-entries > ul > li.sortCelebrity .subMenu li').on("click",function(event){
 		alert("celebrity ==="+$(this).html());
 		$('.sort-view-entries > ul > li .subMenu').hide();
@@ -634,7 +641,11 @@ $(document).ready(function(e){
         $(".bannerContainer").hide();
         $(".videoContainer").html('<div class="closeVideo"><i>X</i></div><div><iframe width="100%" height="340" frameborder="0" allowfullscreen src="http://www.youtube.com/embed/' + videoUrl + '?autoplay=1"></iframe></div>').show();
     });
-	
+
+    //Gallery: on load more
+    $(".btn-load-more").on('click',GALLERY.loadMore);
+
+
 });
 
 
@@ -755,7 +766,7 @@ var GALLERY = (function () {
         Gallery: (typeof galleryData !== 'undefined') ? galleryData : "",
         aCelebrity : (typeof aCelebs !== 'undefined') ? aCelebs : "",
         offset : 0,
-        limit : 15
+        limit : 9
     };
 
     var galleryTemplate = {
@@ -876,9 +887,52 @@ var GALLERY = (function () {
             }
 
             $galleryPlaceHolder.append( Output.join("") );
+        },
+
+        doSearch : function(type,value,limit,offset){
+            
+        },
+
+        loadMore : function(){
+            var Obj = $(this);
+            var offset = Obj.attr('data-offset'),
+                limit = Obj.attr('data-limit');
+
+            var nOffset = parseInt(offset) + parseInt(limit);
+
+            //make the call to fetch data
+            $.ajax({
+                type: "GET",
+                cache: false,
+                url: SITEURL + "/gallery/" + "doSearch",
+                data: {offset: nOffset, limit: limit},
+                dataType: "json",
+                success: function (data) {
+                    if (data.response == 'success'){
+                        var entries = data.content;
+
+                        if (entries.length != 0){
+
+                            //update new offset
+                            Obj.attr('data-offset',nOffset);
+
+                            //build and display the gallery
+                            GALLERY.buildGallery(entries);
+
+                        } else {
+                            //hide the loadmore button
+                            console.log('no new data found');
+                            $(".load-more").hide();
+                        }
+                    }
+                },
+                error: function () {
+                    console.log("cannot fetch gallery data");
+                }
+            });
+
+
         }
-
-
     };
     return exports;
 

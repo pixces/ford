@@ -38,7 +38,7 @@
                     <input type="submit" name="submit" id="submit" value="Login" />
                     <span class="forgot-link">
                         <?php echo CHtml::link('<i class="how-it-works"></i> <span>Forgot password?</span>',
-                            array('user/reset',
+                            array('user/passwordReset',
                                 'lang'=>$this->siteParams['lang'],
                                 'env'=>$this->siteParams['env'],
                                 'phase'=>$this->siteParams['phase'])
