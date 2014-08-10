@@ -20,7 +20,7 @@ class GalleryController extends Controller
     public function actionIndex(){
 
         $offset = 0;
-        $limit = 9;
+        $limit = 3;
         $displayMore = true;
 
         //get the basic details
@@ -90,24 +90,26 @@ class GalleryController extends Controller
                 $params['limit'] = $options['limit'];
             }
 
-            //check for city
-            if(isset($options['city'])){
-                $params['city'] = $options['city'];
+            //check for the types and their corresponding values
+            if (isset($options['type'])){
+                switch($options['type']){
+                    case 'city':
+                        $params['city'] = $options['value'];
+                        break;
+                    case 'text':
+                    case 'audio':
+                        $params['type'] = $options['value'];
+                        break;
+                    case 'celebrity':
+                        $params['channel'] = $options['value'];
+                        break;
+                    case 'all';
+                    default:
+                        break;
+                }
             }
-
-            //check for type
-            if(isset($options['type'])){
-                $params['type'] = $options['type'];
-            }
-
-            //check for channel
-            if(isset($options['channel'])){
-                $params['channel'] = $options['channel'];
-            }
-
         }
         $params = array_merge($params,$baseParams);
-
         $entries = Yii::app()->services->performRequest('/content',$params,'GET')->getResponseData(true);
 
         if ($isAjax == true){

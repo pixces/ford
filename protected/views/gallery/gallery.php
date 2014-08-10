@@ -26,9 +26,9 @@
 				<li data-type="audio"><a href="javascript:void(0)" class=""><i class="sortByvoice"></i> voice <i class="arrow"></i></a></li>
 				<li data-type="celebrity" class="sortCelebrity"><a href="javascript:void(0)" class=""><i class="sortBycelebrity"></i> celebrity <i class="arrow"></i></a>
 					<ul class="subMenu">
-						<li>Rocky &amp; Mayur</li>
-						<li>Gaurav Kapoor</li>
-						<li>Anushka Dandekar</li>
+						<li data-celeb="rocky">Rocky &amp; Mayur</li>
+						<li data-celeb="gaurav">Gaurav Kapoor</li>
+						<li data-celeb="anushka">Anushka Dandekar</li>
 					</ul>
 					<div id="celebrityinputValue"></div>
 				</li>
