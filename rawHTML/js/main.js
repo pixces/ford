@@ -229,6 +229,11 @@ $(document).ready(function (e) {
         return false;
     });
 
+    $(".tabContaier .teamBanner ul li a").click(function(){
+        $(".tabContaier .teamBanner ul li a").next("div.arrowDown").hide();
+        $(this).next("div.arrowDown").show();
+        
+    });
     // find the position of the first image
     var firstImage = $('.slider-content .slider-block:first').index();
     // find the position of the last image

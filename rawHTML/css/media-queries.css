@@ -1491,3 +1491,95 @@
 		width: 235px;
 	}
 }
+
+/* team page start here */
+@media only screen and (min-width:640px) and (max-width: 960px) {
+    .team .teamBanner .bannerContainer .column1.tab1-ct h1 {font-size:59px;line-height: 60px;}
+    .team .teamBanner .bannerContainer .column1 p {line-height: 18px;}
+    .team .teamBanner .bannerContainer .column1.tab1-ct h1 span {font-size:67px;}
+    
+    .team .teamBanner .bannerContainer .column1.tab2-ct h1 {font-size: 65px;line-height: 65px;}
+    .team .teamBanner .bannerContainer .column1.tab2-ct h1 span {font-size: 74px;}
+    
+    .team .teamBanner .bannerContainer .column1.tab3-ct h1 {font-size: 53px;line-height: 53px;}
+    .team .teamBanner .bannerContainer .column1.tab3-ct h1 span {font-size: 66px;}
+    .SYNCBanner {clear:both;}
+}
+
+@media only screen and (min-width:480px) and (max-width: 640px) { 
+    .team .teamBanner .bannerContainer .column1.tab1-ct h1 {font-size:70px;line-height:68px;}
+    .team .teamBanner .bannerContainer .column1 p {line-height: 18px;}
+    .team .teamBanner .bannerContainer .column1.tab1-ct h1 span {font-size:80px;}
+    
+    .team .teamBanner .bannerContainer .column1.tab2-ct h1 {font-size:70px;line-height:68px;}
+    .team .teamBanner .bannerContainer .column1.tab2-ct h1 span {font-size: 80px;}
+    
+    .team .teamBanner .bannerContainer .column1.tab3-ct h1 {font-size: 58px;line-height: 58px;}
+    .team .teamBanner .bannerContainer .column1.tab3-ct h1 span {font-size:72px;}
+    .SYNCBanner {clear:both;}
+}
+@media only screen and (min-width:320px) and (max-width: 480px) { 
+    .team .teamBanner .bannerContainer .column1.tab1-ct h1 {font-size:40px;line-height:40px;}
+    .team .teamBanner .bannerContainer .column1 p {line-height: 18px;}
+    .team .teamBanner .bannerContainer .column1.tab1-ct h1 span {font-size:50px;}
+    
+    .team .teamBanner .bannerContainer .column1.tab2-ct h1 {font-size: 40px;line-height: 40px;}
+    .team .teamBanner .bannerContainer .column1.tab2-ct h1 span {font-size: 45px;}
+    
+    .team .teamBanner .bannerContainer .column1.tab3-ct h1 {font-size: 33px;line-height: 33px;}
+    .team .teamBanner .bannerContainer .column1.tab3-ct h1 span {font-size: 40px;}
+    .SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments .btn-section .btn {font-size: 12px;}
+    .SyncandlinkSection .column1 .tabContaier .blog-section .blog-title-header .title {margin-left: 0px;}
+    .SYNCBanner {clear:both;}
+    .team .teamBanner .bannerContainer .bannerbg-ct {padding: 20px 30px 40px 30px;min-height: 548px;}
+    .team .teamBanner .bannerContainer .column2 .img-bg{background-position: 0px -8px;background-size: 300%;width:100%;}
+    .team .teamBanner .bannerContainer .video-block{height: 150px;bottom: 90px;width: 225px;}
+    .team .teamBanner .bannerContainer .column2 .img-bg{height: 370px;}
+    .team .teamBanner .bannerContainer .video-block a.play-video-btn, .team .teamBanner .bannerContainer .video-block a.play-video-btn, .team .teamBanner .bannerContainer .video-block a.play-video-btn {top: 40px;}
+    .SyncandlinkSection .column2 .section-r .profile-gallery a {margin-right: 5px;
+margin-bottom: 10px;}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+    .team .teamBanner .bannerContainer .bannerbg-ct {padding: 20px 0px 40px 30px;}
+    .team .teamBanner .bannerContainer .column2 {width:52%;}
+    .team .teamBanner .bannerContainer .column1 {width:48%;}
+    
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+    .team .teamBanner .bannerContainer .bannerbg-ct {padding: 20px 30px 40px 30px;min-height: 585px;}
+    .team .teamBanner .bannerContainer .column2,.team .teamBanner .bannerContainer .column1 {width:100%;display: block;}
+   /* .team .teamBanner .bannerContainer .column2 {width:385px;margin: 0 auto;} */
+    .SyncandlinkSection .column1,.SyncandlinkSection .column2 {width:100%;}
+    .SyncandlinkSection .column2 .section-r {padding-left:0px;}
+    .SyncandlinkSection .column1 .tabContaier {padding-right:0px;}
+    .SyncandlinkSection {padding: 0px 30px 0px 30px;}
+    
+}
+@media only screen and (min-width:480px) and (max-width:767px) {
+    .team .teamBanner .bannerContainer {min-height: 650px;}
+   /* .team .teamBanner .bannerContainer .column2 {margin-left: 10%;} */
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .team .teamBanner ul li.tab {width:100%;border-right:0px;}
+    .team .teamBanner.mobileview,.team .teamBanner ul li.tab2 .arrowDown, .team .teamBanner ul li.tab3 .arrowDown {display: block;}
+    .team .teamBanner.defaultview{display:none;}
+    .team .teamBanner .bannerContainer {min-height:580px;}
+    .team .teamBanner .bannerContainer .column2 {margin-bottom: 50px;}
+    .team .teamBanner .bannerContainer .two-video-blocks .video-block {width:49%;height: 110px;}
+    .team .teamBanner .bannerContainer .two-video-blocks .video-block:first-child {margin-right:0px;}
+     .team .teamBanner .bannerContainer .two-video-blocks .video-block:last-child {float:right;}
+}
+@media only screen and (min-width: 1024px) and (max-width:1920px) {
+
+    .team .teamBanner .bannerContainer .column1.tab1-ct h1 {font-size:96px;line-height: 90px;}
+    .team .teamBanner .bannerContainer .column1 p {line-height: 18px;}
+    .team .teamBanner .bannerContainer .column1.tab1-ct h1 span {font-size:110px;}
+    
+    .team .teamBanner .bannerContainer .column1.tab2-ct h1 {font-size: 90px;line-height: 90px;}
+    .team .teamBanner .bannerContainer .column1.tab2-ct h1 span {font-size: 102px;}
+    
+    .team .teamBanner .bannerContainer .column1.tab3-ct h1 {font-size: 53px;line-height: 53px;}
+    .team .teamBanner .bannerContainer .column1.tab3-ct h1 span {font-size: 66px;}
+}
+    /* team page  ends here */

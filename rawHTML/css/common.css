@@ -265,7 +265,7 @@ body {
     margin-left: 6px;
 }
 
-.mainBanner .arrowDown {
+.mainBanner .arrowDown,.teamBanner .arrowDown {
     background: url(../images/banner-sprite.png) no-repeat 0 -160px;
     width: 38px;
     height: 20px;
@@ -834,7 +834,7 @@ body {
     width: 100%;
     background: url(../images/footer-banner1.png) no-repeat center center;
     min-height: 175px;
-    position: relative
+    position: relative;clear:both;
 }
 
 .SYNCBanner .SYNCRight {
@@ -4080,9 +4080,6 @@ form label.error, .errorMessage {
 .shortlistIcon,.viewOther-entries,.mobile-sort-view-entries{
 	display:none;
 }
-/* Short List Entries Css Ends Here */
-
-
 .password-reset .mainBanner {
     min-height: 126px;
     background-position: 0 -168px
@@ -4099,3 +4096,152 @@ form label.error, .errorMessage {
 	float:none;
 	margin:0 auto;
 }
+/* Short List Entries Css Ends Here */
+
+/* team css start here */
+.team .wrapper {background:#eaeaea;}
+.team .navUser {width:140px;}
+.header .mainmenu {margin: 0 35px 0 30px;}
+.team .teamBanner {}
+.team .teamBanner ul {}
+.team .teamBanner ul li.tab,.team .teamBanner .bannerContainer .column2 .img-bg,.team .teamBanner .bannerContainer .video-block a.play-video-btn,.SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments span.social-links a,.SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments .comment-section .photo,.SyncandlinkSection .column1 .tabContaier .blog-section .blog-title-header .title .comments,.SyncandlinkSection .column1 .tabContaier .blog-section .blog-desc .play-btn {background:url("../images/team-sprite.png") no-repeat;}
+.team .teamBanner ul li.tab {width:33.33333333333333%;float:left;background-position:-405px -164px;height:140px;padding-bottom:3px;box-sizing: border-box;border-bottom:3px solid #000;border-right:3px solid #000;text-align: center;position: relative;padding-top:30px;list-style: none;font-size:20px;font-family: 'FordAntennaExtraCondWGL-BoldIt', sans-serif;}
+.team .teamBanner ul li.tab3 {border-right:0px solid #000;float: right;}
+.teamBanner ul li.tab .arrowDown {
+    background: url(../images/banner-sprite.png) no-repeat 0 -160px;
+    width: 38px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    bottom: -22px;
+    left: 48%;
+    z-index: 9999;
+}
+.team .teamBanner ul li.tab span.first-name,.team .teamBanner ul li.tab span.last-name {clear:both;}
+.team .teamBanner ul li.tab span.first-name,.team .teamBanner ul li.tab2 span.first-name,.team .teamBanner ul li.tab3 span.first-name {padding-bottom:11px;}
+.team .teamBanner ul li.tab span.first-name {border-bottom:1px solid #ffb94f;}
+.team .teamBanner ul li.tab2 .arrowDown,.team .teamBanner ul li.tab3 .arrowDown {display: none;}
+.team .teamBanner ul li.tab2:hover .arrowDown,.team .teamBanner ul li.tab3:hover .arrowDown {display: block;}
+.team .teamBanner ul li.tab2 span.first-name {border-bottom:1px solid #f05a29;}
+.team .teamBanner ul li.tab3 span.first-name {border-bottom:1px solid #8cd850;}
+.team .teamBanner ul li.tab span.amp {display: block;clear: both;padding:0px 10px;background:#333333;width:30px;
+text-align: center;position: relative;margin: 0 auto;}
+.team .teamBanner ul li.tab1 span{color:#ffb94f;}
+.team .teamBanner ul li.tab2 span{color:#f05a29;}
+.team .teamBanner ul li.tab3 span{color:#8cd850;}
+.team .teamBanner .bannerContainer {clear: both;min-height: 550px;}
+.team .teamBanner .bannerContainer .bannerbg-ct {background: #23b3ab;min-height: 385px;padding:20px 0px 40px 70px;}
+.team .teamBanner .bannerContainer .column {float:left;box-sizing: border-box;}
+.team .teamBanner .bannerContainer .column1{width:60%;}
+.team .teamBanner .bannerContainer .column2 {width:40%;}
+.team .teamBanner .bannerContainer .column2 .img-bg{width:376px;position: relative;background-position: 0px -16px;height:500px;background-size: 300%;margin: 0 auto;}
+.team .teamBanner .bannerContainer .column1 h1 {margin-top:20px;font-family: 'FordAntennaExtraCondWGL-BoldIt', sans-serif;color:#fff;text-transform: uppercase;line-height: 70px;font-style: italic;}
+.team .teamBanner .bannerContainer .column1.tab1-ct h1  {font-size:80px;}
+.team .teamBanner .bannerContainer .column1.tab2-ct h1  {font-size:80px;}
+.team .teamBanner .bannerContainer .column1.tab3-ct h1  {font-size:74px;}
+
+.team .teamBanner .bannerContainer .column1 h1 span {display: block;}
+.team .teamBanner .bannerContainer .column1.tab1-ct h1 span {color:#ffb94f;font-size:92px;}
+.team .teamBanner .bannerContainer .column1.tab2-ct h1 span {color:#f05a29;font-size:92px;}
+.team .teamBanner .bannerContainer .column1.tab3-ct h1 span {color:#8cd850;font-size:92px;}
+.team .teamBanner .bannerContainer .column1 p {font-size:12px;color:#333;font-family: 'FordAntennaWGL-Regular', sans-serif;line-height: 24px;}
+.team .teamBanner .bannerContainer .column1 p.white {color:#fff;}
+.team .teamBanner .bannerContainer .column1 hr {background-color: #2ad0c7;border:0px solid red;
+height:1px;}
+.team .teamBanner .bannerContainer .video-block{width:264px;height:187px;position: absolute;bottom:135px;left:0px;right:0px;overflow: hidden;margin:0px auto;border:3px solid #fff;}
+.team .teamBanner .bannerContainer .video-block a.play-video-btn {width: 60px;
+height: 60px;
+position: absolute;
+right: 0px;
+left: 0px;
+margin: 0 auto;
+top: 55px;
+bottom: 0px;}
+
+.team .teamBanner .bannerContainer .two-video-blocks .video-block {
+width: 170px;
+height: 120px;
+position: relative;
+bottom: 0px;top: 45%;
+overflow: hidden;
+margin: 0px auto;
+border: 3px solid #fff;
+float: left;
+}
+.team .teamBanner .bannerContainer .two-video-blocks .video-block:first-child {margin-right:10px;}
+.team .teamBanner .bannerContainer .two-video-blocks .video-block a.play-video-btn {width: 40px;height: 40px;top: 35px;}
+.team .teamBanner .bannerContainer .two-video-blocks .video-block a.play-video-btn.yellow {background-position: -656px -1px;}
+.team .teamBanner .bannerContainer .two-video-blocks .video-block a.play-video-btn.orange {background-position: -746px -1px;}
+.team .teamBanner .bannerContainer .two-video-blocks .video-block a.play-video-btn.green {background-position: -701px -1px;}
+
+.team .teamBanner .bannerContainer .video-block a.play-video-btn.yellow {background-position: -466px 0px;}
+.team .teamBanner .bannerContainer .video-block a.play-video-btn.orange {background-position: -594px 0px;}
+.team .teamBanner .bannerContainer .video-block a.play-video-btn.green {background-position: -528px 0px;}
+.team .teamBanner .bannerContainer .video-block img {min-width:100%;width:100%;}
+.team .teamBanner.mobileview {display: none;}
+        /* left side */
+.SyncandlinkSection {overflow: hidden;padding:0px 30px 0px 70px;margin-bottom: 30px;clear:both;}
+.SyncandlinkSection .column {float:left;}
+.SyncandlinkSection .column1 {width:70%;}
+.SyncandlinkSection .column2 {width:30%;}
+.SyncandlinkSection .column1 h2 {font-size:36px;padding-bottom: 10px;
+border-bottom: 1px solid #dedede;
+margin-bottom: 20px;}
+.SyncandlinkSection .column1 h2 span {color:#23b3ab;}
+.SyncandlinkSection .column1 .tabContaier {padding-right:70px;}
+.SyncandlinkSection .column1 .tabContaier .tabDetails ul {list-style: none;}
+.SyncandlinkSection .column1 .tabContaier .tabDetails ul li.tab {padding:2px 10px;margin-right:20px;float:left;margin-bottom: 10px;}
+.SyncandlinkSection .column1 .tabContaier .tabDetails ul li.tab1 {background:#a0a0a0;}
+.SyncandlinkSection .column1 .tabContaier .tabDetails ul li.tab2 {background:#f2b04b;}
+.SyncandlinkSection .column1 .tabContaier .tabDetails ul li.tab3 {background:#e4582a;}
+.SyncandlinkSection .column1 .tabContaier .tabDetails ul li.tab4 {background:#78ca37;}
+.SyncandlinkSection .column1 .tabContaier .tabContentsDiv {clear:both;}
+.SyncandlinkSection .column1 .tabContaier .blog-section {margin-top:70px;font-family: 'FordAntennaWGL-Regular';border-bottom: 1px solid #23b3ab;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-desc .video-player-ct {position: relative;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-title-header {margin-bottom:10px;overflow: hidden;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-title-header .photo {float:left; width:68px;height:68px;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-title-header .gaurav-photo {background: url('../images/gaurav-kapoor.png') no-repeat;background-size:cover;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-title-header .anushka-photo {background: url('../images/anushka-dandekar.png') no-repeat;background-size:cover;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-title-header .title {margin-left: 20px;
+float: left;margin-top:15px;position: relative;width: 84%;font-size:18px;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-title-header .title span {font-size:12px;display: block;font-size:12px;color:#23b3ab;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-title-header .title .comments {float:right;background-position: -410px -118px;width:35px;height:32px;color:#fff;text-align: center;font-size: 12px;line-height: 20px;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-desc {margin-top:10px;clear: both;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-desc .play-btn {background-position: -462px -61px;
+width: 90px;
+height: 100px;
+position: absolute;
+top: 90px;
+left: 0px;
+right: 0px;
+z-index: 100;
+margin: 0 auto;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-desc .blog-img {width:100%;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-desc p {margin: 20px 0px;font-size:12px;line-height: 24px;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-desc hr {background:#64c7c2;height:1px;border:0px solid red;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments {margin-top:20px;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments h5 {position:relative;bold;text-transform: uppercase;color: #333;font-size: 12px;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments span.social-links {position: absolute;right:0px;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments span.social-links a {float:left;width:16px;height:16px;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments span.social-links a.facebook-i {background-position: -406px -20px;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments span.social-links a.twitter-i {background-position: -433px -20px;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments .comment-section {margin: 20px 0px;clear: both;overflow: hidden;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments .comment-section .photo {width:50px;height:50px;background-position: -410px -50px;float:left;margin-right: 20px;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments .comment-section .description {float:left;margin-right:20px;width: 84%;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments .comment-section .description h6 {font-size:14px;font-weight: bold;margin:0px;padding:0px;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments .comment-section .description p {font-family: 'FordAntennaWGL-Regular';font-size:12px;font-weight: normal;padding:10px 0px;margin:0px;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments .btn-section {margin:20px 0px;clear: both;position: relative;}
+.SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments .btn-section .btn{font-size:20px;text-transform: uppercase;padding:2px 5px;background: #4fc2bc;color:#fff;font-family: 'FordAntennaCondWGL-Reg';}
+        /* left side ends */
+
+.SyncandlinkSection .column2 .section-r {margin-top:15px;overflow: hidden;padding-left:30px;}
+.SyncandlinkSection .column2 .section-r h4{font-family: 'FordAntennaExtraCondWGL-Reg', sans-serif;font-size: 20px;text-transform: uppercase;border-bottom:1px solid #d2d2d2;padding-bottom:15px;}
+.SyncandlinkSection .column2 .section-r .sectin-dt{margin:20px 0px;}
+.SyncandlinkSection .column2 .section-r .profile-gallery{}
+.SyncandlinkSection .column2 .section-r .profile-gallery a {width:65px;height:65px;display:inline-block;margin-right:15px;margin-bottom: 15px;}
+.SyncandlinkSection .column2 .section-r .profile-gallery a .img {}
+/* team css ends here */
+
+
+
+
