@@ -1492,6 +1492,7 @@
 	}
 }
 
+
 /* team page start here */
 @media only screen and (min-width:640px) and (max-width: 960px) {
     .team .teamBanner .bannerContainer .column1.tab1-ct h1 {font-size:59px;line-height: 60px;}
@@ -1583,3 +1584,23 @@ margin-bottom: 10px;}
     .team .teamBanner .bannerContainer .column1.tab3-ct h1 span {font-size: 66px;}
 }
     /* team page  ends here */
+
+/* Listing Page Css Ends Here */
+@media only screen and (min-width: 200px) and (max-width: 480px) {
+	.listHeader div.detail span{
+		font-size:0.700em;
+	}
+	.listRows .oddRow div,
+	.listRows .evenRow div{
+		display:block;
+	}
+	.listRows .oddRow .oddCol,
+	.listRows .evenRow .oddCol{
+		background:#e0e0e0;
+	}
+	.listRows .oddRow .evenCol,
+	.listRows .evenRow .evenCol{
+		background:#e8e8e8;
+	}
+}
+

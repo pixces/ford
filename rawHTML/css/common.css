@@ -4096,6 +4096,7 @@ form label.error, .errorMessage {
 	float:none;
 	margin:0 auto;
 }
+
 /* Short List Entries Css Ends Here */
 
 /* team css start here */
@@ -4243,5 +4244,72 @@ margin: 0 auto;}
 /* team css ends here */
 
 
-
-
+/* Listing Page Css Ends Here */
+.listing .mainBanner {
+    min-height: 126px;
+    background-position: 0 -168px
+}
+.listContainer{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+}
+.listHeader{
+	width:auto;
+	min-height:70px;
+	overflow:hidden;
+	background:#23b3ab;
+}
+.listHeader div{
+	width:49.97%;
+	float:left;
+	min-height:70px;
+	background:#23b3ab;
+	font-size:1.250em;
+	color:#ffffff;
+}
+.listHeader div.title{
+	text-align:center;
+	font-family: 'FordAntennaExtraCondWGL-Bold', serif;	
+	line-height:70px;
+	text-transform:uppercase;
+}
+.listHeader div.detail{
+	font-family: 'FordAntennaExtraCondWGL-Reg', sans-serif;
+	border-left:2px solid #ffffff;
+}
+.listHeader div.detail span{
+	background:url(../images/location-icon.png) no-repeat 5px 0;
+	padding:0 0 0 65px;
+	display:block;
+	min-height:52px;
+	margin:8px 0 8px 10px;
+}
+.listRows{
+	width:auto;
+	min-height:35px;
+	overflow:hidden;
+	line-height:35px;
+}
+.listRows .oddRow{
+	width:100%;
+	min-height:35px;
+	overflow:hidden;
+	background:#e0e0e0;
+	display:table;
+}
+.listRows .evenRow{
+	width:100%;
+	min-height:35px;
+	overflow:hidden;
+	background:#e8e8e8;
+	display:table;
+}
+.listRows .oddRow div,
+.listRows .evenRow div{
+	/*width:33.3%;
+	float:left;*/
+	line-height:35px;
+	text-align:center;
+	display:table-cell;
+}
