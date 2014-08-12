@@ -1519,7 +1519,50 @@
     .team .teamBanner .bannerContainer .column1.tab3-ct h1 span {font-size:72px;}
     .SYNCBanner {clear:both;}
 }
-@media only screen and (min-width:320px) and (max-width: 480px) { 
+@media only screen and (min-width:480px) and (max-width:640px) {  
+    .team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column1, .team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column2, .team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column3, .team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column4, .team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column5 {width:50%;border-right:5px solid #fff;
+border-bottom:5px solid #fff;max-height: 120px;}
+    .team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column3,.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column2 {width:100%;}
+    .team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div.none {display: none;}
+    .team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div img.vid-img {width:100%;}
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+    .team .teamBanner .bannerContainer .bannerbg-ct {padding: 20px 0px 40px 30px;}
+    
+    .team .teamBanner .bannerContainer .column2 {width:52%;}
+    .team .teamBanner .bannerContainer .column1 {width:48%;}
+    .team-video-page .greentabsContainer .teamBanner ul li a .div-ct {width: auto; }
+    .team-video-page .greentabsContainer .teamBanner .bannerContainer .bannerbg-ct {padding:30px;}
+   
+    
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+    .team .teamBanner .bannerContainer .bannerbg-ct {min-height: 585px;}
+    .team .mainBanner .bannerContainer h2 {text-transform: uppercase;font-size:30px;color: #fff;line-height: 30px;padding:30px 20px;}
+    .team .teamBanner .bannerContainer .column2,.team .teamBanner .bannerContainer .column1 {width:100%;display: block;}
+   /* .team .teamBanner .bannerContainer .column2 {width:385px;margin: 0 auto;} */
+    .SyncandlinkSection .column1,.SyncandlinkSection .column2 {width:100%;}
+    .SyncandlinkSection .column2 .section-r {padding-left:0px;}
+    .SyncandlinkSection .column1 .tabContaier {padding-right:0px;}
+    .SyncandlinkSection {padding: 0px 30px 0px 30px;}
+    .team-video-page .greentabsContainer .teamBanner ul li a .div-ct {width: auto; }
+    .team-video-page .greentabsContainer .bannerContainer .bannerbg-ct {min-height: 520px;}
+    .team-video-page .greentabsContainer .teamBanner ul li a .div-ct {width:auto;}
+    .team-video-page .greentabsContainer .teamBanner ul li a .div-ct .details {float:none;margin-left:0px;font-size: 16px;}
+    .team-video-page .greentabsContainer .teamBanner ul li a .div-ct .img-ct {width: auto;float: none;display: block;text-align: center;}
+    .team .teamBanner ul li.tab {height: auto;padding-bottom:20px;}
+    
+}
+@media only screen and (min-width:480px) and (max-width:767px) {
+    .team .teamBanner .bannerContainer {min-height: 650px;}
+   /* .team .teamBanner .bannerContainer .column2 {margin-left: 10%;} */
+}
+@media only screen and (min-width:480px) and (max-width:640px) {
+    .SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments .comment-section .description,.SyncandlinkSection .column1 .tabContaier .blog-section .blog-title-header .title {width:75%;}
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
     .team .teamBanner .bannerContainer .column1.tab1-ct h1 {font-size:40px;line-height:40px;}
     .team .teamBanner .bannerContainer .column1 p {line-height: 18px;}
     .team .teamBanner .bannerContainer .column1.tab1-ct h1 span {font-size:50px;}
@@ -1539,37 +1582,25 @@
     .team .teamBanner .bannerContainer .video-block a.play-video-btn, .team .teamBanner .bannerContainer .video-block a.play-video-btn, .team .teamBanner .bannerContainer .video-block a.play-video-btn {top: 40px;}
     .SyncandlinkSection .column2 .section-r .profile-gallery a {margin-right: 5px;
 margin-bottom: 10px;}
-}
-
-@media only screen and (min-width: 768px) and (max-width: 960px) {
-    .team .teamBanner .bannerContainer .bannerbg-ct {padding: 20px 0px 40px 30px;}
-    .team .teamBanner .bannerContainer .column2 {width:52%;}
-    .team .teamBanner .bannerContainer .column1 {width:48%;}
+    .team-video-page .greentabsContainer .teamBanner .bannerContainer .bannerbg-ct {padding:30px;}
+    .team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column1, .team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column2, .team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column3, .team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column4, .team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column5 {width:100%;border-right:0px solid #fff;
+border-bottom:5px solid #fff;max-height: 120px;}
+    .team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div.none {display: none;}
+    .team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div img.vid-img {width:100%;}
+    .SyncandlinkSection .column1 .tabContaier .blog-section .blog-comments .comment-section .description {width:100%;margin-right: 0px;margin-top:10px;}
     
-}
-@media only screen and (min-width:320px) and (max-width:767px) {
-    .team .teamBanner .bannerContainer .bannerbg-ct {padding: 20px 30px 40px 30px;min-height: 585px;}
-    .team .teamBanner .bannerContainer .column2,.team .teamBanner .bannerContainer .column1 {width:100%;display: block;}
-   /* .team .teamBanner .bannerContainer .column2 {width:385px;margin: 0 auto;} */
-    .SyncandlinkSection .column1,.SyncandlinkSection .column2 {width:100%;}
-    .SyncandlinkSection .column2 .section-r {padding-left:0px;}
-    .SyncandlinkSection .column1 .tabContaier {padding-right:0px;}
-    .SyncandlinkSection {padding: 0px 30px 0px 30px;}
-    
-}
-@media only screen and (min-width:480px) and (max-width:767px) {
-    .team .teamBanner .bannerContainer {min-height: 650px;}
-   /* .team .teamBanner .bannerContainer .column2 {margin-left: 10%;} */
-}
-@media only screen and (min-width: 320px) and (max-width: 480px) {
     .team .teamBanner ul li.tab {width:100%;border-right:0px;}
     .team .teamBanner.mobileview,.team .teamBanner ul li.tab2 .arrowDown, .team .teamBanner ul li.tab3 .arrowDown {display: block;}
     .team .teamBanner.defaultview{display:none;}
     .team .teamBanner .bannerContainer {min-height:580px;}
     .team .teamBanner .bannerContainer .column2 {margin-bottom: 50px;}
+    .team-video-page .greentabsContainer .teamBanner .bannerContainer .column2 {margin-bottom:0px;}
     .team .teamBanner .bannerContainer .two-video-blocks .video-block {width:49%;height: 110px;}
     .team .teamBanner .bannerContainer .two-video-blocks .video-block:first-child {margin-right:0px;}
      .team .teamBanner .bannerContainer .two-video-blocks .video-block:last-child {float:right;}
+    .team-video-page .greentabsContainer .teamBanner.mobileview,.team .teamBanner ul li.tab2 .arrowDown, .team .teamBanner ul li.tab3 .arrowDown {display: none;}
+    .team-video-page .greentabsContainer .teamBanner ul li.tab {width:33.33333333333333%;}
+    .team-video-page .greentabsContainer .teamBanner ul li a .div-ct .details {float:none;margin-left:0px;font-size: 14px;}
 }
 @media only screen and (min-width: 1024px) and (max-width:1920px) {
 

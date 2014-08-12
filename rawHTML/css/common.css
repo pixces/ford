@@ -4115,7 +4115,7 @@ form label.error, .errorMessage {
     display: inline-block;
     position: absolute;
     bottom: -22px;
-    left: 48%;
+    left: 0px;right:0px;margin:0 auto;
     z-index: 9999;
 }
 .team .teamBanner ul li.tab span.first-name,.team .teamBanner ul li.tab span.last-name {clear:both;}
@@ -4241,6 +4241,71 @@ margin: 0 auto;}
 .SyncandlinkSection .column2 .section-r .profile-gallery{}
 .SyncandlinkSection .column2 .section-r .profile-gallery a {width:65px;height:65px;display:inline-block;margin-right:15px;margin-bottom: 15px;}
 .SyncandlinkSection .column2 .section-r .profile-gallery a .img {}
+
+ /* team phase 3b */
+.team-video-page .mainBanner {min-height: 120px;line-height: 120px;}
+.team-video-page .mainBanner .bannerContainer h2 {text-transform: uppercase;font-size: 30px;color: #fff;line-height: 30px;padding-top: 45px;}
+.team-video-page .greentabsContainer .teamBanner ul li {background:#2bc2ba;border:0px solid red;}
+.team-video-page .greentabsContainer .teamBanner ul li.tab .arrowDown {background:url(../images/middle-sprite.png) no-repeat -127px -128px;bottom: -18px;}
+.team-video-page .greentabsContainer .bannerContainer .bannerbg-ct{background:#fff;}
+.team-video-page .greentabsContainer .teamBanner ul li.tab span.amp {background: #2bc2ba;}
+.team-video-page-video-page .greentabsContainer .teamBanner ul li.tab a img {width:75px;display: inline-block;}
+.team-video-page .greentabsContainer .teamBanner ul li a.active span {color:#fff;}
+.team-video-page .greentabsContainer .teamBanner ul li a {width: 100%;display: inline-block;text-align: center;}
+.team-video-page .greentabsContainer .teamBanner ul li a .div-ct { width: 70%;margin: 0 auto;}
+.team-video-page .greentabsContainer .teamBanner ul li a .div-ct .img-ct { width: 80px;float: left;}
+.team-video-page .greentabsContainer .teamBanner ul li a .div-ct .details {float: left;margin-left:10px;}
+.team-video-page .greentabsContainer .teamBanner ul li.tab1 a.active img,
+.team-video-page .greentabsContainer .teamBanner ul li.tab2 a.active img,
+.team-video-page .greentabsContainer .teamBanner ul li.tab3 a.active img,.team-video-page .greentabsContainer .teamBanner ul li a img {border-radius: 100%;width:100%;max-width: 75px;}
+.team-video-page .greentabsContainer .teamBanner ul li.tab1 a.active img {border:3px solid #ffb94f;}
+.team-video-page .greentabsContainer .teamBanner ul li.tab2 a.active img {border:3px solid #e4582a;}
+.team-video-page .greentabsContainer .teamBanner ul li.tab3 a.active img {border:3px solid #78ca37;}
+.team-video-page .greentabsContainer .teamBanner ul li.tab1 a.active span.first-name {border-bottom: 1px solid #ffb94f;}
+.team-video-page .greentabsContainer .teamBanner ul li.tab2 a.active span.first-name {border-bottom: 1px solid #e4582a;}
+.team-video-page .greentabsContainer .teamBanner ul li.tab3 a.active span.first-name {border-bottom: 1px solid #78ca37;}
+.team-video-page .greentabsContainer .teamBanner ul li a span {color:#1d7c77;}
+.team-video-page .greentabsContainer .teamBanner ul li a span.first-name {border-bottom: 1px solid #1d7c77;}
+
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column1,.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column2,.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column3,.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column4,.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column5 {float:left;position: relative;box-sizing: border-box;border-right: 5px solid #fff;
+border-bottom: 5px solid #fff;}
+
+.team-video-page .greentabsContainer .bannerContainer .bannerbg-ct {padding:30px;min-height: 520px;}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row {overflow: hidden;margin-bottom: 0px;}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column1 {width:20%;}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column2 {width:40%;}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column3 {width:60%;}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column4 {width:80%;}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .column5 {width:100%;}
+
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .h1,.team .greentabsContainer .teamBanner .banner-video-ct .row .h2,.team .greentabsContainer .teamBanner .banner-video-ct .row .h3,.team .greentabsContainer .teamBanner .banner-video-ct .row .h4 {overflow: hidden;}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .h1 {height:120px}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .h2 {height:240px}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .h3 {height:360px}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row .h4 {height:480px}
+
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div img.vid-img {/*position: absolute;width:100%;left:0px;right:0px;z-index: 1;*/}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div .vid-details {position: absolute;width:100%;left:0px;right:0px;bottom: 0px; z-index:2;}
+
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div .vid-details.big {background: url("../images/video-bg-big-btm.png") repeat-x 0px 0px;height:90px;padding:30px 10px 0px 10px;}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div .vid-details.small {background: url("../images/video-bg-btm.png") repeat-x 0px 0px;height: 60px;padding: 20px 10px 0px 5px;}
+
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div .vid-details.big .play-icon {/*background:url("../images/team-sprite.png") no-repeat -408px -312px;*/width:10%;float:left;max-width: 44px;}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div .vid-details.small .play-icon {/*background: url("../images/team-sprite.png") no-repeat -464px -312px;*/width:20%;float:left;max-width:32px;} 
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div .vid-details.big img,.team .greentabsContainer .teamBanner .banner-video-ct .row div .vid-details.small img {width:100%;}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div .vid-details .name-desc {float: left;padding-left:5px;color:#fff;width:90%;white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div .vid-details .name-desc .name {display: block;font-size: 14px;}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div .vid-details .name-desc .desc {font-size: 24px;}
+
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div .vid-details.small .name-desc .name{font-size: 12px;}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div .vid-details.small .name-desc {width:80%;}
+.team-video-page .greentabsContainer .teamBanner .banner-video-ct .row div .vid-details.small .name-desc .desc{font-size: 14px;white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;}
+
+.team-video-page .SyncandlinkSection {padding-top:80px;}
 /* team css ends here */
 
 
