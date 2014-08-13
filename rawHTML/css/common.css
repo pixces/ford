@@ -4257,6 +4257,7 @@ form label.error,
 .mobile-view.green {
     color: #a2fb5c;
 }
+.votestripMobileView {display: none;}
 .votestrip-container .noofvotes i,
 .votestrip-container .votebadge {
     background: url(../images/team-sprite.png) no-repeat;

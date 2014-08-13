@@ -739,16 +739,7 @@
         width: 100%;
     }
 }
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-    .sync-applink .participateBlock .page-title-section,
-    .sync-applink .participateBlock .sync-applink-bg {
-        min-height: 500px;
-        height: 100%;
-    }
-    .sync-applink .participateBlock .sync-applink-bg p {
-        font-size: 16px;
-    }
-}
+
 @media only screen and (min-width: 320px) and (max-width: 640px) {
     .feature-section {
         padding: 2em 0em;
@@ -777,6 +768,20 @@
         max-width: 100%;
     }
 }
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .sync-applink .participateBlock .page-title-section,
+    .sync-applink .participateBlock .sync-applink-bg {
+        min-height: 500px;
+        height: 100%;
+    }
+    .sync-applink .participateBlock .sync-applink-bg p {
+        font-size: 16px;
+    }
+    
+    
+}
+
 /* View Entries Page Css Starts Here */
 
 @media only screen and (min-width: 570px) and (max-width: 768px) {
@@ -1410,6 +1415,27 @@
         width: 75%;
     }
 }
+@media only screen and (min-width: 320px) and (max-width: 640px) {
+    .votestripNormalView {
+        display: none;
+    }
+    .votestripMobileView {
+        display: block;
+        padding: 90px 0px 50px 0px
+    }
+    .team-video-page .greentabsContainer .bannerContainer .bannerbg-ct {
+        padding: 30px 30px 30px 30px;
+    }
+    .votestrip-container .votecolumn {
+        font-size: 14px;
+        font-family: 'FordAntennaCondWGL-Reg';
+    }
+    .votestrip-container .votebadge {
+        margin: 0px 5px;
+    }
+}
+
+
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     .team .teamBanner .bannerContainer .column1.tab1-ct h1 {
         font-size: 40px;
@@ -1538,6 +1564,32 @@
         margin-left: 0px;
         font-size: 14px;
     }
+    .votestrip-container {padding:0px 10px;}
+    .votestripMobileView .votestrip-container .votebadge {width:116px;height: 88px;top: -12px;}
+    .votestripMobileView .votestrip-container.yellow .votebadge{background-position: -860px -197px;}
+    .votestripMobileView .votestrip-container.orange .votebadge{background-position: -860px 0px;}
+    .votestripMobileView .votestrip-container.green .votebadge{background-position: -860px -98px;}
+    .votestrip-container .celbrity-profile {padding: 12px 0px 0px 0px;}
+    .votestrip-container .celbrity-profile .black-mask {width:68px;height:68px;top:12px;left:0px;}
+    .votestrip-container .celbrity-profile img{width:68px;}
+    .votestrip-container .celbrity-profile .black-mask .btn {font-size: 16px;padding: 0px 5px;top: 2px;height: 25px;}
+    .votestripMobileView {padding: 60px 0px 30px 0px;}
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 359px) {
+       .votestrip-container .votecolumn.firstname {float: left;
+width: 25%;
+line-height: 15px;
+margin-top: 15px;
+text-align: center;}
+    .votestrip-container .secondname {
+float: right;
+width: 25%;
+line-height: 15px;
+margin-top: 15px;
+text-align: center;
+}
 }
 @media only screen and (min-width: 1024px) and (max-width: 1920px) {
     .team .teamBanner .bannerContainer .column1.tab1-ct h1 {
