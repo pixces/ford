@@ -4461,3 +4461,442 @@ form label.error,
     text-align: center;
     display: table-cell;
 }
+
+/* Home Page 26 CSS Starts Here */
+.teamHotspots{
+	background:#2bc2ba;
+	position:relative;
+	display:table;
+    min-height:565px;
+    padding:50px 115px;
+    text-align:center;
+    width:100%;
+}
+.teamHotspots .teamHotspot{
+    display:inline-block;
+    float:left;
+    width:33%;
+}
+.teamHotspot .title{
+	background:#333f4f;
+	font-size:1.087em;
+	font-family:'FordAntennaExtraCondWGL-Bold', serif;
+	color:#2bc2ba;
+	text-transform:uppercase;
+	padding:5px 0;
+	margin: 0 auto;
+    max-width: 215px;
+}
+.teamHotspot .title span{
+	padding:0 5px;
+}
+.teamHotspot .title i.star{
+	background:url(../images/teamHotspots-sprite.png) no-repeat -6px -5px;
+	width:15px;
+	height:15px;
+	display:inline-block;
+}
+.teamHotspots .teamHotspot .img{
+	margin:15px 0;
+    min-height:180px;
+    min-width:260px;
+}
+.teamHotspots .teamHotspot .img img{
+	border:2px solid #ffb94f;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	max-height:177px;
+	max-width:177px;
+}
+.teamHotspots .teamHotspot .icon {
+    background: url("../images/teamHotspots-sprite.png") no-repeat -6px -32px;
+    height: 55px;
+    left: 32%;
+    position: relative;
+    width: 100px;
+}
+.teamHotspots .teamHotspot .body {
+    color: #2d2d2d;
+    font-family: 'FordAntennaCondWGL-Reg',sans-serif;
+    font-size: 0.813em;
+    margin: 12px 0;
+    min-height: 70px;
+    padding: 0 40px;
+}
+
+.teamHotspots .teamHotspot .foot {
+    font-family: 'FordAntennaCondWGL-Bold',serif;
+    text-transform: uppercase;
+	color:#2d2d2d;
+	margin: 0 auto;
+    max-width: 215px;
+}
+.teamHotspots .teamHotspot .foot a{
+	background:#ffb94f;
+	color:#333f4f;
+	display:block;
+	padding:5px 0;
+	text-align:left;
+}
+.teamHotspots i.teamIcon{
+    background:url("../images/teamHotspots-sprite.png") no-repeat -5px -239px;
+	float:left;
+	width:43px;
+	height:30px;
+	position:relative;
+	top:-5px;
+	margin-right:15px;
+}
+.teamHotspots i.arrow{
+	background:url("../images/teamHotspots-sprite.png") no-repeat -40px -5px;
+	width:10px;
+	height:15px;
+	display:inline-block;
+	position:relative;
+	top:1px;
+	margin-left:15px;
+}
+.teamHotspots .col-second .icon {
+    background: url("../images/teamHotspots-sprite.png") no-repeat -6px -103px;
+}
+.teamHotspots .col-third .icon {
+    background: url("../images/teamHotspots-sprite.png") no-repeat -9px -170px;
+}
+.teamHotspots .col-second i.teamIcon {
+    background:url("../images/teamHotspots-sprite.png") no-repeat -68px -239px;
+}
+.teamHotspots .col-third i.teamIcon {
+    background:url("../images/teamHotspots-sprite.png") no-repeat -134px -239px;
+}
+.socialFeeds{
+	background:#eaeaea;
+	position:relative;
+}
+.socialFeeds .heading{
+	color:#010101;
+	font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+	font-size:2.500em;
+	padding:35px 0 15px;
+}
+.socialFeeds .heading span{
+	color:#20a29b;
+}
+.socialFeeds .read-blogs{
+	width:auto;
+	padding:0 0 30px 0;
+}
+.socialFeeds .read-blogs a{
+	border:2px solid #ffb94f;
+	text-transform:uppercase;
+	color:#010101;
+	font-size:1.654em;
+	font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+	padding:5px 10px;
+	max-width:270px;
+	margin:0 auto;
+	display:block;
+}
+.socialFeeds .read-blogs a i.arrow{
+	background:url("../images/teamHotspots-sprite.png") no-repeat -167px -5px;
+	width:13px;
+	height:20px;
+	display:inline-block;
+	position:relative;
+	margin-left:8px;
+}
+.socialFeeds .socialFeed{
+	width:100%;
+	padding:0 30px 20px;
+	overflow:hidden;
+}
+.socialFeeds .socialFeed .socialFeedCol{
+	width:33%;
+	float:left;
+}
+.socialFeeds .socialFeed .socialFeedCol .title{
+	max-width:285px;
+	margin:0 auto;
+	background:#2bc2ba;
+	font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+	color:#ffffff;
+	font-size:1.250em;
+	line-height:40px;
+}
+.socialFeeds .socialFeed .socialFeedCol .title span{
+	margin-left:-20px;
+}
+.socialFeeds .socialFeed .socialFeedCol i.icon{
+	background:#20a29b url("../images/teamHotspots-sprite.png") no-repeat -153px -40px;
+	width:40px;
+	height:40px;
+	float:left;
+}
+.socialFeeds .socialFeed .socialFeedCol.twitter i.icon{
+	background:#20a29b url("../images/teamHotspots-sprite.png") no-repeat -153px -79px;
+}
+.socialFeeds .socialFeed .socialFeedCol.facebook i.icon{
+	background:#20a29b url("../images/teamHotspots-sprite.png") no-repeat -153px -116px;
+}
+.socialFeeds .socialFeed .socialFeedCol .socialFeedcontent{
+	max-width:285px;
+	margin:15px auto 0;
+}
+.socialFeeds .socialFeed .socialFeedCol .instagram-list{
+	width:142px;
+	float:left;
+	margin:10px 0;
+}
+.socialFeeds .instagram-list div{
+	max-width:105px;
+	margin:0 auto;
+	text-align:left;
+}
+.socialFeeds .instagram-list .user-title{
+	font-family:arial;
+	font-size:0.750em;
+}
+.socialFeeds .instagram-list .user-img{
+	margin-top:10px;
+}
+.socialFeeds .instagram-list .user-img img{
+	max-width:100%;
+	height:auto
+}
+.socialFeeds .twitter-list,
+.socialFeeds .facebook-list{
+	margin:0 auto;
+	text-align:left;
+	max-width: 285px;
+	padding:0 20px;
+}
+.socialFeeds .twitter-list img,
+.socialFeeds .facebook-list img{
+	max-width:100%;
+	height:auto
+}
+.socialFeeds .arrowDown {
+    background: url("../images/teamHotspots-arrow.png") no-repeat;
+    bottom:-20px;
+    display:inline-block;
+    height:23px;
+    left:48%;
+    position:absolute;
+    width:39px;
+    z-index:98;
+}
+.bannerTeam{
+	min-height:365px;
+    position:relative;
+    text-align:center;
+    width:auto;
+	background:#000000;
+}
+.bannerTeam .arrowDown {
+    background: url(../images/banner-sprite.png) no-repeat 0 -160px;
+    width: 38px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    bottom:-18px;
+    left: 48%;
+    z-index: 99;
+}
+.bannerTeam .bannerTeam-text{
+	font-family: 'FordAntennaExtraCondWGL-BoldIt', sans-serif;
+	font-size:3.125em;
+	color:#ffffff;
+	width:100%;
+	position:absolute;
+	text-align:center;
+	text-transform:uppercase;
+	top:55px;
+}
+.bannerTeam .bannerTeam-rocky,
+.bannerTeam .bannerTeam-gaurav,
+.bannerTeam .bannerTeam-anushka{
+	background:url(../images/homeBanner.png) no-repeat center center;
+	min-height:365px;
+	border-right:2px solid #000000;
+	width:33.33%;
+	float:left;
+}
+.bannerTeam .bannerTeam-rocky .playVideo,
+.bannerTeam .bannerTeam-gaurav .playVideo,
+.bannerTeam .bannerTeam-anushka .playVideo{
+	max-width: 74px;
+	margin:150px auto 0;
+}
+.bannerTeam .bannerTeam-rocky .votes,
+.bannerTeam .bannerTeam-gaurav .votes,
+.bannerTeam .bannerTeam-anushka .votes{
+	max-width: 150px;
+	margin:150px auto 0;
+}
+.bannerTeam .bannerTeam-rocky .votes{
+	background:url(../images/rocky-mayur_team.png) no-repeat;
+	min-height: 150px;
+}
+.bannerTeam .bannerTeam-gaurav .votes{
+	background:url(../images/gaurav-kapoor_team.png) no-repeat;
+	min-height: 150px;
+}
+.bannerTeam .bannerTeam-anushka .votes{
+	background:url(../images/anushka-dandekar_team.png) no-repeat;
+	min-height: 150px;
+}
+.bannerTeam .bannerTeam-rocky .votes span,
+.bannerTeam .bannerTeam-gaurav .votes span,
+.bannerTeam .bannerTeam-anushka .votes span{
+	display:block;
+	font-family:'FordAntennaExtraCondWGL-Reg', sans-serif;
+	color:#fff;
+	font-size:1.500em;
+	text-transform:uppercase;
+}
+.bannerTeam .bannerTeam-rocky .votes span.counts,
+.bannerTeam .bannerTeam-gaurav .votes span.counts,
+.bannerTeam .bannerTeam-anushka .votes span.counts{
+	font-size:2.375em;
+	font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+	padding-top: 35px;
+}
+.bannerTeam .bannerTeam-taks .viewTeam  span a,
+.bannerTeam .bannerTeam-taks .viewTeam  span a,
+.bannerTeam .bannerTeam-taks .viewTeam  span a{
+	margin-top:0 !important;
+	font-size:1.500em;
+}
+.bannerTeam .bannerTeam-taks .votes,
+.bannerTeam .bannerTeam-taks .votes,
+.bannerTeam .bannerTeam-taks .votes{
+	max-width: 150px;
+	margin:140px auto 0 !important;
+}
+.bannerTeam .bannerTeam-taks .viewTeam span a i.arrow,
+.bannerTeam .bannerTeam-taks .viewTeam span a i.arrow,
+.bannerTeam .bannerTeam-taks .viewTeam span a i.arrow{
+	top:-1px!important;
+}
+.bannerTeam .bannerTeam-rocky .playVideo span{
+	border:2px solid #ffb94f;
+	border-radius: 60px;
+	min-height: 74px;
+	display: block;
+}
+.bannerTeam .bannerTeam-gaurav .playVideo span{
+	border:2px solid #f05a29;
+	border-radius: 60px;
+	min-height: 74px;
+	display: block;
+}
+.bannerTeam .bannerTeam-anushka .playVideo span{
+	border:2px solid #8cd850;
+	border-radius: 60px;
+	min-height: 74px;
+	display: block;
+}
+.bannerTeam .bannerTeam-rocky .playVideo span i.playIcon,
+.bannerTeam .bannerTeam-gaurav .playVideo span i.playIcon,
+.bannerTeam .bannerTeam-anushka .playVideo span i.playIcon{
+	background: url("../images/banner-sprite.png") no-repeat 0 -198px;
+	display: inline-block;
+    height: 27px;
+    left: 5px;
+    position: relative;
+    width: 18px;
+	top:22px;
+}
+.bannerTeam .bannerTeam-rocky .viewTeam span,
+.bannerTeam .bannerTeam-gaurav .viewTeam span,
+.bannerTeam .bannerTeam-anushka .viewTeam span{
+	display:block;
+	font-size:1.125em;
+	text-transform:uppercase;
+	color:#ffffff;
+	font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+	margin-top:20px;
+}
+.bannerTeam .bannerTeam-rocky .viewTeam span a,
+.bannerTeam .bannerTeam-gaurav .viewTeam span a,
+.bannerTeam .bannerTeam-anushka .viewTeam span a{
+	margin-top:25px;
+	display:block;
+}
+.bannerTeam .bannerTeam-rocky .viewTeam span a{
+	color:#ffb94f;
+}
+.bannerTeam .bannerTeam-gaurav .viewTeam span a{
+	color:#f05a29;
+}
+.bannerTeam .bannerTeam-anushka .viewTeam span a{
+	color:#8cd850;
+}
+.bannerTeam .bannerTeam-rocky .viewTeam span a i.arrow{
+	background: url("../images/celebs-sprite.png") no-repeat scroll -108px -3px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 18px;
+    left: 5px;
+    position: relative;
+    width: 11px;
+	top:1px;
+}
+.bannerTeam .bannerTeam-gaurav .viewTeam span a i.arrow{
+	background: url("../images/celebs-sprite.png") no-repeat scroll -129px -3px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 18px;
+    left: 5px;
+    position: relative;
+    width: 11px;
+	top:1px;
+}
+.bannerTeam .bannerTeam-anushka .viewTeam span a i.arrow{
+	background: url("../images/celebs-sprite.png") no-repeat scroll -139px -33px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 18px;
+    left: 5px;
+    position: relative;
+    width: 11px;
+	top:1px;
+}
+
+.teamHotspots .teamHotspot .votes {
+    margin: 15px 0;
+    min-height: 180px;
+    min-width: 260px;
+}
+.teamHotspots .teamHotspot.col-first .votes{
+	background:url(../images/rocky-mayur_team.png) no-repeat center;
+	min-height: 150px;
+}
+.teamHotspots .teamHotspot.col-second .votes{
+	background:url(../images/gaurav-kapoor_team.png) no-repeat center;
+	min-height: 150px;
+}
+.teamHotspots .teamHotspot.col-third .votes{
+	background:url(../images/anushka-dandekar_team.png) no-repeat center;
+	min-height: 150px;
+}
+.teamHotspots .teamHotspot .votes span{
+	display:block;
+	font-family:'FordAntennaExtraCondWGL-Reg', sans-serif;
+	color:#fff;
+	font-size:1.500em;
+	text-transform:uppercase;
+}
+.teamHotspots .teamHotspot .votes span.counts{
+	font-size:2.375em;
+	font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+	padding-top: 35px;
+}
+.teamHotspots .teamHotspot .foot.teamLink a{
+	background:none;
+	text-align:center;
+	font-size:1.375em;
+	font-family: 'FordAntennaExtraCondWGL-Bold', serif;
+}
+.teamHotspots .teamLink i.arrow{
+	margin-left: 5px;
+	top:-1px;
+}
+/* Home Page 26 CSS Ends Here */

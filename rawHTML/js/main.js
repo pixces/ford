@@ -404,7 +404,7 @@ $(document).ready(function (e) {
     /* Celebs Page JS Ends Here */
 	
 	
-	$(".hotspots .hotspot .img a").click(function(){
+	$(".hotspots .hotspot .img a,.bannerTeam .playVideo a,#videoCarousel .item a").click(function(){
 		var videoID = $(this).attr("rel");
 		$(".overlay").toggle().css({"width": documentWidth, "height": documentHeight,"top": 0});
 		$(".videoOverlay").show().find("iframe").attr("src", "http://www.youtube.com/embed/" + videoID + "?autoplay=1");
@@ -424,12 +424,12 @@ $(document).ready(function (e) {
 		//transitionStyle : "fade"
 	});
 	
-	$("#videoCarousel .item a").click(function () {
+	/*$("#videoCarousel .item a").click(function () {
         videoUrl = $(this).attr("rel");
         videoHeight = $(".mainBanner").height();
 
         $(".bannerContainer").hide();
         $(".videoContainer").html('<div class="closeVideo"><i>X</i></div><div><iframe width="100%" height="340" frameborder="0" allowfullscreen src="http://www.youtube.com/embed/' + videoUrl + '?autoplay=1"></iframe></div>').show();
-    });
+    });*/
 
 });

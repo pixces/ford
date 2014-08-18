@@ -1638,3 +1638,117 @@ text-align: center;
         background: #e8e8e8;
     }
 }
+
+/* Home Page 26 CSS Starts Here */
+@media only screen and (min-width: 700px) and (max-width: 1000px) {
+	.teamHotspots {
+        padding: 50px 0
+    }
+
+    .teamHotspots .teamHotspot .body {
+        padding: 0 30px
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 699px) {
+	.teamHotspots {
+        padding: 25px 0;
+        display: block;		
+    }
+
+    .teamHotspots .teamHotspot {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+		float:none;
+    }
+
+    .teamHotspots .teamHotspot .body {
+        min-height: inherit
+    }
+	
+	.socialFeeds .socialFeed .socialFeedCol{
+		float:none;
+		width:100%;
+		overflow:hidden;
+		margin-bottom:20px;
+	}
+}
+
+@media only screen and (min-width: 530px) and (max-width: 699px) {
+    .teamHotspots .teamHotspot .icon {
+        left: 42%;
+    }
+}
+
+@media only screen and (min-width: 420px) and (max-width: 529px) {
+    .teamHotspots .teamHotspot .icon {
+        left: 40%;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 419px) {
+    .teamHotspots .teamHotspot .icon {
+        left: 35%;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 950px) {
+	.socialFeeds .socialFeed{
+		padding:0 10px 20px;
+	}
+	.socialFeeds .socialFeed .socialFeedCol .title,
+	.socialFeeds .socialFeed .socialFeedCol .socialFeedcontent{
+		max-width:235px;
+	}
+	.socialFeeds .socialFeed .socialFeedCol .instagram-list{
+		width:115px;
+	}
+	.socialFeeds .instagram-list div{
+		max-width:90px;
+	}
+}
+@media only screen and (min-width: 765px) and (max-width: 870px) {
+	.bannerTeam .bannerTeam-text{
+		font-size:2.7em;
+	}
+}
+@media only screen and (min-width: 300px) and (max-width: 764px) {
+	.bannerTeam .bannerTeam-text{
+		font-size:2.500em;
+		position:relative;
+		top:0;
+		background:#2bc2ba;
+		padding:10px;
+	}
+	.bannerTeam .bannerTeam-rocky, 
+	.bannerTeam .bannerTeam-gaurav, 
+	.bannerTeam .bannerTeam-anushka{
+		float:none;
+		width:auto;
+		min-height: 200px;
+		border-right:0 none;
+		border-bottom:2px solid #000000;
+		background:url("../images/homeBanner.png") no-repeat top center;
+	}
+	.bannerTeam .bannerTeam-rocky .playVideo, 
+	.bannerTeam .bannerTeam-gaurav .playVideo, 
+	.bannerTeam .bannerTeam-anushka .playVideo,
+	.bannerTeam .bannerTeam-taks .votes,
+	.bannerTeam .bannerTeam-taks .votes,
+	.bannerTeam .bannerTeam-taks .votes{
+		margin:0 auto !important;
+		padding-top:15px;
+	}
+	.bannerTeam .bannerTeam-rocky.bannerTeam-taks .viewTeam span, 
+	.bannerTeam .bannerTeam-gaurav.bannerTeam-taks .viewTeam span, 
+	.bannerTeam .bannerTeam-anushka.bannerTeam-taks .viewTeam span{
+		margin:10px 0 0 0;
+	}
+	.bannerTeam .bannerTeam-rocky .votes span.counts, 
+	.bannerTeam .bannerTeam-gaurav .votes span.counts, 
+	.bannerTeam .bannerTeam-anushka .votes span.counts{
+		padding-top: 25px;
+	}
+}
+/* Home Page 26 CSS Ends Here */
